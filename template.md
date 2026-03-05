@@ -1,19 +1,5 @@
-# Paper Review
+# Review Template
 
-**Title:**  
-**Authors:**  
-**Source URL:**  
-**Publication:**  
-**Date Read:**  
+The canonical template lives at: `templates/review-template.md`.
 
----
-
-## Review
-
-[Paste the ~1500–2000 character review.]
-
----
-
-## Key Insight
-
-One sentence capturing the main takeaway.
+This file is kept for backward compatibility.

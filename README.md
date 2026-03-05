@@ -1,43 +1,64 @@
 # Digital Governance Paper Notes
 
-This repository contains short analytical reviews of research and policy papers on:
+Short, practitioner-oriented reviews of research and policy papers on:
 
-- Digital Public Infrastructure (DPI)
-- AI governance
-- Digital identity
-- Public technology systems
-- Institutional impacts of digital infrastructure
+- AI governance and institutional impacts
+- Digital public infrastructure (DPI) and public sector delivery
+- Digital identity, trust infrastructure, and interoperability
+- Internet governance, privacy, and security
 
-The goal is simple: translate academic and policy research into insights useful for practitioners designing and governing digital systems.
-
-Most notes are approximately 1500–2000 characters and are often first shared on LinkedIn before being archived here.
+Most notes are ~1500–2000 characters and are often drafted for LinkedIn first, then archived here.
 
 ---
 
 ## Repository Structure
 
-papers/YYYY/ – individual paper reviews  
-template.md – template used for new entries  
-index.md – chronological index of reviewed papers  
+- `reviews/YYYY/` – canonical review notes (stable naming convention)
+- `index.md` – auto-generated index of all reviews (do not hand-edit)
+- `templates/` – writing templates
+- `taxonomy/` – controlled vocabulary (domains, tags)
+- `scripts/` – repo utilities (index builder)
+- `legacy/` – older paths kept for backward compatibility
 
 ---
 
-## Themes
+## Review File Convention
 
-Common themes explored in the reviews include:
+New reviews should be created under:
 
-- architecture and governance
-- infrastructure and institutional power
-- digital sovereignty
-- public technology systems
-- trust infrastructure
+`reviews/YYYY/YYYY-MM-DD__<slug>__v1.md`
 
-A recurring perspective across the notes:
+Each review **should** start with front matter:
 
-> Infrastructure design decisions encode governance outcomes.
+```yaml
+---
+title: ""
+source: ""
+publication: ""
+date_read: "YYYY-MM-DD"
+primary_domain: ""
+tags: []
+---
+```
+
+Use: `templates/review-template.md`
 
 ---
 
-## Index
+## Index Generation
 
-See **index.md** for a chronological list of reviewed papers.
+The index is generated from front matter in review files.
+
+Rebuild locally:
+
+```bash
+python scripts/build_index.py
+```
+
+CI checks that `index.md` is up to date on every push/PR.
+
+---
+
+## License
+
+See `LICENSE`.
