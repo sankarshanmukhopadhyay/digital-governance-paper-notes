@@ -7,8 +7,6 @@ Short, practitioner-oriented reviews of research and policy papers on:
 - Digital identity, trust infrastructure, and interoperability
 - Internet governance, privacy, and security
 
-Most notes are ~1500–2000 characters and are often drafted for LinkedIn first, then archived here.
-
 ---
 
 ## Repository Structure
@@ -18,7 +16,6 @@ Most notes are ~1500–2000 characters and are often drafted for LinkedIn first,
 - `templates/` – writing templates
 - `taxonomy/` – controlled vocabulary (domains, tags)
 - `scripts/` – repo utilities (index builder)
-- `legacy/` – older paths kept for backward compatibility
 
 ---
 
