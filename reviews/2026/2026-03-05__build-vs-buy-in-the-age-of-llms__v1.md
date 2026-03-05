@@ -4,18 +4,10 @@ source: "https://arxiv.org/abs/2602.13033v2"
 publication: "arXiv"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
-tags: []
+tags: ["sovereignty", "procurement", "LLMs", "public sector", "infrastructure strategy"]
 ---
 
 # Paper Review
-
-**Title:** Build vs Buy in the Age of LLMs  
-**Authors:** —  
-**Source URL:** https://arxiv.org/abs/2602.13033v2  
-**Publication:** arXiv  
-**Date Read:** 2026-03-05
-
----
 
 ## Review
 
@@ -35,4 +27,4 @@ Overall, the paper succeeds in reframing the debate. The next step is turning th
 
 ## Key Insight
 
-For governments, AI procurement is not a software sourcing decision but a strategic infrastructure choice that must balance sovereignty, cost, security, and long‑term operational resilience.
+The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths—not for a romantic preference for in-house models.

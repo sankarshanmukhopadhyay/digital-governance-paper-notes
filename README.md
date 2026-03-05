@@ -1,5 +1,7 @@
 # Digital Governance Paper Notes
 
+**Index:** [Paper Review Index](index.md)
+
 Short, practitioner-oriented reviews of research and policy papers on:
 
 - AI governance and institutional impacts

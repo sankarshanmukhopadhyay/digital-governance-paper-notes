@@ -2,6 +2,7 @@
 
 | Date | Paper | Domain | Link |
 |------|------|--------|------|
+| 2026-03-05 | The Stack and the State: India’s Digital Governance Model as Technopolitical Power | Digital Governance | https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html |
 | 2026-03-05 | Exhaustibility Is Not an Optimization. It Is a First-Class Invariant | Trust Infrastructure | https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e |
 | 2026-03-05 | DPI-AI Framework: Vision paper on Building AI-Ready Nations through Digital Public Infrastructure | AI Governance | https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Vision_Paper_-DPI-AI-Framework_2026_CDPI.pdf |
 | 2026-03-05 | Build vs Buy in the Age of LLMs | AI Governance | https://arxiv.org/abs/2602.13033v2 |

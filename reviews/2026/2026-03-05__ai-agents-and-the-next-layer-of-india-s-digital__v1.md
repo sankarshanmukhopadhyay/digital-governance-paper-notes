@@ -1,23 +1,13 @@
 ---
 title: "AI Agents and the Next Layer of India's Digital Infrastructure"
 source: "https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/"
-publication: "Tech Policy Press\"
+publication: "Tech Policy Press"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
-tags: []
+tags: ["India", "DPI", "AI agents", "delegation", "trust registries"]
 ---
 
 # Paper Review
-
-**Title:** AI Agents and the Next Layer of India's Digital
-Infrastructure
-**Authors:** Not specified (Tech Policy Press essay)
-**Source URL:**
-https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/
-**Publication:** Tech Policy Press
-**Date Read:** 2026-03-05
-
----
 
 ## Review
 
@@ -69,6 +59,4 @@ assurance layers that allow them to operate safely at societal scale.
 
 ## Key Insight
 
-Agent ecosystems will only function safely at societal scale if
-identity, delegation, trust registries, and accountability frameworks
-are treated as core infrastructure rather than afterthoughts.
+At population scale, an “agent layer” only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud.
