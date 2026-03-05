@@ -11,7 +11,7 @@ tags: []
 
 ## Review
 
-[Paste the ~1500–2000 character review.]
+[Paste the review.]
 
 ## Key Insight
 
