@@ -1,9 +1,18 @@
 # Paper Review Index
 
-| Date | Paper | Domain | Link |
-|------|------|--------|------|
-| 2026-03-05 | The Stack and the State: India’s Digital Governance Model as Technopolitical Power | Digital Governance | https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html |
-| 2026-03-05 | Exhaustibility Is Not an Optimization. It Is a First-Class Invariant | Trust Infrastructure | https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e |
-| 2026-03-05 | DPI-AI Framework: Vision paper on Building AI-Ready Nations through Digital Public Infrastructure | AI Governance | https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Vision_Paper_-DPI-AI-Framework_2026_CDPI.pdf |
-| 2026-03-05 | Build vs Buy in the Age of LLMs | AI Governance | https://arxiv.org/abs/2602.13033v2 |
-| 2026-03-05 | AI Agents and the Next Layer of India's Digital Infrastructure | AI Governance | https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/ |
+| Date | Paper | Domain | Review | Source |
+|------|------|--------|--------|--------|
+| 2026-03-06 | Towards an Open, Resilient, Non-Aligned AI | AI Governance | [Review](reviews/2026/2026-03-06__towards-an-open-resilient-non-aligned-ai__v1.md) | [Source](https://geopolitique.eu/en/2026/02/16/towards-an-open-resilient-non-aligned-ai/) |
+| 2026-03-06 | Toward Risk Thresholds for AI-Enabled Cyber Threats | Cybersecurity | [Review](reviews/2026/2026-03-06__toward-risk-thresholds-for-ai-enabled-cyber-threats__v1.md) | [Source](https://cltc.berkeley.edu/wp-content/uploads/2026/01/Toward_Risk_Thresholds_for_AI-Enabled_Cyber_Threats.pdf) |
+| 2026-03-06 | The Mythology of Conscious AI | Socio-technical Systems | [Review](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) | [Source](https://www.noemamag.com/the-mythology-of-conscious-ai/) |
+| 2026-03-06 | Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies and the Long Game Ahead | AI Governance | [Review](reviews/2026/2026-03-06__sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies__v1.md) | [Source](https://institute.global/insights/tech-and-digitalisation/sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies) |
+| 2026-03-06 | International AI Safety Report 2026 | AI Governance | [Review](reviews/2026/2026-03-06__international-ai-safety-report-2026__v1.md) | [Source](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) |
+| 2026-03-06 | Democratising AI: Towards Open, Decentralised AI Ecosystems | AI Governance | [Review](reviews/2026/2026-03-06__democratising-ai-towards-open-decentralised-ai-ecosystems__v1.md) | [Source](https://www.orfonline.org/research/democratising-ai-towards-open-decentralised-ai-ecosystems) |
+| 2026-03-06 | AI Regulatory Capability Framework and Self-Assessment Tool | Law & Regulation | [Review](reviews/2026/2026-03-06__ai-regulatory-capability-framework-and-self-assessment-tool__v1.md) | [Source](https://www.turing.ac.uk/news/publications/ai-regulatory-capability-framework-and-self-assessment-tool) |
+| 2026-03-06 | AI Maturity Framework for Public Administrations | Public Sector Digital Strategy | [Review](reviews/2026/2026-03-06__ai-maturity-framework-for-public-administrations__v1.md) | [Source](https://unesdoc.unesco.org/ark:/48223/pf0000397145.locale=en) |
+| 2026-03-06 | AI Governance in South Asia | Law & Regulation | [Review](reviews/2026/2026-03-06__ai-governance-in-south-asia__v1.md) | [Source](https://cerai.iitm.ac.in/docs/AI-Governance-In-South-Asia.pdf) |
+| 2026-03-05 | The Stack and the State: India’s Digital Governance Model as Technopolitical Power | Digital Governance | [Review](reviews/2026/2026-03-05__the-stack-and-the-state-india-s-digital-governance-model-as-technopolitical-power__v1.md) | [Source](https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html) |
+| 2026-03-05 | Exhaustibility Is Not an Optimization. It Is a First-Class Invariant | Trust Infrastructure | [Review](reviews/2026/2026-03-05__exhaustibility-first-class-invariant__v1.md) | [Source](https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e) |
+| 2026-03-05 | DPI-AI Framework: Vision paper on Building AI-Ready Nations through Digital Public Infrastructure | AI Governance | [Review](reviews/2026/2026-03-05__dpi-ai-framework-vision-paper__v1.md) | [Source](https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Vision_Paper_-DPI-AI-Framework_2026_CDPI.pdf) |
+| 2026-03-05 | Build vs Buy in the Age of LLMs | AI Governance | [Review](reviews/2026/2026-03-05__build-vs-buy-in-the-age-of-llms__v1.md) | [Source](https://arxiv.org/abs/2602.13033v2) |
+| 2026-03-05 | AI Agents and the Next Layer of India's Digital Infrastructure | AI Governance | [Review](reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md) | [Source](https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/) |

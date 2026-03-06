@@ -14,7 +14,7 @@ Short, practitioner-oriented reviews of research and policy papers on:
 ## Repository Structure
 
 - `reviews/YYYY/` – canonical review notes (stable naming convention)
-- `index.md` – auto-generated index of all reviews (do not hand-edit)
+- `index.md` – auto-generated index of all reviews with both repo review links and source links (do not hand-edit)
 - `templates/` – writing templates
 - `taxonomy/` – controlled vocabulary (domains, tags)
 - `scripts/` – repo utilities (index builder)

@@ -32,6 +32,7 @@ class ReviewRecord:
     title: str
     domain: str
     link: str
+    review_path: str
     path: str
 
 def _strip_quotes(v: str) -> str:
@@ -88,7 +89,8 @@ def load_reviews() -> List[ReviewRecord]:
         if not domain:
             domain = "Uncategorized"
 
-        records.append(ReviewRecord(date=date, title=title, domain=domain, link=link, path=path))
+        review_path = os.path.relpath(path, REPO_ROOT).replace(os.sep, "/")
+        records.append(ReviewRecord(date=date, title=title, domain=domain, link=link, review_path=review_path, path=path))
 
     # sort newest first, then title
     records.sort(key=lambda r: (r.date, r.title.lower()), reverse=True)
@@ -98,11 +100,11 @@ def render_index(records: List[ReviewRecord]) -> str:
     lines = [
         "# Paper Review Index",
         "",
-        "| Date | Paper | Domain | Link |",
-        "|------|------|--------|------|",
+        "| Date | Paper | Domain | Review | Source |",
+        "|------|------|--------|--------|--------|",
     ]
     for r in records:
-        lines.append(f"| {r.date} | {r.title} | {r.domain} | {r.link} |")
+        lines.append(f"| {r.date} | {r.title} | {r.domain} | [Review]({r.review_path}) | [Source]({r.link}) |")
     lines.append("")
     return "\n".join(lines)
 
