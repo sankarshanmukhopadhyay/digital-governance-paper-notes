@@ -88,11 +88,11 @@ python scripts/build_index.py --check
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD*
+- **2026-03-07** — [Advancing Open Source AI in India](reviews/2026/2026-03-07__advancing-open-source-ai-in-india__v1.md) — *Digital Futures Lab*
 - **2026-03-06** — [Towards an Open, Resilient, Non-Aligned AI](reviews/2026/2026-03-06__towards-an-open-resilient-non-aligned-ai__v1.md) — *Geopolitique.eu*
 - **2026-03-06** — [Toward Risk Thresholds for AI-Enabled Cyber Threats](reviews/2026/2026-03-06__toward-risk-thresholds-for-ai-enabled-cyber-threats__v1.md) — *UC Berkeley Center for Long-Term Cybersecurity*
 - **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine*
 - **2026-03-06** — [The Global Landscape of Environmental AI Regulation: From the Cost of Reasoning to a Right to Green AI](reviews/2026/2026-03-06__the-global-landscape-of-environmental-ai-regulation__v1.md) — *SSRN*
-- **2026-03-06** — [Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies and the Long Game Ahead](reviews/2026/2026-03-06__sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies__v1.md) — *Tony Blair Institute for Global Change*
 
 <!-- RECENT_REVIEWS:END -->
 
