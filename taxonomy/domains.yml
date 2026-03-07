@@ -1,11 +1,86 @@
 primary_domains:
+
   - AI Governance
+  - AI Safety & Evaluation
+  - Digital Public Infrastructure
+  - Digital Public Goods
   - Public Sector Digital Strategy
   - Digital Identity
   - Trust Infrastructure
-  - Internet Governance
+  - Standards, Protocols & Interoperability
   - Privacy & Data Protection
-  - Cybersecurity
-  - Standards & Interop
-  - Law & Regulation
+  - Cybersecurity & Resilience
+  - Law, Regulation & Liability
+  - Platform Governance & Internet Governance
   - Socio-technical Systems
+  - Inclusion, Rights & Development
+  - State Capacity & Administrative Systems
+  - Economic & Market Infrastructure
+
+
+secondary_topics:
+
+  # AI systems
+  - foundation models
+  - agentic systems
+  - multi-agent systems
+  - AI benchmarks
+  - evaluation frameworks
+  - AI risk management
+  - model governance
+  - alignment and safety
+
+  # Digital infrastructure
+  - identity systems
+  - digital wallets
+  - verifiable credentials
+  - trust registries
+  - authentication systems
+  - digital signatures
+  - consent and data exchange
+  - interoperable identity
+  - credential ecosystems
+
+  # Governance and regulation
+  - algorithmic accountability
+  - regulatory frameworks
+  - liability regimes
+  - public procurement
+  - institutional design
+  - regulatory sandboxes
+  - administrative automation
+
+  # DPI architecture
+  - public digital platforms
+  - open standards
+  - infrastructure governance
+  - interoperability frameworks
+  - registries and directories
+
+  # Security and resilience
+  - cryptography
+  - supply chain security
+  - infrastructure resilience
+  - trust assurance
+
+  # Social impacts
+  - welfare delivery
+  - digital exclusion
+  - rights and safeguards
+  - surveillance risks
+  - public accountability
+
+
+scholarly_signals:
+
+  # arXiv-style research domains (optional metadata)
+  - cs.AI
+  - cs.LG
+  - cs.CR
+  - cs.CY
+  - cs.MA
+  - cs.NI
+  - cs.HC
+  - cs.SE
+  - stat.ML
+  - econ.GN
