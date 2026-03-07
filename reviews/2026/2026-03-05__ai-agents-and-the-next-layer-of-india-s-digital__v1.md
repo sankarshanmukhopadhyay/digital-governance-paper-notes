@@ -4,8 +4,13 @@ source: "https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-dig
 publication: "Tech Policy Press"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
-tags: ["India", "DPI", "AI agents", "delegation", "trust registries"]
-key_insight: "At population scale, an \"agent layer\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud."
+tags:
+  - "India"
+  - "digital public infrastructure"
+  - "AI agents"
+  - "delegation"
+  - "trust registries"
+key_insight: "At population scale, an \\"agent layer\\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud."
 ---
 
 # Paper Review

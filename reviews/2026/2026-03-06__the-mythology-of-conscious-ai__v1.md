@@ -4,7 +4,12 @@ source: "https://www.noemamag.com/the-mythology-of-conscious-ai/"
 publication: "Noema Magazine"
 date_read: "2026-03-06"
 primary_domain: "Socio-technical Systems"
-tags: ["consciousness", "anthropomorphism", "accountability", "governance", "philosophy of AI"]
+tags:
+  - "consciousness"
+  - "anthropomorphism"
+  - "accountability"
+  - "AI governance"
+  - "philosophy of AI"
 key_insight: "Myths about conscious AI distract from the immediate governance problem: non-conscious systems already exercise power at scale without clear accountability."
 ---
 

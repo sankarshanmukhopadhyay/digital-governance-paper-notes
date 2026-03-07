@@ -1,5 +1,4 @@
 primary_domains:
-
   - AI Governance
   - AI Safety & Evaluation
   - Digital Public Infrastructure
@@ -17,70 +16,97 @@ primary_domains:
   - State Capacity & Administrative Systems
   - Economic & Market Infrastructure
 
-
 secondary_topics:
-
-  # AI systems
-  - foundation models
-  - agentic systems
-  - multi-agent systems
+  # AI systems and governance
+  - AI adoption
+  - AI agents
   - AI benchmarks
-  - evaluation frameworks
+  - AI governance
+  - AI regulation
   - AI risk management
-  - model governance
+  - AI safety
+  - agentic systems
   - alignment and safety
-
-  # Digital infrastructure
-  - identity systems
-  - digital wallets
-  - verifiable credentials
-  - trust registries
-  - authentication systems
-  - digital signatures
-  - consent and data exchange
-  - interoperable identity
-  - credential ecosystems
-
-  # Governance and regulation
-  - algorithmic accountability
-  - regulatory frameworks
-  - liability regimes
-  - public procurement
-  - institutional design
-  - regulatory sandboxes
-  - administrative automation
-
-  # DPI architecture
-  - public digital platforms
-  - open standards
+  - anthropomorphism
+  - assurance
+  - accountability
+  - authority
+  - authorization
+  - Bayesian networks
+  - capability
+  - cognitive linguistics
+  - concentration
+  - consciousness
+  - context engineering
+  - coding agents
+  - coordination
+  - cyber risk
+  - decentralisation
+  - delegation
+  - dependencies
+  - deployment controls
+  - decision triggers
+  - developer tooling
+  - development
+  - digital policy
+  - digital public infrastructure
+  - digital sovereignty
+  - environmental impact
+  - evaluations
+  - evidence
+  - evidence tiers
+  - foundation models
+  - generative AI
+  - geopolitical risk
+  - global south
+  - governance-by-design
+  - India
+  - India Stack
   - infrastructure governance
-  - interoperability frameworks
-  - registries and directories
-
-  # Security and resilience
-  - cryptography
-  - supply chain security
-  - infrastructure resilience
+  - infrastructure strategy
+  - interoperability
+  - labour
+  - legal theory
+  - legitimacy
+  - LLMs
+  - maturity models
+  - model governance
+  - OECD
+  - open ecosystems
+  - open-source AI
+  - philosophy of AI
+  - portability
+  - procurement
+  - provenance
+  - public administration
+  - public infrastructure
+  - public procurement
+  - public sector
+  - public-interest technology
+  - regulators
+  - regulatory frameworks
+  - regulatory policy
+  - resilience
+  - risk tiering
+  - sovereignty
+  - South Asia
+  - state capacity
+  - technopolitics
+  - thresholds
   - trust assurance
-
-  # Social impacts
-  - welfare delivery
-  - digital exclusion
-  - rights and safeguards
-  - surveillance risks
-  - public accountability
-
+  - trust registries
+  - uncertainty
+  - vendor governance
+  - workflows
 
 scholarly_signals:
-
-  # arXiv-style research domains (optional metadata)
   - cs.AI
-  - cs.LG
-  - cs.CR
   - cs.CY
+  - cs.CR
+  - cs.HC
+  - cs.LG
   - cs.MA
   - cs.NI
-  - cs.HC
   - cs.SE
-  - stat.ML
   - econ.GN
+  - stat.ML

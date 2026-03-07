@@ -3,8 +3,13 @@ title: "The Global Landscape of Environmental AI Regulation: From the Cost of Re
 source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6219838"
 publication: "SSRN"
 date_read: "2026-03-06"
-primary_domain: "AI Governance"
-tags: ["AI regulation", "environmental impact", "AI governance", "generative AI", "policy"]
+primary_domain: "Law, Regulation & Liability"
+tags:
+  - "AI regulation"
+  - "environmental impact"
+  - "AI governance"
+  - "generative AI"
+  - "regulatory policy"
 key_insight: "Effective environmental governance of AI will require regulation to shift from facility-level reporting toward model-level transparency, especially around inference costs and reasoning-heavy systems."
 ---
 

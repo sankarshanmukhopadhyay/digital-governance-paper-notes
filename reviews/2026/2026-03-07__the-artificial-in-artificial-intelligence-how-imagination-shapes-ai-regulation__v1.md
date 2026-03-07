@@ -3,8 +3,13 @@ title: "The Artificial in ‘Artificial Intelligence’: How Imagination Shapes 
 source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639"
 publication: "SSRN"
 date_read: "2026-03-07"
-primary_domain: "AI Governance and Regulation"
-tags: ["AI regulation", "cognitive linguistics", "AI governance", "legal theory", "digital public infrastructure"]
+primary_domain: "Law, Regulation & Liability"
+tags:
+  - "AI regulation"
+  - "cognitive linguistics"
+  - "AI governance"
+  - "legal theory"
+  - "digital public infrastructure"
 key_insight: "AI regulation is being shaped not only by technical architectures but by metaphors that silently define where risk, responsibility, and accountability are presumed to sit."
 ---
 

@@ -3,8 +3,13 @@ title: "AI Regulatory Capability Framework and Self-Assessment Tool"
 source: "https://www.turing.ac.uk/news/publications/ai-regulatory-capability-framework-and-self-assessment-tool"
 publication: "The Alan Turing Institute"
 date_read: "2026-03-06"
-primary_domain: "Law & Regulation"
-tags: ["regulators", "capability", "evidence tiers", "authority", "coordination"]
+primary_domain: "Law, Regulation & Liability"
+tags:
+  - "regulators"
+  - "capability"
+  - "evidence tiers"
+  - "authority"
+  - "coordination"
 key_insight: "Regulatory capability has to be evidenced, infrastructure-backed, and tied to authority at runtime, otherwise self-assessment becomes polished theatre."
 ---
 

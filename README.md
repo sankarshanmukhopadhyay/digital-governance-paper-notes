@@ -9,6 +9,22 @@ A curated archive of short, practitioner-oriented reviews of research papers, po
 
 ## Scope
 
+### Taxonomy Snapshot
+
+<!-- TAXONOMY_SUMMARY:START -->
+
+- **AI Governance** (7)
+- **AI Safety & Evaluation** (2)
+- **Digital Public Infrastructure** (2)
+- **Public Sector Digital Strategy** (1)
+- **Trust Infrastructure** (1)
+- **Cybersecurity & Resilience** (1)
+- **Law, Regulation & Liability** (4)
+- **Socio-technical Systems** (1)
+- **State Capacity & Administrative Systems** (1)
+
+<!-- TAXONOMY_SUMMARY:END -->
+
 The repository focuses on concise review notes that extract the main argument of a paper, assess strengths and weaknesses, and capture one durable insight for future work.
 
 Core areas include:

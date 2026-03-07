@@ -4,8 +4,13 @@ source: "https://www.orfonline.org/research/democratising-ai-towards-open-decent
 publication: "Observer Research Foundation"
 date_read: "2026-03-06"
 primary_domain: "AI Governance"
-tags: ["decentralisation", "open ecosystems", "interoperability", "governance", "global south"]
-key_insight: "AI democratisation only becomes operational when \"decentralisation\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term."
+tags:
+  - "decentralisation"
+  - "open ecosystems"
+  - "interoperability"
+  - "AI governance"
+  - "global south"
+key_insight: "AI democratisation only becomes operational when \\"decentralisation\\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term."
 ---
 
 # Paper Review

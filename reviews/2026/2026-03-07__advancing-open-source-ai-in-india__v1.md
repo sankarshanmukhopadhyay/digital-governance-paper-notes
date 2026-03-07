@@ -3,8 +3,13 @@ title: "Advancing Open Source AI in India"
 source: "https://www.digitalfutureslab.in/publications/advancing-open-source-ai-in-india-recommendations-for-governments-and-technology-developers"
 publication: "Digital Futures Lab"
 date_read: "2026-03-07"
-primary_domain: "AI Governance / Digital Public Infrastructure"
-tags: ["ai-governance", "open-source-ai", "india", "dpi", "public-interest-technology"]
+primary_domain: "AI Governance"
+tags:
+  - "AI governance"
+  - "open-source AI"
+  - "India"
+  - "digital public infrastructure"
+  - "public-interest technology"
 key_insight: "The brief’s strongest contribution is showing that AI openness is not binary but component-specific, yet it remains more persuasive as policy architecture than as an operational governance framework for high-impact public deployments."
 ---
 

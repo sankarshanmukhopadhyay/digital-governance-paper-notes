@@ -3,9 +3,14 @@ title: "The Stack and the State: India’s Digital Governance Model as Technopol
 source: "https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html"
 publication: "Information Polity (IPP Journal)"
 date_read: "2026-03-05"
-primary_domain: "Digital Governance"
-tags: ["India Stack", "DPI", "technopolitics", "state capacity", "legitimacy"]
-key_insight: "DPI’s \"power effects\" are not vibes—they come from specific architectural and operational control points, so serious critique needs measurable indicators and design-level mappings."
+primary_domain: "State Capacity & Administrative Systems"
+tags:
+  - "India Stack"
+  - "digital public infrastructure"
+  - "technopolitics"
+  - "state capacity"
+  - "legitimacy"
+key_insight: "DPI’s \\"power effects\\" are not vibes—they come from specific architectural and operational control points, so serious critique needs measurable indicators and design-level mappings."
 ---
 
 # Paper Review

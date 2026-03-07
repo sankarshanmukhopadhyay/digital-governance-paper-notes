@@ -4,7 +4,12 @@ source: "https://unesdoc.unesco.org/ark:/48223/pf0000397145.locale=en"
 publication: "UNESCO"
 date_read: "2026-03-06"
 primary_domain: "Public Sector Digital Strategy"
-tags: ["public administration", "maturity models", "evidence", "risk tiering", "vendor governance"]
+tags:
+  - "public administration"
+  - "maturity models"
+  - "evidence"
+  - "risk tiering"
+  - "vendor governance"
 key_insight: "Public-sector AI maturity should be evidenced, risk-tiered, and vendor-aware, otherwise maturity models drift into self-assurance theatre."
 ---
 

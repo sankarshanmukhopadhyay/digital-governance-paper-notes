@@ -3,8 +3,13 @@ title: "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Cod
 source: "https://arxiv.org/abs/2602.11988"
 publication: "arXiv"
 date_read: "2026-03-07"
-primary_domain: "AI Agents / Software Engineering"
-tags: ["AI agents", "coding agents", "benchmarks", "developer tooling", "context engineering"]
+primary_domain: "AI Safety & Evaluation"
+tags:
+  - "AI agents"
+  - "coding agents"
+  - "AI benchmarks"
+  - "developer tooling"
+  - "context engineering"
 key_insight: "Automatically generated repository context files often degrade coding-agent performance because they introduce additional constraints without improving task-relevant understanding."
 ---
 

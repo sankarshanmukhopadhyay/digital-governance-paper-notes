@@ -3,8 +3,13 @@ title: "Business Perspectives on Advancing AI"
 source: "https://www.businessatoecd.org/hubfs/Business%20Perspectives%20on%20Advancing%20AI.pdf"
 publication: "Business at OECD"
 date_read: "2026-03-07"
-primary_domain: "AI Governance and Policy"
-tags: ["AI governance", "OECD", "digital policy", "AI adoption", "regulatory policy"]
+primary_domain: "AI Governance"
+tags:
+  - "AI governance"
+  - "OECD"
+  - "digital policy"
+  - "AI adoption"
+  - "regulatory policy"
 key_insight: "AI adoption policy debates increasingly hinge on balancing innovation incentives and regulatory coherence with stronger accountability and public-interest safeguards."
 ---
 

@@ -4,7 +4,12 @@ source: "https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it
 publication: "Medium (Paul Knowles)"
 date_read: "2026-03-05"
 primary_domain: "Trust Infrastructure"
-tags: ["Agentic AI", "Authorization", "Delegation", "Provenance", "Digital Identity", "Governance-by-Design"]
+tags:
+  - "agentic systems"
+  - "authorization"
+  - "delegation"
+  - "provenance"
+  - "governance-by-design"
 key_insight: "For agentic systems, governance must shift from persistent identity-based permission to action-bound, exhaustible authority that produces verifiable provenance at the moment an effect occurs."
 ---
 
