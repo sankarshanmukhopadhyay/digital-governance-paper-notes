@@ -5,7 +5,12 @@ publication: "arXiv"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
 tags: ["sovereignty", "procurement", "LLMs", "public sector", "infrastructure strategy"]
+key_insight: "The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths—not for a romantic preference for in-house models."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 
@@ -22,8 +27,6 @@ However, the work reads more like a strategic briefing than a practical decision
 The same limitation appears in the governance and security discussion. Risks are acknowledged, but the paper offers little in the way of concrete operational controls or procurement safeguards. Anyone familiar with large government technology programs knows that these implementation details often determine success or failure.
 
 Overall, the paper succeeds in reframing the debate. The next step is turning that framing into a repeatable playbook. Governments do not simply need a conversation about build versus buy. They need a structured method to decide when each option actually makes sense.
-
----
 
 ## Key Insight
 

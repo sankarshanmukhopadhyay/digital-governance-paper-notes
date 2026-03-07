@@ -5,7 +5,12 @@ publication: "Tech Policy Press"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
 tags: ["India", "DPI", "AI agents", "delegation", "trust registries"]
+key_insight: "At population scale, an \"agent layer\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 
@@ -54,8 +59,6 @@ The essay opens an important conversation about the next layer of
 India's digital infrastructure. The deeper challenge ahead is less about
 building agents and more about engineering the governance, identity, and
 assurance layers that allow them to operate safely at societal scale.
-
----
 
 ## Key Insight
 

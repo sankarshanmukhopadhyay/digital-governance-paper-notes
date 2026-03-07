@@ -5,7 +5,12 @@ publication: "SSRN"
 date_read: "2026-03-06"
 primary_domain: "AI Governance"
 tags: ["AI regulation", "environmental impact", "AI governance", "generative AI", "policy"]
+key_insight: "Effective environmental governance of AI will require regulation to shift from facility-level reporting toward model-level transparency, especially around inference costs and reasoning-heavy systems."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

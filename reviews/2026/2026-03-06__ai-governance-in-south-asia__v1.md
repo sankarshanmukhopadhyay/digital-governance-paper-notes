@@ -5,7 +5,12 @@ publication: "Centre for Responsible AI, IIT Madras"
 date_read: "2026-03-06"
 primary_domain: "Law & Regulation"
 tags: ["south asia", "development", "sovereignty", "labour", "public infrastructure"]
+key_insight: "South Asia’s pragmatic AI governance path will only become credible when soft-law coordination is backed by enforceable controls, sovereign infrastructure choices, and real labour protections."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

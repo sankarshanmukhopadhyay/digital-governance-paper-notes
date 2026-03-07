@@ -1,5 +1,3 @@
-# Paper Review
-
 ---
 title: ""
 source: ""
@@ -7,7 +5,10 @@ publication: ""
 date_read: ""
 primary_domain: ""
 tags: []
+key_insight: ""
 ---
+
+# Paper Review
 
 ## Review
 

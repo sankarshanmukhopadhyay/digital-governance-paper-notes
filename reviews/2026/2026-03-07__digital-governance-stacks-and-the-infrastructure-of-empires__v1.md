@@ -1,13 +1,14 @@
-# Paper Review
-
 ---
 title: "Digital Governance Stacks and the Infrastructure of Empires"
 source: "https://botpopuli.net/digital-governance-stacks-and-the-infrastructure-of-empires/"
 publication: "Bot Populi"
 date_read: "2026-03-07"
 primary_domain: "Digital Public Infrastructure Governance"
-tags: [DPI, digital sovereignty, infrastructure governance, geopolitical risk, public administration]
+tags: ["DPI", "digital sovereignty", "infrastructure governance", "geopolitical risk", "public administration"]
+key_insight: "Digital governance infrastructure is not merely technical plumbing; its architecture can shape sovereignty, administrative autonomy, and geopolitical influence."
 ---
+
+# Paper Review
 
 ## Review
 

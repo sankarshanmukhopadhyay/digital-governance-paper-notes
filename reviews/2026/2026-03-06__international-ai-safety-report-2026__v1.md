@@ -5,7 +5,12 @@ publication: "International AI Safety Report"
 date_read: "2026-03-06"
 primary_domain: "AI Governance"
 tags: ["AI safety", "uncertainty", "concentration", "evaluations", "deployment controls"]
+key_insight: "The central AI-safety challenge is not diagnosis but translating uncertainty into default actions, decision thresholds, and enforceable consequences."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

@@ -4,8 +4,11 @@ source: "https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Visio
 publication: "Centre for Digital Public Infrastructure (CDPI)"
 date_read: "2026-03-05"
 primary_domain: "AI Governance"
-tags: ["DPI","AI","public sector","workflows","risk tiering","assurance","governance"]
+tags: ["DPI", "AI", "public sector", "workflows", "risk tiering", "assurance", "governance"]
+key_insight: "Treat AI as modular infrastructure, but make legitimacy modular too: risk-tier workflows with signed, bounded, revocable authority and built-in redress."
 ---
+
+# Paper Review
 
 ## Review
 

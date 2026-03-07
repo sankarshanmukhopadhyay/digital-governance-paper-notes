@@ -5,7 +5,12 @@ publication: "Geopolitique.eu"
 date_read: "2026-03-06"
 primary_domain: "AI Governance"
 tags: ["sovereignty", "resilience", "interoperability", "portability", "geopolitics"]
+key_insight: "Sovereignty in AI is not a branding posture but an operational capability built through portability, audit rights, egress drills, and enforceable redress."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

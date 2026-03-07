@@ -5,7 +5,12 @@ publication: "Information Polity (IPP Journal)"
 date_read: "2026-03-05"
 primary_domain: "Digital Governance"
 tags: ["India Stack", "DPI", "technopolitics", "state capacity", "legitimacy"]
+key_insight: "DPI’s \"power effects\" are not vibes—they come from specific architectural and operational control points, so serious critique needs measurable indicators and design-level mappings."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

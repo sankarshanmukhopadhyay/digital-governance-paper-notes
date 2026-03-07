@@ -5,7 +5,12 @@ publication: "Tony Blair Institute for Global Change"
 date_read: "2026-03-06"
 primary_domain: "AI Governance"
 tags: ["sovereignty", "dependencies", "portability", "procurement", "control-steer-depend"]
+key_insight: "AI sovereignty is credible only when countries can operationally exit, audit, and tier dependencies rather than merely rebrand lock-in as strategic autonomy."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 

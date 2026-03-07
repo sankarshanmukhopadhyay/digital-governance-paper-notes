@@ -5,7 +5,12 @@ publication: "UC Berkeley Center for Long-Term Cybersecurity"
 date_read: "2026-03-06"
 primary_domain: "Cybersecurity"
 tags: ["AI safety", "cyber risk", "thresholds", "bayesian networks", "decision triggers"]
+key_insight: "Cyber-risk thresholds become real governance only when probabilistic assessment is tied to explicit baselines, trigger points, and mandatory actions."
 ---
+
+# Paper Review
+
+## Review
 
 # Paper Review
 
