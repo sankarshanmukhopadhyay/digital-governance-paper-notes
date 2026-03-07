@@ -4,6 +4,7 @@
 Outputs:
 - index.md
 - docs/index.md
+- docs/index.html
 - README.md recent reviews block
 
 Conventions:
@@ -14,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import html
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -23,9 +25,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 REVIEWS_GLOB = str(REPO_ROOT / "reviews" / "**" / "*.md")
 INDEX_PATH = REPO_ROOT / "index.md"
 DOCS_INDEX_PATH = REPO_ROOT / "docs" / "index.md"
+DOCS_HTML_PATH = REPO_ROOT / "docs" / "index.html"
 README_PATH = REPO_ROOT / "README.md"
 README_START = "<!-- RECENT_REVIEWS:START -->"
 README_END = "<!-- RECENT_REVIEWS:END -->"
+GITHUB_PAGES_BASE = "/digital-governance-paper-notes/"
+GITHUB_REPO_BLOB_BASE = "https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/"
+
 
 @dataclass(frozen=True)
 class ReviewRecord:
@@ -137,12 +143,75 @@ def update_readme(readme_text: str, recent_block: str) -> str:
     return readme_text + "\n## Recent Reviews\n\n" + recent_block + "\n"
 
 
+def render_docs_html(records: List[ReviewRecord]) -> str:
+    rows = []
+    for r in records:
+        source_html = f'<a href="{html.escape(r.source, quote=True)}" target="_blank" rel="noopener noreferrer">Source</a>' if r.source else "—"
+        review_href = html.escape(GITHUB_REPO_BLOB_BASE + r.review_path, quote=True)
+        rows.append(
+            "<tr>"
+            f"<td>{html.escape(r.date)}</td>"
+            f"<td><a href=\"{review_href}\" target=\"_blank\" rel=\"noopener noreferrer\">{html.escape(r.title)}</a></td>"
+            f"<td>{html.escape(r.publication or '—')}</td>"
+            f"<td>{html.escape(r.domain)}</td>"
+            f"<td>{source_html}</td>"
+            "</tr>"
+        )
+    rows_html = "\n".join(rows)
+    return f"""<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  <title>Digital Governance Paper Notes</title>
+  <meta name=\"description\" content=\"Practitioner-oriented review archive on AI governance, digital public infrastructure, and public-interest technology.\">
+  <style>
+    :root {{ color-scheme: light dark; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: #0b1020; color: #e8ecf4; }}
+    main {{ max-width: 1200px; margin: 0 auto; padding: 2rem 1rem 4rem; }}
+    h1 {{ margin: 0 0 .5rem; font-size: 2rem; }}
+    p {{ line-height: 1.6; color: #cfd7e6; }}
+    a {{ color: #8cc8ff; }}
+    .card {{ background: #121a2f; border: 1px solid #23304f; border-radius: 14px; padding: 1rem; margin-top: 1rem; overflow-x: auto; }}
+    table {{ width: 100%; border-collapse: collapse; min-width: 840px; }}
+    th, td {{ text-align: left; padding: .75rem; border-bottom: 1px solid #23304f; vertical-align: top; }}
+    th {{ font-size: .9rem; color: #9fb0cf; }}
+    .meta {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; color: #9fb0cf; font-size: .95rem; }}
+    .pill {{ background: #18233f; border: 1px solid #23304f; border-radius: 999px; padding: .35rem .75rem; }}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Digital Governance Paper Notes</h1>
+    <p>A curated archive of short, practitioner-oriented reviews covering AI governance, regulation, digital public infrastructure, digital identity, and adjacent socio-technical systems.</p>
+    <div class=\"meta\">
+      <span class=\"pill\">{len(records)} reviews indexed</span>
+      <span class=\"pill\"><a href=\"https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes\" target=\"_blank\" rel=\"noopener noreferrer\">Repository</a></span>
+      <span class=\"pill\"><a href=\"{html.escape((GITHUB_REPO_BLOB_BASE + 'index.md'), quote=True)}\" target=\"_blank\" rel=\"noopener noreferrer\">Markdown index</a></span>
+    </div>
+    <div class=\"card\">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Paper</th><th>Publication</th><th>Domain</th><th>Source</th></tr>
+        </thead>
+        <tbody>
+          {rows_html}
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
+"""
+
+
 def compute_outputs(records: List[ReviewRecord]) -> Dict[Path, str]:
     readme_current = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else "# Digital Governance Paper Notes\n"
     recent_block = render_recent_reviews(records)
     return {
         INDEX_PATH: render_index(records),
         DOCS_INDEX_PATH: render_index(records, link_prefix="../"),
+        DOCS_HTML_PATH: render_docs_html(records),
         README_PATH: update_readme(readme_current, recent_block),
     }
 

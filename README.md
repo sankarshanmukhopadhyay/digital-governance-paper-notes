@@ -85,6 +85,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD*
 - **2026-03-06** — [Towards an Open, Resilient, Non-Aligned AI](reviews/2026/2026-03-06__towards-an-open-resilient-non-aligned-ai__v1.md) — *Geopolitique.eu*
@@ -92,7 +93,6 @@ python scripts/build_index.py --check
 - **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine*
 - **2026-03-06** — [The Global Landscape of Environmental AI Regulation: From the Cost of Reasoning to a Right to Green AI](reviews/2026/2026-03-06__the-global-landscape-of-environmental-ai-regulation__v1.md) — *SSRN*
 - **2026-03-06** — [Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies and the Long Game Ahead](reviews/2026/2026-03-06__sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies__v1.md) — *Tony Blair Institute for Global Change*
-- **2026-03-06** — [International AI Safety Report 2026](reviews/2026/2026-03-06__international-ai-safety-report-2026__v1.md) — *International AI Safety Report*
 
 <!-- RECENT_REVIEWS:END -->
 
@@ -102,7 +102,7 @@ python scripts/build_index.py --check
 
 In the repository settings, set **Pages** to deploy from **GitHub Actions**.
 
-The generated site entrypoint is `docs/index.md`.
+The generated site entrypoint is `docs/index.html` (built from review metadata for reliable Pages deployment).
 
 ---
 
