@@ -17,10 +17,6 @@ key_insight: "The build-vs-buy question is really a sovereignty dial: government
 
 ## Review
 
-# Paper Review
-
-## Review
-
 Governments are increasingly confronting a deceptively simple strategic question: should they buy AI capability from vendors or build their own? The paper “Build vs Buy in the Age of LLMs” addresses this issue and avoids the usual binary framing. Instead, it presents a spectrum of options ranging from simple API access to fully sovereign national models, evaluated through lenses such as sovereignty, security, cost, talent availability, and national strategy.
 
 That framing is the paper’s strongest contribution. In reality, most public sector deployments will fall somewhere between the extremes. Licensed model instances, retrieval‑augmented systems that keep national data local, and adaptations of open models are likely to dominate. Treating AI capability as strategic infrastructure rather than just another software procurement decision is exactly the perspective governments need.

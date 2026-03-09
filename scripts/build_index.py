@@ -6,6 +6,9 @@ Outputs:
 - docs/index.html
 - README.md recent reviews block
 
+Note: docs/index.md is no longer generated. docs/index.html is the sole
+Pages entrypoint. index.md is the repository-native Markdown index.
+
 Conventions:
 - Reviews live under reviews/YYYY/*.md
 - Review files should use canonical YAML front matter at the top of the file
@@ -27,11 +30,10 @@ from typing import Dict, List, Tuple
 REPO_ROOT = Path(__file__).resolve().parent.parent
 REVIEWS_GLOB = str(REPO_ROOT / "reviews" / "**" / "*.md")
 INDEX_PATH = REPO_ROOT / "index.md"
-DOCS_INDEX_MD_PATH = REPO_ROOT / "docs" / "index.md"
 DOCS_HTML_PATH = REPO_ROOT / "docs" / "index.html"
 README_PATH = REPO_ROOT / "README.md"
 TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "domains.yml"
-GENERATED_PATHS = (INDEX_PATH, DOCS_INDEX_MD_PATH, DOCS_HTML_PATH, README_PATH)
+GENERATED_PATHS = (INDEX_PATH, DOCS_HTML_PATH, README_PATH)
 
 README_START = "<!-- RECENT_REVIEWS:START -->"
 README_END = "<!-- RECENT_REVIEWS:END -->"
@@ -359,8 +361,8 @@ def render_index(records: List[ReviewRecord], taxonomy: Taxonomy, link_prefix: s
         [
             "## Master Table",
             "",
-            "| Date | Paper | Publication | Domain | Review | Source |",
-            "|------|-------|-------------|--------|--------|--------|",
+            "| Date | Paper | Publication | Domain | Key Insight | Review | Source |",
+            "|------|-------|-------------|--------|-------------|--------|--------|",
         ]
     )
 
@@ -368,8 +370,9 @@ def render_index(records: List[ReviewRecord], taxonomy: Taxonomy, link_prefix: s
         review_link = f"{link_prefix}{r.review_path}"
         publication = r.publication or "—"
         source_link = f"[Source]({r.source})" if r.source else "—"
+        insight = r.key_insight or "—"
         lines.append(
-            f"| {r.date} | {r.title} | {publication} | {r.domain} | [Review]({review_link}) | {source_link} |"
+            f"| {r.date} | {r.title} | {publication} | {r.domain} | {insight} | [Review]({review_link}) | {source_link} |"
         )
 
     lines.append("")
@@ -433,12 +436,14 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
             if r.source else "—"
         )
         review_href = html.escape(GITHUB_REPO_BLOB_BASE + r.review_path, quote=True)
+        insight_html = html.escape(r.key_insight) if r.key_insight else "—"
         rows.append(
             "<tr>"
             f"<td>{html.escape(r.date)}</td>"
             f"<td><a href=\"{review_href}\" target=\"_blank\" rel=\"noopener noreferrer\">{html.escape(r.title)}</a></td>"
             f"<td>{html.escape(r.publication or '—')}</td>"
             f"<td>{html.escape(r.domain)}</td>"
+            f"<td class=\"insight\">{insight_html}</td>"
             f"<td>{source_html}</td>"
             "</tr>"
         )
@@ -466,9 +471,10 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
     p {{ line-height: 1.6; color: #cfd7e6; }}
     a {{ color: #8cc8ff; }}
     .card {{ background: #121a2f; border: 1px solid #23304f; border-radius: 14px; padding: 1rem; margin-top: 1rem; overflow-x: auto; }}
-    table {{ width: 100%; border-collapse: collapse; min-width: 840px; }}
+    table {{ width: 100%; border-collapse: collapse; min-width: 1000px; }}
     th, td {{ text-align: left; padding: .75rem; border-bottom: 1px solid #23304f; vertical-align: top; }}
     th {{ font-size: .9rem; color: #9fb0cf; }}
+    td.insight {{ font-size: .88rem; color: #b8c8e0; max-width: 320px; }}
     .meta {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; color: #9fb0cf; font-size: .95rem; }}
     .pill {{ background: #18233f; border: 1px solid #23304f; border-radius: 999px; padding: .35rem .75rem; }}
     .domain-grid {{ display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }}
@@ -495,6 +501,7 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
             <th>Paper</th>
             <th>Publication</th>
             <th>Domain</th>
+            <th>Key Insight</th>
             <th>Source</th>
           </tr>
         </thead>
@@ -534,7 +541,6 @@ def main() -> int:
     records = load_reviews(taxonomy)
 
     root_index = render_index(records, taxonomy, link_prefix="")
-    docs_index = render_index(records, taxonomy, link_prefix=GITHUB_REPO_BLOB_BASE)
     docs_html = render_docs_html(records, taxonomy)
 
     readme_existing = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
@@ -542,7 +548,7 @@ def main() -> int:
     readme_updated = update_readme(readme_existing, recent_block, taxonomy, records)
 
     out_of_date: List[str] = []
-    for path, content in ((INDEX_PATH, root_index), (DOCS_INDEX_MD_PATH, docs_index), (DOCS_HTML_PATH, docs_html), (README_PATH, readme_updated)):
+    for path, content in ((INDEX_PATH, root_index), (DOCS_HTML_PATH, docs_html), (README_PATH, readme_updated)):
         write_or_check(path, content, args.check, out_of_date)
 
     if out_of_date:

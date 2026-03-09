@@ -17,10 +17,6 @@ key_insight: "DPI’s \\"power effects\\" are not vibes—they come from specifi
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This paper in *Information Polity* examines India’s digital governance model and argues that Digital Public Infrastructure (DPI) is not neutral plumbing. Identity systems, payment rails, credential platforms, and data exchanges reshape how states exercise authority, how welfare is delivered, and how legitimacy is constructed.
 
 That framing is valuable. DPI is often discussed as “technology” or “infrastructure,” but in practice it functions as a governance substrate.

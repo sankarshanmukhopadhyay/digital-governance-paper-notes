@@ -17,10 +17,6 @@ key_insight: "AI democratisation only becomes operational when \\"decentralisati
 
 ## Review
 
-# Paper Review
-
-## Review
-
 The ORF volume on “Democratising AI” moves the conversation beyond access to chatbots and reframes democratisation as access, participation, and governance across the AI stack. In other words, it offers a strong “why” and a solid “what.”
 
 That layered framing is a real strength. It forces us to ask where centralisation actually lives: data, models, compute, deployment, and standards.

@@ -17,10 +17,6 @@ key_insight: "At population scale, an \\"agent layer\\" only becomes governance-
 
 ## Review
 
-# Paper Review
-
-## Review
-
 The essay *AI Agents and the Next Layer of India's Digital
 Infrastructure* argues that AI agents may represent the next stage of
 India's digital public infrastructure. The argument is compelling at a

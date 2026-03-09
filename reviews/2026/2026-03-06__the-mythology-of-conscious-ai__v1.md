@@ -17,10 +17,6 @@ key_insight: "Myths about conscious AI distract from the immediate governance pr
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This essay dismantles a belief that has quietly become dangerous: that intelligence, scaled far enough, turns into consciousness.
 
 Intelligence is performance. Consciousness is experience. Confusing the two is not progress. It is a category error we keep repeating because machines now speak, persuade, and perform like us. Fluency is not feeling. Prediction is not presence. Output is not inner life.

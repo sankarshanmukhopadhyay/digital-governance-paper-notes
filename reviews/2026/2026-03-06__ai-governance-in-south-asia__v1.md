@@ -17,10 +17,6 @@ key_insight: "South Asia’s pragmatic AI governance path will only become credi
 
 ## Review
 
-# Paper Review
-
-## Review
-
 South Asia is quietly converging on a distinctive AI governance posture: pragmatic, use-case-driven, and pro-adoption rather than pro-spectacle.
 
 “AI Governance in South Asia” makes that case clearly across India, Bangladesh, Sri Lanka, Nepal, and Bhutan, where AI is being framed as development infrastructure rather than frontier competition. The focus is agriculture, health, language access, disaster response, and public services. That instinct is sound.

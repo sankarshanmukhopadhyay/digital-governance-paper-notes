@@ -17,10 +17,6 @@ key_insight: "Cyber-risk thresholds become real governance only when probabilist
 
 ## Review
 
-# Paper Review
-
-## Review
-
 AI cyber “thresholds” today are mostly compliance theatre.
 
 Every major frontier framework says some version of: “If the model meaningfully uplifts cyber offense, we will add safeguards.” The problem is that “meaningfully” is doing all the work. It is a vibes-based control with a PDF wrapper.

@@ -17,10 +17,6 @@ key_insight: "AI sovereignty is credible only when countries can operationally e
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This report gets the big move right: sovereign AI is not self-sufficiency. It is agency under interdependence. But most countries are building dependency with nicer branding.
 
 The CSD framing, Control, Steer, Depend, is useful. Yet without hard triggers and measurable thresholds, it becomes a story machine: every lock-in gets relabeled “managed dependence,” every partnership becomes “sovereign access.”

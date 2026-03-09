@@ -17,10 +17,6 @@ key_insight: "The central AI-safety challenge is not diagnosis but translating u
 
 ## Review
 
-# Paper Review
-
-## Review
-
 The International AI Safety Report 2026 correctly concludes that the hardest problem in AI governance is not lack of concern, but decision-making under uncertainty.
 
 The report names this the “evidence dilemma.” Act early and you risk freezing the wrong controls into place. Wait for proof and you absorb avoidable harm. That framing is solid. Where the report strains is in what it does next with that insight.

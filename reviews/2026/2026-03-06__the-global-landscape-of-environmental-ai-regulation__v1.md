@@ -17,10 +17,6 @@ key_insight: "Effective environmental governance of AI will require regulation t
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This paper examines how environmental regulation should adapt to the rapidly growing energy and resource footprint of generative and reasoning-based AI systems. It argues that current regulatory approaches focus mainly on facility-level disclosures and training costs, while largely ignoring inference-level impacts where much of the environmental burden may occur. Using comparative legal analysis across several jurisdictions, the authors highlight a global transparency gap and propose a governance framework centered on model-level disclosure, standardized reporting of inference costs, and user-facing rights to avoid unnecessary generative AI.
 
 The paper’s strongest contribution is its insistence that AI environmental governance must move beyond datacenter reporting toward model-level transparency. The discussion of inference costs, especially for reasoning models, highlights an emerging regulatory blind spot. The comparative typology of regulatory approaches also provides a useful analytical scaffold for understanding how jurisdictions differ in ambition, transparency requirements, and enforcement mechanisms.

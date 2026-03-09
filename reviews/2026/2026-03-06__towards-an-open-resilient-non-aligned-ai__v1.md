@@ -17,10 +17,6 @@ key_insight: "Sovereignty in AI is not a branding posture but an operational cap
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This is a compelling strategic frame: an open, resilient, “non-aligned” AI posture as an alternative to the US–China stack race. As geopolitics, it is thoughtful. As execution doctrine, it is still incomplete. And that gap is where most “sovereignty” stories go to die.
 
 We have already accepted the obvious: sovereign AI is not self-sufficiency. It is agency under interdependence. But the uncomfortable truth is that many countries are mostly doing dependency with better branding.

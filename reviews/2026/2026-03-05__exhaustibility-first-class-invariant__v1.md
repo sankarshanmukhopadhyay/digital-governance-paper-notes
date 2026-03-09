@@ -17,10 +17,6 @@ key_insight: "For agentic systems, governance must shift from persistent identit
 
 ## Review
 
-# Paper Review
-
-## Review
-
 Agentic AI approaches are exposing a design assumption embedded in most digital identity systems: authority is persistent. Once a credential, role, or API token is issued, systems assume that permission remains valid until it expires or is revoked.
 
 Paul Knowles’ essay, *Exhaustibility Is Not an Optimization. It Is a First-Class Invariant*, challenges that assumption directly.

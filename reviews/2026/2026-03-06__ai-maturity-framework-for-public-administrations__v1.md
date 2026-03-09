@@ -17,10 +17,6 @@ key_insight: "Public-sector AI maturity should be evidenced, risk-tiered, and ve
 
 ## Review
 
-# Paper Review
-
-## Review
-
 The AI Maturity Framework for Public Administrations (2025) is one of the more structured, accessible maturity models in the public sector space. Six pillars. Clear progression from Basic to Advanced. Governance and ethics treated as first-class citizens rather than footnotes. That alone is progress.
 
 But the framework is entirely self-positioning. There is no validation layer, no evidence quality scoring, and no dependency logic between categories. In practice, this means two organisations can both rate themselves “Dynamic” with wildly different operational realities.

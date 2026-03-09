@@ -17,10 +17,6 @@ key_insight: "Regulatory capability has to be evidenced, infrastructure-backed, 
 
 ## Review
 
-# Paper Review
-
-## Review
-
 This is a strong report.
 
 Treating AI regulation as a capability problem rather than an “AI literacy” problem is the right move. Decomposing regulation into lifecycle stages and concrete activities makes the work legible to real organisations. Framing funding, skills, tools, leadership, and legal powers as a portfolio of levers is pragmatic and overdue.
