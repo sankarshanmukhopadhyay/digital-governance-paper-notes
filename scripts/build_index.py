@@ -191,6 +191,9 @@ def validate_review_file(path: Path, txt: str, fm: Dict[str, object], taxonomy: 
     errors: List[str] = []
     text = txt.lstrip("\ufeff")
 
+    if not re.match(r"^\d{4}-\d{2}-\d{2}__[a-z0-9\-]+__v\d+\.md$", path.name):
+        errors.append("invalid filename; expected YYYY-MM-DD__paper-slug__vN.md")
+
     if not re.match(r"(?ms)^---\s*\n.*?\n---\s*", text):
         errors.append("front matter must appear at the top of the file")
 

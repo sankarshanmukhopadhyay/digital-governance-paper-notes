@@ -31,7 +31,6 @@ There is also a translation gap between coding-agent performance and public-inte
 
 Overall, this is a worthwhile and original practice paper. It is not a definitive evaluation, but it is a credible early blueprint for how persistent context can become an institutional memory layer for AI agents. For AI governance and DPI practitioners, the big idea is simple: memory is not magic; it is architecture.
 
-
 ## Key Insight
 
-Persistent, machine-readable project context can act as a governance layer for AI coding agents, but the paper demonstrates this through a single-project experience report rather than a comparative evaluation.
+Persistent, machine-readable project context acts as a governance and memory layer for coding agents, but the paper demonstrates this through a single-project experience report rather than a comparative study.

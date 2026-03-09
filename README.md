@@ -2,7 +2,7 @@
 
 A curated archive of short, practitioner-oriented reviews of research papers, policy reports, essays, and institutional publications on AI governance, digital public infrastructure, public-interest technology, digital identity, and adjacent governance questions.
 
-**Repository index:** [index.md](index.md)  
+**Primary index:** [index.md](index.md)  
 **GitHub Pages site:** [docs/index.html](docs/index.html)
 
 ---
@@ -41,6 +41,7 @@ Core areas include:
 
 - `reviews/YYYY/` — canonical review files
 - `index.md` — generated root index for the repository
+- `docs/index.html` — generated GitHub Pages entrypoint
 - `templates/` — review templates
 - `taxonomy/` — controlled vocabulary and domain scaffolding
 - `scripts/` — repository maintenance utilities
