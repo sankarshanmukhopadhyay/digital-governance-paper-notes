@@ -526,10 +526,46 @@ def write_or_check(path: Path, new_content: str, check: bool, out_of_date: List[
             path.write_text(new_content, encoding="utf-8")
 
 
+def lint_files(paths: List[Path], taxonomy: Taxonomy) -> int:
+    """Validate one or more review files and report errors. Returns exit code."""
+    any_errors = False
+    for path in paths:
+        if not path.exists():
+            print(f"ERROR  {path}: file not found")
+            any_errors = True
+            continue
+
+        txt = path.read_text(encoding="utf-8")
+        fm = parse_front_matter(txt)
+        errors = validate_review_file(path, txt, fm, taxonomy)
+
+        if errors:
+            any_errors = True
+            print(f"FAIL   {path}")
+            for err in errors:
+                print(f"       • {err}")
+        else:
+            print(f"OK     {path}")
+
+    if any_errors:
+        return 1
+    print("\nAll files passed lint.")
+    return 0
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Build, check, or lint review files for the digital-governance-paper-notes archive."
+    )
     parser.add_argument("--check", action="store_true", help="Check whether generated files are up to date")
     parser.add_argument("--print-generated", action="store_true", help="Print generated file paths and exit")
+    parser.add_argument(
+        "--lint",
+        nargs="+",
+        metavar="FILE",
+        help="Validate one or more review markdown files without writing any output. "
+             "Files may be anywhere on disk — they do not need to be inside the repo yet.",
+    )
     args = parser.parse_args()
 
     if args.print_generated:
@@ -538,6 +574,10 @@ def main() -> int:
         return 0
 
     taxonomy = load_taxonomy()
+
+    if args.lint:
+        return lint_files([Path(p).resolve() for p in args.lint], taxonomy)
+
     records = load_reviews(taxonomy)
 
     root_index = render_index(records, taxonomy, link_prefix="")
