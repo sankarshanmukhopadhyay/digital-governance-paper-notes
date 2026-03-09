@@ -30,6 +30,7 @@ INDEX_PATH = REPO_ROOT / "index.md"
 DOCS_HTML_PATH = REPO_ROOT / "docs" / "index.html"
 README_PATH = REPO_ROOT / "README.md"
 TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "domains.yml"
+GENERATED_PATHS = (INDEX_PATH, DOCS_HTML_PATH, README_PATH)
 
 README_START = "<!-- RECENT_REVIEWS:START -->"
 README_END = "<!-- RECENT_REVIEWS:END -->"
@@ -520,7 +521,13 @@ def write_or_check(path: Path, new_content: str, check: bool, out_of_date: List[
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="Check whether generated files are up to date")
+    parser.add_argument("--print-generated", action="store_true", help="Print generated file paths and exit")
     args = parser.parse_args()
+
+    if args.print_generated:
+        for path in GENERATED_PATHS:
+            print(path.relative_to(REPO_ROOT).as_posix())
+        return 0
 
     taxonomy = load_taxonomy()
     records = load_reviews(taxonomy)
@@ -533,9 +540,8 @@ def main() -> int:
     readme_updated = update_readme(readme_existing, recent_block, taxonomy, records)
 
     out_of_date: List[str] = []
-    write_or_check(INDEX_PATH, root_index, args.check, out_of_date)
-    write_or_check(DOCS_HTML_PATH, docs_html, args.check, out_of_date)
-    write_or_check(README_PATH, readme_updated, args.check, out_of_date)
+    for path, content in ((INDEX_PATH, root_index), (DOCS_HTML_PATH, docs_html), (README_PATH, readme_updated)):
+        write_or_check(path, content, args.check, out_of_date)
 
     if out_of_date:
         print("Generated files are stale:")
