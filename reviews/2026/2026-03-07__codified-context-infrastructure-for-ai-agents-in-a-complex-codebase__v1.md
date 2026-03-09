@@ -17,6 +17,8 @@ scholarly_signal: "cs.SE"
 key_insight: "Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation."
 ---
 
+# Paper Review
+
 ## Review
 
 This paper argues that AI coding agents fail less when project knowledge is treated as infrastructure rather than as ad hoc prompt text. In a 108,256-line distributed C# system developed across 283 sessions, the author builds a three-tier “codified context” stack: a hot-memory constitution loaded into every session, 19 specialist agents invoked for domain-specific tasks, and a cold-memory knowledge base of 34 subsystem documents retrieved on demand. The central contribution is practical and timely. It shows that agent performance in large codebases depends not only on model capability but on how conventions, constraints, failure modes, and routing logic are codified for repeated reuse.
@@ -28,3 +30,8 @@ That said, the evidence base is narrow. This is a single-author, single-project 
 There is also a translation gap between coding-agent performance and public-interest governance. The paper hints at transferability to broader agentic systems, yet it does not develop concrete implications for accountability, auditability, public procurement, or regulatory assurance. That is a missed opportunity. A sharper discussion could connect the three-tier architecture to policy controls such as change management, evidence trails, human override, and risk-tiered deployment.
 
 Overall, this is a worthwhile and original practice paper. It is not a definitive evaluation, but it is a credible early blueprint for how persistent context can become an institutional memory layer for AI agents. For AI governance and DPI practitioners, the big idea is simple: memory is not magic; it is architecture.
+
+
+## Key Insight
+
+Persistent, machine-readable project context can act as a governance layer for AI coding agents, but the paper demonstrates this through a single-project experience report rather than a comparative evaluation.

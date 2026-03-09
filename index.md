@@ -4,9 +4,9 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (7)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (2)
-- [Digital Public Infrastructure](#digital-public-infrastructure) (2)
+- [AI Governance](#ai-governance) (8)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (3)
+- [Digital Public Infrastructure](#digital-public-infrastructure) (3)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
 - [Trust Infrastructure](#trust-infrastructure) (1)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
@@ -18,9 +18,12 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Review | Source |
 |------|-------|-------------|--------|--------|--------|
+| 2026-03-09 | Doot: The AI Agent for Every Indian Citizen | DigiDoot / India AI Mission White Paper | Digital Public Infrastructure | [Review](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) | [Source](https://digidoot.in/Doot_WhitePaper.pdf) |
+| 2026-03-09 | Agents of Chaos | arXiv | AI Safety & Evaluation | [Review](reviews/2026/2026-03-09__agents-of-chaos__v1.md) | [Source](https://arxiv.org/abs/2602.20021) |
 | 2026-03-07 | The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation | SSRN | Law, Regulation & Liability | [Review](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) | [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639) |
 | 2026-03-07 | Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents? | arXiv | AI Safety & Evaluation | [Review](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) | [Source](https://arxiv.org/abs/2602.11988) |
 | 2026-03-07 | Digital Governance Stacks and the Infrastructure of Empires | Bot Populi | Digital Public Infrastructure | [Review](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) | [Source](https://botpopuli.net/digital-governance-stacks-and-the-infrastructure-of-empires/) |
+| 2026-03-07 | Codified Context: Infrastructure for AI Agents in a Complex Codebase | arXiv | AI Governance | [Review](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) | [Source](https://arxiv.org/abs/2602.20478) |
 | 2026-03-07 | Business Perspectives on Advancing AI | Business at OECD | AI Governance | [Review](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) | [Source](https://www.businessatoecd.org/hubfs/Business%20Perspectives%20on%20Advancing%20AI.pdf) |
 | 2026-03-07 | Advancing Open Source AI in India | Digital Futures Lab | AI Governance | [Review](reviews/2026/2026-03-07__advancing-open-source-ai-in-india__v1.md) | [Source](https://www.digitalfutureslab.in/publications/advancing-open-source-ai-in-india-recommendations-for-governments-and-technology-developers) |
 | 2026-03-06 | Towards an Open, Resilient, Non-Aligned AI | Geopolitique.eu | AI Governance | [Review](reviews/2026/2026-03-06__towards-an-open-resilient-non-aligned-ai__v1.md) | [Source](https://geopolitique.eu/en/2026/02/16/towards-an-open-resilient-non-aligned-ai/) |
@@ -44,6 +47,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-03-07** — [Codified Context: Infrastructure for AI Agents in a Complex Codebase](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) — *arXiv* — `cs.SE` — [Source](https://arxiv.org/abs/2602.20478)
+  - Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation.
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD* — [Source](https://www.businessatoecd.org/hubfs/Business%20Perspectives%20on%20Advancing%20AI.pdf)
   - AI adoption policy debates increasingly hinge on balancing innovation incentives and regulatory coherence with stronger accountability and public-interest safeguards.
 - **2026-03-07** — [Advancing Open Source AI in India](reviews/2026/2026-03-07__advancing-open-source-ai-in-india__v1.md) — *Digital Futures Lab* — [Source](https://www.digitalfutureslab.in/publications/advancing-open-source-ai-in-india-recommendations-for-governments-and-technology-developers)
@@ -62,6 +67,8 @@ A generated index of review notes in this repository.
 ## AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2602.20021)
+  - The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.
 - **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2602.11988)
   - Automatically generated repository context files often degrade coding-agent performance because they introduce additional constraints without improving task-relevant understanding.
 - **2026-03-06** — [International AI Safety Report 2026](reviews/2026/2026-03-06__international-ai-safety-report-2026__v1.md) — *International AI Safety Report* — [Source](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026)
@@ -70,6 +77,8 @@ A generated index of review notes in this repository.
 ## Digital Public Infrastructure
 <a id="digital-public-infrastructure"></a>
 
+- **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper* — `cs.AI` — [Source](https://digidoot.in/Doot_WhitePaper.pdf)
+  - The next layer of digital public infrastructure may be citizen-owned AI agents that mediate interaction between individuals and complex administrative systems.
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi* — [Source](https://botpopuli.net/digital-governance-stacks-and-the-infrastructure-of-empires/)
   - Digital governance infrastructure is not merely technical plumbing; its architecture can shape sovereignty, administrative autonomy, and geopolitical influence.
 - **2026-03-05** — [DPI-AI Framework: Vision paper on Building AI-Ready Nations through Digital Public Infrastructure](reviews/2026/2026-03-05__dpi-ai-framework-vision-paper__v1.md) — *Centre for Digital Public Infrastructure (CDPI)* — [Source](https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Vision_Paper_-DPI-AI-Framework_2026_CDPI.pdf)

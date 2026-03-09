@@ -2,8 +2,8 @@
 
 A curated archive of short, practitioner-oriented reviews of research papers, policy reports, essays, and institutional publications on AI governance, digital public infrastructure, public-interest technology, digital identity, and adjacent governance questions.
 
-**Primary index:** [index.md](index.md)  
-**GitHub Pages index:** [docs/index.md](docs/index.md)
+**Repository index:** [index.md](index.md)  
+**GitHub Pages site:** [docs/index.html](docs/index.html)
 
 ---
 
@@ -13,9 +13,9 @@ A curated archive of short, practitioner-oriented reviews of research papers, po
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (7)
-- **AI Safety & Evaluation** (2)
-- **Digital Public Infrastructure** (2)
+- **AI Governance** (8)
+- **AI Safety & Evaluation** (3)
+- **Digital Public Infrastructure** (3)
 - **Public Sector Digital Strategy** (1)
 - **Trust Infrastructure** (1)
 - **Cybersecurity & Resilience** (1)
@@ -41,7 +41,6 @@ Core areas include:
 
 - `reviews/YYYY/` — canonical review files
 - `index.md` — generated root index for the repository
-- `docs/index.md` — generated index for GitHub Pages publishing
 - `templates/` — review templates
 - `taxonomy/` — controlled vocabulary and domain scaffolding
 - `scripts/` — repository maintenance utilities
@@ -101,14 +100,14 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper*
+- **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv*
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
 - **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv*
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
+- **2026-03-07** — [Codified Context: Infrastructure for AI Agents in a Complex Codebase](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) — *arXiv*
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD*
 - **2026-03-07** — [Advancing Open Source AI in India](reviews/2026/2026-03-07__advancing-open-source-ai-in-india__v1.md) — *Digital Futures Lab*
-- **2026-03-06** — [Towards an Open, Resilient, Non-Aligned AI](reviews/2026/2026-03-06__towards-an-open-resilient-non-aligned-ai__v1.md) — *Geopolitique.eu*
-- **2026-03-06** — [Toward Risk Thresholds for AI-Enabled Cyber Threats](reviews/2026/2026-03-06__toward-risk-thresholds-for-ai-enabled-cyber-threats__v1.md) — *UC Berkeley Center for Long-Term Cybersecurity*
-- **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine*
 
 <!-- RECENT_REVIEWS:END -->
 

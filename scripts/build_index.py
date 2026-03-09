@@ -3,7 +3,6 @@
 
 Outputs:
 - index.md
-- docs/index.md
 - docs/index.html
 - README.md recent reviews block
 
@@ -28,7 +27,6 @@ from typing import Dict, List, Tuple
 REPO_ROOT = Path(__file__).resolve().parent.parent
 REVIEWS_GLOB = str(REPO_ROOT / "reviews" / "**" / "*.md")
 INDEX_PATH = REPO_ROOT / "index.md"
-DOCS_INDEX_PATH = REPO_ROOT / "docs" / "index.md"
 DOCS_HTML_PATH = REPO_ROOT / "docs" / "index.html"
 README_PATH = REPO_ROOT / "README.md"
 TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "domains.yml"
@@ -525,7 +523,6 @@ def main() -> int:
     records = load_reviews(taxonomy)
 
     root_index = render_index(records, taxonomy, link_prefix="")
-    docs_index = render_index(records, taxonomy, link_prefix="../")
     docs_html = render_docs_html(records, taxonomy)
 
     readme_existing = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
@@ -534,7 +531,6 @@ def main() -> int:
 
     out_of_date: List[str] = []
     write_or_check(INDEX_PATH, root_index, args.check, out_of_date)
-    write_or_check(DOCS_INDEX_PATH, docs_index, args.check, out_of_date)
     write_or_check(DOCS_HTML_PATH, docs_html, args.check, out_of_date)
     write_or_check(README_PATH, readme_updated, args.check, out_of_date)
 
