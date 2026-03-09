@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (8)
+- [AI Governance](#ai-governance) (9)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (3)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (3)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
@@ -18,6 +18,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Review | Source |
 |------|-------|-------------|--------|--------|--------|
+| 2026-03-09 | Strategy for Artificial Intelligence in Healthcare for India (SAHI) | Ministry of Health and Family Welfare, Government of India | AI Governance | [Review](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) | [Source](https://abdm.gov.in/sahi) |
 | 2026-03-09 | Doot: The AI Agent for Every Indian Citizen | DigiDoot / India AI Mission White Paper | Digital Public Infrastructure | [Review](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) | [Source](https://digidoot.in/Doot_WhitePaper.pdf) |
 | 2026-03-09 | Agents of Chaos | arXiv | AI Safety & Evaluation | [Review](reviews/2026/2026-03-09__agents-of-chaos__v1.md) | [Source](https://arxiv.org/abs/2602.20021) |
 | 2026-03-07 | The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation | SSRN | Law, Regulation & Liability | [Review](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) | [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639) |
@@ -47,6 +48,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-03-09** — [Strategy for Artificial Intelligence in Healthcare for India (SAHI)](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) — *Ministry of Health and Family Welfare, Government of India* — [Source](https://abdm.gov.in/sahi)
+  - SAHI’s real significance is not that it celebrates AI in health, but that it tries to turn India’s health DPI into a governed deployment environment where risk tiering, interoperability, capacity, and procurement become the rails for responsible scale.
 - **2026-03-07** — [Codified Context: Infrastructure for AI Agents in a Complex Codebase](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) — *arXiv* — `cs.SE` — [Source](https://arxiv.org/abs/2602.20478)
   - Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation.
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD* — [Source](https://www.businessatoecd.org/hubfs/Business%20Perspectives%20on%20Advancing%20AI.pdf)

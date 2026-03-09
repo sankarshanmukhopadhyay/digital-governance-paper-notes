@@ -19,6 +19,8 @@ scholarly_signal: ""
 key_insight: "SAHI’s real significance is not that it celebrates AI in health, but that it tries to turn India’s health DPI into a governed deployment environment where risk tiering, interoperability, capacity, and procurement become the rails for responsible scale."
 ---
 
+# Paper Review
+
 ## Review
 
 SAHI is best read as a state strategy for governing AI adoption in healthcare rather than as a research paper in the strict academic sense. Its strongest contribution is architectural: it links AI deployment to India’s existing health digital public infrastructure, especially ABDM, and frames AI as a system-strengthening layer rather than a standalone innovation agenda. The document is especially useful in how it organizes the problem: seven governing principles, a lifecycle view of health AI, five strategic pillars, and 32 recommendations spanning safety, accountability, data quality, interoperability, workforce capacity, validation, procurement, and pilot-to-scale pathways. That gives policymakers a usable scaffold instead of the usual fog-machine of techno-optimism.

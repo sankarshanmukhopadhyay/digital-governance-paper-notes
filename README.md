@@ -13,7 +13,7 @@ A curated archive of short, practitioner-oriented reviews of research papers, po
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (8)
+- **AI Governance** (9)
 - **AI Safety & Evaluation** (3)
 - **Digital Public Infrastructure** (3)
 - **Public Sector Digital Strategy** (1)
@@ -101,6 +101,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-09** — [Strategy for Artificial Intelligence in Healthcare for India (SAHI)](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) — *Ministry of Health and Family Welfare, Government of India*
 - **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper*
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv*
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
@@ -108,7 +109,6 @@ python scripts/build_index.py --check
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
 - **2026-03-07** — [Codified Context: Infrastructure for AI Agents in a Complex Codebase](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) — *arXiv*
 - **2026-03-07** — [Business Perspectives on Advancing AI](reviews/2026/2026-03-07__business-perspectives-on-advancing-ai__v1.md) — *Business at OECD*
-- **2026-03-07** — [Advancing Open Source AI in India](reviews/2026/2026-03-07__advancing-open-source-ai-in-india__v1.md) — *Digital Futures Lab*
 
 <!-- RECENT_REVIEWS:END -->
 

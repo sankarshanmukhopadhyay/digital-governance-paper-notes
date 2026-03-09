@@ -27,10 +27,11 @@ from typing import Dict, List, Tuple
 REPO_ROOT = Path(__file__).resolve().parent.parent
 REVIEWS_GLOB = str(REPO_ROOT / "reviews" / "**" / "*.md")
 INDEX_PATH = REPO_ROOT / "index.md"
+DOCS_INDEX_MD_PATH = REPO_ROOT / "docs" / "index.md"
 DOCS_HTML_PATH = REPO_ROOT / "docs" / "index.html"
 README_PATH = REPO_ROOT / "README.md"
 TAXONOMY_PATH = REPO_ROOT / "taxonomy" / "domains.yml"
-GENERATED_PATHS = (INDEX_PATH, DOCS_HTML_PATH, README_PATH)
+GENERATED_PATHS = (INDEX_PATH, DOCS_INDEX_MD_PATH, DOCS_HTML_PATH, README_PATH)
 
 README_START = "<!-- RECENT_REVIEWS:START -->"
 README_END = "<!-- RECENT_REVIEWS:END -->"
@@ -533,6 +534,7 @@ def main() -> int:
     records = load_reviews(taxonomy)
 
     root_index = render_index(records, taxonomy, link_prefix="")
+    docs_index = render_index(records, taxonomy, link_prefix=GITHUB_REPO_BLOB_BASE)
     docs_html = render_docs_html(records, taxonomy)
 
     readme_existing = README_PATH.read_text(encoding="utf-8") if README_PATH.exists() else ""
@@ -540,7 +542,7 @@ def main() -> int:
     readme_updated = update_readme(readme_existing, recent_block, taxonomy, records)
 
     out_of_date: List[str] = []
-    for path, content in ((INDEX_PATH, root_index), (DOCS_HTML_PATH, docs_html), (README_PATH, readme_updated)):
+    for path, content in ((INDEX_PATH, root_index), (DOCS_INDEX_MD_PATH, docs_index), (DOCS_HTML_PATH, docs_html), (README_PATH, readme_updated)):
         write_or_check(path, content, args.check, out_of_date)
 
     if out_of_date:
