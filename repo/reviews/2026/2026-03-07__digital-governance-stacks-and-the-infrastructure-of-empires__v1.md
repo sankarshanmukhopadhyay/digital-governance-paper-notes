@@ -3,6 +3,7 @@ title: "Digital Governance Stacks and the Infrastructure of Empires"
 source: "https://botpopuli.net/digital-governance-stacks-and-the-infrastructure-of-empires/"
 publication: "Bot Populi"
 date_read: "2026-03-07"
+scholarly_signal: "cs.NI"
 primary_domain: "Digital Public Infrastructure"
 tags:
   - "digital public infrastructure"

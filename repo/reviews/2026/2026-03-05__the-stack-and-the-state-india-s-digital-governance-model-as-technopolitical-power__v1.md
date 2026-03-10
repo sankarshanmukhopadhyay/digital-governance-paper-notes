@@ -3,6 +3,7 @@ title: "The Stack and the State: India’s Digital Governance Model as Technopol
 source: "https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html"
 publication: "Information Polity (IPP Journal)"
 date_read: "2026-03-05"
+scholarly_signal: "cs.CY"
 primary_domain: "State Capacity & Administrative Systems"
 tags:
   - "India Stack"

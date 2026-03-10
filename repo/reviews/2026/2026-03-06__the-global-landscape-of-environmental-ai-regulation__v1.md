@@ -3,6 +3,7 @@ title: "The Global Landscape of Environmental AI Regulation: From the Cost of Re
 source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6219838"
 publication: "SSRN"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "Law, Regulation & Liability"
 tags:
   - "AI regulation"

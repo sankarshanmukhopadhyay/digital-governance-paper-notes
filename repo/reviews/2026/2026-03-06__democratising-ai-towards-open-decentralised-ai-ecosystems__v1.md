@@ -3,6 +3,7 @@ title: "Democratising AI: Towards Open, Decentralised AI Ecosystems"
 source: "https://www.orfonline.org/research/democratising-ai-towards-open-decentralised-ai-ecosystems"
 publication: "Observer Research Foundation"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "AI Governance"
 tags:
   - "decentralisation"

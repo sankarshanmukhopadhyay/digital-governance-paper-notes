@@ -3,6 +3,7 @@ title: "Toward Risk Thresholds for AI-Enabled Cyber Threats"
 source: "https://cltc.berkeley.edu/wp-content/uploads/2026/01/Toward_Risk_Thresholds_for_AI-Enabled_Cyber_Threats.pdf"
 publication: "UC Berkeley Center for Long-Term Cybersecurity"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CR"
 primary_domain: "Cybersecurity & Resilience"
 tags:
   - "AI safety"

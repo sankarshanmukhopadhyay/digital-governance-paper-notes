@@ -3,6 +3,7 @@ title: "Exhaustibility Is Not an Optimization. It Is a First-Class Invariant"
 source: "https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e"
 publication: "Medium (Paul Knowles)"
 date_read: "2026-03-05"
+scholarly_signal: "cs.CR"
 primary_domain: "Trust Infrastructure"
 tags:
   - "agentic systems"

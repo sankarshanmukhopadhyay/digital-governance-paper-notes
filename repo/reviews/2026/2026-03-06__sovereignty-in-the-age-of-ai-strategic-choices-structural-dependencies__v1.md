@@ -3,6 +3,7 @@ title: "Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies
 source: "https://institute.global/insights/tech-and-digitalisation/sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies"
 publication: "Tony Blair Institute for Global Change"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "AI Governance"
 tags:
   - "sovereignty"

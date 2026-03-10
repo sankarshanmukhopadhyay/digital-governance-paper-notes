@@ -3,6 +3,7 @@ title: "AI Governance in South Asia"
 source: "https://cerai.iitm.ac.in/docs/AI-Governance-In-South-Asia.pdf"
 publication: "Centre for Responsible AI, IIT Madras"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "Law, Regulation & Liability"
 tags:
   - "South Asia"

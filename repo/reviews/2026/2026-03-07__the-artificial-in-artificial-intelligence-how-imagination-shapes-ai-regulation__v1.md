@@ -3,6 +3,7 @@ title: "The Artificial in ‘Artificial Intelligence’: How Imagination Shapes 
 source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639"
 publication: "SSRN"
 date_read: "2026-03-07"
+scholarly_signal: "cs.CY"
 primary_domain: "Law, Regulation & Liability"
 tags:
   - "AI regulation"

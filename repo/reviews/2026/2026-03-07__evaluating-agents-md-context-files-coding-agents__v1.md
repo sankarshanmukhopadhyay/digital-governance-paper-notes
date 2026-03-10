@@ -3,6 +3,7 @@ title: "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Cod
 source: "https://arxiv.org/abs/2602.11988"
 publication: "arXiv"
 date_read: "2026-03-07"
+scholarly_signal: "cs.AI"
 primary_domain: "AI Safety & Evaluation"
 tags:
   - "AI agents"

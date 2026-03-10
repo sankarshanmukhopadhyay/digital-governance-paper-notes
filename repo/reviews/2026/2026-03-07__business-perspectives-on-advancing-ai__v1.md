@@ -3,6 +3,7 @@ title: "Business Perspectives on Advancing AI"
 source: "https://www.businessatoecd.org/hubfs/Business%20Perspectives%20on%20Advancing%20AI.pdf"
 publication: "Business at OECD"
 date_read: "2026-03-07"
+scholarly_signal: "cs.CY"
 primary_domain: "AI Governance"
 tags:
   - "AI governance"

@@ -3,6 +3,7 @@ title: "The Mythology of Conscious AI"
 source: "https://www.noemamag.com/the-mythology-of-conscious-ai/"
 publication: "Noema Magazine"
 date_read: "2026-03-06"
+scholarly_signal: "cs.AI"
 primary_domain: "Socio-technical Systems"
 tags:
   - "consciousness"

@@ -3,6 +3,7 @@ title: "International AI Safety Report 2026"
 source: "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
 publication: "International AI Safety Report"
 date_read: "2026-03-06"
+scholarly_signal: "cs.AI"
 primary_domain: "AI Safety & Evaluation"
 tags:
   - "AI safety"

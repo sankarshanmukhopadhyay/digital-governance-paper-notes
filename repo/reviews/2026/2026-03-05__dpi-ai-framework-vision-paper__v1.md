@@ -3,6 +3,7 @@ title: "DPI-AI Framework: Vision paper on Building AI-Ready Nations through Digi
 source: "https://digitalpublicinfrastructure.ai/wp-content/uploads/2026/01/Vision_Paper_-DPI-AI-Framework_2026_CDPI.pdf"
 publication: "Centre for Digital Public Infrastructure (CDPI)"
 date_read: "2026-03-05"
+scholarly_signal: "cs.NI"
 primary_domain: "Digital Public Infrastructure"
 tags:
   - "digital public infrastructure"

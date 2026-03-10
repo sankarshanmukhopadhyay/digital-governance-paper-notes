@@ -3,6 +3,7 @@ title: "AI Agents and the Next Layer of India's Digital Infrastructure"
 source: "https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/"
 publication: "Tech Policy Press"
 date_read: "2026-03-05"
+scholarly_signal: "cs.AI"
 primary_domain: "AI Governance"
 tags:
   - "India"

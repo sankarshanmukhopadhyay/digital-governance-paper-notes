@@ -3,6 +3,7 @@ title: "Towards an Open, Resilient, Non-Aligned AI"
 source: "https://geopolitique.eu/en/2026/02/16/towards-an-open-resilient-non-aligned-ai/"
 publication: "Geopolitique.eu"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "AI Governance"
 tags:
   - "sovereignty"

@@ -3,6 +3,7 @@ title: "AI Maturity Framework for Public Administrations"
 source: "https://unesdoc.unesco.org/ark:/48223/pf0000397145.locale=en"
 publication: "UNESCO"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "Public Sector Digital Strategy"
 tags:
   - "public administration"

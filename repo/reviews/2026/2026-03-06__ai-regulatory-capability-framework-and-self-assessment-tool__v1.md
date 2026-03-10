@@ -3,6 +3,7 @@ title: "AI Regulatory Capability Framework and Self-Assessment Tool"
 source: "https://www.turing.ac.uk/news/publications/ai-regulatory-capability-framework-and-self-assessment-tool"
 publication: "The Alan Turing Institute"
 date_read: "2026-03-06"
+scholarly_signal: "cs.CY"
 primary_domain: "Law, Regulation & Liability"
 tags:
   - "regulators"

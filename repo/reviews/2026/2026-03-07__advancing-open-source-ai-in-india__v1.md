@@ -3,6 +3,7 @@ title: "Advancing Open Source AI in India"
 source: "https://www.digitalfutureslab.in/publications/advancing-open-source-ai-in-india-recommendations-for-governments-and-technology-developers"
 publication: "Digital Futures Lab"
 date_read: "2026-03-07"
+scholarly_signal: "cs.CY"
 primary_domain: "AI Governance"
 tags:
   - "AI governance"

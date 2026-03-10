@@ -3,6 +3,7 @@ title: "Build vs Buy in the Age of LLMs"
 source: "https://arxiv.org/abs/2602.13033v2"
 publication: "arXiv"
 date_read: "2026-03-05"
+scholarly_signal: "cs.AI"
 primary_domain: "AI Governance"
 tags:
   - "sovereignty"
