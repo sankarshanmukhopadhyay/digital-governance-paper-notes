@@ -15,6 +15,7 @@ key_insight: |
   AI systems can improve visible performance while gradually eroding the human expertise, intuition, and professional agency needed to detect and correct system failures. Governance frameworks must therefore treat human capability retention as a safety objective.
 ---
 
+## Paper Review
 # Review
 
 This paper examines a subtle but consequential risk emerging from AI deployment in professional environments: systems can improve short-term productivity while quietly degrading the human capabilities required to supervise them effectively. Drawing on a year-long qualitative study of AI-assisted radiation oncology planning involving clinicians, dosimetrists, and physicists, the authors identify what they call an **AI-as-Amplifier Paradox**. AI can increase throughput and consistency while simultaneously weakening professional intuition, vigilance, and long-term expertise.
@@ -32,3 +33,7 @@ For public sector AI systems and digital public infrastructure, the implications
 A practical governance response would treat **human capability retention as a safety control objective**. This could include mechanisms such as periodic AI-off drills, independent verification tasks, skill maintenance protocols, and oversight metrics that measure not only output accuracy but also the robustness of human review capacity.
 
 In short, the paper argues that the long-term safety of AI systems depends not only on the quality of their outputs but on the durability of the human institutions that supervise them. Systems that appear successful today may quietly undermine the human expertise required to govern them tomorrow.
+
+## Key Insight
+AI systems can improve visible performance while gradually eroding the human expertise, intuition, and professional agency needed to detect and correct system failures. Governance frameworks must therefore treat human capability retention as a safety objective.
+
