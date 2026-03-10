@@ -31,7 +31,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Trust Infrastructure** (1)
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (4)
-- **Socio-technical Systems** (1)
+- **Socio-technical Systems** (2)
 - **State Capacity & Administrative Systems** (1)
 
 <!-- TAXONOMY_SUMMARY:END -->
@@ -112,6 +112,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-10** — [Gene name errors: Lessons not learned](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) — *PLOS Computational Biology*
 - **2026-03-10** — [From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) — *arXiv*
 - **2026-03-09** — [Strategy for Artificial Intelligence in Healthcare for India (SAHI)](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) — *Ministry of Health and Family Welfare, Government of India*
 - **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper*
@@ -119,7 +120,6 @@ python scripts/build_index.py --check
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
 - **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv*
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
-- **2026-03-07** — [Codified Context: Infrastructure for AI Agents in a Complex Codebase](reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 

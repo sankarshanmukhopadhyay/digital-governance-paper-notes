@@ -11,13 +11,14 @@ A generated index of review notes in this repository.
 - [Trust Infrastructure](#trust-infrastructure) (1)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (4)
-- [Socio-technical Systems](#socio-technical-systems) (1)
+- [Socio-technical Systems](#socio-technical-systems) (2)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 
 ## Master Table
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-10 | Gene name errors: Lessons not learned | PLOS Computational Biology | Socio-technical Systems | A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can. | [Review](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) | [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) |
 | 2026-03-10 | From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction | arXiv | AI Governance | | | [Review](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) | [Source](https://arxiv.org/abs/2601.21920) |
 | 2026-03-09 | Strategy for Artificial Intelligence in Healthcare for India (SAHI) | Ministry of Health and Family Welfare, Government of India | AI Governance | SAHI’s real significance is not that it celebrates AI in health, but that it tries to turn India’s health DPI into a governed deployment environment where risk tiering, interoperability, capacity, and procurement become the rails for responsible scale. | [Review](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) | [Source](https://abdm.gov.in/sahi) |
 | 2026-03-09 | Doot: The AI Agent for Every Indian Citizen | DigiDoot / India AI Mission White Paper | Digital Public Infrastructure | The next layer of digital public infrastructure may be citizen-owned AI agents that mediate interaction between individuals and complex administrative systems. | [Review](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) | [Source](https://digidoot.in/Doot_WhitePaper.pdf) |
@@ -123,6 +124,8 @@ A generated index of review notes in this repository.
 ## Socio-technical Systems
 <a id="socio-technical-systems"></a>
 
+- **2026-03-10** — [Gene name errors: Lessons not learned](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) — *PLOS Computational Biology* — `cs.CY` — [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984)
+  - A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.
 - **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine* — [Source](https://www.noemamag.com/the-mythology-of-conscious-ai/)
   - Myths about conscious AI distract from the immediate governance problem: non-conscious systems already exercise power at scale without clear accountability.
 
