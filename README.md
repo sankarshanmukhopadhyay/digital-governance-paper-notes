@@ -28,6 +28,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **AI Safety & Evaluation** (3)
 - **Digital Public Infrastructure** (3)
 - **Public Sector Digital Strategy** (1)
+- **Digital Identity** (1)
 - **Trust Infrastructure** (1)
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (4)
@@ -112,6 +113,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&*
 - **2026-03-10** — [Gene name errors: Lessons not learned](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) — *PLOS Computational Biology*
 - **2026-03-10** — [From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) — *arXiv*
 - **2026-03-09** — [Strategy for Artificial Intelligence in Healthcare for India (SAHI)](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) — *Ministry of Health and Family Welfare, Government of India*
@@ -119,7 +121,6 @@ python scripts/build_index.py --check
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv*
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
 - **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv*
-- **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi*
 
 <!-- RECENT_REVIEWS:END -->
 

@@ -8,6 +8,7 @@ A generated index of review notes in this repository.
 - [AI Safety & Evaluation](#ai-safety-evaluation) (3)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (3)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
+- [Digital Identity](#digital-identity) (1)
 - [Trust Infrastructure](#trust-infrastructure) (1)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (4)
@@ -18,6 +19,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-12 | Digital Identities Across the World | PwC / Strategy& | Digital Identity | Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure. | [Review](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) | [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf) |
 | 2026-03-10 | Gene name errors: Lessons not learned | PLOS Computational Biology | Socio-technical Systems | A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can. | [Review](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) | [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) |
 | 2026-03-10 | From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction | arXiv | AI Governance | | | [Review](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) | [Source](https://arxiv.org/abs/2601.21920) |
 | 2026-03-09 | Strategy for Artificial Intelligence in Healthcare for India (SAHI) | Ministry of Health and Family Welfare, Government of India | AI Governance | SAHI’s real significance is not that it celebrates AI in health, but that it tries to turn India’s health DPI into a governed deployment environment where risk tiering, interoperability, capacity, and procurement become the rails for responsible scale. | [Review](reviews/2026/2026-03-09__strategy-for-artificial-intelligence-in-healthcare-for-india-sahi__v1.md) | [Source](https://abdm.gov.in/sahi) |
@@ -96,6 +98,12 @@ A generated index of review notes in this repository.
 
 - **2026-03-06** — [AI Maturity Framework for Public Administrations](reviews/2026/2026-03-06__ai-maturity-framework-for-public-administrations__v1.md) — *UNESCO* — [Source](https://unesdoc.unesco.org/ark:/48223/pf0000397145.locale=en)
   - Public-sector AI maturity should be evidenced, risk-tiered, and vendor-aware, otherwise maturity models drift into self-assurance theatre.
+
+## Digital Identity
+<a id="digital-identity"></a>
+
+- **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&* — [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf)
+  - Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure.
 
 ## Trust Infrastructure
 <a id="trust-infrastructure"></a>

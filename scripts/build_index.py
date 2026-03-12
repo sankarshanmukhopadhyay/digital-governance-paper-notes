@@ -180,8 +180,28 @@ def parse_front_matter(md_text: str) -> Dict[str, object]:
         if val.startswith("[") and val.endswith("]"):
             inner = val[1:-1].strip()
             if inner:
-                parts = [_strip_quotes(part.strip()) for part in inner.split(",")]
-                data[key] = [p for p in parts if p]
+                # Parse a tiny inline YAML/CSV-style list while preserving commas inside quoted items.
+                parts = []
+                current = []
+                quote = None
+                for ch in inner:
+                    if ch in {'"', "'"}:
+                        if quote is None:
+                            quote = ch
+                        elif quote == ch:
+                            quote = None
+                        current.append(ch)
+                    elif ch == ',' and quote is None:
+                        item = _strip_quotes(''.join(current).strip())
+                        if item:
+                            parts.append(item)
+                        current = []
+                    else:
+                        current.append(ch)
+                tail = _strip_quotes(''.join(current).strip())
+                if tail:
+                    parts.append(tail)
+                data[key] = parts
             else:
                 data[key] = []
             continue
