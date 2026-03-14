@@ -6,7 +6,7 @@ A generated index of review notes in this repository.
 
 - [AI Governance](#ai-governance) (10)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (3)
-- [Digital Public Infrastructure](#digital-public-infrastructure) (3)
+- [Digital Public Infrastructure](#digital-public-infrastructure) (4)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
 - [Digital Identity](#digital-identity) (1)
 - [Trust Infrastructure](#trust-infrastructure) (1)
@@ -19,6 +19,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-14 | What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy | Tech Policy Press | Digital Public Infrastructure | India’s repository diplomacy is best understood not as neutral knowledge-sharing, but as a low-commitment instrument for projecting leadership while preserving strategic flexibility in a fragmented technology order. | [Review](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) | [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/) |
 | 2026-03-12 | Digital Identities Across the World | PwC / Strategy& | Digital Identity | Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure. | [Review](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) | [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf) |
 | 2026-03-10 | Gene name errors: Lessons not learned | PLOS Computational Biology | Socio-technical Systems | A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can. | [Review](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) | [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) |
 | 2026-03-10 | From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction | arXiv | AI Governance | | | [Review](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) | [Source](https://arxiv.org/abs/2601.21920) |
@@ -86,6 +87,8 @@ A generated index of review notes in this repository.
 ## Digital Public Infrastructure
 <a id="digital-public-infrastructure"></a>
 
+- **2026-03-14** — [What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) — *Tech Policy Press* — [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/)
+  - India’s repository diplomacy is best understood not as neutral knowledge-sharing, but as a low-commitment instrument for projecting leadership while preserving strategic flexibility in a fragmented technology order.
 - **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper* — `cs.AI` — [Source](https://digidoot.in/Doot_WhitePaper.pdf)
   - The next layer of digital public infrastructure may be citizen-owned AI agents that mediate interaction between individuals and complex administrative systems.
 - **2026-03-07** — [Digital Governance Stacks and the Infrastructure of Empires](reviews/2026/2026-03-07__digital-governance-stacks-and-the-infrastructure-of-empires__v1.md) — *Bot Populi* — [Source](https://botpopuli.net/digital-governance-stacks-and-the-infrastructure-of-empires/)

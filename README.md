@@ -26,7 +26,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 - **AI Governance** (10)
 - **AI Safety & Evaluation** (3)
-- **Digital Public Infrastructure** (3)
+- **Digital Public Infrastructure** (4)
 - **Public Sector Digital Strategy** (1)
 - **Digital Identity** (1)
 - **Trust Infrastructure** (1)
@@ -113,6 +113,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-14** — [What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) — *Tech Policy Press*
 - **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&*
 - **2026-03-10** — [Gene name errors: Lessons not learned](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) — *PLOS Computational Biology*
 - **2026-03-10** — [From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) — *arXiv*
@@ -120,7 +121,6 @@ python scripts/build_index.py --check
 - **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper*
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv*
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN*
-- **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
