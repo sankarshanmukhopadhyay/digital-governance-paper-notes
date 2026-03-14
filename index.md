@@ -4,8 +4,8 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (11)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (3)
+- [AI Governance](#ai-governance) (12)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (4)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (4)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
 - [Digital Identity](#digital-identity) (1)
@@ -20,6 +20,8 @@ A generated index of review notes in this repository.
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
 | 2026-03-14 | What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy | Tech Policy Press | Digital Public Infrastructure | India’s repository diplomacy is best understood not as neutral knowledge-sharing, but as a low-commitment instrument for projecting leadership while preserving strategic flexibility in a fragmented technology order. | [Review](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) | [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/) |
+| 2026-03-14 | Open Problems in Technical AI Governance | Transactions on Machine Learning Research | AI Governance | The paper’s most durable contribution is showing that many AI governance debates are blocked not by lack of principles, but by missing technical capacities for assessment, access, verification, security, operationalisation, and ecosystem monitoring. | [Review](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) | [Source](https://arxiv.org/abs/2407.14981) |
+| 2026-03-14 | MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing | arXiv | AI Safety & Evaluation | MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable. | [Review](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) | [Source](https://arxiv.org/abs/2603.06007) |
 | 2026-03-14 | Advancing Indigenous Foundation Models | White paper | AI Governance | The paper’s strongest move is treating indigenous foundation models as public-interest infrastructure, but it stops short of specifying the assurance, procurement, and lifecycle governance machinery needed to make that ambition operational. | [Review](reviews/2026/2026-03-14__advancing-indigenous-foundation-models__v1.md) | [Source](uploaded white paper: Advancing Indigenous Foundation Models) |
 | 2026-03-12 | Digital Identities Across the World | PwC / Strategy& | Digital Identity | Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure. | [Review](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) | [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf) |
 | 2026-03-10 | Gene name errors: Lessons not learned | PLOS Computational Biology | Socio-technical Systems | A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can. | [Review](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) | [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) |
@@ -54,6 +56,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-03-14** — [Open Problems in Technical AI Governance](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) — *Transactions on Machine Learning Research* — `cs.CY` — [Source](https://arxiv.org/abs/2407.14981)
+  - The paper’s most durable contribution is showing that many AI governance debates are blocked not by lack of principles, but by missing technical capacities for assessment, access, verification, security, operationalisation, and ecosystem monitoring.
 - **2026-03-14** — [Advancing Indigenous Foundation Models](reviews/2026/2026-03-14__advancing-indigenous-foundation-models__v1.md) — *White paper* — [Source](uploaded white paper: Advancing Indigenous Foundation Models)
   - The paper’s strongest move is treating indigenous foundation models as public-interest infrastructure, but it stops short of specifying the assurance, procurement, and lifecycle governance machinery needed to make that ambition operational.
 - **2026-03-10** — [From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction](reviews/2026/2026-03-10__future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction__v1.md) — *arXiv* — `cs.HC` — [Source](https://arxiv.org/abs/2601.21920)
@@ -80,6 +84,8 @@ A generated index of review notes in this repository.
 ## AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.06007)
+  - MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable.
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2602.20021)
   - The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.
 - **2026-03-07** — [Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?](reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2602.11988)
