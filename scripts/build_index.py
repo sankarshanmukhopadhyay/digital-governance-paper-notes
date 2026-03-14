@@ -25,6 +25,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Tuple
+import textwrap
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -68,6 +69,7 @@ class ReviewRecord:
     domain: str
     source: str
     review_path: str
+    slug: str = ""
     tags: Tuple[str, ...] = field(default_factory=tuple)
     scholarly_signal: str = ""
     key_insight: str = ""
@@ -78,6 +80,23 @@ def _strip_quotes(v: str) -> str:
     if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
         return v[1:-1]
     return v
+
+
+def _clean_scalar(value: str) -> str:
+    value = textwrap.dedent(value).strip("\n")
+    return _strip_quotes(value.strip())
+
+
+def _derive_slug_from_path(path: Path) -> str:
+    m = re.match(r"^\d{4}-\d{2}-\d{2}__(.+)__v\d+\.md$", path.name)
+    return m.group(1) if m else path.stem
+
+
+def _extract_key_insight_from_body(txt: str) -> str:
+    m = re.search(r"(?ms)^## Key Insight\s*$\n+(.+?)(?:\n## |\Z)", txt)
+    if not m:
+        return ""
+    return " ".join(line.strip() for line in m.group(1).splitlines() if line.strip())
 
 
 def _slugify_anchor(text: str) -> str:
@@ -134,53 +153,74 @@ def load_taxonomy() -> Taxonomy:
 def parse_front_matter(md_text: str) -> Dict[str, object]:
     """Parse YAML-style front matter from the top of the file only.
 
-    Supports:
+    Supports a deliberately small subset that covers the repo's needs:
     - key: "value"
     - key: value
     - key:
         - item1
         - item2
     - key: [item1, item2]
+    - key: | / > block scalars
     """
     text = md_text.lstrip("\ufeff")
     m = re.match(r"(?ms)^---\s*\n(.*?)\n---\s*", text)
     if not m:
         return {}
 
-    block = m.group(1).splitlines()
+    lines = m.group(1).splitlines()
     data: Dict[str, object] = {}
-    current_list_key = None
-
-    for raw_line in block:
-        line = raw_line.rstrip()
+    i = 0
+    while i < len(lines):
+        raw_line = lines[i]
+        line = raw_line.rstrip("\n")
         stripped = line.strip()
 
         if not stripped or stripped.startswith("#"):
-            continue
-
-        list_item_match = re.match(r"^\s*-\s+(.*)$", line)
-        if list_item_match and current_list_key:
-            data.setdefault(current_list_key, [])
-            assert isinstance(data[current_list_key], list)
-            data[current_list_key].append(_strip_quotes(list_item_match.group(1).strip()))
+            i += 1
             continue
 
         m_key = re.match(r"^([A-Za-z0-9_]+)\s*:\s*(.*)$", stripped)
         if not m_key:
+            i += 1
             continue
 
         key, val = m_key.group(1), m_key.group(2)
-        current_list_key = None
+
+        if val in {"|", ">"}:
+            block_lines = []
+            i += 1
+            while i < len(lines):
+                candidate = lines[i]
+                if candidate.startswith("  ") or candidate.strip() == "":
+                    block_lines.append(candidate[2:] if candidate.startswith("  ") else "")
+                    i += 1
+                    continue
+                break
+            block = "\n".join(block_lines)
+            data[key] = _clean_scalar(block if val == "|" else re.sub(r"\n+", " ", block))
+            continue
 
         if val == "":
-            data[key] = []
-            current_list_key = key
+            items: List[str] = []
+            j = i + 1
+            while j < len(lines):
+                candidate = lines[j]
+                item_match = re.match(r"^\s*-\s+(.*)$", candidate)
+                if item_match:
+                    items.append(_strip_quotes(item_match.group(1).strip()))
+                    j += 1
+                    continue
+                if not candidate.strip():
+                    j += 1
+                    continue
+                break
+            data[key] = items
+            i = j
             continue
 
         if val.startswith("[") and val.endswith("]"):
             inner = val[1:-1].strip()
             if inner:
-                # Parse a tiny inline YAML/CSV-style list while preserving commas inside quoted items.
                 parts = []
                 current = []
                 quote = None
@@ -204,9 +244,11 @@ def parse_front_matter(md_text: str) -> Dict[str, object]:
                 data[key] = parts
             else:
                 data[key] = []
+            i += 1
             continue
 
-        data[key] = _strip_quotes(val)
+        data[key] = _clean_scalar(val)
+        i += 1
 
     return data
 
@@ -235,6 +277,11 @@ def validate_review_file(path: Path, txt: str, fm: Dict[str, object], taxonomy: 
         errors.append("missing '## Review' section")
     if not re.search(r"(?m)^## Key Insight\s*$", txt):
         errors.append("missing '## Key Insight' section")
+
+    body_key_insight = _extract_key_insight_from_body(txt)
+    fm_key_insight = str(fm.get("key_insight", "")).strip()
+    if not body_key_insight and not fm_key_insight:
+        errors.append("key insight must be present in front matter or the body Key Insight section")
 
     primary_domain = str(fm.get("primary_domain", "")).strip()
     if taxonomy.primary_domains and primary_domain and primary_domain not in taxonomy.primary_domains:
@@ -277,7 +324,8 @@ def load_reviews(taxonomy: Taxonomy) -> List[ReviewRecord]:
         domain = str(fm.get("primary_domain", "")).strip() or "Uncategorized"
         publication = str(fm.get("publication", "")).strip()
         scholarly_signal = str(fm.get("scholarly_signal", "")).strip()
-        key_insight = str(fm.get("key_insight", "")).strip()
+        key_insight = str(fm.get("key_insight", "")).strip() or _extract_key_insight_from_body(txt)
+        slug = _derive_slug_from_path(path)
 
         tags_raw = fm.get("tags", [])
         if isinstance(tags_raw, str):
@@ -309,6 +357,7 @@ def load_reviews(taxonomy: Taxonomy) -> List[ReviewRecord]:
                 domain=domain,
                 source=source,
                 review_path=review_path,
+                slug=slug,
                 tags=tags,
                 scholarly_signal=scholarly_signal,
                 key_insight=key_insight,
@@ -458,7 +507,7 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
         review_href = html.escape(GITHUB_REPO_BLOB_BASE + r.review_path, quote=True)
         insight_html = html.escape(r.key_insight) if r.key_insight else "—"
         rows.append(
-            "<tr>"
+            f'<tr data-review-slug="{html.escape(r.slug, quote=True)}">'
             f"<td>{html.escape(r.date)}</td>"
             f"<td><a href=\"{review_href}\" target=\"_blank\" rel=\"noopener noreferrer\">{html.escape(r.title)}</a></td>"
             f"<td>{html.escape(r.publication or '—')}</td>"
@@ -522,6 +571,7 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
             <th>Publication</th>
             <th>Domain</th>
             <th>Key Insight</th>
+            <th>Review</th>
             <th>Source</th>
           </tr>
         </thead>
