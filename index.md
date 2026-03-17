@@ -6,12 +6,13 @@ A generated index of review notes in this repository.
 
 - [AI Governance](#ai-governance) (12)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (4)
-- [Digital Public Infrastructure](#digital-public-infrastructure) (4)
+- [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
 - [Digital Identity](#digital-identity) (1)
 - [Trust Infrastructure](#trust-infrastructure) (1)
+- [Privacy & Data Protection](#privacy-data-protection) (1)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
-- [Law, Regulation & Liability](#law-regulation-liability) (4)
+- [Law, Regulation & Liability](#law-regulation-liability) (5)
 - [Socio-technical Systems](#socio-technical-systems) (2)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 
@@ -19,6 +20,9 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-17 | Sandboxes for DPI: Co-creating the blocks of digital trust | Datasphere Initiative | Digital Public Infrastructure | The report’s most useful move is to treat sandboxes not as innovation theater, but as upstream governance capacity for testing trust, inclusion, interoperability, and institutional learning before DPI choices harden at population scale. | [Review](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) | [Source](https://www.thedatasphere.org/datasphere-publish/sandboxes-for-dpi/) |
+| 2026-03-17 | Distributed Legal Infrastructure for a Trustworthy Agentic Web | arXiv | Law, Regulation & Liability | The paper’s real contribution is not the rhetoric of agent personhood, but the claim that legality for agents must be infrastructural: identity, constraints, evidence, adjudication, and portability have to travel with the system rather than be bolted on after harm occurs. | [Review](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) | [Source](https://arxiv.org/abs/2603.06884) |
+| 2026-03-17 | AI Innovation, Effective Anonymization & the DPDP Act | Open Loop | Privacy & Data Protection | The report’s central insight is that India’s AI bottleneck is not merely lack of data, but lack of a usable legal-operational pathway for iterative model development, effective anonymization, and PET adoption under the DPDP regime. | [Review](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) | [Source](https://openloop.org/programs/policy-anonymization-india/) |
 | 2026-03-14 | What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy | Tech Policy Press | Digital Public Infrastructure | India’s repository diplomacy is best understood not as neutral knowledge-sharing, but as a low-commitment instrument for projecting leadership while preserving strategic flexibility in a fragmented technology order. | [Review](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) | [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/) |
 | 2026-03-14 | Open Problems in Technical AI Governance | Transactions on Machine Learning Research | AI Governance | The paper’s most durable contribution is showing that many AI governance debates are blocked not by lack of principles, but by missing technical capacities for assessment, access, verification, security, operationalisation, and ecosystem monitoring. | [Review](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) | [Source](https://arxiv.org/abs/2407.14981) |
 | 2026-03-14 | MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing | arXiv | AI Safety & Evaluation | MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable. | [Review](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) | [Source](https://arxiv.org/abs/2603.06007) |
@@ -96,6 +100,8 @@ A generated index of review notes in this repository.
 ## Digital Public Infrastructure
 <a id="digital-public-infrastructure"></a>
 
+- **2026-03-17** — [Sandboxes for DPI: Co-creating the blocks of digital trust](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) — *Datasphere Initiative* — [Source](https://www.thedatasphere.org/datasphere-publish/sandboxes-for-dpi/)
+  - The report’s most useful move is to treat sandboxes not as innovation theater, but as upstream governance capacity for testing trust, inclusion, interoperability, and institutional learning before DPI choices harden at population scale.
 - **2026-03-14** — [What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) — *Tech Policy Press* — [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/)
   - India’s repository diplomacy is best understood not as neutral knowledge-sharing, but as a low-commitment instrument for projecting leadership while preserving strategic flexibility in a fragmented technology order.
 - **2026-03-09** — [Doot: The AI Agent for Every Indian Citizen](reviews/2026/2026-03-09__doot-agent-one-architecture__v1.md) — *DigiDoot / India AI Mission White Paper* — `cs.AI` — [Source](https://digidoot.in/Doot_WhitePaper.pdf)
@@ -123,6 +129,12 @@ A generated index of review notes in this repository.
 - **2026-03-05** — [Exhaustibility Is Not an Optimization. It Is a First-Class Invariant](reviews/2026/2026-03-05__exhaustibility-first-class-invariant__v1.md) — *Medium (Paul Knowles)* — [Source](https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e)
   - For agentic systems, governance must shift from persistent identity-based permission to action-bound, exhaustible authority that produces verifiable provenance at the moment an effect occurs.
 
+## Privacy & Data Protection
+<a id="privacy-data-protection"></a>
+
+- **2026-03-17** — [AI Innovation, Effective Anonymization & the DPDP Act](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) — *Open Loop* — [Source](https://openloop.org/programs/policy-anonymization-india/)
+  - The report’s central insight is that India’s AI bottleneck is not merely lack of data, but lack of a usable legal-operational pathway for iterative model development, effective anonymization, and PET adoption under the DPDP regime.
+
 ## Cybersecurity & Resilience
 <a id="cybersecurity-resilience"></a>
 
@@ -132,6 +144,8 @@ A generated index of review notes in this repository.
 ## Law, Regulation & Liability
 <a id="law-regulation-liability"></a>
 
+- **2026-03-17** — [Distributed Legal Infrastructure for a Trustworthy Agentic Web](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.06884)
+  - The paper’s real contribution is not the rhetoric of agent personhood, but the claim that legality for agents must be infrastructural: identity, constraints, evidence, adjudication, and portability have to travel with the system rather than be bolted on after harm occurs.
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639)
   - AI regulation is being shaped not only by technical architectures but by metaphors that silently define where risk, responsibility, and accountability are presumed to sit.
 - **2026-03-06** — [The Global Landscape of Environmental AI Regulation: From the Cost of Reasoning to a Right to Green AI](reviews/2026/2026-03-06__the-global-landscape-of-environmental-ai-regulation__v1.md) — *SSRN* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6219838)
