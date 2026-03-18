@@ -10,7 +10,7 @@ A generated index of review notes in this repository.
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (1)
 - [Digital Identity](#digital-identity) (1)
 - [Trust Infrastructure](#trust-infrastructure) (1)
-- [Privacy & Data Protection](#privacy-data-protection) (1)
+- [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (5)
 - [Socio-technical Systems](#socio-technical-systems) (2)
@@ -20,6 +20,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-18 | Large-scale online deanonymization with LLMs | arXiv | Privacy & Data Protection | LLMs do not need to exceed human investigative capability to collapse pseudonymity at scale — they only need to reduce its cost, and that cost reduction is now sufficient to make large-scale deanonymization a routine, automatable threat. | [Review](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) | [Source](https://arxiv.org/abs/2602.16800) |
 | 2026-03-17 | Sandboxes for DPI: Co-creating the blocks of digital trust | Datasphere Initiative | Digital Public Infrastructure | The report’s most useful move is to treat sandboxes not as innovation theater, but as upstream governance capacity for testing trust, inclusion, interoperability, and institutional learning before DPI choices harden at population scale. | [Review](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) | [Source](https://www.thedatasphere.org/datasphere-publish/sandboxes-for-dpi/) |
 | 2026-03-17 | Distributed Legal Infrastructure for a Trustworthy Agentic Web | arXiv | Law, Regulation & Liability | The paper’s real contribution is not the rhetoric of agent personhood, but the claim that legality for agents must be infrastructural: identity, constraints, evidence, adjudication, and portability have to travel with the system rather than be bolted on after harm occurs. | [Review](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) | [Source](https://arxiv.org/abs/2603.06884) |
 | 2026-03-17 | AI Innovation, Effective Anonymization & the DPDP Act | Open Loop | Privacy & Data Protection | The report’s central insight is that India’s AI bottleneck is not merely lack of data, but lack of a usable legal-operational pathway for iterative model development, effective anonymization, and PET adoption under the DPDP regime. | [Review](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) | [Source](https://openloop.org/programs/policy-anonymization-india/) |
@@ -132,6 +133,8 @@ A generated index of review notes in this repository.
 ## Privacy & Data Protection
 <a id="privacy-data-protection"></a>
 
+- **2026-03-18** — [Large-scale online deanonymization with LLMs](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) — *arXiv* — `cs.CR` — [Source](https://arxiv.org/abs/2602.16800)
+  - LLMs do not need to exceed human investigative capability to collapse pseudonymity at scale — they only need to reduce its cost, and that cost reduction is now sufficient to make large-scale deanonymization a routine, automatable threat.
 - **2026-03-17** — [AI Innovation, Effective Anonymization & the DPDP Act](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) — *Open Loop* — [Source](https://openloop.org/programs/policy-anonymization-india/)
   - The report’s central insight is that India’s AI bottleneck is not merely lack of data, but lack of a usable legal-operational pathway for iterative model development, effective anonymization, and PET adoption under the DPDP regime.
 

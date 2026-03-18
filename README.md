@@ -30,7 +30,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Public Sector Digital Strategy** (1)
 - **Digital Identity** (1)
 - **Trust Infrastructure** (1)
-- **Privacy & Data Protection** (1)
+- **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (5)
 - **Socio-technical Systems** (2)
@@ -114,6 +114,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-18** — [Large-scale online deanonymization with LLMs](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) — *arXiv*
 - **2026-03-17** — [Sandboxes for DPI: Co-creating the blocks of digital trust](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) — *Datasphere Initiative*
 - **2026-03-17** — [Distributed Legal Infrastructure for a Trustworthy Agentic Web](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) — *arXiv*
 - **2026-03-17** — [AI Innovation, Effective Anonymization & the DPDP Act](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) — *Open Loop*
@@ -121,7 +122,6 @@ python scripts/build_index.py --check
 - **2026-03-14** — [Open Problems in Technical AI Governance](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) — *Transactions on Machine Learning Research*
 - **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv*
 - **2026-03-14** — [Advancing Indigenous Foundation Models](reviews/2026/2026-03-14__advancing-indigenous-foundation-models__v1.md) — *White paper*
-- **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&*
 
 <!-- RECENT_REVIEWS:END -->
 
