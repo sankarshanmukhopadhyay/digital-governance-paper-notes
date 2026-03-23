@@ -24,10 +24,10 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (12)
+- **AI Governance** (14)
 - **AI Safety & Evaluation** (4)
 - **Digital Public Infrastructure** (5)
-- **Public Sector Digital Strategy** (1)
+- **Public Sector Digital Strategy** (2)
 - **Digital Identity** (1)
 - **Trust Infrastructure** (1)
 - **Privacy & Data Protection** (2)
@@ -114,14 +114,14 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv*
+- **2026-03-23** — [Nomotic AI: The Governance Counterpart to Agentic AI](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) — *SSRN (Independent Researcher)*
+- **2026-03-23** — [AI for Justice: Ethical, Fair and Robust Adoption in India's Courts](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-robust-adoption-indias-courts__v1.md) — *DAKSH & Digital Futures Lab / UNDP*
 - **2026-03-18** — [Large-scale online deanonymization with LLMs](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) — *arXiv*
 - **2026-03-17** — [Sandboxes for DPI: Co-creating the blocks of digital trust](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) — *Datasphere Initiative*
 - **2026-03-17** — [Distributed Legal Infrastructure for a Trustworthy Agentic Web](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) — *arXiv*
 - **2026-03-17** — [AI Innovation, Effective Anonymization & the DPDP Act](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) — *Open Loop*
 - **2026-03-14** — [What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) — *Tech Policy Press*
-- **2026-03-14** — [Open Problems in Technical AI Governance](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) — *Transactions on Machine Learning Research*
-- **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv*
-- **2026-03-14** — [Advancing Indigenous Foundation Models](reviews/2026/2026-03-14__advancing-indigenous-foundation-models__v1.md) — *White paper*
 
 <!-- RECENT_REVIEWS:END -->
 

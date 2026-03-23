@@ -21,6 +21,7 @@ secondary_topics:
   - AI adoption
   - AI agents
   - AI benchmarks
+  - AI ethics
   - AI governance
   - AI regulation
   - AI risk management
@@ -90,6 +91,7 @@ secondary_topics:
   - reproducibility
   - resilience
   - risk tiering
+  - risk assessment
   - sovereignty
   - South Asia
   - state capacity
@@ -100,6 +102,20 @@ secondary_topics:
   - uncertainty
   - vendor governance
   - workflows
+  - adversarial evaluation
+  - behavioral alignment
+  - constraint compliance
+  - delegated authority
+  - economic agency
+  - epistemic integrity
+  - fairness and bias
+  - institutional readiness
+  - judicial systems
+  - mechanism design
+  - regulatory alignment
+  - rights-based frameworks
+  - robustness evaluation
+  - transparency and accountability
 
 scholarly_signals:
   - cs.AI
