@@ -117,8 +117,8 @@ python scripts/build_index.py --check
 - **2026-03-26** — [Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) — *HAL / CNRS / Open Knowledge Foundation*
 - **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv*
 - **2026-03-23** — [Nomotic AI: The Governance Counterpart to Agentic AI](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) — *SSRN (Independent Researcher)*
-- **2026-03-23** — [AI for Justice: Ethical, Fair and Robust Adoption in India's Courts](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-and-robust-adoption-in-indias-courts__v1.md) — *DAKSH & Digital Futures Lab / UNDP*
 - **2026-03-23** — [AI for Justice: Ethical, Fair and Robust Adoption in India's Courts](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-robust-adoption-indias-courts__v1.md) — *DAKSH & Digital Futures Lab / UNDP*
+- **2026-03-23** — [AI for Justice: Ethical, Fair and Robust Adoption in India's Courts](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-and-robust-adoption-in-indias-courts__v1.md) — *DAKSH & Digital Futures Lab / UNDP*
 - **2026-03-18** — [Large-scale online deanonymization with LLMs](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) — *arXiv*
 - **2026-03-17** — [Sandboxes for DPI: Co-creating the blocks of digital trust](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) — *Datasphere Initiative*
 - **2026-03-17** — [Distributed Legal Infrastructure for a Trustworthy Agentic Web](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) — *arXiv*
