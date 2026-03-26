@@ -12,7 +12,7 @@ A generated index of review notes in this repository.
 - [Trust Infrastructure](#trust-infrastructure) (1)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
-- [Law, Regulation & Liability](#law-regulation-liability) (5)
+- [Law, Regulation & Liability](#law-regulation-liability) (6)
 - [Socio-technical Systems](#socio-technical-systems) (2)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 
@@ -20,6 +20,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-03-26 | Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training | HAL / CNRS / Open Knowledge Foundation | Law, Regulation & Liability | The report’s deepest contribution is to show that openness without enforceable constraints is not neutral openness at all, but a governance vacuum in which shared informational resources are converted into proprietary advantage by actors with the scale to extract without reciprocating. | [Review](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) | [Source](https://hal.science/hal-05009616v1) |
 | 2026-03-23 | The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency | arXiv | AI Governance | AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness—transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design. | [Review](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) | [Source](https://arxiv.org/abs/2603.15639) |
 | 2026-03-23 | Nomotic AI: The Governance Counterpart to Agentic AI | SSRN (Independent Researcher) | AI Governance | Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance. | [Review](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) | [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069888) |
 | 2026-03-23 | AI for Justice: Ethical, Fair and Robust Adoption in India's Courts | DAKSH & Digital Futures Lab / UNDP | Public Sector Digital Strategy | The report's strongest contribution is translating governance from abstract principle into an institutional sequence (readiness → risk → technical scrutiny → ongoing oversight), yet it underspecifies enforcement authority, vendor lock-in dynamics, and contestability mechanisms; these are critical gaps for operational deployment in Indian courts. | [Review](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-and-robust-adoption-in-indias-courts__v1.md) | [Source](https://www.digitalfutureslab.in/publications/ai-for-justice-ethical-fair-and-robust-adoption-in-india-s-courts) |
@@ -159,6 +160,8 @@ A generated index of review notes in this repository.
 ## Law, Regulation & Liability
 <a id="law-regulation-liability"></a>
 
+- **2026-03-26** — [Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) — *HAL / CNRS / Open Knowledge Foundation* — [Source](https://hal.science/hal-05009616v1)
+  - The report’s deepest contribution is to show that openness without enforceable constraints is not neutral openness at all, but a governance vacuum in which shared informational resources are converted into proprietary advantage by actors with the scale to extract without reciprocating.
 - **2026-03-17** — [Distributed Legal Infrastructure for a Trustworthy Agentic Web](reviews/2026/2026-03-17__distributed-legal-infrastructure-for-a-trustworthy-agentic-web__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.06884)
   - The paper’s real contribution is not the rhetoric of agent personhood, but the claim that legality for agents must be infrastructural: identity, constraints, evidence, adjudication, and portability have to travel with the system rather than be bolted on after harm occurs.
 - **2026-03-07** — [The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation](reviews/2026/2026-03-07__the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation__v1.md) — *SSRN* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6289639)
