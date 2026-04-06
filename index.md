@@ -8,8 +8,8 @@ A generated index of review notes in this repository.
 - [AI Safety & Evaluation](#ai-safety-evaluation) (4)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
-- [Digital Identity](#digital-identity) (1)
-- [Trust Infrastructure](#trust-infrastructure) (1)
+- [Digital Identity](#digital-identity) (2)
+- [Trust Infrastructure](#trust-infrastructure) (2)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (6)
@@ -21,6 +21,8 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-06 | Syntelos: Trust Through Attestation and Policy | Author webpage / paper draft | Trust Infrastructure | Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides. | [Review](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) | [Source](https://dhh1128.github.io/papers/syntelos.html) |
+| 2026-04-06 | A Cryptographic Framework for Proof of Personhood | Reference page for IACR ePrint paper | Digital Identity | The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions. | [Review](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) | [Source](https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html) |
 | 2026-03-30 | Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency | SSRN / BlockchainGov report | Socio-technical Systems | The paper’s central value is not that it proves blockchain adoption, but that it reframes blockchain failure as an institutional design problem. Its participatory methodology improves problem selection and contextual fit, but it still stops short of specifying the operational governance needed for legitimate deployment. | [Review](reviews/2026/2026-03-30__participatory-unblocking-of-blockchain-use-cases__v1.md) | [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6465860) |
 | 2026-03-26 | Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training | HAL / CNRS / Open Knowledge Foundation | Law, Regulation & Liability | The report’s deepest contribution is to show that openness without enforceable constraints is not neutral openness at all, but a governance vacuum in which shared informational resources are converted into proprietary advantage by actors with the scale to extract without reciprocating. | [Review](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) | [Source](https://hal.science/hal-05009616v1) |
 | 2026-03-26 | From Extraction to Ownership: Platform Cooperatives as Infrastructure for Worker Sovereignty in African AI Labor Markets | ResearchGate / preprint | Economic & Market Infrastructure | The paper’s most important move is to argue that the problem in African AI labor markets is not only underpayment but infrastructural exclusion: workers remain trapped because compute, capital, contracting power, and governance are organized to keep ownership upstream. | [Review](reviews/2026/2026-03-26__from-extraction-to-ownership-platform-cooperatives-as-infrastructure-for-worker-sovereignty-in-african-ai-labor-markets__v1.md) | [Source](https://www.researchgate.net/publication/400798251_From_Extraction_to_Ownership_Platform_Cooperatives_as_Infrastructure_for_Worker_Sovereignty_in_African_AI_Labor_Markets) |
@@ -134,12 +136,16 @@ A generated index of review notes in this repository.
 ## Digital Identity
 <a id="digital-identity"></a>
 
+- **2026-04-06** — [A Cryptographic Framework for Proof of Personhood](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) — *Reference page for IACR ePrint paper* — [Source](https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html)
+  - The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions.
 - **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&* — [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf)
   - Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure.
 
 ## Trust Infrastructure
 <a id="trust-infrastructure"></a>
 
+- **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft* — [Source](https://dhh1128.github.io/papers/syntelos.html)
+  - Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides.
 - **2026-03-05** — [Exhaustibility Is Not an Optimization. It Is a First-Class Invariant](reviews/2026/2026-03-05__exhaustibility-first-class-invariant__v1.md) — *Medium (Paul Knowles)* — [Source](https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e)
   - For agentic systems, governance must shift from persistent identity-based permission to action-bound, exhaustible authority that produces verifiable provenance at the moment an effect occurs.
 
