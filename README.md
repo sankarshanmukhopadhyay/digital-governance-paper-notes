@@ -24,8 +24,8 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (14)
-- **AI Safety & Evaluation** (4)
+- **AI Governance** (15)
+- **AI Safety & Evaluation** (5)
 - **Digital Public Infrastructure** (5)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (2)
@@ -116,13 +116,13 @@ python scripts/build_index.py --check
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft*
+- **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv*
+- **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv*
 - **2026-04-06** — [A Cryptographic Framework for Proof of Personhood](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) — *Reference page for IACR ePrint paper*
 - **2026-03-30** — [Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency](reviews/2026/2026-03-30__participatory-unblocking-of-blockchain-use-cases__v1.md) — *SSRN / BlockchainGov report*
 - **2026-03-26** — [Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) — *HAL / CNRS / Open Knowledge Foundation*
 - **2026-03-26** — [From Extraction to Ownership: Platform Cooperatives as Infrastructure for Worker Sovereignty in African AI Labor Markets](reviews/2026/2026-03-26__from-extraction-to-ownership-platform-cooperatives-as-infrastructure-for-worker-sovereignty-in-african-ai-labor-markets__v1.md) — *ResearchGate / preprint*
 - **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv*
-- **2026-03-23** — [Nomotic AI: The Governance Counterpart to Agentic AI](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) — *SSRN (Independent Researcher)*
-- **2026-03-23** — [AI for Justice: Ethical, Fair and Robust Adoption in India's Courts](reviews/2026/2026-03-23__ai-for-justice-ethical-fair-and-robust-adoption-in-indias-courts__v1.md) — *DAKSH & Digital Futures Lab / UNDP*
 
 <!-- RECENT_REVIEWS:END -->
 

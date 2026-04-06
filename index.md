@@ -4,8 +4,8 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (14)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (4)
+- [AI Governance](#ai-governance) (15)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (2)
@@ -22,6 +22,8 @@ A generated index of review notes in this repository.
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
 | 2026-04-06 | Syntelos: Trust Through Attestation and Policy | Author webpage / paper draft | Trust Infrastructure | Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides. | [Review](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) | [Source](https://dhh1128.github.io/papers/syntelos.html) |
+| 2026-04-06 | CUBE: A Standard for Unifying Agent Benchmarks | arXiv | AI Safety & Evaluation | CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for. | [Review](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) | [Source](https://arxiv.org/abs/2603.15798) |
+| 2026-04-06 | Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement | arXiv | AI Governance | Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised. | [Review](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) | [Source](https://arxiv.org/abs/2603.16938) |
 | 2026-04-06 | A Cryptographic Framework for Proof of Personhood | Reference page for IACR ePrint paper | Digital Identity | The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions. | [Review](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) | [Source](https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html) |
 | 2026-03-30 | Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency | SSRN / BlockchainGov report | Socio-technical Systems | The paper’s central value is not that it proves blockchain adoption, but that it reframes blockchain failure as an institutional design problem. Its participatory methodology improves problem selection and contextual fit, but it still stops short of specifying the operational governance needed for legitimate deployment. | [Review](reviews/2026/2026-03-30__participatory-unblocking-of-blockchain-use-cases__v1.md) | [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6465860) |
 | 2026-03-26 | Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training | HAL / CNRS / Open Knowledge Foundation | Law, Regulation & Liability | The report’s deepest contribution is to show that openness without enforceable constraints is not neutral openness at all, but a governance vacuum in which shared informational resources are converted into proprietary advantage by actors with the scale to extract without reciprocating. | [Review](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) | [Source](https://hal.science/hal-05009616v1) |
@@ -70,6 +72,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv* — `cs.CR` — [Source](https://arxiv.org/abs/2603.16938)
+  - Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.
 - **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.15639)
   - AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness—transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design.
 - **2026-03-23** — [Nomotic AI: The Governance Counterpart to Agentic AI](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) — *SSRN (Independent Researcher)* — `cs.AI` — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069888)
@@ -102,6 +106,8 @@ A generated index of review notes in this repository.
 ## AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.15798)
+  - CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for.
 - **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.06007)
   - MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable.
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2602.20021)
