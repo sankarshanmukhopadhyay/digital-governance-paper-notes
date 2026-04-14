@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (15)
+- [AI Governance](#ai-governance) (16)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -21,6 +21,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-14 | AI Governance, Safety and Infrastructure | Global Network Initiative and Centre for Communication Governance, National Law University Delhi | AI Governance | The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power. | [Review](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) | [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf) |
 | 2026-04-06 | Syntelos: Trust Through Attestation and Policy | Author webpage / paper draft | Trust Infrastructure | Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides. | [Review](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) | [Source](https://dhh1128.github.io/papers/syntelos.html) |
 | 2026-04-06 | CUBE: A Standard for Unifying Agent Benchmarks | arXiv | AI Safety & Evaluation | CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for. | [Review](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) | [Source](https://arxiv.org/abs/2603.15798) |
 | 2026-04-06 | Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement | arXiv | AI Governance | Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised. | [Review](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) | [Source](https://arxiv.org/abs/2603.16938) |
@@ -72,6 +73,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi* — [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf)
+  - The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power.
 - **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv* — `cs.CR` — [Source](https://arxiv.org/abs/2603.16938)
   - Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.
 - **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.15639)
