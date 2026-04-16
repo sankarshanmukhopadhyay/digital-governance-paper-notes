@@ -15,12 +15,13 @@ A generated index of review notes in this repository.
 - [Law, Regulation & Liability](#law-regulation-liability) (6)
 - [Socio-technical Systems](#socio-technical-systems) (3)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
-- [Economic & Market Infrastructure](#economic-market-infrastructure) (1)
+- [Economic & Market Infrastructure](#economic-market-infrastructure) (2)
 
 ## Master Table
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-16 | Mapping India’s Data Centres: Aspirations, Realities and Futures | Digital Futures Lab | Economic & Market Infrastructure | The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift. | [Review](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) | [Source](https://www.digitalfutureslab.in/publications/mapping-india-s-data-centres-aspirations-realities-and-futures) |
 | 2026-04-16 | AI Index Report 2026 | Stanford Institute for Human-Centered Artificial Intelligence (HAI) | AI Governance | The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated. | [Review](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) | [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report) |
 | 2026-04-14 | AI Governance, Safety and Infrastructure | Global Network Initiative and Centre for Communication Governance, National Law University Delhi | AI Governance | The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power. | [Review](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) | [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf) |
 | 2026-04-06 | Syntelos: Trust Through Attestation and Policy | Author webpage / paper draft | Trust Infrastructure | Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides. | [Review](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) | [Source](https://dhh1128.github.io/papers/syntelos.html) |
@@ -210,5 +211,7 @@ A generated index of review notes in this repository.
 ## Economic & Market Infrastructure
 <a id="economic-market-infrastructure"></a>
 
+- **2026-04-16** — [Mapping India’s Data Centres: Aspirations, Realities and Futures](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) — *Digital Futures Lab* — [Source](https://www.digitalfutureslab.in/publications/mapping-india-s-data-centres-aspirations-realities-and-futures)
+  - The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift.
 - **2026-03-26** — [From Extraction to Ownership: Platform Cooperatives as Infrastructure for Worker Sovereignty in African AI Labor Markets](reviews/2026/2026-03-26__from-extraction-to-ownership-platform-cooperatives-as-infrastructure-for-worker-sovereignty-in-african-ai-labor-markets__v1.md) — *ResearchGate / preprint* — [Source](https://www.researchgate.net/publication/400798251_From_Extraction_to_Ownership_Platform_Cooperatives_as_Infrastructure_for_Worker_Sovereignty_in_African_AI_Labor_Markets)
   - The paper’s most important move is to argue that the problem in African AI labor markets is not only underpayment but infrastructural exclusion: workers remain trapped because compute, capital, contracting power, and governance are organized to keep ownership upstream.

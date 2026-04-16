@@ -35,7 +35,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Law, Regulation & Liability** (6)
 - **Socio-technical Systems** (3)
 - **State Capacity & Administrative Systems** (1)
-- **Economic & Market Infrastructure** (1)
+- **Economic & Market Infrastructure** (2)
 
 <!-- TAXONOMY_SUMMARY:END -->
 
@@ -115,6 +115,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-04-16** — [Mapping India’s Data Centres: Aspirations, Realities and Futures](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) — *Digital Futures Lab*
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi*
 - **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft*
@@ -122,7 +123,6 @@ python scripts/build_index.py --check
 - **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv*
 - **2026-04-06** — [A Cryptographic Framework for Proof of Personhood](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) — *Reference page for IACR ePrint paper*
 - **2026-03-30** — [Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency](reviews/2026/2026-03-30__participatory-unblocking-of-blockchain-use-cases__v1.md) — *SSRN / BlockchainGov report*
-- **2026-03-26** — [Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) — *HAL / CNRS / Open Knowledge Foundation*
 
 <!-- RECENT_REVIEWS:END -->
 
