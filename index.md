@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (16)
+- [AI Governance](#ai-governance) (17)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -21,6 +21,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-16 | AI Index Report 2026 | Stanford Institute for Human-Centered Artificial Intelligence (HAI) | AI Governance | The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated. | [Review](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) | [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report) |
 | 2026-04-14 | AI Governance, Safety and Infrastructure | Global Network Initiative and Centre for Communication Governance, National Law University Delhi | AI Governance | The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power. | [Review](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) | [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf) |
 | 2026-04-06 | Syntelos: Trust Through Attestation and Policy | Author webpage / paper draft | Trust Infrastructure | Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides. | [Review](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) | [Source](https://dhh1128.github.io/papers/syntelos.html) |
 | 2026-04-06 | CUBE: A Standard for Unifying Agent Benchmarks | arXiv | AI Safety & Evaluation | CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for. | [Review](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) | [Source](https://arxiv.org/abs/2603.15798) |
@@ -73,6 +74,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)* — [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report)
+  - The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated.
 - **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi* — [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf)
   - The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power.
 - **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv* — `cs.CR` — [Source](https://arxiv.org/abs/2603.16938)
