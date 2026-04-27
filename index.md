@@ -13,6 +13,7 @@ A generated index of review notes in this repository.
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (6)
+- [Platform Governance & Internet Governance](#platform-governance-internet-governance) (1)
 - [Socio-technical Systems](#socio-technical-systems) (3)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 - [Economic & Market Infrastructure](#economic-market-infrastructure) (2)
@@ -21,6 +22,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-27 | Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience | Centre for International Governance Innovation | Platform Governance & Internet Governance | Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. The paper is strongest when it treats memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress. | [Review](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) | [Source](https://www.cigionline.org/articles/institutional-memory-narrative-integrity-and-the-future-of-democratic-resilience/) |
 | 2026-04-16 | Mapping India’s Data Centres: Aspirations, Realities and Futures | Digital Futures Lab | Economic & Market Infrastructure | The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift. | [Review](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) | [Source](https://www.digitalfutureslab.in/publications/mapping-india-s-data-centres-aspirations-realities-and-futures) |
 | 2026-04-16 | AI Index Report 2026 | Stanford Institute for Human-Centered Artificial Intelligence (HAI) | AI Governance | The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated. | [Review](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) | [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report) |
 | 2026-04-14 | AI Governance, Safety and Infrastructure | Global Network Initiative and Centre for Communication Governance, National Law University Delhi | AI Governance | The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power. | [Review](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) | [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf) |
@@ -191,6 +193,12 @@ A generated index of review notes in this repository.
   - Regulatory capability has to be evidenced, infrastructure-backed, and tied to authority at runtime, otherwise self-assessment becomes polished theatre.
 - **2026-03-06** — [AI Governance in South Asia](reviews/2026/2026-03-06__ai-governance-in-south-asia__v1.md) — *Centre for Responsible AI, IIT Madras* — [Source](https://cerai.iitm.ac.in/docs/AI-Governance-In-South-Asia.pdf)
   - South Asia’s pragmatic AI governance path will only become credible when soft-law coordination is backed by enforceable controls, sovereign infrastructure choices, and real labour protections.
+
+## Platform Governance & Internet Governance
+<a id="platform-governance-internet-governance"></a>
+
+- **2026-04-27** — [Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) — *Centre for International Governance Innovation* — [Source](https://www.cigionline.org/articles/institutional-memory-narrative-integrity-and-the-future-of-democratic-resilience/)
+  - Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. The paper is strongest when it treats memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress.
 
 ## Socio-technical Systems
 <a id="socio-technical-systems"></a>
