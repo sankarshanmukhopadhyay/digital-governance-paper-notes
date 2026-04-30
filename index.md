@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (17)
+- [AI Governance](#ai-governance) (18)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (5)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -22,6 +22,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-04-30 | How Can AI Support Language Digitization and Digital Inclusion? | Stanford HAI | AI Governance | Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies. | [Review](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) | [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion) |
 | 2026-04-27 | Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience | Centre for International Governance Innovation | Platform Governance & Internet Governance | Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. The paper is strongest when it treats memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress. | [Review](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) | [Source](https://www.cigionline.org/articles/institutional-memory-narrative-integrity-and-the-future-of-democratic-resilience/) |
 | 2026-04-16 | Mapping India’s Data Centres: Aspirations, Realities and Futures | Digital Futures Lab | Economic & Market Infrastructure | The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift. | [Review](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) | [Source](https://www.digitalfutureslab.in/publications/mapping-india-s-data-centres-aspirations-realities-and-futures) |
 | 2026-04-16 | AI Index Report 2026 | Stanford Institute for Human-Centered Artificial Intelligence (HAI) | AI Governance | The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated. | [Review](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) | [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report) |
@@ -77,6 +78,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI* — [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion)
+  - Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies.
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)* — [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report)
   - The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated.
 - **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi* — [Source](https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf)
@@ -223,7 +226,3 @@ A generated index of review notes in this repository.
   - The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift.
 - **2026-03-26** — [From Extraction to Ownership: Platform Cooperatives as Infrastructure for Worker Sovereignty in African AI Labor Markets](reviews/2026/2026-03-26__from-extraction-to-ownership-platform-cooperatives-as-infrastructure-for-worker-sovereignty-in-african-ai-labor-markets__v1.md) — *ResearchGate / preprint* — [Source](https://www.researchgate.net/publication/400798251_From_Extraction_to_Ownership_Platform_Cooperatives_as_Infrastructure_for_Worker_Sovereignty_in_African_AI_Labor_Markets)
   - The paper’s most important move is to argue that the problem in African AI labor markets is not only underpayment but infrastructural exclusion: workers remain trapped because compute, capital, contracting power, and governance are organized to keep ownership upstream.
-
-## 2026 Additions
-
-- [2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) - *How Can AI Support Language Digitization and Digital Inclusion?*

@@ -24,7 +24,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (17)
+- **AI Governance** (18)
 - **AI Safety & Evaluation** (5)
 - **Digital Public Infrastructure** (5)
 - **Public Sector Digital Strategy** (2)
@@ -116,6 +116,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI*
 - **2026-04-27** — [Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) — *Centre for International Governance Innovation*
 - **2026-04-16** — [Mapping India’s Data Centres: Aspirations, Realities and Futures](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) — *Digital Futures Lab*
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
@@ -123,7 +124,6 @@ python scripts/build_index.py --check
 - **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft*
 - **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv*
 - **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv*
-- **2026-04-06** — [A Cryptographic Framework for Proof of Personhood](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) — *Reference page for IACR ePrint paper*
 
 <!-- RECENT_REVIEWS:END -->
 

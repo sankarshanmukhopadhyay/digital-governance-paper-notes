@@ -5,12 +5,12 @@ publication: "Stanford HAI"
 date_read: "2026-04-30"
 primary_domain: "AI Governance"
 tags:
-  - "language digitization"
-  - "digital inclusion"
   - "AI governance"
-  - "linguistic infrastructure"
-  - "cultural sovereignty"
+  - "infrastructure governance"
+  - "inclusion, rights & development"
   - "digital public infrastructure"
+  - "sovereignty"
+  - "legitimacy"
 key_insight: "Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies."
 ---
 
