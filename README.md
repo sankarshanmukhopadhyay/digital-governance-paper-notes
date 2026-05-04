@@ -32,7 +32,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Trust Infrastructure** (2)
 - **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
-- **Law, Regulation & Liability** (6)
+- **Law, Regulation & Liability** (7)
 - **Platform Governance & Internet Governance** (1)
 - **Socio-technical Systems** (3)
 - **Inclusion, Rights & Development** (1)
@@ -118,13 +118,13 @@ python scripts/build_index.py --check
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-05-04** — [DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) — *NITI Aayog / NITI Frontier Tech Hub*
+- **2026-05-04** — [AI Agents Under EU Law: A Compliance Architecture for AI Providers](reviews/2026/2026-04-07__ai-agents-under-eu-law-a-compliance-architecture-for-ai-providers__v1.md) — *arXiv working paper*
 - **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI*
 - **2026-04-28** — [AI’s English Problem—and Why We Should Care](reviews/2026/2026-04-28__ais-english-problem-and-why-we-should-care__v1.md) — *TechPolicy.Press*
 - **2026-04-27** — [Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) — *Centre for International Governance Innovation*
 - **2026-04-16** — [Mapping India’s Data Centres: Aspirations, Realities and Futures](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) — *Digital Futures Lab*
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi*
-- **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft*
 
 <!-- RECENT_REVIEWS:END -->
 
