@@ -6,7 +6,7 @@ A generated index of review notes in this repository.
 
 - [AI Governance](#ai-governance) (18)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
-- [Digital Public Infrastructure](#digital-public-infrastructure) (5)
+- [Digital Public Infrastructure](#digital-public-infrastructure) (6)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (2)
 - [Trust Infrastructure](#trust-infrastructure) (2)
@@ -23,6 +23,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-05-04 | DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth | NITI Aayog / NITI Frontier Tech Hub | Digital Public Infrastructure | DPI@2047 is strongest when it treats digital public infrastructure as market-making state capacity, but it under-specifies the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation. | [Review](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) | [Source](https://niti.gov.in/sites/default/files/2026-04/DPI-2047-for-Viksit-Bharat-A-Strategic-Roadmap-to-Enable-Non-linear-Inclusive-Socio-economic-Growth.pdf) |
 | 2026-04-30 | How Can AI Support Language Digitization and Digital Inclusion? | Stanford HAI | AI Governance | Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies. | [Review](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) | [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion) |
 | 2026-04-28 | AI’s English Problem—and Why We Should Care | TechPolicy.Press | Inclusion, Rights & Development | The article’s strongest contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains under-specified because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior. | [Review](reviews/2026/2026-04-28__ais-english-problem-and-why-we-should-care__v1.md) | [Source](https://www.techpolicy.press/ais-english-problem-and-why-we-should-care/) |
 | 2026-04-27 | Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience | Centre for International Governance Innovation | Platform Governance & Internet Governance | Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. The paper is strongest when it treats memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress. | [Review](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) | [Source](https://www.cigionline.org/articles/institutional-memory-narrative-integrity-and-the-future-of-democratic-resilience/) |
@@ -134,6 +135,8 @@ A generated index of review notes in this repository.
 ## Digital Public Infrastructure
 <a id="digital-public-infrastructure"></a>
 
+- **2026-05-04** — [DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) — *NITI Aayog / NITI Frontier Tech Hub* — [Source](https://niti.gov.in/sites/default/files/2026-04/DPI-2047-for-Viksit-Bharat-A-Strategic-Roadmap-to-Enable-Non-linear-Inclusive-Socio-economic-Growth.pdf)
+  - DPI@2047 is strongest when it treats digital public infrastructure as market-making state capacity, but it under-specifies the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation.
 - **2026-03-17** — [Sandboxes for DPI: Co-creating the blocks of digital trust](reviews/2026/2026-03-17__sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust__v1.md) — *Datasphere Initiative* — [Source](https://www.thedatasphere.org/datasphere-publish/sandboxes-for-dpi/)
   - The report’s most useful move is to treat sandboxes not as innovation theater, but as upstream governance capacity for testing trust, inclusion, interoperability, and institutional learning before DPI choices harden at population scale.
 - **2026-03-14** — [What India’s Push for Global Digital Repositories Tells Us About Its Tech Diplomacy](reviews/2026/2026-03-14__what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy__v1.md) — *Tech Policy Press* — [Source](https://www.techpolicy.press/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/)

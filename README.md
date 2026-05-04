@@ -26,7 +26,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 - **AI Governance** (18)
 - **AI Safety & Evaluation** (5)
-- **Digital Public Infrastructure** (5)
+- **Digital Public Infrastructure** (6)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (2)
 - **Trust Infrastructure** (2)
@@ -117,6 +117,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-05-04** — [DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) — *NITI Aayog / NITI Frontier Tech Hub*
 - **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI*
 - **2026-04-28** — [AI’s English Problem—and Why We Should Care](reviews/2026/2026-04-28__ais-english-problem-and-why-we-should-care__v1.md) — *TechPolicy.Press*
 - **2026-04-27** — [Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) — *Centre for International Governance Innovation*
@@ -124,7 +125,6 @@ python scripts/build_index.py --check
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-04-14** — [AI Governance, Safety and Infrastructure](reviews/2026/2026-04-14__ai-governance-safety-and-infrastructure__v1.md) — *Global Network Initiative and Centre for Communication Governance, National Law University Delhi*
 - **2026-04-06** — [Syntelos: Trust Through Attestation and Policy](reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md) — *Author webpage / paper draft*
-- **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
