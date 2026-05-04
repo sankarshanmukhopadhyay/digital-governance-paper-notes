@@ -15,6 +15,7 @@ A generated index of review notes in this repository.
 - [Law, Regulation & Liability](#law-regulation-liability) (6)
 - [Platform Governance & Internet Governance](#platform-governance-internet-governance) (1)
 - [Socio-technical Systems](#socio-technical-systems) (3)
+- [Inclusion, Rights & Development](#inclusion-rights-development) (1)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 - [Economic & Market Infrastructure](#economic-market-infrastructure) (2)
 
@@ -23,6 +24,7 @@ A generated index of review notes in this repository.
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
 | 2026-04-30 | How Can AI Support Language Digitization and Digital Inclusion? | Stanford HAI | AI Governance | Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies. | [Review](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) | [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion) |
+| 2026-04-28 | AI’s English Problem—and Why We Should Care | TechPolicy.Press | Inclusion, Rights & Development | The article’s strongest contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains under-specified because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior. | [Review](reviews/2026/2026-04-28__ais-english-problem-and-why-we-should-care__v1.md) | [Source](https://www.techpolicy.press/ais-english-problem-and-why-we-should-care/) |
 | 2026-04-27 | Institutional Memory, Narrative Integrity, and the Future of Democratic Resilience | Centre for International Governance Innovation | Platform Governance & Internet Governance | Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. The paper is strongest when it treats memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress. | [Review](reviews/2026/2026-04-27__institutional-memory-narrative-integrity-democratic-resilience__v1.md) | [Source](https://www.cigionline.org/articles/institutional-memory-narrative-integrity-and-the-future-of-democratic-resilience/) |
 | 2026-04-16 | Mapping India’s Data Centres: Aspirations, Realities and Futures | Digital Futures Lab | Economic & Market Infrastructure | The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift. | [Review](reviews/2026/2026-04-16__mapping-indias-data-centres-aspirations-realities-and-futures__v1.md) | [Source](https://www.digitalfutureslab.in/publications/mapping-india-s-data-centres-aspirations-realities-and-futures) |
 | 2026-04-16 | AI Index Report 2026 | Stanford Institute for Human-Centered Artificial Intelligence (HAI) | AI Governance | The report’s most important contribution is showing that AI capability, compute, capital, and measurement power are concentrating faster than governance systems can adapt, leaving a small set of actors with growing influence over both AI’s trajectory and the terms on which it is evaluated. | [Review](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) | [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report) |
@@ -212,6 +214,12 @@ A generated index of review notes in this repository.
   - A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.
 - **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine* — [Source](https://www.noemamag.com/the-mythology-of-conscious-ai/)
   - Myths about conscious AI distract from the immediate governance problem: non-conscious systems already exercise power at scale without clear accountability.
+
+## Inclusion, Rights & Development
+<a id="inclusion-rights-development"></a>
+
+- **2026-04-28** — [AI’s English Problem—and Why We Should Care](reviews/2026/2026-04-28__ais-english-problem-and-why-we-should-care__v1.md) — *TechPolicy.Press* — [Source](https://www.techpolicy.press/ais-english-problem-and-why-we-should-care/)
+  - The article’s strongest contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains under-specified because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior.
 
 ## State Capacity & Administrative Systems
 <a id="state-capacity-administrative-systems"></a>
