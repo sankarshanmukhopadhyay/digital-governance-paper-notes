@@ -8,7 +8,7 @@ A generated index of review notes in this repository.
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (6)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
-- [Digital Identity](#digital-identity) (2)
+- [Digital Identity](#digital-identity) (3)
 - [Trust Infrastructure](#trust-infrastructure) (2)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
@@ -23,6 +23,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-05-05 | Self-Sovereign Identity and the Future of Digital Trust: From India to the World | Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence | Digital Identity | The report is strongest when it treats self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized. | [Review](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) | [Source](https://www.dsci.in/resource/content/self-sovereign-identity-and-future-digital-trust-india-world) |
 | 2026-05-04 | DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth | NITI Aayog / NITI Frontier Tech Hub | Digital Public Infrastructure | DPI@2047 is strongest when it treats digital public infrastructure as market-making state capacity, but it under-specifies the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation. | [Review](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) | [Source](https://niti.gov.in/sites/default/files/2026-04/DPI-2047-for-Viksit-Bharat-A-Strategic-Roadmap-to-Enable-Non-linear-Inclusive-Socio-economic-Growth.pdf) |
 | 2026-05-04 | AI Agents Under EU Law: A Compliance Architecture for AI Providers | arXiv working paper | Law, Regulation & Liability | The paper’s strongest move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped. | [Review](reviews/2026/2026-04-07__ai-agents-under-eu-law-a-compliance-architecture-for-ai-providers__v1.md) | [Source](https://arxiv.org/abs/2604.04604) |
 | 2026-04-30 | How Can AI Support Language Digitization and Digital Inclusion? | Stanford HAI | AI Governance | Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies. | [Review](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) | [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion) |
@@ -160,6 +161,8 @@ A generated index of review notes in this repository.
 ## Digital Identity
 <a id="digital-identity"></a>
 
+- **2026-05-05** — [Self-Sovereign Identity and the Future of Digital Trust: From India to the World](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) — *Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence* — [Source](https://www.dsci.in/resource/content/self-sovereign-identity-and-future-digital-trust-india-world)
+  - The report is strongest when it treats self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized.
 - **2026-04-06** — [A Cryptographic Framework for Proof of Personhood](reviews/2026/2026-04-06__a-cryptographic-framework-for-proof-of-personhood__v1.md) — *Reference page for IACR ePrint paper* — [Source](https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html)
   - The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions.
 - **2026-03-12** — [Digital Identities Across the World](reviews/2026/2026-03-12__digital-identities-across-the-world__v1.md) — *PwC / Strategy&* — [Source](https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf)
