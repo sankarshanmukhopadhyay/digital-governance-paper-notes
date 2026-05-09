@@ -509,10 +509,11 @@ def render_docs_html(records: List[ReviewRecord], taxonomy: Taxonomy) -> str:
         rows.append(
             f'<tr data-review-slug="{html.escape(r.slug, quote=True)}">'
             f"<td>{html.escape(r.date)}</td>"
-            f"<td><a href=\"{review_href}\" target=\"_blank\" rel=\"noopener noreferrer\">{html.escape(r.title)}</a></td>"
+            f"<td>{html.escape(r.title)}</td>"
             f"<td>{html.escape(r.publication or '—')}</td>"
             f"<td>{html.escape(r.domain)}</td>"
             f"<td class=\"insight\">{insight_html}</td>"
+            f"<td><a href=\"{review_href}\" target=\"_blank\" rel=\"noopener noreferrer\">Review</a></td>"
             f"<td>{source_html}</td>"
             "</tr>"
         )
