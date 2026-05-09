@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (18)
+- [AI Governance](#ai-governance) (19)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (6)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -23,6 +23,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-05-09 | Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty | Kautilya School of Public Policy Working Paper #3 | AI Governance | The paper is strongest when it treats data sourcing, synthetic content, and technological sovereignty as one governance loop rather than three separate policy problems. Its central gap is that it proposes institutional remedies without fully specifying the enforcement architecture, evidence duties, revocation mechanics, and redress pathways needed to make those remedies operational. | [Review](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) | [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india) |
 | 2026-05-06 | Future of Jobs in the Age of AI: Emerging Roles, New Opportunities | DeepTech4Bharat Foundation and Center of Policy Research and Governance | Socio-technical Systems | The report is strongest when it treats AI employment as a reallocation of roles across the full AI stack, but it under-specifies the institutional controls needed to make those roles legitimate, contestable, and accountable. Its central governance gap is that it identifies new occupations without fully defining the authority, liability, evidence, and redress structures those occupations will exercise. | [Review](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) | [Source](https://www.ai4india.org/) |
 | 2026-05-06 | Building a Human Resilience Infrastructure for the AI Age | Imagining the Digital Future Center, Elon University | Socio-technical Systems | The report's strongest move is to redefine resilience as an institutional property rather than an individual coping skill. Its main governance weakness is that it names contestability, authenticity, literacy, and institutional redesign as necessities without converting them into enforceable decision rights, evidence duties, escalation paths, and redress mechanisms. | [Review](reviews/2026/2026-04-01__building-human-resilience-infrastructure-ai-age__v1.md) | [Source](https://imaginingthedigitalfuture.org/reports-and-publications/human-resilience-in-the-age-of-ai/) |
 | 2026-05-05 | Self-Sovereign Identity and the Future of Digital Trust: From India to the World | Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence | Digital Identity | The report is strongest when it treats self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized. | [Review](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) | [Source](https://www.dsci.in/resource/content/self-sovereign-identity-and-future-digital-trust-india-world) |
@@ -86,6 +87,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3* — [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india)
+  - The paper is strongest when it treats data sourcing, synthetic content, and technological sovereignty as one governance loop rather than three separate policy problems. Its central gap is that it proposes institutional remedies without fully specifying the enforcement architecture, evidence duties, revocation mechanics, and redress pathways needed to make those remedies operational.
 - **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI* — [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion)
   - Language digitization is not merely a preservation exercise but an infrastructural governance process that determines whose identities, cultures, and knowledge systems become machine-legible within AI-mediated societies.
 - **2026-04-16** — [AI Index Report 2026](reviews/2026/2026-04-16__ai-index-report-2026__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)* — [Source](https://hai.stanford.edu/ai-index/2026-ai-index-report)
