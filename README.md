@@ -24,7 +24,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (19)
+- **AI Governance** (20)
 - **AI Safety & Evaluation** (5)
 - **Digital Public Infrastructure** (7)
 - **Public Sector Digital Strategy** (2)
@@ -117,6 +117,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology*
 - **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3*
 - **2026-05-06** — [Future of Jobs in the Age of AI: Emerging Roles, New Opportunities](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) — *DeepTech4Bharat Foundation and Center of Policy Research and Governance*
 - **2026-05-06** — [Building Digital Foundations in Small Island Digital States 2.0](reviews/2026/2026-05-06__building-digital-foundations-in-small-island-digital-states-2-0__v1.md) — *United Nations Development Programme*
@@ -124,7 +125,6 @@ python scripts/build_index.py --check
 - **2026-05-05** — [Self-Sovereign Identity and the Future of Digital Trust: From India to the World](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) — *Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence*
 - **2026-05-04** — [DPI@2047 for Viksit Bharat: A Strategic Roadmap to Enable Non-linear Inclusive Socio-economic Growth](reviews/2026/2026-05-04__dpi-2047-for-viksit-bharat__v1.md) — *NITI Aayog / NITI Frontier Tech Hub*
 - **2026-05-04** — [AI Agents Under EU Law: A Compliance Architecture for AI Providers](reviews/2026/2026-04-07__ai-agents-under-eu-law-a-compliance-architecture-for-ai-providers__v1.md) — *arXiv working paper*
-- **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI*
 
 <!-- RECENT_REVIEWS:END -->
 

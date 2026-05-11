@@ -4,7 +4,7 @@ A generated index of review notes in this repository.
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (19)
+- [AI Governance](#ai-governance) (20)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (5)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (7)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -23,6 +23,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-05-11 | AI Governance at the Frontier: Unpacking Foundational Assumptions | Center for Security and Emerging Technology | AI Governance | The report's strongest move is to treat governance proposals as bundles of assumptions rather than competing slogans. Its unresolved weakness is that assumption-mapping becomes policy-relevant only when each assumption is translated into testable institutional capacity, enforceable authority, and observable failure conditions. | [Review](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) | [Source](https://cset.georgetown.edu/publication/ai-governance-at-the-frontier/) |
 | 2026-05-09 | Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty | Kautilya School of Public Policy Working Paper #3 | AI Governance | The paper is strongest when it treats data sourcing, synthetic content, and technological sovereignty as one governance loop rather than three separate policy problems. Its central gap is that it proposes institutional remedies without fully specifying the enforcement architecture, evidence duties, revocation mechanics, and redress pathways needed to make those remedies operational. | [Review](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) | [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india) |
 | 2026-05-06 | Future of Jobs in the Age of AI: Emerging Roles, New Opportunities | DeepTech4Bharat Foundation and Center of Policy Research and Governance | Socio-technical Systems | The report is strongest when it treats AI employment as a reallocation of roles across the full AI stack, but it under-specifies the institutional controls needed to make those roles legitimate, contestable, and accountable. Its central governance gap is that it identifies new occupations without fully defining the authority, liability, evidence, and redress structures those occupations will exercise. | [Review](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) | [Source](https://www.ai4india.org/) |
 | 2026-05-06 | Building Digital Foundations in Small Island Digital States 2.0 | United Nations Development Programme | Digital Public Infrastructure | The brief is strongest when it treats SIDS digital transformation as an institutional capability problem rather than an ICT rollout problem, but it still needs a sharper operating model for authority, assurance, revocation, redress, and supplier accountability across shared digital infrastructure. | [Review](reviews/2026/2026-05-06__building-digital-foundations-in-small-island-digital-states-2-0__v1.md) | [Source](https://www.undp.org/publications/building-digital-foundations-small-island-digital-states-20) |
@@ -88,6 +89,8 @@ A generated index of review notes in this repository.
 ## AI Governance
 <a id="ai-governance"></a>
 
+- **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology* — [Source](https://cset.georgetown.edu/publication/ai-governance-at-the-frontier/)
+  - The report's strongest move is to treat governance proposals as bundles of assumptions rather than competing slogans. Its unresolved weakness is that assumption-mapping becomes policy-relevant only when each assumption is translated into testable institutional capacity, enforceable authority, and observable failure conditions.
 - **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3* — [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india)
   - The paper is strongest when it treats data sourcing, synthetic content, and technological sovereignty as one governance loop rather than three separate policy problems. Its central gap is that it proposes institutional remedies without fully specifying the enforcement architecture, evidence duties, revocation mechanics, and redress pathways needed to make those remedies operational.
 - **2026-04-30** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford HAI* — [Source](https://hai.stanford.edu/policy/how-can-ai-support-language-digitization-and-digital-inclusion)
