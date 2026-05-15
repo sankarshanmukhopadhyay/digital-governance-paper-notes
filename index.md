@@ -5,7 +5,7 @@ A generated index of review notes in this repository.
 ## Browse by Domain
 
 - [AI Governance](#ai-governance) (20)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (5)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (6)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (7)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (3)
@@ -23,6 +23,7 @@ A generated index of review notes in this repository.
 
 | Date | Paper | Publication | Domain | Key Insight | Review | Source |
 |------|-------|-------------|--------|-------------|--------|--------|
+| 2026-05-15 | From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders | Center for Democracy & Technology AI Governance Lab | AI Safety & Evaluation | The report's strongest contribution is that it treats eating disorder risk as a pattern of interaction rather than a prohibited content class. Its governance gap is that the taxonomy still needs to become an auditable control framework with thresholds, evidence requirements, escalation duties, and redress pathways. | [Review](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) | [Source](https://programs.sigchi.org/chi/2026/program/content/223437) |
 | 2026-05-11 | AI Governance at the Frontier: Unpacking Foundational Assumptions | Center for Security and Emerging Technology | AI Governance | The report's strongest move is to treat governance proposals as bundles of assumptions rather than competing slogans. Its unresolved weakness is that assumption-mapping becomes policy-relevant only when each assumption is translated into testable institutional capacity, enforceable authority, and observable failure conditions. | [Review](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) | [Source](https://cset.georgetown.edu/publication/ai-governance-at-the-frontier/) |
 | 2026-05-09 | Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty | Kautilya School of Public Policy Working Paper #3 | AI Governance | The paper is strongest when it treats data sourcing, synthetic content, and technological sovereignty as one governance loop rather than three separate policy problems. Its central gap is that it proposes institutional remedies without fully specifying the enforcement architecture, evidence duties, revocation mechanics, and redress pathways needed to make those remedies operational. | [Review](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) | [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india) |
 | 2026-05-06 | Future of Jobs in the Age of AI: Emerging Roles, New Opportunities | DeepTech4Bharat Foundation and Center of Policy Research and Governance | Socio-technical Systems | The report is strongest when it treats AI employment as a reallocation of roles across the full AI stack, but it under-specifies the institutional controls needed to make those roles legitimate, contestable, and accountable. Its central governance gap is that it identifies new occupations without fully defining the authority, liability, evidence, and redress structures those occupations will exercise. | [Review](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) | [Source](https://www.ai4india.org/) |
@@ -133,6 +134,8 @@ A generated index of review notes in this repository.
 ## AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-05-15** — [From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) — *Center for Democracy & Technology AI Governance Lab* — `cs.HC` — [Source](https://programs.sigchi.org/chi/2026/program/content/223437)
+  - The report's strongest contribution is that it treats eating disorder risk as a pattern of interaction rather than a prohibited content class. Its governance gap is that the taxonomy still needs to become an auditable control framework with thresholds, evidence requirements, escalation duties, and redress pathways.
 - **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv* — `cs.AI` — [Source](https://arxiv.org/abs/2603.15798)
   - CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for.
 - **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.06007)
