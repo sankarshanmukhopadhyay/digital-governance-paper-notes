@@ -37,7 +37,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Socio-technical Systems** (6)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (1)
-- **Economic & Market Infrastructure** (2)
+- **Economic & Market Infrastructure** (3)
 
 <!-- TAXONOMY_SUMMARY:END -->
 
@@ -117,6 +117,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-06-24** — [Municipal Tokens as Urban Policy Tools: The Case of LVGA and the MyLugano App](reviews/2026/2026-06-09__municipal-tokens-as-urban-policy-tools__v1.md) — *P2P Financial Systems International Workshop*
 - **2026-06-24** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence and Stanford SILICON*
 - **2026-05-15** — [From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) — *Center for Democracy & Technology AI Governance Lab*
 - **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology*
@@ -124,7 +125,6 @@ python scripts/build_index.py --check
 - **2026-05-06** — [Future of Jobs in the Age of AI: Emerging Roles, New Opportunities](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) — *DeepTech4Bharat Foundation and Center of Policy Research and Governance*
 - **2026-05-06** — [Building Digital Foundations in Small Island Digital States 2.0](reviews/2026/2026-05-06__building-digital-foundations-in-small-island-digital-states-2-0__v1.md) — *United Nations Development Programme*
 - **2026-05-06** — [Building a Human Resilience Infrastructure for the AI Age](reviews/2026/2026-04-01__building-human-resilience-infrastructure-ai-age__v1.md) — *Imagining the Digital Future Center, Elon University*
-- **2026-05-05** — [Self-Sovereign Identity and the Future of Digital Trust: From India to the World](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) — *Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence*
 
 <!-- RECENT_REVIEWS:END -->
 
