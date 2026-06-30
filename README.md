@@ -26,7 +26,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 - **AI Governance** (19)
 - **AI Safety & Evaluation** (6)
-- **Digital Public Infrastructure** (7)
+- **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (3)
 - **Trust Infrastructure** (2)
@@ -118,6 +118,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-06-26** — [Digital Public Infrastructure in Africa: A Leapfrog Catalyst for Inclusive Growth and Prosperity](reviews/2026/2026-06-26__digital-public-infrastructure-in-africa__v1.md) — *United Nations Development Programme, Regional Bureau for Africa and Digital, AI and Innovation Hub*
 - **2026-06-26** — [Control Is the Operative Fact: A Three-Layer Model for Digital Identity, Transferable Records, and Platform-Independent Authority](reviews/2026/2026-06-26__control-is-the-operative-fact-open-etr__v1.md) — *OWG Connect — Open Trade Infrastructure Series (Discussion Paper v1.0)*
 - **2026-06-24** — [Municipal Tokens as Urban Policy Tools: The Case of LVGA and the MyLugano App](reviews/2026/2026-06-09__municipal-tokens-as-urban-policy-tools__v1.md) — *P2P Financial Systems International Workshop*
 - **2026-06-24** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence and Stanford SILICON*
@@ -125,7 +126,6 @@ python scripts/build_index.py --check
 - **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology*
 - **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3*
 - **2026-05-06** — [Future of Jobs in the Age of AI: Emerging Roles, New Opportunities](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) — *DeepTech4Bharat Foundation and Center of Policy Research and Governance*
-- **2026-05-06** — [Building Digital Foundations in Small Island Digital States 2.0](reviews/2026/2026-05-06__building-digital-foundations-in-small-island-digital-states-2-0__v1.md) — *United Nations Development Programme*
 
 <!-- RECENT_REVIEWS:END -->
 
