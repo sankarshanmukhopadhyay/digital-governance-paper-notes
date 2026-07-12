@@ -25,7 +25,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 <!-- TAXONOMY_SUMMARY:START -->
 
 - **AI Governance** (19)
-- **AI Safety & Evaluation** (6)
+- **AI Safety & Evaluation** (7)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (4)
@@ -118,6 +118,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge*
 - **2026-07-12** — [Introducing AI to an Online Petition Platform Changed Outputs but not Outcomes](reviews/2026/2026-07-12__introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes__v1.md) — *arXiv*
 - **2026-06-27** — [Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines](reviews/2026/2026-06-27__strategic-identity-asymmetry__v1.md) — *SSRN*
 - **2026-06-26** — [Digital Public Infrastructure in Africa: A Leapfrog Catalyst for Inclusive Growth and Prosperity](reviews/2026/2026-06-26__digital-public-infrastructure-in-africa__v1.md) — *United Nations Development Programme, Regional Bureau for Africa and Digital, AI and Innovation Hub*
@@ -125,7 +126,6 @@ python scripts/build_index.py --check
 - **2026-06-24** — [Municipal Tokens as Urban Policy Tools: The Case of LVGA and the MyLugano App](reviews/2026/2026-06-09__municipal-tokens-as-urban-policy-tools__v1.md) — *P2P Financial Systems International Workshop*
 - **2026-06-24** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence and Stanford SILICON*
 - **2026-05-15** — [From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) — *Center for Democracy & Technology AI Governance Lab*
-- **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology*
 
 <!-- RECENT_REVIEWS:END -->
 
