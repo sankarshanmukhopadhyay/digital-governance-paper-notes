@@ -34,7 +34,7 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 - **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (7)
-- **Platform Governance & Internet Governance** (1)
+- **Platform Governance & Internet Governance** (2)
 - **Socio-technical Systems** (6)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (1)
@@ -118,6 +118,7 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-07-12** — [Introducing AI to an Online Petition Platform Changed Outputs but not Outcomes](reviews/2026/2026-07-12__introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes__v1.md) — *arXiv*
 - **2026-06-27** — [Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines](reviews/2026/2026-06-27__strategic-identity-asymmetry__v1.md) — *SSRN*
 - **2026-06-26** — [Digital Public Infrastructure in Africa: A Leapfrog Catalyst for Inclusive Growth and Prosperity](reviews/2026/2026-06-26__digital-public-infrastructure-in-africa__v1.md) — *United Nations Development Programme, Regional Bureau for Africa and Digital, AI and Innovation Hub*
 - **2026-06-26** — [Control Is the Operative Fact: A Three-Layer Model for Digital Identity, Transferable Records, and Platform-Independent Authority](reviews/2026/2026-06-26__control-is-the-operative-fact-open-etr__v1.md) — *OWG Connect — Open Trade Infrastructure Series (Discussion Paper v1.0)*
@@ -125,7 +126,6 @@ python scripts/build_index.py --check
 - **2026-06-24** — [How Can AI Support Language Digitization and Digital Inclusion?](reviews/2026/2026-04-30__how-can-ai-support-language-digitization-and-digital-inclusion__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence and Stanford SILICON*
 - **2026-05-15** — [From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) — *Center for Democracy & Technology AI Governance Lab*
 - **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology*
-- **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3*
 
 <!-- RECENT_REVIEWS:END -->
 
