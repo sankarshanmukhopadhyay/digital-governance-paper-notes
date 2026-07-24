@@ -33,4 +33,4 @@ Overall, this is a worthwhile and original practice paper. It is not a definitiv
 
 ## Key Insight
 
-Persistent, machine-readable project context acts as a governance and memory layer for coding agents, but the paper demonstrates this through a single-project experience report rather than a comparative study.
+Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation.

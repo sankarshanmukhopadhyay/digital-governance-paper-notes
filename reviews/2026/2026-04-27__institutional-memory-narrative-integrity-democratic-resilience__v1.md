@@ -36,4 +36,4 @@ A governance-grade extension of this work would treat institutional memory as an
 
 ## Key Insight
 
-The paper’s important move is to treat memory as infrastructure rather than heritage. Democratic resilience depends on whether institutions can preserve and contest the record of power over time, but that requires enforceable governance around provenance, access, correction, audit, revocation, and redress, not merely better archives.
+Democratic resilience is increasingly determined by who controls the systems that preserve, surface, and contest institutional memory. By treating memory as civic infrastructure, but it stops short of specifying enforceable governance mechanisms for provenance, contestation, revocation, and redress.

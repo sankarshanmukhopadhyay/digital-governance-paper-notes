@@ -36,7 +36,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - **2026-04-06** — [Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement](reviews/2026/2026-04-06__cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.16938)
   - Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.
 - **2026-03-23** — [The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency](reviews/2026/2026-03-23__comprehension-gated-agent-economy-robustness-first-ai-economic-agency__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.15639)
-  - AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness—transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design.
+  - AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness, transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design.
 - **2026-03-23** — [Nomotic AI: The Governance Counterpart to Agentic AI](reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md) — *SSRN (Independent Researcher)* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069888)
   - Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance.
 - **2026-03-14** — [Open Problems in Technical AI Governance](reviews/2026/2026-03-14__open-problems-in-technical-ai-governance__v1.md) — *Transactions on Machine Learning Research* — [Source](https://arxiv.org/abs/2407.14981)
@@ -58,11 +58,11 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - **2026-03-06** — [Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies and the Long Game Ahead](reviews/2026/2026-03-06__sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies__v1.md) — *Tony Blair Institute for Global Change* — [Source](https://institute.global/insights/tech-and-digitalisation/sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies)
   - AI sovereignty is credible only when countries can operationally exit, audit, and tier dependencies rather than merely rebrand lock-in as strategic autonomy.
 - **2026-03-06** — [Democratising AI: Towards Open, Decentralised AI Ecosystems](reviews/2026/2026-03-06__democratising-ai-towards-open-decentralised-ai-ecosystems__v1.md) — *Observer Research Foundation* — [Source](https://www.orfonline.org/research/democratising-ai-towards-open-decentralised-ai-ecosystems)
-  - AI democratisation only becomes operational when \\"decentralisation\\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term.
+  - AI democratisation only becomes operational when \"decentralisation\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term.
 - **2026-03-05** — [Build vs Buy in the Age of LLMs](reviews/2026/2026-03-05__build-vs-buy-in-the-age-of-llms__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2602.13033v2)
-  - The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths—not for a romantic preference for in-house models.
+  - The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths, not a romantic preference for in-house models.
 - **2026-03-05** — [AI Agents and the Next Layer of India's Digital Infrastructure](reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md) — *Tech Policy Press* — [Source](https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/)
-  - At population scale, an \\"agent layer\\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud.
+  - At population scale, an \"agent layer\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable; otherwise you just automated intermediaries and fraud.
 
 ### AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
@@ -140,7 +140,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 <a id="privacy-data-protection"></a>
 
 - **2026-03-18** — [Large-scale online deanonymization with LLMs](reviews/2026/2026-03-18__large-scale-online-deanonymization-with-llms__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2602.16800)
-  - LLMs do not need to exceed human investigative capability to collapse pseudonymity at scale — they only need to reduce its cost, and that cost reduction is now sufficient to make large-scale deanonymization a routine, automatable threat.
+  - LLMs do not need to exceed human investigative capability to collapse pseudonymity at scale; they only need to reduce its cost, and that cost reduction is now sufficient to make large-scale deanonymization a routine, automatable threat.
 - **2026-03-17** — [AI Innovation, Effective Anonymization & the DPDP Act](reviews/2026/2026-03-17__ai-innovation-effective-anonymization-the-dpdp-act__v1.md) — *Open Loop* — [Source](https://openloop.org/programs/policy-anonymization-india/)
   - The report’s central insight is that India’s AI bottleneck is not merely lack of data, but lack of a usable legal-operational pathway for iterative model development, effective anonymization, and PET adoption under the DPDP regime.
 
@@ -190,7 +190,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - **2026-03-30** — [Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency](reviews/2026/2026-03-30__participatory-unblocking-of-blockchain-use-cases__v1.md) — *SSRN / BlockchainGov report* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6465860)
   - The paper’s central value is not that it proves blockchain adoption, but that it reframes blockchain failure as an institutional design problem. Its participatory methodology improves problem selection and contextual fit, but it still stops short of specifying the operational governance needed for legitimate deployment.
 - **2026-03-10** — [Gene name errors: Lessons not learned](reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md) — *PLOS Computational Biology* — [Source](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984)
-  - A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.
+  - A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices; only structural interventions at the software, journal, and training levels can.
 - **2026-03-06** — [The Mythology of Conscious AI](reviews/2026/2026-03-06__the-mythology-of-conscious-ai__v1.md) — *Noema Magazine* — [Source](https://www.noemamag.com/the-mythology-of-conscious-ai/)
   - Myths about conscious AI distract from the immediate governance problem: non-conscious systems already exercise power at scale without clear accountability.
 
@@ -206,7 +206,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 <a id="state-capacity-administrative-systems"></a>
 
 - **2026-03-05** — [The Stack and the State: India’s Digital Governance Model as Technopolitical Power](reviews/2026/2026-03-05__the-stack-and-the-state-india-s-digital-governance-model-as-technopolitical-power__v1.md) — *Information Polity (IPP Journal)* — [Source](https://www.ippjournal.org/the-stack-and-the-state-indias-digital-governance-model-as-technopolitical-power.html)
-  - DPI’s \\"power effects\\" are not vibes—they come from specific architectural and operational control points, so serious critique needs measurable indicators and design-level mappings.
+  - DPI’s \"power effects\" are not vibes; they come from specific architectural and operational control points, so serious critique needs measurable indicators and design-level mappings.
 
 ### Economic & Market Infrastructure
 <a id="economic-market-infrastructure"></a>

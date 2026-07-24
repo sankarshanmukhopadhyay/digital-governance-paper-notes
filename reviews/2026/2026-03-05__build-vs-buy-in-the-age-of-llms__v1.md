@@ -10,7 +10,7 @@ tags:
   - "LLMs"
   - "public sector"
   - "infrastructure strategy"
-key_insight: "The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths—not for a romantic preference for in-house models."
+key_insight: "The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths, not a romantic preference for in-house models."
 ---
 
 # Paper Review
@@ -31,4 +31,4 @@ Overall, the paper succeeds in reframing the debate. The next step is turning th
 
 ## Key Insight
 
-The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths—not for a romantic preference for in-house models.
+The build-vs-buy question is really a sovereignty dial: governments should optimize for control of data, risk, and upgrade paths, not a romantic preference for in-house models.

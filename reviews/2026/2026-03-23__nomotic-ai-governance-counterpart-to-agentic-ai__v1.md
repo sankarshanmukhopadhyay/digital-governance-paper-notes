@@ -40,4 +40,4 @@ The paper succeeds as conceptual framing: it elevates governance to co-equal sta
 
 ## Key Insight
 
-Nomotic AI's core insight is architectural rather than technical: the governance gap in agentic AI systems persists not because governance is impossible but because governance is typically treated as a post-deployment compliance layer rather than as a design-time architectural decision that is co-equal with capability design.
+Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance.

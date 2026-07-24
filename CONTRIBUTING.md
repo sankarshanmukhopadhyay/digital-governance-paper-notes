@@ -64,6 +64,28 @@ The review body should contain two sections, in this order:
 
 The key insight line is also stored in the front matter `key_insight` field — keep them identical.
 
+### Editorial lint
+
+Before rebuilding the index, run the Tier 1 editorial lint. It checks front matter completeness, taxonomy conformance, file naming, the em dash and banned-phrase style rules, `key_insight` identity between front matter and the body's `## Key Insight` section, body length, and duplicate papers across the archive:
+
+```bash
+python scripts/editorial_lint.py
+```
+
+Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. See `editorial-standards.md` for the full tier breakdown of what this script does and does not check, and why.
+
+To see a single file's findings:
+
+```bash
+python scripts/editorial_lint.py reviews/2026/2026-03-05__some-review__v1.md
+```
+
+To see what the proposed Phase 2 provenance fields (`published`, `doi`, `affiliation`, `peer_review_status`, `paper_type`) would add, without treating them as required yet:
+
+```bash
+python scripts/editorial_lint.py --strict-schema
+```
+
 ### Rebuilding generated files
 
 After writing or editing a review, rebuild the generated index files locally before committing:

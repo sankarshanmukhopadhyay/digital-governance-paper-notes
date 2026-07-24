@@ -10,7 +10,7 @@ tags:
   - "AI agents"
   - "delegation"
   - "trust registries"
-key_insight: "At population scale, an \\"agent layer\\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud."
+key_insight: "At population scale, an \"agent layer\" only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable; otherwise you just automated intermediaries and fraud."
 ---
 
 # Paper Review
@@ -63,4 +63,4 @@ assurance layers that allow them to operate safely at societal scale.
 
 ## Key Insight
 
-At population scale, an “agent layer” only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud.
+At population scale, an “agent layer” only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable; otherwise you just automated intermediaries and fraud.

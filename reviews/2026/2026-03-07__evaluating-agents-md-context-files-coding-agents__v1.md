@@ -31,4 +31,4 @@ Overall, the paper provides valuable empirical evidence against a rapidly spread
 
 ## Key Insight
 
-More repository context does not necessarily improve coding agent performance; excessive automatically generated guidance can increase cost and reduce task success.
+Automatically generated repository context files often degrade coding-agent performance because they introduce additional constraints without improving task-relevant understanding.

@@ -36,4 +36,4 @@ The core idea behind obligation-driven agents is important and directionally cor
 
 ## Key Insight
 
-Citizen-owned AI agents could become the next interface layer of digital public infrastructure, reshaping how individuals interact with governments and markets.
+The next layer of digital public infrastructure may be citizen-owned AI agents that mediate interaction between individuals and complex administrative systems.

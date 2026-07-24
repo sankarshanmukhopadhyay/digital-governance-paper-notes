@@ -10,7 +10,7 @@ tags:
   - "interoperability"
   - "AI governance"
   - "global south"
-key_insight: "AI democratisation only becomes operational when \\"decentralisation\\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term."
+key_insight: "AI democratisation only becomes operational when \"decentralisation\" is broken into testable design choices, conformance rules, and incentives rather than treated as a feel-good umbrella term."
 ---
 
 # Paper Review

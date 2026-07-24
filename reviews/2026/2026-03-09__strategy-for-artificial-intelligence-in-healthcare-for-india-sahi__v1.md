@@ -33,4 +33,4 @@ For AI governance and DPI practice, SAHI matters because it treats digital infra
 
 ## Key Insight
 
-SAHI’s real significance is not that it promotes AI in healthcare, but that it attempts to make India’s health DPI governable enough for AI to scale without collapsing into unsafe pilots, vendor chaos, or institutional theatre.
+SAHI’s real significance is not that it celebrates AI in health, but that it tries to turn India’s health DPI into a governed deployment environment where risk tiering, interoperability, capacity, and procurement become the rails for responsible scale.

@@ -70,4 +70,4 @@ Notably, the report grounds governance in rights and institutional legitimacy ra
 
 ## Key Insight
 
-The report's core contribution is translating governance from abstract principle into an institutional sequence; readiness, risk, technical scrutiny, ongoing oversight; yet it underspecifies enforcement authority, vendor lock-in dynamics, and contestability mechanisms. These are not conceptual gaps but operational ones: they determine whether the framework enables responsible deployment or remains aspirational guidance.
+The report's central contribution is translating governance from abstract principle into an institutional sequence (readiness → risk → technical scrutiny → ongoing oversight), yet it underspecifies enforcement authority, vendor lock-in dynamics, and contestability mechanisms; these are critical gaps for operational deployment in Indian courts.

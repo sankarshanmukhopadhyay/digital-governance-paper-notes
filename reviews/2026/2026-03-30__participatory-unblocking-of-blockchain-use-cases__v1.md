@@ -32,4 +32,4 @@ That leaves the report in an interesting position. It is not proof that blockcha
 
 ## Key Insight
 
-The report does not establish blockchain efficacy so much as it establishes a better threshold for blockchain seriousness. It shows that participatory, problem-driven design can improve institutional fit, but also reveals that without explicit models for authority, revocation, liability, and redress, better prototypes still fall short of legitimate infrastructure.
+The paper’s central value is not that it proves blockchain adoption, but that it reframes blockchain failure as an institutional design problem. Its participatory methodology improves problem selection and contextual fit, but it still stops short of specifying the operational governance needed for legitimate deployment.

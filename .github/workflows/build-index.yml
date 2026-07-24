@@ -16,6 +16,13 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install lint dependencies
+        run: pip install pyyaml
+
+      - name: Editorial lint (Tier 1 checks)
+        run: |
+          python scripts/editorial_lint.py
+
       - name: Check index is up to date
         run: |
           python scripts/build_index.py --check
