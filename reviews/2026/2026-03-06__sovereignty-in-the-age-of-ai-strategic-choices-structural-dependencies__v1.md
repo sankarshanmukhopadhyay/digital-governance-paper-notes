@@ -21,7 +21,7 @@ This report gets the big move right: sovereign AI is not self-sufficiency. It is
 
 The CSD framing, Control, Steer, Depend, is useful. Yet without hard triggers and measurable thresholds, it becomes a story machine: every lock-in gets relabeled “managed dependence,” every partnership becomes “sovereign access.”
 
-What is missing in most sovereignty talk, and still under-specified here, is the part that actually hurts: optionality engineering.
+What is missing in most sovereignty talk, and still lacks an operational account here, is the part that actually hurts: optionality engineering.
 
 - Can you switch providers in weeks, not years?
 - Do you have tested fallbacks for critical workloads?

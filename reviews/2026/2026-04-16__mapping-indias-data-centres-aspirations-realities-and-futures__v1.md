@@ -21,7 +21,7 @@ key_insight: "The report’s core contribution is to show that India’s data-ce
 
 ## Review
 
-This report is strongest when it refuses to treat data centres as invisible backend infrastructure. It reads them instead as political infrastructure sitting underneath India’s AI, localisation, and digital sovereignty ambitions. That shift in framing matters. Once data centres are seen as sites where land, water, electricity, tax expenditure, and regulatory attention are allocated, the central issue is no longer whether India should scale compute. It is who gets priority access to scarce resources, on what terms, and with what public justification.
+The report refuses to treat data centres as invisible backend infrastructure. It reads them instead as political infrastructure sitting underneath India’s AI, localisation, and digital sovereignty ambitions. That shift in framing matters. Once data centres are seen as sites where land, water, electricity, tax expenditure, and regulatory attention are allocated, the central issue is no longer whether India should scale compute. It is who gets priority access to scarce resources, on what terms, and with what public justification.
 
 The paper’s sharpest move is to separate localisation from sovereignty. Domestic siting does not automatically produce sovereign control if ownership, tenancy, and strategic dependence remain concentrated in hyperscaler supply chains and foreign partnerships. That is an important corrective to the current policy mood, which too easily treats domestic buildout as proof of autonomy. The report shows that sovereignty rhetoric can obscure rather than resolve the underlying question of who actually governs the infrastructure.
 

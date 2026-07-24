@@ -20,7 +20,7 @@ key_insight: "The report’s deepest contribution is to show that openness witho
 
 ## Review
 
-This report is a useful intervention in how we think about the open web in an AI economy. Its central move is to refuse the lazy assumption that more openness is automatically more just. Instead, it argues that the open web now functions as a shared informational resource that can be mined at scale by actors who convert that openness into proprietary advantage while contributing little back to the commons that sustain it. That is the right problem statement, and the report is strongest when it names this asymmetry clearly rather than treating it as an unfortunate side effect of innovation.
+This report is a useful intervention in how we think about the open web in an AI economy. Its central move is to refuse the lazy assumption that more openness is automatically more just. Instead, it argues that the open web now functions as a shared informational resource that can be mined at scale by actors who convert that openness into proprietary advantage while contributing little back to the commons that sustain it. That is the right problem statement, and the report directly advances the analysis when it names this asymmetry clearly rather than treating it as an unfortunate side effect of innovation.
 
 The framework is also directionally strong. By distinguishing between techno-legal openness, limits on data extractivism by large firms, and community data sovereignty, the report pushes beyond the stale binary of open versus closed. It correctly sees that licensing, collective governance, and community preference signaling are not peripheral questions. They are part of the struggle over who benefits from openness, on what terms, and with what obligations.
 

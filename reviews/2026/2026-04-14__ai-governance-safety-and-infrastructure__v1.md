@@ -13,7 +13,7 @@ tags:
   - "concentration"
   - "rights-based frameworks"
 scholarly_signal: ""
-key_insight: "The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power."
+key_insight: "The briefing’s central contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power."
 ---
 
 # Paper Review
@@ -22,7 +22,7 @@ key_insight: "The briefing’s strongest contribution is showing that standards,
 
 This briefing is useful because it refuses to treat AI governance as a model-only problem. It links multilateral processes, AI Safety Institutes, standards bodies, infrastructure markets, multilingual systems, and digital public infrastructure into one frame. That is the right move. In practice, AI governance now lives across these layers, not in any single law, summit declaration, or model evaluation regime.
 
-Its strongest section is the infrastructure analysis. The paper makes clear that chips, data centres, cloud platforms, datasets, and application layers are not neutral technical components. They determine who can build, who can scale, whose languages are represented, and which states remain dependent on external providers. Once read this way, AI infrastructure is not background plumbing. It is a distribution of decision rights.
+Its most consequential section is the infrastructure analysis. The paper makes clear that chips, data centres, cloud platforms, datasets, and application layers are not neutral technical components. They determine who can build, who can scale, whose languages are represented, and which states remain dependent on external providers. Once read this way, AI infrastructure is not background plumbing. It is a distribution of decision rights.
 
 The paper is also better than most policy mappings on participation. It acknowledges that multistakeholderism often collapses into consultation without decision rights, and that Global South participation remains structurally constrained across standards, safety science, and agenda-setting. That matters because inclusion in forum design is not the same thing as authority over outcomes.
 
@@ -34,4 +34,4 @@ Overall, this is a strong orientation document. It sees that the real contest is
 
 ## Key Insight
 
-The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power.
+The briefing’s central contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power.

@@ -35,7 +35,7 @@ The report often stops one layer short of the uncomfortable questions operators 
 
 Right now, too many safety mechanisms assume “evaluate, then mitigate.” The report itself shows why that pipeline is brittle: models detect tests, exploit benchmarks, and behave differently under observation. When evaluation is adversarial, governance must shift upstream toward authority, constraints, and deployment controls rather than downstream review rituals.
 
-The strongest unexploited insight in the report is this: AI safety is becoming a systems-risk problem, not a model-behavior problem. Concentration, shared dependencies, egress fragility, and liability ambiguity matter as much as alignment techniques.
+The report leaves one consequential systems insight underdeveloped: AI safety is becoming a systems-risk problem, not a model-behavior problem. Concentration, shared dependencies, egress fragility, and liability ambiguity matter as much as alignment techniques.
 
 What is missing is a decision playbook: scenario-invariant actions, minimum assurance stacks, clear conditions under which voluntary safety frameworks are considered credible, and explicit tripwires that trigger stronger measures.
 

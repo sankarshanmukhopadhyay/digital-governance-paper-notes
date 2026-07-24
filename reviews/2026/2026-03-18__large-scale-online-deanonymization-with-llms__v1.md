@@ -29,7 +29,7 @@ The experimental design is careful about a hard problem: ground-truth deanonymiz
 
 The governance implications are stated clearly and are correct. Classical frameworks — k-anonymity, differential privacy — were designed for structured databases and offer no protection here. LLM-based text sanitization exists but is known to leave semantic residue. Rate-limiting API access and detecting bulk scraping are cited as partial mitigations but the authors are honest that splitting an attack into summarisation, embedding, and ranking tasks makes it difficult to distinguish from legitimate use. The practical conclusion is uncomfortable: platforms that make pseudonymous user content accessible at scale should assume that content is linkable to real identities, and users posting under pseudonyms should not assume otherwise.
 
-The paper's main analytical limitation is that its strongest Calibrate step (Swiss-system tournament sorting) is explicitly a batch attack — it requires a large co-present query set to function and cannot deanonymize a single individual efficiently. The per-user agentic attack is demonstrated but not rigorously benchmarked at scale. These are two different threat models that warrant cleaner separation in the framing.
+The paper's main analytical limitation is that its most effective Calibrate step (Swiss-system tournament sorting) is explicitly a batch attack — it requires a large co-present query set to function and cannot deanonymize a single individual efficiently. The per-user agentic attack is demonstrated but not rigorously benchmarked at scale. These are two different threat models that warrant cleaner separation in the framing.
 
 ## Key Insight
 

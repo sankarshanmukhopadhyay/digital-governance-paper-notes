@@ -23,7 +23,7 @@ That framing is valuable. DPI is often discussed as “technology” or “infra
 
 Where the analysis becomes tenuous is in methodology and architectural specificity.
 
-The paper relies primarily on secondary sources and interpretive synthesis across sectors. That can be acceptable for political analysis, but it leaves several claims under-specified. Assertions about exclusion, surveillance, or centralization would be materially stronger if tied to measurable indicators such as authentication failure rates, grievance-resolution throughput, revocation mechanisms, or administrative override pathways. Without that empirical layer, the argument risks reading as narrative rather than evaluation.
+The paper relies primarily on secondary sources and interpretive synthesis across sectors. That can be acceptable for political analysis, but it leaves several claims without measurable support. Assertions about exclusion, surveillance, or centralization would be materially stronger if tied to measurable indicators such as authentication failure rates, grievance-resolution throughput, revocation mechanisms, or administrative override pathways. Without that empirical layer, the argument risks reading as narrative rather than evaluation.
 
 A second gap is architectural clarity. The discussion treats “India Stack” as a conceptual bundle, but power effects in digital infrastructure usually emerge from concrete design choices: identifier-binding models, authentication modes, revocation procedures, audit logs, and institutional separation of roles. Mapping these design choices to governance outcomes would strengthen the argument and make the power claims falsifiable.
 

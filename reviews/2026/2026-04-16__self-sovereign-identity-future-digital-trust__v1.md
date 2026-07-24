@@ -18,7 +18,7 @@ tags:
   - "legitimacy"
   - "portability"
   - "assurance"
-key_insight: "The report is strongest when it treats self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized."
+key_insight: "The paper frames self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized."
 ---
 
 # Paper Review
@@ -27,7 +27,7 @@ key_insight: "The report is strongest when it treats self-sovereign identity as 
 
 This DSCI and Digi Yatra Foundation report is a strategically important identity infrastructure paper because it frames self-sovereign identity not as a cryptographic upgrade but as a reallocation of control over verification. Its central claim is that India can use verifiable credentials, decentralized identifiers, Digi Yatra’s operational evidence, and the maturity of India Stack to shape the next global layer of digital trust. That claim is directionally right. Identity infrastructure determines who can participate, which issuers are authoritative, which verifiers may rely on a claim, and which actors absorb liability when verification fails. The paper understands that the move from centralized databases to holder-mediated credentials is a governance shift, not only a technical pattern.
 
-The strongest contribution is the report’s insistence that verification does not require institutional accumulation of personal data. In the model it advances, credentials issued by trusted authorities can be stored by holders, selectively disclosed, and verified cryptographically without repeated database calls or repeated document copying. This matters because the dominant identity model has made citizens legible by distributing copies of sensitive data across banks, telecom operators, hotels, airports, employers, schools, and state systems. Verifiable credentials change the control plane: the relying party no longer needs to become a data custodian for every interaction, and the individual can prove a claim without surrendering the full document behind it.
+The central contribution is the report’s insistence that verification does not require institutional accumulation of personal data. In the model it advances, credentials issued by trusted authorities can be stored by holders, selectively disclosed, and verified cryptographically without repeated database calls or repeated document copying. This matters because the dominant identity model has made citizens legible by distributing copies of sensitive data across banks, telecom operators, hotels, airports, employers, schools, and state systems. Verifiable credentials change the control plane: the relying party no longer needs to become a data custodian for every interaction, and the individual can prove a claim without surrendering the full document behind it.
 
 The report is also valuable because it places India’s digital identity trajectory inside a serious international standards landscape. It maps W3C Verifiable Credentials, W3C DIDs, ISO mDL, OpenID4VCI, OpenID4VP, eIDAS 2.0, ICAO Digital Travel Credentials, IATA One ID, Hyperledger Aries, Indy, AnonCreds, and Trust Over IP. More importantly, it does not treat interoperability as a slogan. It recognizes that digital identity will fragment unless credential formats, presentation protocols, issuer authorization, trust registries, certification mechanisms, and legal recognition move together. That is the correct systems frame. A credential that is cryptographically valid but institutionally unrecognized is not useful infrastructure. It is a proof object without standing.
 
@@ -51,4 +51,4 @@ The central tension is clear. The report wants India to move from database ident
 
 ## Key Insight
 
-The report is strongest when it treats self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized.
+The paper frames self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized.

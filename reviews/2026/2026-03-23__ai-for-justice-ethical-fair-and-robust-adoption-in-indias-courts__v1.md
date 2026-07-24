@@ -17,7 +17,7 @@ tags:
   - public administration
   - state capacity
 scholarly_signal: "cs.CY"
-key_insight: "The report's strongest contribution is translating governance from abstract principle into an institutional sequence (readiness → risk → technical scrutiny → ongoing oversight), yet it underspecifies enforcement authority, vendor lock-in dynamics, and contestability mechanisms; these are critical gaps for operational deployment in Indian courts."
+key_insight: "The report's central contribution is translating governance from abstract principle into an institutional sequence (readiness → risk → technical scrutiny → ongoing oversight), yet it underspecifies enforcement authority, vendor lock-in dynamics, and contestability mechanisms; these are critical gaps for operational deployment in Indian courts."
 ---
 
 # Paper Review
@@ -48,7 +48,7 @@ The ten concrete safeguards: domain expert consultation, public disclosure of AI
 
 However, several limitations significantly constrain the framework's operational applicability.
 
-**Enforcement and Authority**: The framework prescribes governance structures but is vague about enforcement. Who has the mandate to halt deployments that fail risk assessment? What happens when an AI tool produces outcomes that cannot be justified? The framework contemplates risk-based prohibition but does not specify institutional authority, escalation pathways, or enforceable consequences. In judicial settings, governance mechanisms require clearly defined decision authority and accountability, which the report leaves underspecified.
+**Enforcement and Authority**: The framework prescribes governance structures but is vague about enforcement. Who has the mandate to halt deployments that fail risk assessment? What happens when an AI tool produces outcomes that cannot be justified? The framework contemplates risk-based prohibition but does not specify institutional authority, escalation pathways, or enforceable consequences. In judicial settings, governance mechanisms require clearly defined decision authority and accountability, which the report does not translate into an operational control model.
 
 **Evidentiary Gaps**: The report outlines risks and safeguards but provides limited empirical evidence on the actual performance and impact of AI tools in court settings. The authors acknowledge that many deployments lack defined metrics, evaluation timelines, or outcome tracking. The framework is stronger as a conceptual governance model than as evidence-backed assessment of whether existing tools actually improve outcomes, whether risks materialize as predicted, or whether safeguards prevent harms in practice.
 

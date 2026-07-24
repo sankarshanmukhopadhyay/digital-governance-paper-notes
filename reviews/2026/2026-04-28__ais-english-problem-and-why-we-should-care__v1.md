@@ -16,7 +16,7 @@ tags:
   - "LLMs"
   - "public infrastructure"
   - "legitimacy"
-key_insight: "The article’s strongest contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains under-specified because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior."
+key_insight: "The article’s central contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains insufficiently operationalized because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior."
 ---
 
 # Paper Review
@@ -27,7 +27,7 @@ This TechPolicy.Press perspective by Sushant Kumar and Ananya Mukherjee argues t
 
 The governance significance of the article lies in this infrastructure framing. If AI systems are primarily trained, evaluated, and deployed through high-resource languages, then English becomes more than a language of convenience. It becomes a gatekeeping layer for public service access, administrative legibility, economic participation, and institutional voice. In that sense, the article is not merely describing a model performance gap. It is identifying a control-plane problem: the communities whose languages are poorly represented in training data are also the communities least able to shape how AI systems classify, translate, advise, and mediate their interactions with the state and the market.
 
-The article is strongest when it connects language exclusion to power concentration. It correctly observes that most AI systems are built within institutional and commercial environments far removed from low-resource language communities. The resulting asymmetry is not just that models perform poorly in Odia, Gujarati, Assamese, Hausa, or other underrepresented languages. The deeper problem is that linguistic communities may become dependent on systems whose categories, context assumptions, and representational defaults were not designed with their authority or consent. The example of models defaulting to four seasons when local ecological reality recognizes two is not a trivial cultural error. It illustrates how model outputs can normalize the worldview embedded in dominant training corpora.
+The article directly advances the analysis when it connects language exclusion to power concentration. It correctly observes that most AI systems are built within institutional and commercial environments far removed from low-resource language communities. The resulting asymmetry is not just that models perform poorly in Odia, Gujarati, Assamese, Hausa, or other underrepresented languages. The deeper problem is that linguistic communities may become dependent on systems whose categories, context assumptions, and representational defaults were not designed with their authority or consent. The example of models defaulting to four seasons when local ecological reality recognizes two is not a trivial cultural error. It illustrates how model outputs can normalize the worldview embedded in dominant training corpora.
 
 Bhashini’s community-driven data collection model is presented as an alternative governance pathway. The article treats BhashaDaan and similar initiatives as mechanisms through which citizens can contribute speech, text, and local linguistic knowledge to AI development. This is valuable because it resists the purely extractive model in which communities appear only as raw data sources for platform expansion. It also recognizes that public AI infrastructure in multilingual societies cannot be produced solely through private-sector scaling or frontier model adaptation. There is a legitimate role for public institutions, academic partners, linguistic experts, and community contributors in building shared linguistic assets.
 
@@ -45,4 +45,4 @@ The article should therefore be used as a framing document for language infrastr
 
 ## Key Insight
 
-The article’s strongest contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains under-specified because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior.
+The article’s central contribution is to frame language as AI infrastructure rather than interface localization, but its governance model remains insufficiently operationalized because it does not define who controls linguistic datasets, who can authorize reuse, and how communities can contest downstream model behavior.

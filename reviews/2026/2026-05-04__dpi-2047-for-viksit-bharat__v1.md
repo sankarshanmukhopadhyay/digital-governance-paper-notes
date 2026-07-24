@@ -16,7 +16,7 @@ tags:
   - "AI governance"
   - "interoperability"
   - "legitimacy"
-key_insight: "DPI@2047 is strongest when it treats digital public infrastructure as market-making state capacity, but it under-specifies the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation."
+key_insight: "DPI@2047 treats digital public infrastructure as market-making state capacity, but it does not operationalize the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation."
 ---
 
 # Paper Review
@@ -27,7 +27,7 @@ NITI Aayog’s DPI@2047 roadmap is an ambitious state-capacity document that att
 
 The review should be read as a roadmap for governing economic coordination, not simply as a technology strategy. Its most important claim is that public-purpose digital rails can lower the cost of trust, discovery, verification, transactions, and market participation for citizens and enterprises that are currently locked out by informality, paperwork, local intermediaries, and fragmented data. That is a strong and materially important argument. DPI here is framed as market infrastructure: it redistributes who can be discovered, who can transact, who can prove eligibility, who can access credit, who can sell surplus energy, who can receive AI-mediated advice, and who becomes visible to state and market systems.
 
-The document’s strongest contribution is its insistence on moving beyond national platforms toward district-level demand aggregation and state-led execution. That is a serious governance insight. India’s development challenge is not only a lack of digital rails but a lack of locally legible operating capacity. By making districts the unit of demand aggregation, the roadmap recognizes that adoption cannot be commanded from the center. It has to be converted into credible local demand, contextual solution design, implementation capacity, and ecosystem incentives. This is a more grounded model than the usual DPI export narrative because it treats state capacity, not code release, as the binding constraint.
+The document’s central contribution is its insistence on moving beyond national platforms toward district-level demand aggregation and state-led execution. That is a serious governance insight. India’s development challenge is not only a lack of digital rails but a lack of locally legible operating capacity. By making districts the unit of demand aggregation, the roadmap recognizes that adoption cannot be commanded from the center. It has to be converted into credible local demand, contextual solution design, implementation capacity, and ecosystem incentives. This is a more grounded model than the usual DPI export narrative because it treats state capacity, not code release, as the binding constraint.
 
 The second major strength is the recognition that DPI initiatives are not projects. They are living products and ecosystem institutions. The roadmap correctly identifies robust institutional setup, shared digital capabilities, market participation, regulatory sandboxes, and mission-mode programs as the architecture through which DPI becomes durable. It also makes a useful distinction between government-owned, public-private, and regulated private operation models. This matters because DPI governance is not reducible to public ownership. The hard question is whether the operating arrangement can preserve neutrality, interoperability, non-discrimination, accountability, and long-term public purpose while private actors innovate at the edge.
 
@@ -53,4 +53,4 @@ The central tension is that DPI@2047 understands infrastructure as a growth mult
 
 ## Key Insight
 
-DPI@2047 is strongest when it treats digital public infrastructure as market-making state capacity, but it under-specifies the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation.
+DPI@2047 treats digital public infrastructure as market-making state capacity, but it does not operationalize the governance layer that must decide who controls data flows, AI-mediated decisions, ecosystem access, revocation, redress, and accountability across decentralized implementation.

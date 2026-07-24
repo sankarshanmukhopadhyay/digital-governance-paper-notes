@@ -20,7 +20,7 @@ tags:
   - "regulatory alignment"
   - "transparency and accountability"
 scholarly_signal: "cs.CY"
-key_insight: "The paper’s strongest move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped."
+key_insight: "The paper’s decisive analytical move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped."
 ---
 
 # Paper Review
@@ -33,7 +33,7 @@ The paper’s most important contribution is the external-action inventory. It s
 
 The paper is also valuable because it refuses to isolate the AI Act from the rest of the EU digital regulatory stack. It maps the AI Act against the GDPR, Cyber Resilience Act, Digital Services Act, Data Act, Data Governance Act, NIS2, DORA, sectoral regimes, and revised product liability rules. This matters because agent providers do not face one regulatory perimeter. They face regulatory stacking, where a single action can trigger data protection duties, cybersecurity obligations, platform accountability, sectoral supervision, and liability exposure at the same time. The paper’s twelve-step compliance sequence is useful precisely because it makes that stacking legible.
 
-The strongest governance insight concerns runtime behavioral drift. The authors are right that a high-risk agent whose behavioral drift cannot be traced, bounded, or replayed cannot credibly satisfy essential requirements around oversight, logging, robustness, post-market monitoring, and conformity assessment. This is not a speculative legal concern. It is a control-plane failure. If the provider cannot show whether the deployed system remains within the assessed operating envelope, the conformity claim becomes structurally unverifiable.
+The paper's central governance insight concerns runtime behavioral drift. The authors are right that a high-risk agent whose behavioral drift cannot be traced, bounded, or replayed cannot credibly satisfy essential requirements around oversight, logging, robustness, post-market monitoring, and conformity assessment. This is not a speculative legal concern. It is a control-plane failure. If the provider cannot show whether the deployed system remains within the assessed operating envelope, the conformity claim becomes structurally unverifiable.
 
 The paper is also sharp on cybersecurity. It correctly rejects prompt-level restraint as a security control. For agents with tool access, privilege minimization has to live outside the generative model, at the API, identity, authorization, and execution layer. This is the right distinction. A model instruction saying “do not delete files” is not equivalent to an interface that never exposes delete capability. The same logic applies to human oversight. Oversight cannot be a performative checkbox if the system can act before authority is exercised or if the human reviewer is reduced to a liability sink after irreversible action.
 
@@ -49,4 +49,4 @@ The recommended next step is to convert the paper’s action inventory into mach
 
 ## Key Insight
 
-The paper’s strongest move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped.
+The paper’s decisive analytical move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped.
