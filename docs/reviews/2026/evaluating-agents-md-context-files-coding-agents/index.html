@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents? | Digital Governance Paper Notes</title>
+  <meta name="description" content="Automatically generated repository context files often degrade coding-agent performance because they introduce additional constraints without improving task-relevant understanding.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/ai-safety-evaluation/">AI Safety &amp; Evaluation</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">AI Safety &amp; Evaluation · 2026-03-07</div><h1>Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?</h1><div class="review-meta"><span>arXiv</span><span><a href="https://arxiv.org/abs/2602.11988" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-03-07__evaluating-agents-md-context-files-coding-agents__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI agents</span><span class="tag">coding agents</span><span class="tag">AI benchmarks</span><span class="tag">developer tooling</span><span class="tag">context engineering</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>Automatically generated repository context files often degrade coding-agent performance because they introduce additional constraints without improving task-relevant understanding.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>This paper evaluates whether repository-level context files such as AGENTS.md actually improve the effectiveness of coding agents. While such files are widely recommended by agent developers, the authors show through controlled evaluation that automatically generated context files often reduce task success rates while increasing cost.</p>
+<p>The study introduces AGENTBENCH, a benchmark derived from real GitHub repositories that already include developer-written context files. Across multiple coding agents and models, the authors compare three settings: no context file, LLM-generated context files, and developer-provided files.</p>
+<p>The results are surprising. LLM-generated context files generally reduce success rates and increase inference costs by more than 20%. Developer-written context files slightly improve performance but still increase operational cost due to additional exploration and testing steps triggered by the instructions in the files.</p>
+<p>Trace analysis reveals that coding agents reliably follow the instructions present in context files, leading to more repository exploration, additional testing, and greater use of project-specific tooling. However, these instructions do not meaningfully help agents locate relevant code faster. In effect, the added guidance often introduces unnecessary constraints rather than improving task understanding.</p>
+<p>The work highlights an emerging design tension in agentic systems: more context does not necessarily produce better outcomes. In many cases, models already possess sufficient prior knowledge about common development tooling and repository structure, making large context documents redundant.</p>
+<p>Overall, the paper provides valuable empirical evidence against a rapidly spreading engineering practice. Its main contribution is demonstrating that concise, minimal guidance may be more effective than extensive automatically generated documentation when designing environments for coding agents.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>More repository context does not necessarily improve coding agent performance; excessive automatically generated guidance can increase cost and reduce task success.</p></div>
+
+<div class="prev-next"><a href="../../../reviews/2026/the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation/"><span>Newer review</span>The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation</a><a class="next" href="../../../reviews/2026/digital-governance-stacks-and-the-infrastructure-of-empires/"><span>Older review</span>Digital Governance Stacks and the Infrastructure of Empires</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/ai-safety-evaluation/">More in AI Safety &amp; Evaluation</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/">CUBE: A Standard for Unifying Agent Benchmarks</a></h3>
+  <div class="publication">arXiv</div>
+  <p>CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/">Read review</a> · <a href="https://arxiv.org/abs/2603.15798" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-03-14</div>
+  <h3><a href="../../../reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/">MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing</a></h3>
+  <div class="publication">arXiv</div>
+  <p>MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/">Read review</a> · <a href="https://arxiv.org/abs/2603.06007" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-03-09</div>
+  <h3><a href="../../../reviews/2026/agents-of-chaos/">Agents of Chaos</a></h3>
+  <div class="publication">arXiv</div>
+  <p>The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/agents-of-chaos/">Read review</a> · <a href="https://arxiv.org/abs/2602.20021" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-07-12</div>
+  <h3><a href="../../../reviews/2026/god-has-helped-us-and-so-will-ai/">‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI</a></h3>
+  <div class="publication">Cambridge Programme on AI Science &amp; Policy, University of Cambridge</div>
+  <p>The report shows that the relevant unit of AI misuse is not the isolated malicious prompt but the organization that can train specialists, distribute access, compare providers, and convert model output into operational routines. Safety governance built around single-user refusals will remain structurally inadequate unless it can address coordinated adversaries without turning platform monitoring into unaccountable security infrastructure.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/god-has-helped-us-and-so-will-ai/">Read review</a> · <a href="https://casp.ac/reports/ai-enabled-terrorism" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

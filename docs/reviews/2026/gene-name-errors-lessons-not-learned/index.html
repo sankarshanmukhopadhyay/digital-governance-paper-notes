@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gene name errors: Lessons not learned | Digital Governance Paper Notes</title>
+  <meta name="description" content="A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/socio-technical-systems/">Socio-technical Systems</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">Socio-technical Systems · 2026-03-10</div><h1>Gene name errors: Lessons not learned</h1><div class="review-meta"><span>PLOS Computational Biology</span><span><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-03-10__gene-name-errors-lessons-not-learned__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">evidence</span><span class="tag">reproducibility</span><span class="tag">public-interest technology</span><span class="tag">evaluations</span><span class="tag">developer tooling</span><span class="tag">public administration</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>Abeysooriya et al. conduct a large-scale longitudinal audit of supplementary Excel files published in PubMed Central between 2014 and 2020, asking whether the well-publicised 2016 report on spreadsheet-induced gene name corruption had any lasting effect on researcher behaviour. The answer is unambiguous: it did not.</p>
+<p>Screening 166,139 genomics articles and manually verifying 5,136 suspect files, the authors confirm gene name errors in 30.9% of publications containing supplementary Excel gene lists (3,436 of 11,117) — substantially above the 19.6% reported in 2016. The proportion of affected articles remained essentially flat across all seven years, ruling out any secular improvement. The elevated headline figure reflects both a wider sample (all of PMC rather than 18 selected journals) and an improved scanner that now detects five-digit internal date serial numbers, which account for roughly 15.7% of confirmed errors in the sampled subset.</p>
+<p>The paper also identifies locale-dependent error modes — gene symbols misread as dates because of Italian, Spanish, Dutch, or Finnish month names — extending the known taxonomy of how spreadsheet internationalisation interacts with biological nomenclature. A counterintuitive finding is a statistically significant positive correlation between journal impact factor and error rate: Cell, Nature, PNAS, and EBioMedicine all exceed 40% affected. The most plausible explanation — unverified in this paper — is that high-impact journals require authors to deposit raw source data, inflating the surface area for errors rather than indicating lower scientific quality.</p>
+<p>The central governance-relevant finding is that neither HGNC gene symbol reforms, nor open-source remediation tools (Truke, EscapeExcel, HGNChelper), nor prior publication of the problem have bent the error-rate curve. This generalises beyond genomics: it is a case study in the limits of awareness-based interventions for changing embedded data-handling practices. The paper's prescription — migrate to Python/R notebooks, use LibreOffice when spreadsheets are unavoidable, share genomic data as flat text — is technically sound but underestimates the structural barriers of training, legacy workflows, and journal submission conventions that make behaviour change slow even when intent is present.</p>
+<p>For public-sector and research-infrastructure contexts, the implication is that mandating open data deposition without simultaneously mandating format standards and tooling support creates a reproducibility illusion: data are visible but silently corrupted. Journals, funders, and infrastructure operators bear co-responsibility alongside individual researchers.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>A decade of documented warnings and nomenclature reforms have not reduced the rate of spreadsheet-induced gene name corruption in published genomics research, demonstrating that knowledge dissemination alone cannot change entrenched data practices — only structural interventions at the software, journal, and training levels can.</p></div>
+<section class="membership"><h2>Appears in these collections</h2><div class="tag-row"><a class="tag-link" href="../../../collections/epistemic-integrity-human-capability/">Epistemic integrity and human capability</a></div></section>
+<div class="prev-next"><a href="../../../reviews/2026/digital-identities-across-the-world/"><span>Newer review</span>Digital Identities Across the World</a><a class="next" href="../../../reviews/2026/future-of-work-to-future-of-workers-addressing-asymptomatic-ai-harms-for-dignified-human-ai-interaction/"><span>Older review</span>From Future of Work to Future of Workers: Addressing Asymptomatic AI Harms for Dignified Human-AI Interaction</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/socio-technical-systems/">More in Socio-technical Systems</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">Socio-technical Systems · 2026-07-24</div>
+  <h3><a href="../../../reviews/2026/the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science/">The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science</a></h3>
+  <div class="publication">arXiv</div>
+  <p>LLMs do not merely reduce the cost of scientific work. By raising the opportunity cost of researcher time, they can redirect effort toward higher throughput, thinner development, and greater submission pressure, making institutional incentives rather than model accuracy the decisive governance problem.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science/">Read review</a> · <a href="https://arxiv.org/abs/2607.17397" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Socio-technical Systems · 2026-05-06</div>
+  <h3><a href="../../../reviews/2026/building-human-resilience-infrastructure-ai-age/">Building a Human Resilience Infrastructure for the AI Age</a></h3>
+  <div class="publication">Imagining the Digital Future Center, Elon University</div>
+  <p>The report&#x27;s strongest move is to redefine resilience as an institutional property rather than an individual coping skill. Its main governance weakness is that it names contestability, authenticity, literacy, and institutional redesign as necessities without converting them into enforceable decision rights, evidence duties, escalation paths, and redress mechanisms.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/building-human-resilience-infrastructure-ai-age/">Read review</a> · <a href="https://imaginingthedigitalfuture.org/reports-and-publications/human-resilience-in-the-age-of-ai/" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Socio-technical Systems · 2026-04-07</div>
+  <h3><a href="../../../reviews/2026/ai-assistance-reduces-persistence-and-hurts-independent-performance/">AI Assistance Reduces Persistence and Hurts Independent Performance</a></h3>
+  <div class="publication">arXiv preprint</div>
+  <p>The paper shows that AI assistance is not only a performance aid but a behavioral control surface that can recondition users away from persistence and independent competence. Its governance significance lies in shifting AI evaluation from immediate helpfulness toward measurable autonomy preservation, capability retention, and refusal-to-solve design obligations.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/ai-assistance-reduces-persistence-and-hurts-independent-performance/">Read review</a> · <a href="https://arxiv.org/abs/2604.04721" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Socio-technical Systems · 2026-03-30</div>
+  <h3><a href="../../../reviews/2026/participatory-unblocking-of-blockchain-use-cases/">Participatory Unblocking of Blockchain Use Cases: Lessons Learned from the Argentina Onchain Residency</a></h3>
+  <div class="publication">SSRN / BlockchainGov report</div>
+  <p>The paper’s central value is not that it proves blockchain adoption, but that it reframes blockchain failure as an institutional design problem. Its participatory methodology improves problem selection and contextual fit, but it still stops short of specifying the operational governance needed for legitimate deployment.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/participatory-unblocking-of-blockchain-use-cases/">Read review</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6465860" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

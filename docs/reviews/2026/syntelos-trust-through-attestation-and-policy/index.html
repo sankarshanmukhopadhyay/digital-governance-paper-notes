@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syntelos: Trust Through Attestation and Policy | Digital Governance Paper Notes</title>
+  <meta name="description" content="Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/trust-infrastructure/">Trust Infrastructure</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">Trust Infrastructure · 2026-04-06</div><h1>Syntelos: Trust Through Attestation and Policy</h1><div class="review-meta"><span>Author webpage / paper draft</span><span><a href="https://dhh1128.github.io/papers/syntelos.html" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-04-06__syntelos-trust-through-attestation-and-policy__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI agents</span><span class="tag">agentic systems</span><span class="tag">decentralisation</span><span class="tag">delegation</span><span class="tag">accountability</span><span class="tag">authority</span><span class="tag">authorization</span><span class="tag">governance-by-design</span><span class="tag">interoperability</span><span class="tag">legitimacy</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>This paper proposes Syntelos as a trust architecture for distributed systems built around attestations, policy evaluation, and decentralized coordination. Its central move is to shift trust away from static identity and toward verifiable claims about capability, relationship, and authorization. That is the right direction. In distributed systems, and especially in agentic ones, the important question is rarely who an actor is in the abstract. It is what they are allowed to do, under what constraints, and on whose authority.</p>
+<p>The paper is strongest when it treats trust as a runtime evaluation problem rather than a registration problem. Attestations are presented not as decorative metadata but as inputs into active decision-making. That makes the architecture more realistic than many identity-first trust models, which often assume that once an actor is named or authenticated the governance question has largely been solved. Syntelos instead recognizes that trust has to be computed in context, against policy, and in relation to changing conditions. That aligns with where distributed systems and delegated machine action are heading.</p>
+<p>Its other strong feature is composability. By allowing multiple attestations to be assembled and evaluated against policy, the system offers a plausible route to more granular trust decisions across heterogeneous participants. This is valuable because modern systems increasingly require layered trust rather than binary admission. A participant may be recognized for one function, constrained for another, and disallowed from a third. Attestation-plus-policy is a better fit for that reality than monolithic identity assertions.</p>
+<p>The paper’s main weakness is that it is clearer on proof than on governance. It explains how trust claims can be assembled and evaluated, but it is less precise about who controls the policy layer, how policy changes propagate, and how conflicts over authority are resolved. That is not a side issue. Once trust is defined as policy evaluation, the policy layer becomes the control plane. Whoever sets those rules determines the practical distribution of power in the system. The paper gestures toward decentralization, but decentralization of attestations does not automatically produce decentralization of rule-setting.</p>
+<p>Revocation and lifecycle governance also appear underdeveloped. Trustworthy systems need more than valid attestations. They need mechanisms for withdrawal, expiry, dispute, and redress. If an actor’s authority changes, if an issuer is compromised, or if a delegation chain is found to be invalid, the architecture has to support operational rollback rather than merely retrospective diagnosis. Without that, trust becomes sticky in exactly the wrong way.</p>
+<p>There is also an interoperability problem sitting just beneath the surface. The paper assumes that attestations can be composed across domains, but cross-domain composition depends on more than syntax. It requires governance over semantics, schema evolution, and evaluation criteria. Different institutions do not simply disagree on format. They disagree on what counts as valid authority, sufficient evidence, and legitimate action. A trust architecture that does not make those disagreements operational risks pushing them out of view rather than resolving them.</p>
+<p>Overall, this is a useful architectural paper because it moves the discussion beyond static identity and toward delegated, contextual, policy-mediated trust. But its decisive unresolved issue is legitimacy at execution time. The interesting question is not whether attestations can be verified. It is who gets to shape the policies that interpret them, who may revoke or override them, and how affected participants can challenge those decisions when they are wrong.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>Syntelos reframes trust as a runtime evaluation of attestations against policy, but leaves unresolved the governance of that policy layer, where real authority over system behavior resides.</p></div>
+<section class="membership"><h2>Appears in these collections</h2><div class="tag-row"><a class="tag-link" href="../../../collections/digital-identity-trust-infrastructure/">Digital identity and trust infrastructure</a><a class="tag-link" href="../../../collections/agent-authority-delegation-redress/">Agent authority, delegation and redress</a><a class="tag-link" href="../../../collections/governance-beyond-principles/">Governance beyond principles</a></div></section>
+<div class="prev-next"><a href="../../../reviews/2026/ai-assistance-reduces-persistence-and-hurts-independent-performance/"><span>Newer review</span>AI Assistance Reduces Persistence and Hurts Independent Performance</a><a class="next" href="../../../reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/"><span>Older review</span>CUBE: A Standard for Unifying Agent Benchmarks</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/trust-infrastructure/">More in Trust Infrastructure</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">Trust Infrastructure · 2026-03-05</div>
+  <h3><a href="../../../reviews/2026/exhaustibility-first-class-invariant/">Exhaustibility Is Not an Optimization. It Is a First-Class Invariant</a></h3>
+  <div class="publication">Medium (Paul Knowles)</div>
+  <p>For agentic systems, governance must shift from persistent identity-based permission to action-bound, exhaustible authority that produces verifiable provenance at the moment an effect occurs.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/exhaustibility-first-class-invariant/">Read review</a> · <a href="https://medium.com/@paul_15561/exhaustibility-is-not-an-optimization-it-is-a-first-class-invariant-c3a19008077e" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Law, Regulation &amp; Liability · 2026-03-17</div>
+  <h3><a href="../../../reviews/2026/distributed-legal-infrastructure-for-a-trustworthy-agentic-web/">Distributed Legal Infrastructure for a Trustworthy Agentic Web</a></h3>
+  <div class="publication">arXiv</div>
+  <p>The paper’s real contribution is not the rhetoric of agent personhood, but the claim that legality for agents must be infrastructural: identity, constraints, evidence, adjudication, and portability have to travel with the system rather than be bolted on after harm occurs.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/distributed-legal-infrastructure-for-a-trustworthy-agentic-web/">Read review</a> · <a href="https://arxiv.org/abs/2603.06884" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement</a></h3>
+  <div class="publication">arXiv</div>
+  <p>Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Read review</a> · <a href="https://arxiv.org/abs/2603.16938" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Digital Identity · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/a-cryptographic-framework-for-proof-of-personhood/">A Cryptographic Framework for Proof of Personhood</a></h3>
+  <div class="publication">Reference page for IACR ePrint paper</div>
+  <p>The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/a-cryptographic-framework-for-proof-of-personhood/">Read review</a> · <a href="https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codified Context: Infrastructure for AI Agents in a Complex Codebase | Digital Governance Paper Notes</title>
+  <meta name="description" content="Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/ai-governance/">AI Governance</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">AI Governance · 2026-03-07</div><h1>Codified Context: Infrastructure for AI Agents in a Complex Codebase</h1><div class="review-meta"><span>arXiv</span><span><a href="https://arxiv.org/abs/2602.20478" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-03-07__codified-context-infrastructure-for-ai-agents-in-a-complex-codebase__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI agents</span><span class="tag">agentic systems</span><span class="tag">context engineering</span><span class="tag">coding agents</span><span class="tag">governance-by-design</span><span class="tag">developer tooling</span><span class="tag">coordination</span><span class="tag">workflows</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>Persistent, machine-readable project context functions as a governance layer for AI coding agents, but the paper shows this through a single-project experience report rather than a comparative evaluation.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>This paper argues that AI coding agents fail less when project knowledge is treated as infrastructure rather than as ad hoc prompt text. In a 108,256-line distributed C# system developed across 283 sessions, the author builds a three-tier “codified context” stack: a hot-memory constitution loaded into every session, 19 specialist agents invoked for domain-specific tasks, and a cold-memory knowledge base of 34 subsystem documents retrieved on demand. The central contribution is practical and timely. It shows that agent performance in large codebases depends not only on model capability but on how conventions, constraints, failure modes, and routing logic are codified for repeated reuse.</p>
+<p>The paper is strongest when it reframes documentation as an operational control layer. That framing matters beyond software engineering. Public sector AI systems, DPI components, and safety-critical administrative tools all face the same problem: models are stateless, institutions are not. In that sense, the paper offers a useful governance-by-design lesson. Stable behavior comes from structured context, explicit rules, and disciplined update practices, not from hoping the model “remembers.”</p>
+<p>That said, the evidence base is narrow. This is a single-author, single-project experience report with observational case studies, not a controlled evaluation. The quantitative material is descriptive rather than causal. Reported counts for prompts, agent turns, retrieval calls, and infrastructure growth help establish scale, but they do not isolate whether the architecture improved quality, speed, cost, or safety compared with simpler baselines. The strongest claims therefore remain plausible but under-tested.</p>
+<p>There is also a translation gap between coding-agent performance and public-interest governance. The paper hints at transferability to broader agentic systems, yet it does not develop concrete implications for accountability, auditability, public procurement, or regulatory assurance. That is a missed opportunity. A sharper discussion could connect the three-tier architecture to policy controls such as change management, evidence trails, human override, and risk-tiered deployment.</p>
+<p>Overall, this is a worthwhile and original practice paper. It is not a definitive evaluation, but it is a credible early blueprint for how persistent context can become an institutional memory layer for AI agents. For AI governance and DPI practitioners, the big idea is simple: memory is not magic; it is architecture.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>Persistent, machine-readable project context acts as a governance and memory layer for coding agents, but the paper demonstrates this through a single-project experience report rather than a comparative study.</p></div>
+
+<div class="prev-next"><a href="../../../reviews/2026/digital-governance-stacks-and-the-infrastructure-of-empires/"><span>Newer review</span>Digital Governance Stacks and the Infrastructure of Empires</a><a class="next" href="../../../reviews/2026/business-perspectives-on-advancing-ai/"><span>Older review</span>Business Perspectives on Advancing AI</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/ai-governance/">More in AI Governance</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement</a></h3>
+  <div class="publication">arXiv</div>
+  <p>Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Read review</a> · <a href="https://arxiv.org/abs/2603.16938" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-03-23</div>
+  <h3><a href="../../../reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/">The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency</a></h3>
+  <div class="publication">arXiv</div>
+  <p>AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness—transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/">Read review</a> · <a href="https://arxiv.org/abs/2603.15639" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-03-23</div>
+  <h3><a href="../../../reviews/2026/nomotic-ai-governance-counterpart-to-agentic-ai/">Nomotic AI: The Governance Counterpart to Agentic AI</a></h3>
+  <div class="publication">SSRN (Independent Researcher)</div>
+  <p>Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/nomotic-ai-governance-counterpart-to-agentic-ai/">Read review</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069888" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-03-05</div>
+  <h3><a href="../../../reviews/2026/ai-agents-and-the-next-layer-of-india-s-digital/">AI Agents and the Next Layer of India&#x27;s Digital Infrastructure</a></h3>
+  <div class="publication">Tech Policy Press</div>
+  <p>At population scale, an \\&quot;agent layer\\&quot; only becomes governance-grade when delegation is cryptographically bounded, discoverable, and revocable—otherwise you just automated intermediaries and fraud.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/ai-agents-and-the-next-layer-of-india-s-digital/">Read review</a> · <a href="https://www.techpolicy.press/ai-agents-and-the-next-layer-of-indias-digital-infrastructure/" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

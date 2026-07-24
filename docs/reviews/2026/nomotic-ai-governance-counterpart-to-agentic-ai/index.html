@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nomotic AI: The Governance Counterpart to Agentic AI | Digital Governance Paper Notes</title>
+  <meta name="description" content="Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/ai-governance/">AI Governance</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">AI Governance · 2026-03-23</div><h1>Nomotic AI: The Governance Counterpart to Agentic AI</h1><div class="review-meta"><span>SSRN (Independent Researcher)</span><span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6069888" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-03-23__nomotic-ai-governance-counterpart-to-agentic-ai__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI governance</span><span class="tag">agentic systems</span><span class="tag">AI safety</span><span class="tag">authorization</span><span class="tag">accountability</span><span class="tag">governance-by-design</span><span class="tag">delegated authority</span><span class="tag">regulatory alignment</span><span class="tag">AI ethics</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>Agentic AI systems operating in production environments have exposed a fundamental governance gap: the distinction between what systems can do (capability) and what they should do (governance) remains uncaptured by existing vocabulary, requiring a new conceptual category that treats governance as co-equal with capability rather than as afterthought compliance.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>Hood introduces Nomotic AI, a conceptual framework positioned explicitly as the governance counterpart to agentic AI. The core contribution is terminological and architectural: recognizing that the discourse around agentic systems has become capability-centric while governance vocabulary remains underdeveloped, Hood proposes that "law" (from Greek nomos) should be as central to AI discourse as "action."</p>
+<p>The paper's strength lies in its crisply articulated problem statement. Organizations deploying agentic systems are experiencing predictable failure modes (unauthorized actions, security vulnerabilities, compliance violations) not because the systems malfunctioned, but because governance boundaries were never explicit at design time. Hood argues compellingly that treating governance as a post-deployment compliance layer guarantees tension and reactive patching. The case for governance-as-architecture is well-supported by reference to EU AI Act risk-tiering and NIST frameworks, both of which mandate integrated governance from the beginning.</p>
+<p>The formal contribution is a duality: agentic systems (perceive, reason, plan, act) paired with nomotic systems (govern, authorize, trust, evaluate). This framing dissolves a persistent confusion between intent (originating in user input) and authority (originating in governance rules). When a customer service agent with a $500 refund limit is asked to approve $2,000, the example clarifies that the failure is not in the agent's reasoning but in the authorization boundary.</p>
+<p>Six core principles are presented: governance as architecture, pre-action authorization, explicit authority boundaries, verifiable trust, ethical justification, and accountable governance. The principles are broadly reasonable; governance structures should have owners, permissions should be explicit, trust should be earned rather than assumed; yet remain at a level of abstraction that invites critique. Pre-action authorization, for instance, is specified to allow implementation variation (synchronous or asynchronous, class-based or instance-level), which opens the question: at what level of operational specificity should Nomotic AI principles constrain implementation?</p>
+<p>The paper does not provide implementation architectures, formal verification methods, or empirical validation of whether Nomotic AI frameworks reduce the failure modes claimed. The discussion of enforcement in distributed multi-agent systems acknowledges the gap but defers detailed mechanism design. The relationship to existing approaches (Constitutional AI as training-time alignment, runtime policy enforcement, delegated authority models) is acknowledged but not deeply analyzed. Hood claims synthesis of these approaches into a "holistic category," yet the novel architectural contribution beyond naming and reframing remains ambiguous.</p>
+<p>A significant limitation is the assumption that governance can be static; that a set of rules established at design time will remain appropriate. The paper recognizes in passing that governance must be "evolvable," but does not grapple with how nomotic frameworks adapt when agentic capabilities or deployment contexts change. The board-level governance section gestures toward institutional design (who sets authority boundaries?) without resolving it.</p>
+<p>For public sector and digital infrastructure contexts, the paper's framing is useful: governance must be designed into systems, not bolted on afterward. This aligns with DPI design principles (modular, interoperable, human-centered). However, the applicability to contexts where authority boundaries are contested, politically dynamic, or culturally variable is underexplored. In India's digital governance context, for instance, questions of whose authority counts and how boundaries adapt across federal-state coordination remain open.</p>
+<p>The paper succeeds as conceptual framing: it elevates governance to co-equal standing with capability and provides vocabulary for that conversation. Whether "Nomotic AI" will gain traction in discourse remains an empirical question. The stronger contribution may be the principle-level guidance for enterprise governance rather than the neologism itself.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>Nomotic AI's core insight is architectural rather than technical: the governance gap in agentic AI systems persists not because governance is impossible but because governance is typically treated as a post-deployment compliance layer rather than as a design-time architectural decision that is co-equal with capability design.</p></div>
+<section class="membership"><h2>Appears in these collections</h2><div class="tag-row"><a class="tag-link" href="../../../collections/ai-governance-institutional-accountability/">AI governance and institutional accountability</a><a class="tag-link" href="../../../collections/agent-authority-delegation-redress/">Agent authority, delegation and redress</a></div></section>
+<div class="prev-next"><a href="../../../reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/"><span>Newer review</span>The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency</a><a class="next" href="../../../reviews/2026/ai-for-justice-ethical-fair-and-robust-adoption-in-indias-courts/"><span>Older review</span>AI for Justice: Ethical, Fair and Robust Adoption in India&#x27;s Courts</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/ai-governance/">More in AI Governance</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Cryptographic Runtime Governance for Autonomous AI Systems: The Aegis Architecture for Verifiable Policy Enforcement</a></h3>
+  <div class="publication">arXiv</div>
+  <p>Aegis is valuable because it treats governance as an execution condition rather than post hoc oversight, but it does not solve the harder question of who gets to define the immutable policy layer and how that authority is constrained, challenged, and revised.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/">Read review</a> · <a href="https://arxiv.org/abs/2603.16938" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-03-23</div>
+  <h3><a href="../../../reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/">The Comprehension-Gated Agent Economy: A Robustness-First Architecture for AI Economic Agency</a></h3>
+  <div class="publication">arXiv</div>
+  <p>AI agents in economic contexts should be gated on verified robustness across three orthogonal dimensions (constraint compliance, epistemic integrity, behavioral alignment) rather than on capability benchmarks, because capability is empirically uncorrelated with operational robustness—transforming safety from a regulatory cost into a competitive advantage through incentive-compatible mechanism design.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/">Read review</a> · <a href="https://arxiv.org/abs/2603.15639" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-04-14</div>
+  <h3><a href="../../../reviews/2026/ai-governance-safety-and-infrastructure/">AI Governance, Safety and Infrastructure</a></h3>
+  <div class="publication">Global Network Initiative and Centre for Communication Governance, National Law University Delhi</div>
+  <p>The briefing’s strongest contribution is showing that standards, safety institutions, and infrastructure concentration are converging into one governance problem, but it stops short of specifying the enforceable control points that would actually redistribute power.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/ai-governance-safety-and-infrastructure/">Read review</a> · <a href="https://globalnetworkinitiative.org/wp-content/uploads/MAP-AI-Literature-Review.pdf" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Governance · 2026-03-14</div>
+  <h3><a href="../../../reviews/2026/open-problems-in-technical-ai-governance/">Open Problems in Technical AI Governance</a></h3>
+  <div class="publication">Transactions on Machine Learning Research</div>
+  <p>The paper’s most durable contribution is showing that many AI governance debates are blocked not by lack of principles, but by missing technical capacities for assessment, access, verification, security, operationalisation, and ecosystem monitoring.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/open-problems-in-technical-ai-governance/">Read review</a> · <a href="https://arxiv.org/abs/2407.14981" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

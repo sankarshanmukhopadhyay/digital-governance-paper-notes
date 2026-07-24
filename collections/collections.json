@@ -1,0 +1,47 @@
+{
+  "collections": [
+    {
+      "title": "AI governance and institutional accountability",
+      "slug": "ai-governance-institutional-accountability",
+      "description": "Reviews examining how AI systems redistribute authority, create institutional duties and expose gaps between governance principles and enforceable controls.",
+      "domains": ["AI Governance", "AI Safety & Evaluation", "Law, Regulation & Liability"],
+      "any_tags": ["AI governance", "accountability", "deployment controls", "regulatory frameworks", "institutional readiness"],
+      "max_items": 15
+    },
+    {
+      "title": "Digital identity and trust infrastructure",
+      "slug": "digital-identity-trust-infrastructure",
+      "description": "Work on identity, credentials, trust registries, assurance and the institutional mechanisms that make claims actionable across organisational boundaries.",
+      "domains": ["Digital Identity", "Trust Infrastructure", "Standards, Protocols & Interoperability"],
+      "max_items": 15
+    },
+    {
+      "title": "Digital public infrastructure and state capacity",
+      "slug": "digital-public-infrastructure-state-capacity",
+      "description": "Reviews connecting public digital rails to sovereignty, administrative capability, inclusion, procurement and the long-term control of essential infrastructure.",
+      "domains": ["Digital Public Infrastructure", "Digital Public Goods", "Public Sector Digital Strategy", "State Capacity & Administrative Systems"],
+      "max_items": 15
+    },
+    {
+      "title": "Agent authority, delegation and redress",
+      "slug": "agent-authority-delegation-redress",
+      "description": "Papers concerned with who may act, how machine authority is bounded, what evidence proves mandate and how affected parties challenge or reverse consequential actions.",
+      "any_tags": ["AI agents", "agentic systems", "authority", "authorization", "delegation", "delegated authority", "accountability"],
+      "max_items": 15
+    },
+    {
+      "title": "Epistemic integrity and human capability",
+      "slug": "epistemic-integrity-human-capability",
+      "description": "Research on deskilling, dependency, scientific reliability, language access and the institutional conditions required to preserve human judgement under automation.",
+      "any_tags": ["epistemic integrity", "labour", "reproducibility", "cognitive linguistics", "AI adoption", "generative AI"],
+      "max_items": 15
+    },
+    {
+      "title": "Governance beyond principles",
+      "slug": "governance-beyond-principles",
+      "description": "Reviews that test whether governance claims are operational: whether authority, evidence, enforcement, revocation, accountability and remedy are actually implemented.",
+      "any_tags": ["governance-by-design", "evidence", "assurance", "accountability", "authority", "thresholds", "deployment controls", "trust assurance"],
+      "max_items": 15
+    }
+  ]
+}

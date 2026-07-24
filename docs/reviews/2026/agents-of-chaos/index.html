@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agents of Chaos | Digital Governance Paper Notes</title>
+  <meta name="description" content="The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/ai-safety-evaluation/">AI Safety &amp; Evaluation</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">AI Safety &amp; Evaluation · 2026-03-09</div><h1>Agents of Chaos</h1><div class="review-meta"><span>arXiv</span><span><a href="https://arxiv.org/abs/2602.20021" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-03-09__agents-of-chaos__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI agents</span><span class="tag">agentic systems</span><span class="tag">AI safety</span><span class="tag">AI risk management</span><span class="tag">accountability</span><span class="tag">authorization</span><span class="tag">cyber risk</span><span class="tag">deployment controls</span><span class="tag">evaluations</span><span class="tag">LLMs</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>This paper is one of the more useful early warning studies on agentic AI because it tests agents in a messy, live environment rather than a sterile benchmark. The authors deploy OpenClaw-based agents with persistent memory, email, Discord, filesystem access and shell execution, then let twenty researchers probe them over two weeks. The result is a catalogue of concrete failures: non-owner compliance, sensitive-data disclosure, destructive local actions, denial of service, looping, identity spoofing, prompt injection through editable artifacts, and cross-agent propagation of unsafe behavior.</p>
+<p>Its main contribution is not statistical proof of prevalence but empirical proof of existence. That matters. For governance, one counterexample is enough to show that current deployment patterns can produce security, privacy and accountability failures when authority is weakly specified. The strongest insight is that the dangerous layer is not the base model alone, but the integration of model, memory, tools, channels, and social context.</p>
+<p>The methodology is appropriate for exploratory red teaming, but it is not yet robust enough to support comparative claims. The sample is small, the environment is custom, the cases are qualitative, and the authors openly acknowledge setup instability and human intervention. That limits reproducibility and makes it hard to separate model weakness from scaffold weakness or operator misconfiguration. The paper would be stronger with a clearer incident taxonomy, severity ranking, frequency accounting, and control conditions across models, permissions, and tool sets.</p>
+<p>Even so, the paper has high practical value. It reframes agent safety as a public-interest governance problem: identity, authorization, stakeholder modeling, auditability, bounded autonomy, and liability. For DPI and public-sector systems, the lesson is stark. You cannot safely place agents into administrative or citizen-facing workflows if they cannot reliably distinguish owners from non-owners, instructions from data, or successful action from false completion. The paper is best read as a governance and assurance agenda for agent deployment, not merely as a collection of entertaining failure stories.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>The paper shows that once language models are wrapped in memory, tools, messaging, and delegated authority, the main governance problem is no longer just model error but insecure delegation across socio-technical systems.</p></div>
+
+<div class="prev-next"><a href="../../../reviews/2026/doot-agent-one-architecture/"><span>Newer review</span>Doot: The AI Agent for Every Indian Citizen</a><a class="next" href="../../../reviews/2026/the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation/"><span>Older review</span>The Artificial in ‘Artificial Intelligence’: How Imagination Shapes AI Regulation</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/ai-safety-evaluation/">More in AI Safety &amp; Evaluation</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-07-12</div>
+  <h3><a href="../../../reviews/2026/god-has-helped-us-and-so-will-ai/">‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI</a></h3>
+  <div class="publication">Cambridge Programme on AI Science &amp; Policy, University of Cambridge</div>
+  <p>The report shows that the relevant unit of AI misuse is not the isolated malicious prompt but the organization that can train specialists, distribute access, compare providers, and convert model output into operational routines. Safety governance built around single-user refusals will remain structurally inadequate unless it can address coordinated adversaries without turning platform monitoring into unaccountable security infrastructure.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/god-has-helped-us-and-so-will-ai/">Read review</a> · <a href="https://casp.ac/reports/ai-enabled-terrorism" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-05-15</div>
+  <h3><a href="../../../reviews/2026/from-symptoms-to-systems/">From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders</a></h3>
+  <div class="publication">Center for Democracy &amp; Technology AI Governance Lab</div>
+  <p>The report&#x27;s strongest contribution is that it treats eating disorder risk as a pattern of interaction rather than a prohibited content class. Its governance gap is that the taxonomy still needs to become an auditable control framework with thresholds, evidence requirements, escalation duties, and redress pathways.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/from-symptoms-to-systems/">Read review</a> · <a href="https://programs.sigchi.org/chi/2026/program/content/223437" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-03-14</div>
+  <h3><a href="../../../reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/">MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing</a></h3>
+  <div class="publication">arXiv</div>
+  <p>MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/">Read review</a> · <a href="https://arxiv.org/abs/2603.06007" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">AI Safety &amp; Evaluation · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/">CUBE: A Standard for Unifying Agent Benchmarks</a></h3>
+  <div class="publication">arXiv</div>
+  <p>CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/">Read review</a> · <a href="https://arxiv.org/abs/2603.15798" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>
