@@ -1,20 +1,46 @@
 # Digital Governance Paper Notes
 
-A curated archive of short, practitioner-oriented reviews of research papers, policy reports, essays, and institutional publications on AI governance, digital public infrastructure, public-interest technology, digital identity, and adjacent governance questions.
+A curated archive of governance-first reviews of research papers, policy reports, essays, and institutional publications on AI governance, digital public infrastructure, public-interest technology, digital identity, and adjacent governance questions.
 
-**GitHub Pages site:** [sankarshanmukhopadhyay.github.io/digital-governance-paper-notes](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/) &nbsp;·&nbsp; **Repository index:** [index.md](index.md)
+**Site:** [sankarshanmukhopadhyay.github.io/digital-governance-paper-notes](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/) 
+
+**Index:** [index.md](index.md)
+
+**Editorial standards:** [editorial-standards.md](editorial-standards.md)
+
+**Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
 ## About
 
-These are working notes from a single reader. Each review extracts the main argument of a paper, assesses its strengths and limitations honestly, and captures one durable insight worth carrying into future work.
+These are working notes from a single reader. Each review extracts the governance claim a paper makes or implies, assesses it against a fixed set of questions (who controls the system, under what conditions that control can be contested, whether the proposed mechanisms are enforceable and by whom), and closes with one durable insight worth carrying into future work.
 
-The collection has a running editorial preoccupation: when does a governance claim become operationally credible? Maturity frameworks, sovereignty postures, and open-ecosystem visions tend to be evaluated here against whether they specify enforceable controls, testable design choices, or mechanisms that could actually fail — rather than just affirming good intentions. That bias shows in the reviews.
+The archive has a running editorial preoccupation: when does a governance claim become operationally credible? Maturity frameworks, sovereignty postures, and open-ecosystem visions are evaluated here against whether they specify enforceable controls, testable design choices, and mechanisms that could actually fail, rather than against how well they affirm good intentions. That bias is deliberate and it shows in the reviews.
 
-The current set skews toward India, South Asia, and APAC contexts because that is where the reading started. That is a temporary feature of the backlog, not a limitation of scope. The archive will cover globally published work that aligns to the taxonomy.
+The current set skews toward India, South Asia, and APAC contexts because that is where the reading started. That is a temporary feature of the backlog, not a limitation of scope. The archive covers globally published work that aligns to the taxonomy below.
 
-If you want to suggest a paper for review, open an issue and assign it to the maintainer. See [CONTRIBUTING.md](CONTRIBUTING.md) for how that works.
+To suggest a paper for review, open an issue and assign it to the maintainer. See [CONTRIBUTING.md](CONTRIBUTING.md) for what to include.
+
+---
+
+## Editorial standards
+
+Every review is written against a fixed governance checklist and a fixed style discipline, documented in full in [editorial-standards.md](editorial-standards.md). In short:
+
+- **Governance-first, not summary.** A review states what the paper argues and, for mechanism or design proposals and policy/regulatory reports, evaluates control, contestability, enforcement, redress, the assumed beneficiary population, and unaddressed failure modes. Conceptual, philosophical, and advocacy papers get an adapted version of the same lens rather than a forced fit.
+- **Traceable claims.** What the review says the paper argues should be locatable in the paper. Reviewer inference is distinguished from the paper's own claims rather than folded into them.
+- **A steelman before a critique.** Every substantive critique engages the strongest available counter-argument before making its case.
+- **No em dashes, no hedge phrases, no empty praise.** "Robust," "leverage" as a verb, "delves into," "sheds light on," and similar filler are off-limits; see the full banned-phrase list in [editorial-standards.md](editorial-standards.md).
+- **`key_insight` is load-bearing.** It must be specific to the paper, present in the front matter, and identical to the body's `## Key Insight` section.
+
+A subset of these rules is enforced mechanically. Run the linter before opening a pull request:
+
+```bash
+python scripts/editorial_lint.py
+```
+
+It checks front matter completeness, taxonomy conformance, file naming, em dashes, the banned-phrase list, `key_insight` identity between front matter and body, body length, and duplicate papers across the archive. CI runs it on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, length-band outliers) are reported but left to editorial judgment. What the linter can and cannot verify, and why some checks are warnings rather than hard gates, is documented in [editorial-standards.md](editorial-standards.md).
 
 ---
 
@@ -42,6 +68,8 @@ If you want to suggest a paper for review, open an issue and assign it to the ma
 
 <!-- TAXONOMY_SUMMARY:END -->
 
+This snapshot regenerates automatically from `taxonomy/domains.yml` and the reviews in `reviews/`; don't hand-edit the block between the markers above.
+
 Core areas include:
 
 - AI governance and institutional capacity
@@ -50,31 +78,41 @@ Core areas include:
 - Internet governance, privacy, cybersecurity, and standards
 - Socio-technical systems and governance theory
 
+The full controlled vocabulary, including secondary topic tags and arXiv scholarly-signal codes, lives in [`taxonomy/domains.yml`](taxonomy/domains.yml). Adding a domain or tag not yet in that file means updating it in the same commit as the review that needs it.
+
 ---
 
 ## Repository Structure
 
-- `reviews/YYYY/` — canonical review files
-- `index.md` — generated root index for the repository
-- `docs/index.html` — generated GitHub Pages entrypoint
-- `templates/` — review template
-- `taxonomy/` — controlled vocabulary and domain scaffolding
-- `scripts/` — repository maintenance utilities
-- `.github/workflows/` — automation for index generation, Pages, and release packaging
+```text
+reviews/YYYY/                 canonical review files, one per paper
+index.md                      generated root index
+docs/                         generated GitHub Pages site (index.html, per-domain and per-collection pages)
+templates/review-template.md  canonical front matter and body template
+taxonomy/domains.yml           controlled vocabulary: domains, tags, scholarly signals
+collections/collections.json  curated cross-cutting collections
+scripts/build_index.py         rebuilds index.md, docs/, and the README's generated sections
+scripts/editorial_lint.py      Tier 1 editorial checks (style, schema, taxonomy, duplication)
+editorial-standards.md         the full editorial rulebook, including what is and isn't automated
+CONTRIBUTING.md                how to suggest a paper and how the maintainer writes a review
+.github/workflows/             CI: lint + index staleness check, index rebuild, Pages deploy
+```
 
 ---
 
 ## Review File Convention
 
-New reviews should use the canonical path format:
+New reviews use the canonical path format:
 
 ```text
 reviews/YYYY/YYYY-MM-DD__slug__v1.md
 ```
 
-Each review should follow the template in `templates/review-template.md`.
+The date is when the review was finished, not the paper's publication date. Version increments (`v2`, `v3`) are used only for substantive post-publication revisions to the analysis, not formatting fixes.
 
-Expected front matter:
+Each review follows [`templates/review-template.md`](templates/review-template.md): required front matter, then a `## Review` section of roughly 2,000-6,000 characters depending on how much the paper is actually arguing, then a `## Key Insight` section that must match the front matter `key_insight` field exactly.
+
+Required front matter:
 
 ```yaml
 ---
@@ -84,10 +122,12 @@ publication: ""
 date_read: "YYYY-MM-DD"
 primary_domain: ""
 tags: []
-scholarly_signal: ""    # optional
+scholarly_signal: ""    # optional; arXiv/preprint subject classification only
 key_insight: ""
 ---
 ```
+
+`primary_domain` and every entry in `tags` must come from [`taxonomy/domains.yml`](taxonomy/domains.yml). `scholarly_signal` is the only optional field; every other field is required and checked by `editorial_lint.py`.
 
 ---
 
@@ -95,22 +135,19 @@ key_insight: ""
 
 The repository maintains itself with minimal manual overhead:
 
-- On pull requests, CI checks whether generated files are stale.
-- On pushes to `main` that modify `reviews/` or indexing logic, CI rebuilds the index and auto-commits generated changes.
-- On version tags such as `v1.0.0`, CI creates a clean release ZIP artifact.
+- On pull requests and pushes, CI installs dependencies, runs `editorial_lint.py`, and checks whether generated files are stale. A lint error or a stale index blocks the merge.
+- On pushes to `main` that touch `reviews/`, the taxonomy, or the indexing logic, CI rebuilds `index.md` and `docs/` and auto-commits the result.
 - GitHub Pages publishes from the generated `docs/` directory via GitHub Actions.
 
-To rebuild locally:
+To run everything locally before opening a pull request:
 
 ```bash
-python scripts/build_index.py
+python scripts/editorial_lint.py      # style, schema, and taxonomy checks
+python scripts/build_index.py          # rebuild index.md, docs/, and this README's generated sections
+python scripts/build_index.py --check  # verify nothing is stale
 ```
 
-To verify locally:
-
-```bash
-python scripts/build_index.py --check
-```
+Commit the review file together with any regenerated files in a single commit.
 
 ---
 
@@ -129,19 +166,13 @@ python scripts/build_index.py --check
 
 <!-- RECENT_REVIEWS:END -->
 
----
-
-## GitHub Pages Setup
-
-In the repository settings, set **Pages** to deploy from **GitHub Actions**.
-
-The generated site entrypoint is `docs/index.html` (built from review metadata for reliable Pages deployment).
+This list regenerates automatically from the most recently read reviews; don't hand-edit the block between the markers above. See [index.md](index.md) for the full archive, browsable by domain and by collection.
 
 ---
 
 ## Contributing
 
-To suggest a paper for review, open an issue and assign it to the maintainer. See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
+To suggest a paper for review, open an issue and assign it to the maintainer, including the title, author(s), a direct link, and a sentence on why it fits the taxonomy. To write a review, follow the conventions above and in [CONTRIBUTING.md](CONTRIBUTING.md), then run `editorial_lint.py` and `build_index.py` before opening a pull request.
 
 ---
 
