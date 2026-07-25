@@ -15,7 +15,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
 - [Law, Regulation & Liability](#law-regulation-liability) (7)
 - [Platform Governance & Internet Governance](#platform-governance-internet-governance) (2)
-- [Socio-technical Systems](#socio-technical-systems) (7)
+- [Socio-technical Systems](#socio-technical-systems) (8)
 - [Inclusion, Rights & Development](#inclusion-rights-development) (2)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
 - [Economic & Market Infrastructure](#economic-market-infrastructure) (3)
@@ -179,6 +179,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### Socio-technical Systems
 <a id="socio-technical-systems"></a>
 
+- **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.08084)
+  - AI companions do not merely simulate intimacy. They place the continuity, terms, and emotional consequences of a relationship under platform control while personalizing feedback loops that can intensify both recovery and withdrawal.
 - **2026-07-24** — [The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science](reviews/2026/2026-07-19__the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2607.17397)
   - LLMs do not merely reduce the cost of scientific work. By raising the opportunity cost of researcher time, they can redirect effort toward higher throughput, thinner development, and greater submission pressure, making institutional incentives rather than model accuracy the decisive governance problem.
 - **2026-05-06** — [Future of Jobs in the Age of AI: Emerging Roles, New Opportunities](reviews/2026/2026-05-06__future-of-jobs-in-the-age-of-ai__v1.md) — *DeepTech4Bharat Foundation and Center of Policy Research and Governance* — [Source](https://www.ai4india.org/)
