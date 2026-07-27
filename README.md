@@ -64,7 +64,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 - **Socio-technical Systems** (8)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (1)
-- **Economic & Market Infrastructure** (3)
+- **Economic & Market Infrastructure** (4)
 
 <!-- TAXONOMY_SUMMARY:END -->
 

@@ -92,6 +92,7 @@ docs/reviews/2026/the-global-landscape-of-environmental-ai-regulation/index.html
 docs/reviews/2026/the-mythology-of-conscious-ai/index.html
 docs/reviews/2026/the-stack-and-the-state-india-s-digital-governance-model-as-technopolitical-power/index.html
 docs/reviews/2026/the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science/index.html
+docs/reviews/2026/the-value-of-open-source-ai-for-the-canadian-economy/index.html
 docs/reviews/2026/toward-risk-thresholds-for-ai-enabled-cyber-threats/index.html
 docs/reviews/2026/towards-an-open-resilient-non-aligned-ai/index.html
 docs/reviews/2026/what-indias-push-for-global-digital-repositories-tells-us-about-its-tech-diplomacy/index.html

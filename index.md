@@ -18,7 +18,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - [Socio-technical Systems](#socio-technical-systems) (8)
 - [Inclusion, Rights & Development](#inclusion-rights-development) (2)
 - [State Capacity & Administrative Systems](#state-capacity-administrative-systems) (1)
-- [Economic & Market Infrastructure](#economic-market-infrastructure) (3)
+- [Economic & Market Infrastructure](#economic-market-infrastructure) (4)
 
 ## Reviews by Domain
 
@@ -219,3 +219,5 @@ A generated repository-native index. The GitHub Pages site provides guided brows
   - The report’s core contribution is to show that India’s data-centre buildout is not a neutral scaling exercise but a governance choice that reallocates water, energy, land, subsidy, and political priority toward compute infrastructure without yet building the disclosure, accountability, and redress mechanisms needed to legitimate that shift.
 - **2026-03-26** — [From Extraction to Ownership: Platform Cooperatives as Infrastructure for Worker Sovereignty in African AI Labor Markets](reviews/2026/2026-03-26__from-extraction-to-ownership-platform-cooperatives-as-infrastructure-for-worker-sovereignty-in-african-ai-labor-markets__v1.md) — *ResearchGate / preprint* — [Source](https://www.researchgate.net/publication/400798251_From_Extraction_to_Ownership_Platform_Cooperatives_as_Infrastructure_for_Worker_Sovereignty_in_African_AI_Labor_Markets)
   - The paper’s most important move is to argue that the problem in African AI labor markets is not only underpayment but infrastructural exclusion: workers remain trapped because compute, capital, contracting power, and governance are organized to keep ownership upstream.
+- **2026-03-07** — [The Value of Open Source AI for the Canadian Economy](reviews/2026/2026-03-07__the-value-of-open-source-ai-for-the-canadian-economy__v1.md) — *Linux Foundation Research* — [Source](https://www.linuxfoundation.org/research/open-source-ai-canada)
+  - The report frames open models as economic infrastructure for reducing adoption costs and dependence, but it does not specify the governance conditions under which openness becomes public capacity rather than a subsidy for dominant model providers.
