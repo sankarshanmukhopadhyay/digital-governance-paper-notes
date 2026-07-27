@@ -51,7 +51,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 <!-- TAXONOMY_SUMMARY:START -->
 
 - **AI Governance** (19)
-- **AI Safety & Evaluation** (7)
+- **AI Safety & Evaluation** (8)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (4)

@@ -69,6 +69,7 @@ docs/reviews/2026/gene-name-errors-lessons-not-learned/index.html
 docs/reviews/2026/god-has-helped-us-and-so-will-ai/index.html
 docs/reviews/2026/governing-artificial-intelligence-in-india/index.html
 docs/reviews/2026/how-can-ai-support-language-digitization-and-digital-inclusion/index.html
+docs/reviews/2026/indigenizing-adversarial-stress-testing/index.html
 docs/reviews/2026/institutional-memory-narrative-integrity-democratic-resilience/index.html
 docs/reviews/2026/international-ai-safety-report-2026/index.html
 docs/reviews/2026/introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes/index.html

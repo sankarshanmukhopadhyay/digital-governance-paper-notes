@@ -5,7 +5,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ## Browse by Domain
 
 - [AI Governance](#ai-governance) (19)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (7)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (8)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (8)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (4)
@@ -73,6 +73,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
   - The report's central contribution is that it treats eating disorder risk as a pattern of interaction rather than a prohibited content class. Its governance gap is that the taxonomy still needs to become an auditable control framework with thresholds, evidence requirements, escalation duties, and redress pathways.
 - **2026-04-06** — [CUBE: A Standard for Unifying Agent Benchmarks](reviews/2026/2026-04-06__cube-a-standard-for-unifying-agent-benchmarks__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.15798)
   - CUBE correctly identifies benchmark fragmentation as an infrastructure bottleneck, but the standard it proposes would also become a governance layer that shapes what agent capability is legible, portable, and worth optimizing for.
+- **2026-03-24** — [Indigenizing Adversarial Stress Testing](reviews/2026/2026-03-24__indigenizing-adversarial-stress-testing__v1.md) — *Humane Intelligence and Emergence Circle* — [Source](https://humane-intelligence.org/wp-content/uploads/2026/03/Indigenized-Adversarial-Stress-Testing-Framework.pdf)
+  - The framework recasts AI stress testing as an exercise of Indigenous governing authority rather than a vendor-controlled safety check, but its sovereignty claims require enforceable agreements, auditable revocation, remedy pathways, and developer obligations before test findings can constrain deployment.
 - **2026-03-14** — [MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing](reviews/2026/2026-03-14__masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2603.06007)
   - MASFactory’s real contribution is not that it makes multi-agent systems easier to build, but that it reframes orchestration as a reusable governance surface where topology, context access, and human intervention can be made explicit, inspectable, and testable.
 - **2026-03-09** — [Agents of Chaos](reviews/2026/2026-03-09__agents-of-chaos__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2602.20021)
