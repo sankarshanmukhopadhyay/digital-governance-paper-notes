@@ -13,7 +13,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - [Standards, Protocols & Interoperability](#standards-protocols-interoperability) (1)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
-- [Law, Regulation & Liability](#law-regulation-liability) (7)
+- [Law, Regulation & Liability](#law-regulation-liability) (8)
 - [Platform Governance & Internet Governance](#platform-governance-internet-governance) (2)
 - [Socio-technical Systems](#socio-technical-systems) (8)
 - [Inclusion, Rights & Development](#inclusion-rights-development) (2)
@@ -155,6 +155,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### Law, Regulation & Liability
 <a id="law-regulation-liability"></a>
 
+- **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)* — [Source](https://www.fatf-gafi.org/content/fatf-gafi/en/publications/Virtualassets/targeted-report-decentralised-finance-2026.html)
+  - FATF reframes DeFi regulation around observable control rather than claims of decentralisation, but its fallback for systems without an identifiable controller shifts enforcement toward adjacent intermediaries without defining the legitimacy, evidence standards, or redress required for that indirect control regime.
 - **2026-05-04** — [AI Agents Under EU Law: A Compliance Architecture for AI Providers](reviews/2026/2026-04-07__ai-agents-under-eu-law-a-compliance-architecture-for-ai-providers__v1.md) — *arXiv working paper* — [Source](https://arxiv.org/abs/2604.04604)
   - The paper’s decisive analytical move is to relocate AI agent compliance from model classification to action inventory: what the agent can touch, change, disclose, delegate, or trigger is the real regulatory map. Its unresolved weakness is that it treats provider compliance architecture as the main control surface while leaving legitimacy, redress, and affected-party power underdeveloped.
 - **2026-03-26** — [Legal Frictions for Data Openness: Reflections from a Case-Study on Re-use of the Open Web for AI Training](reviews/2026/2026-03-26__legal-frictions-for-data-openness-open-web-and-ai__v1.md) — *HAL / CNRS / Open Knowledge Foundation* — [Source](https://hal.science/hal-05009616v1)
