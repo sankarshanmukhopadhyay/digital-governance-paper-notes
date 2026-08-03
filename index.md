@@ -4,7 +4,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 
 ## Browse by Domain
 
-- [AI Governance](#ai-governance) (19)
+- [AI Governance](#ai-governance) (20)
 - [AI Safety & Evaluation](#ai-safety-evaluation) (8)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (8)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
@@ -25,6 +25,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### AI Governance
 <a id="ai-governance"></a>
 
+- **2026-08-03** — [Critique of Agent Model](reviews/2026/2026-08-03__critique-of-agent-model__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2606.23991)
+  - The paper correctly identifies that advanced agents redistribute control by internalising goals, identity, deliberation, and learning, but it mistakes architectural visibility for governability: an inspectable module is not an accountable institution unless authority, constraint, revocation, evidence, and redress are executable around it.
 - **2026-05-11** — [AI Governance at the Frontier: Unpacking Foundational Assumptions](reviews/2026/2026-05-11__ai-governance-at-the-frontier__v1.md) — *Center for Security and Emerging Technology* — [Source](https://cset.georgetown.edu/publication/ai-governance-at-the-frontier/)
   - The report's decisive analytical move is to treat governance proposals as bundles of assumptions rather than competing slogans. Its unresolved weakness is that assumption-mapping becomes policy-relevant only when each assumption is translated into testable institutional capacity, enforceable authority, and observable failure conditions.
 - **2026-05-09** — [Governing Artificial Intelligence in India: Data Sourcing, Synthetic Content, and Technological Sovereignty](reviews/2026/2026-03-30__governing-artificial-intelligence-in-india__v1.md) — *Kautilya School of Public Policy Working Paper #3* — [Source](https://www.kspp.edu.in/working-papers/governing-artificial-intelligence-in-india)

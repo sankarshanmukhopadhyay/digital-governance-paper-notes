@@ -50,7 +50,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (19)
+- **AI Governance** (20)
 - **AI Safety & Evaluation** (8)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -155,6 +155,7 @@ Commit the review file together with any regenerated files in a single commit.
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-08-03** — [Critique of Agent Model](reviews/2026/2026-08-03__critique-of-agent-model__v1.md) — *arXiv*
 - **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)*
 - **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv*
 - **2026-07-24** — [The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science](reviews/2026/2026-07-19__the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science__v1.md) — *arXiv*
@@ -162,7 +163,6 @@ Commit the review file together with any regenerated files in a single commit.
 - **2026-07-12** — [Introducing AI to an Online Petition Platform Changed Outputs but not Outcomes](reviews/2026/2026-07-12__introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes__v1.md) — *arXiv*
 - **2026-06-27** — [Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines](reviews/2026/2026-06-27__strategic-identity-asymmetry__v1.md) — *SSRN*
 - **2026-06-26** — [Digital Public Infrastructure in Africa: A Leapfrog Catalyst for Inclusive Growth and Prosperity](reviews/2026/2026-06-26__digital-public-infrastructure-in-africa__v1.md) — *United Nations Development Programme, Regional Bureau for Africa and Digital, AI and Innovation Hub*
-- **2026-06-26** — [Control Is the Operative Fact: A Three-Layer Model for Digital Identity, Transferable Records, and Platform-Independent Authority](reviews/2026/2026-06-26__control-is-the-operative-fact-open-etr__v1.md) — *OWG Connect — Open Trade Infrastructure Series (Discussion Paper v1.0)*
 
 <!-- RECENT_REVIEWS:END -->
 

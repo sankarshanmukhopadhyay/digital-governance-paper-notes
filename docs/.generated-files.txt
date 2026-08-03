@@ -49,6 +49,7 @@ docs/reviews/2026/business-perspectives-on-advancing-ai/index.html
 docs/reviews/2026/codified-context-infrastructure-for-ai-agents-in-a-complex-codebase/index.html
 docs/reviews/2026/comprehension-gated-agent-economy-robustness-first-ai-economic-agency/index.html
 docs/reviews/2026/control-is-the-operative-fact-open-etr/index.html
+docs/reviews/2026/critique-of-agent-model/index.html
 docs/reviews/2026/cryptographic-runtime-governance-for-autonomous-ai-systems-the-aegis-architecture-for-verifiable-policy-enforcement/index.html
 docs/reviews/2026/cube-a-standard-for-unifying-agent-benchmarks/index.html
 docs/reviews/2026/democratising-ai-towards-open-decentralised-ai-ecosystems/index.html
