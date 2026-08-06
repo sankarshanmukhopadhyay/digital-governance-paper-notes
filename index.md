@@ -5,7 +5,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ## Browse by Domain
 
 - [AI Governance](#ai-governance) (20)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (9)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (10)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (8)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (4)
@@ -69,6 +69,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-08-06** — [Position: LLMs Can't Jump](reviews/2026/2026-08-06__llms-cant-jump__v1.md) — *ICML 2026* — [Source](https://openreview.net/forum?id=klU4737opt)
+  - The inability to generate new premises is not only a model-capability gap; it is a governance boundary for institutions that delegate scientific agenda-setting to AI. World models may expand the space of machine-generated hypotheses, but without rules for evidentiary status, validation, attribution, and contestability they also concentrate authority over what counts as a plausible explanation.
 - **2026-08-06** — [Not All LLM Reasoning is Visible in the Chain-of-Thought](reviews/2026/2026-08-06__not-all-llm-reasoning-is-visible-in-the-chain-of-thought__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2607.22925)
   - Chain-of-thought monitoring is not an accountability mechanism when consequential computation can occur without an interpretable token trace. The governance implication is not simply that monitors need better detection, but that institutions must stop treating model-generated explanations as sufficient evidence of intent, compliance, or safe internal process.
 - **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge* — [Source](https://casp.ac/reports/ai-enabled-terrorism)

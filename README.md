@@ -51,7 +51,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 <!-- TAXONOMY_SUMMARY:START -->
 
 - **AI Governance** (20)
-- **AI Safety & Evaluation** (9)
+- **AI Safety & Evaluation** (10)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (4)
@@ -156,13 +156,13 @@ Commit the review file together with any regenerated files in a single commit.
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433*
+- **2026-08-06** — [Position: LLMs Can't Jump](reviews/2026/2026-08-06__llms-cant-jump__v1.md) — *ICML 2026*
 - **2026-08-06** — [Not All LLM Reasoning is Visible in the Chain-of-Thought](reviews/2026/2026-08-06__not-all-llm-reasoning-is-visible-in-the-chain-of-thought__v1.md) — *arXiv*
 - **2026-08-03** — [Critique of Agent Model](reviews/2026/2026-08-03__critique-of-agent-model__v1.md) — *arXiv*
 - **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)*
 - **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv*
 - **2026-07-24** — [The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science](reviews/2026/2026-07-19__the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science__v1.md) — *arXiv*
 - **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge*
-- **2026-07-12** — [Introducing AI to an Online Petition Platform Changed Outputs but not Outcomes](reviews/2026/2026-07-12__introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 

@@ -76,6 +76,7 @@ docs/reviews/2026/international-ai-safety-report-2026/index.html
 docs/reviews/2026/introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes/index.html
 docs/reviews/2026/large-scale-online-deanonymization-with-llms/index.html
 docs/reviews/2026/legal-frictions-for-data-openness-open-web-and-ai/index.html
+docs/reviews/2026/llms-cant-jump/index.html
 docs/reviews/2026/mapping-indias-data-centres-aspirations-realities-and-futures/index.html
 docs/reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/index.html
 docs/reviews/2026/municipal-tokens-as-urban-policy-tools/index.html
