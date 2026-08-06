@@ -88,6 +88,7 @@ docs/reviews/2026/sovereignty-in-the-age-of-ai-strategic-choices-structural-depe
 docs/reviews/2026/strategic-identity-asymmetry/index.html
 docs/reviews/2026/strategy-for-artificial-intelligence-in-healthcare-for-india-sahi/index.html
 docs/reviews/2026/syntelos-trust-through-attestation-and-policy/index.html
+docs/reviews/2026/taking-scale-seriously-in-technology-law/index.html
 docs/reviews/2026/targeted-report-on-regulatory-challenges-from-decentralised-finance/index.html
 docs/reviews/2026/the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai/index.html
 docs/reviews/2026/the-artificial-in-artificial-intelligence-how-imagination-shapes-ai-regulation/index.html

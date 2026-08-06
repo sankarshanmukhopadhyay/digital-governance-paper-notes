@@ -13,7 +13,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - [Standards, Protocols & Interoperability](#standards-protocols-interoperability) (1)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
 - [Cybersecurity & Resilience](#cybersecurity-resilience) (1)
-- [Law, Regulation & Liability](#law-regulation-liability) (8)
+- [Law, Regulation & Liability](#law-regulation-liability) (9)
 - [Platform Governance & Internet Governance](#platform-governance-internet-governance) (2)
 - [Socio-technical Systems](#socio-technical-systems) (8)
 - [Inclusion, Rights & Development](#inclusion-rights-development) (2)
@@ -157,6 +157,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### Law, Regulation & Liability
 <a id="law-regulation-liability"></a>
 
+- **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5530398)
+  - Scale is not merely an amplifier of technological harm; it can change who is affected, what kind of harm exists, which actors hold power, and which remedies remain viable. Regulation that treats scale as multiplication will repeatedly arrive with the wrong problem definition, the wrong institution, and too little authority to intervene.
 - **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)* — [Source](https://www.fatf-gafi.org/content/fatf-gafi/en/publications/Virtualassets/targeted-report-decentralised-finance-2026.html)
   - FATF reframes DeFi regulation around observable control rather than claims of decentralisation, but its fallback for systems without an identifiable controller shifts enforcement toward adjacent intermediaries without defining the legitimacy, evidence standards, or redress required for that indirect control regime.
 - **2026-05-04** — [AI Agents Under EU Law: A Compliance Architecture for AI Providers](reviews/2026/2026-04-07__ai-agents-under-eu-law-a-compliance-architecture-for-ai-providers__v1.md) — *arXiv working paper* — [Source](https://arxiv.org/abs/2604.04604)

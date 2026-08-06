@@ -59,7 +59,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
-- **Law, Regulation & Liability** (8)
+- **Law, Regulation & Liability** (9)
 - **Platform Governance & Internet Governance** (2)
 - **Socio-technical Systems** (8)
 - **Inclusion, Rights & Development** (2)
@@ -155,6 +155,7 @@ Commit the review file together with any regenerated files in a single commit.
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433*
 - **2026-08-03** — [Critique of Agent Model](reviews/2026/2026-08-03__critique-of-agent-model__v1.md) — *arXiv*
 - **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)*
 - **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv*
@@ -162,7 +163,6 @@ Commit the review file together with any regenerated files in a single commit.
 - **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge*
 - **2026-07-12** — [Introducing AI to an Online Petition Platform Changed Outputs but not Outcomes](reviews/2026/2026-07-12__introducing-ai-to-an-online-petition-platform-changed-outputs-but-not-outcomes__v1.md) — *arXiv*
 - **2026-06-27** — [Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines](reviews/2026/2026-06-27__strategic-identity-asymmetry__v1.md) — *SSRN*
-- **2026-06-26** — [Digital Public Infrastructure in Africa: A Leapfrog Catalyst for Inclusive Growth and Prosperity](reviews/2026/2026-06-26__digital-public-infrastructure-in-africa__v1.md) — *United Nations Development Programme, Regional Bureau for Africa and Digital, AI and Innovation Hub*
 
 <!-- RECENT_REVIEWS:END -->
 
