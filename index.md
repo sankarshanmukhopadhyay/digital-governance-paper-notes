@@ -5,7 +5,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ## Browse by Domain
 
 - [AI Governance](#ai-governance) (20)
-- [AI Safety & Evaluation](#ai-safety-evaluation) (8)
+- [AI Safety & Evaluation](#ai-safety-evaluation) (9)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (8)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
 - [Digital Identity](#digital-identity) (4)
@@ -69,6 +69,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### AI Safety & Evaluation
 <a id="ai-safety-evaluation"></a>
 
+- **2026-08-06** — [Not All LLM Reasoning is Visible in the Chain-of-Thought](reviews/2026/2026-08-06__not-all-llm-reasoning-is-visible-in-the-chain-of-thought__v1.md) — *arXiv* — [Source](https://arxiv.org/abs/2607.22925)
+  - Chain-of-thought monitoring is not an accountability mechanism when consequential computation can occur without an interpretable token trace. The governance implication is not simply that monitors need better detection, but that institutions must stop treating model-generated explanations as sufficient evidence of intent, compliance, or safe internal process.
 - **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge* — [Source](https://casp.ac/reports/ai-enabled-terrorism)
   - The report shows that the relevant unit of AI misuse is not the isolated malicious prompt but the organization that can train specialists, distribute access, compare providers, and convert model output into operational routines. Safety governance built around single-user refusals will remain structurally inadequate unless it can address coordinated adversaries without turning platform monitoring into unaccountable security infrastructure.
 - **2026-05-15** — [From Symptoms to Systems: A Stakeholder-Informed Taxonomy of Generative AI Risks for Eating Disorders](reviews/2026/2026-05-15__from-symptoms-to-systems__v1.md) — *Center for Democracy & Technology AI Governance Lab* — [Source](https://programs.sigchi.org/chi/2026/program/content/223437)

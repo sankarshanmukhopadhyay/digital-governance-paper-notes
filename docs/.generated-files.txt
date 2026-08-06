@@ -80,6 +80,7 @@ docs/reviews/2026/mapping-indias-data-centres-aspirations-realities-and-futures/
 docs/reviews/2026/masfactory-a-graph-centric-framework-for-orchestrating-llm-based-multi-agent-systems-with-vibe-graphing/index.html
 docs/reviews/2026/municipal-tokens-as-urban-policy-tools/index.html
 docs/reviews/2026/nomotic-ai-governance-counterpart-to-agentic-ai/index.html
+docs/reviews/2026/not-all-llm-reasoning-is-visible-in-the-chain-of-thought/index.html
 docs/reviews/2026/open-problems-in-technical-ai-governance/index.html
 docs/reviews/2026/participatory-unblocking-of-blockchain-use-cases/index.html
 docs/reviews/2026/sandboxes-for-dpi-co-creating-the-blocks-of-digital-trust/index.html
