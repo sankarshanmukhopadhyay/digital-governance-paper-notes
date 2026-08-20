@@ -1,0 +1,31 @@
+schema_version: "1.0"
+project:
+  name: digital-governance-paper-notes
+  maturity: stable
+  lifecycle: active
+  operational_status: active-development
+  specification_status: not-applicable
+  intended_use:
+    - research-review-notes
+    - evidence-synthesis
+    - governance-analysis
+  not_asserted:
+    - normative-specification-authority
+    - production-certification
+    - independent-third-party-assurance
+authority:
+  normative_scope:
+    - research-review-notes
+  does_not_own:
+    - source-publication-authority
+    - external-policy-authority
+    - standards-body-governance
+  delegation: "Repository maintainers govern the organization and interpretation of project-local research notes; cited sources and external institutions retain authority over their own materials."
+  revocation_or_supersession: "Research conclusions are corrected or superseded through explicit versioned edits; prior states remain available through Git history."
+evidence:
+  validation_commands:
+    - git diff --check
+  evidence_outputs: []
+  known_limitations:
+    - research notes are analytical artifacts rather than normative specifications
+    - source accuracy remains bounded by cited external evidence
