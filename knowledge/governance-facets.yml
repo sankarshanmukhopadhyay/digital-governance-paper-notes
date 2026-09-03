@@ -1,0 +1,33 @@
+version: 1
+facets:
+  authority:
+    description: Who may decide or act, and on what mandate.
+  legitimacy:
+    description: Why an institution, rule or decision should be recognised as entitled to govern.
+  accountability:
+    description: How responsibility is attributed and consequences attach to decisions or failures.
+  contestability:
+    description: Whether affected parties can challenge a decision, rule, classification or exercise of power.
+  redress:
+    description: Mechanisms for correction, remedy, compensation or restoration after harm or error.
+  revocation:
+    description: Withdrawal or termination of authority, status, credentials, permissions or trust state.
+  delegation:
+    description: Transfer or bounding of authority to another human, institution, software agent or process.
+  gatekeeping:
+    description: Control over admission, recognition, participation, visibility or access to infrastructure.
+  institutional-capacity:
+    description: Organisational capability required to operate, supervise, enforce or sustain a governance arrangement.
+  provenance:
+    description: Evidence about origin, authorship, issuance or chain of custody, distinct from legitimacy.
+  enforcement:
+    description: Mechanisms through which rules or obligations become practically binding.
+  dependency:
+    description: Structural reliance on operators, infrastructure, vendors, registries or institutional cooperation.
+
+assignment_rules:
+  - Assign a facet only when the review substantively addresses the mechanism or institutional tension.
+  - Do not assign facets from keyword occurrence alone.
+  - Facets are discovery aids, not scores, grades or claims of quality.
+  - Prefer fewer defensible facets over exhaustive classification.
+  - AI systems may propose candidates, but canonical assignment requires human editorial acceptance.
