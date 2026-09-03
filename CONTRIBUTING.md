@@ -72,7 +72,7 @@ Before rebuilding the index, run the Tier 1 editorial lint. It checks front matt
 python scripts/editorial_lint.py
 ```
 
-Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. See `editorial-standards.md` for the full tier breakdown of what this script does and does not check, and why.
+Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. The intellectual standards for reading and critique are described separately in `editorial-standards.md`; this file and the repository tooling remain the source of truth for contribution mechanics and automated checks.
 
 To see a single file's findings:
 
