@@ -135,9 +135,9 @@ key_insight: ""
 
 The repository maintains itself with minimal manual overhead:
 
-- On pull requests and pushes, CI installs dependencies, runs `editorial_lint.py`, and checks whether generated files are stale. A lint error or a stale index blocks the merge.
-- On pushes to `main` that touch `reviews/`, the taxonomy, or the indexing logic, CI rebuilds `index.md` and `docs/` and auto-commits the result.
-- GitHub Pages publishes from the generated `docs/` directory via GitHub Actions.
+- On pull requests and pushes, CI installs dependencies, runs `editorial_lint.py`, builds the generated discovery site in the runner, and verifies that generation is reproducible. Review PRs do not need to commit generated files solely to satisfy CI.
+- On pushes to `main` that touch `reviews/`, the taxonomy, or the indexing logic, CI rebuilds `index.md` and `docs/` and auto-commits the result so the repository stays synchronized.
+- GitHub Pages independently rebuilds `docs/` from the merged review sources before uploading the Pages artifact, avoiding a race with the repository's generated-file commit.
 
 To run everything locally before opening a pull request:
 
@@ -147,7 +147,7 @@ python scripts/build_index.py          # rebuild index.md, docs/, and this READM
 python scripts/build_index.py --check  # verify nothing is stale
 ```
 
-Commit the review file together with any regenerated files in a single commit.
+Commit the review file and any hand-authored source changes. Generated files may be committed for review when useful, but the default path leaves them to the repository automation.
 
 ---
 
