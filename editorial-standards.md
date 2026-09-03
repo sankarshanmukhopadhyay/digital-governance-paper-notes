@@ -1,79 +1,141 @@
-# Editorial Standards for Digital Governance Paper Notes
+# Editorial Principles for Digital Governance Paper Notes
 
 ## Purpose
 
-This document sets the rules by which a review earns publication in the repository. It is written against the actual content of the 68 published reviews, not against an idealized version of the archive. The current reviews are stylistically disciplined and analytically confident, but confidence is not the same property as rigor. A reader from a journal editorial board, a regulator's research office, or a think tank would ask three questions the current pipeline does not systematically answer: where in the paper does this claim live, what would make this claim false, and how does this paper's argument sit against the five adjacent papers already in the archive. The rules below are organized to close those three gaps without abandoning the voice the repository has built.
+Digital Governance Paper Notes is a curated archive of critical readings, not a neutral catalogue of abstracts. Each review asks what a paper establishes, what it leaves unresolved, and what distribution of authority, dependency, legitimacy, and institutional responsibility follows if its argument is accepted.
 
-## 1. Provenance and Metadata Integrity
+The repository takes governance seriously as an infrastructural question. Technical systems allocate decision rights. Standards establish who may make claims that others are expected to recognize. Registries create gatekeeping power. Verification systems determine what can count as evidence. Policy frameworks can shift discretion between institutions, vendors, operators, and affected people. A useful review therefore has to read beyond technical function without losing fidelity to the paper itself.
 
-A review is only as trustworthy as its paper trail. The current front matter tracks `date_read` but not the paper's own publication date, and has no `doi` or institutional-affiliation field at all. This is a real gap: a claim about "the current state of AI regulatory capacity" means something different if the paper is from 2021 than from 2026, and the reader has no way to check without leaving the review.
+These principles describe the intellectual posture expected of a reviewer and the reading experience a reader should be able to rely on. Repository mechanics, file conventions, metadata requirements, and automated checks are documented separately in `CONTRIBUTING.md`, the review template, taxonomy, and repository tooling.
 
-- Every review records the paper's original publication or preprint date, separately from the date the reviewer read it. If the paper does not state one, the review says so explicitly rather than omitting the field.
-- Every review records the author's institutional affiliation and, where it is material to the argument, states it in the body (a paper on platform liability written by platform in-house counsel is a different evidentiary object than the same paper written by an independent academic, even if the arguments are identical).
-- Preprint status, working-paper status, and peer-review status are distinguished explicitly. A preprint gets a visible flag in the front matter and a sentence in the body noting that claims have not cleared review.
-- `source_url` must resolve to the paper itself or its canonical landing page, not a search result, a paywall gateway that immediately 404s, or a cached mirror. If only a paywalled abstract is accessible, the review says so at the top of the analysis, not buried in a footnote.
-- A `doi` field is populated whenever one exists. Its absence is recorded as `null`, not silently dropped, so a missing DOI reads as "checked, none found" rather than "not checked."
+## Read the paper on its own terms first
 
-## 2. Evidentiary Traceability
+Governance analysis begins with accurate reading. Before asking what institutional consequences follow from a paper, the reviewer should understand the problem the authors believe they are solving, the proposition they actually advance, the evidence they offer, and the limits they place on their own claims.
 
-This is the largest gap in the current archive. Reviews assert strong claims about what a paper argues, gets wrong, or fails to see, but almost none of them anchor a claim to a specific location in the source text — a section, a figure, a stated methodology, a quoted (and properly minimal) phrase. A reader cannot verify the review against the paper without re-reading the whole paper, which defeats the purpose of a review.
+A review should not substitute the repository's preferred governance concerns for the authors' argument. A philosophical essay should not be faulted for failing to specify an enforcement mechanism it never proposes. A narrow empirical study should not be treated as a comprehensive institutional theory. A system-design paper, however, can reasonably be examined for who controls the mechanism, how authority changes state, what happens when components fail, and who bears the consequences.
 
-- Every substantive claim about what the paper argues or fails to argue should be locatable. Not every sentence needs a citation, but the review as a whole should make clear which section, framework, or claim in the paper is being evaluated at each point, using the paper's own terms rather than the reviewer's restatement of them.
-- Reviewer inference must be marked as inference. There is a difference between "the paper states that voluntary frameworks are sufficient" and "the paper's silence on enforcement implies it assumes voluntary compliance will hold." The second is a legitimate governance critique, but it has to be flagged as the reviewer's read, not folded into the paper's claims as if the paper said it.
-- Where a paper makes an empirical claim (a statistic, a benchmark result, a survey finding), the review states the evidentiary basis the paper gives for it and whether that basis is adequate to the claim's strength. A paper that draws a general governance conclusion from a single case study should be called out for exactly that, not just labeled "weak" without saying why.
-- Quoted material follows the same minimal-quotation discipline as any other written output: quotes are rare, short, and used only where the paper's exact language is itself the evidence (a definitional claim, an unusually strong or unusually hedged assertion). Everything else is paraphrase in the reviewer's own words.
+The first obligation is therefore interpretive fairness: establish what the paper is trying to do before deciding whether it succeeds.
 
-## 3. Analytical Completeness by Paper Type
+## Distinguish what is established from what is inferred
 
-The system prompt's governance checklist (control, contestability, enforceability, beneficiary population, failure modes, novelty) is well built for papers that propose a governance mechanism or system design. It does not fit every paper in the archive equally well. "The Mythology of Conscious AI" is a philosophical essay, not a design proposal, and forcing an enforcement-and-redress analysis onto it produces a review that gestures at the checklist rather than genuinely applying it. The fix is a triage step, not a weaker checklist.
+Strong reviews make the boundary between source and interpretation visible.
 
-- Before drafting, the review classifies the paper into one of a small number of types: mechanism/design proposal, empirical study, policy or regulatory report, conceptual/theoretical argument, survey or literature review, or advocacy/position paper. This classification appears in the front matter or the opening line of the analysis.
-- The full governance checklist (who controls, under what conditions control transfers, enforcement, redress, beneficiary population, failure modes) is mandatory in full for mechanism/design proposals and policy/regulatory reports, since those are papers making implementable claims.
-- For conceptual, philosophical, or advocacy papers, the review substitutes an adapted checklist: what governance-relevant premise does the argument depend on, what institutional actor would this argument, if accepted, empower or weaken, and what does the argument's framing make it easy to avoid discussing. This keeps the governance lens without manufacturing an enforcement analysis for a paper that was never making an enforcement claim.
-- For empirical studies, the checklist adds a specific requirement: does the sample, method, or dataset support the scope of the governance conclusion drawn from it. This is the single most common failure mode in adjacent literatures (a narrow technical result generalized into a broad policy recommendation) and the current reviews do not consistently check for it.
+When a review says that a paper argues something, the reader should be able to find that argument in the paper. When a review draws an institutional consequence that the authors do not themselves state, that consequence should be presented as analysis rather than attribution.
 
-## 4. Argumentative Rigor and the Steelman Requirement
+This distinction matters especially in governance work because many important implications are structural rather than explicit. A paper may describe a registry as a neutral coordination service while saying little about who controls admission. The reviewer may reasonably infer that admission control becomes a locus of institutional power. That is a valuable observation, but it remains the reviewer's inference unless the paper makes the same claim.
 
-A review that only identifies what is weak, without engaging what a sophisticated defender of the paper would say in response, is advocacy dressed as analysis. Reputable review venues expect the reviewer to have made the strongest case for the paper before making the case against it.
+The same discipline applies to absence. Silence on revocation does not prove that authors oppose revocation. It may instead mean that lifecycle governance lies outside the paper's scope. The review should identify the omission and explain why it matters without manufacturing a position the authors did not take.
 
-- Every "Weaknesses and Gaps" or "Governance Analysis" section must include at least one place where the review states the strongest available counter to its own critique, then explains why the critique survives it (or, where honest, concedes that it doesn't fully survive it). This is not hedging; it is the difference between a critique that has been pressure-tested and one that hasn't.
-- Where the review disagrees with the paper's normative framing (whose interests should count, what counts as a legitimate exercise of authority), it states this as a disagreement, not as a factual correction. Conflating "the paper is wrong" with "the paper and I disagree about who should decide" is a category error the current reviews sometimes make, particularly in the sovereignty and open-ecosystem papers.
-- Alternative readings of ambiguous passages are noted where the paper's own argument is genuinely underspecified, rather than the review picking the least charitable reading and critiquing that.
+## Follow the evidence before the conclusion
 
-## 5. Comparative Positioning
+Governance conclusions should be proportionate to the evidence supporting them.
 
-The archive currently reviews each paper in isolation, even though many of the 68 entries cluster tightly (multiple AI governance maturity frameworks, multiple India/DPI papers, multiple sovereignty papers). A single-paper review that never says "this recombines a maturity-model structure already published in three prior frameworks in this archive" is missing information the reader needs to judge the novelty claim in "Novelty and Impact."
+For empirical work, this means examining whether the sample, measurement choices, dataset, benchmark, cases, or experimental design support the breadth of the conclusion being drawn. A technical performance result may demonstrate that a mechanism works under specified conditions without establishing that it should be adopted institutionally. A case study may expose a governance failure without showing that the same causal structure holds across jurisdictions or sectors.
 
-- Before finalizing the Novelty and Impact assessment, the reviewer checks the archive's own index for papers in the same or an adjacent domain and states explicitly whether the paper's central mechanism, framework, or claim has appeared before, in the archive or in the wider literature the reviewer is aware of.
-- Where a genuine precedent exists, the review names it (paper title, not a vague "similar work exists") and states what, if anything, the new paper adds beyond that precedent.
-- This does not require exhaustive literature review for every entry, but it does require the reviewer to have actually checked, not asserted "genuinely novel" or "incremental" as an unsupported label.
+For conceptual work, the evidence is often argumentative rather than empirical. The reviewer should identify the premises on which the conclusion depends and ask which of those premises are demonstrated, which are defended normatively, and which are simply assumed.
 
-## 6. Style and Prose Discipline, Enforced Mechanically
+For policy and design proposals, the relevant evidence includes implementation detail. A proposal that depends on institutional capacity, independent oversight, reliable revocation, accessible appeal, or interoperable infrastructure should be read partly through those dependencies. A mechanism is not operational merely because its desired outcome is clear.
 
-The existing style rules (dense paragraphs, no em dashes, no hedge phrases, precise attribution of agency) are correct. The problem is that they are currently aspirational rather than enforced, and the archive shows drift as a result.
+## Treat technology as an allocation of decision rights
 
-- A pre-commit or CI lint checks every review file for the banned phrase list and for the em-dash character before it can be merged. This is a five-line script; there is no reason this should be caught by a human reader after the fact.
-- A character-count check on the review body flags files that fall well outside the stated target range, so length drift (currently ranging roughly 2,700 to 3,400 characters against a ~2,000-character template target) gets caught rather than silently normalized as the new target.
-- Passive constructions that obscure agency ("mechanisms are described," "concerns have been raised") are treated as a specific, checkable failure: the review names who describes the mechanism and who raises the concern, because in governance writing the identity of the actor is usually the analytical point.
+The repository's central editorial concern is not whether technology is political in the abstract. It is whether a specific architecture changes who can decide, authorize, exclude, verify, revoke, observe, contest, or recover.
 
-## 7. Reviewer Positionality and Correction Policy
+A reviewer should therefore look for the institutional geometry embedded in a system. Who controls the relevant infrastructure? Who determines eligibility? Who can change policy? Who supplies the evidence on which decisions depend? Who can deny recognition? Who has the capacity to challenge an adverse outcome? Which actors become indispensable intermediaries?
 
-The repository is explicit, correctly, that it reflects one reader's judgment, not institutional consensus. Reputable single-author review venues (a respected columnist, a named peer reviewer) handle this not by pretending to neutrality but by being transparent about their own vantage point and by having a visible mechanism for being wrong in public.
+These questions should arise from the mechanism under review, not from a generic checklist. Their value lies in showing how apparently technical choices relocate authority.
 
-- Where a review's judgment turns on a contestable normative position (what counts as legitimate state control over a DPI stack, whether voluntary industry frameworks can ever be adequate), the review can take a position, but should signal that it is a position, not settled fact, consistent with the archive's own stated editorial preoccupation.
-- A visible, dated correction log exists for substantive errors discovered after publication (misread claims, wrong attribution, factual errors in the paper's own reporting that the review repeated uncritically). This is distinct from the existing version-increment rule for "substantive post-publication revisions" — a correction log records what was wrong and when it was fixed, rather than only bumping a version number silently.
-- If a paper is later retracted, corrected, or superseded by a revised version, the review is updated with a visible notice rather than left to stand as if the underlying paper were unchanged.
+This also means separating capability from authority. A system may be technically capable of taking an action without possessing legitimate authority to do so. Likewise, evidence that an action originated from a particular actor does not establish that the actor was entitled to take it.
 
-## 8. Pre-Publication Checklist
+## Separate provenance from legitimacy
 
-This extends, rather than replaces, the existing Repository Compliance Checklist. Before a review is merged:
+Digital governance systems increasingly depend on proofs of origin, integrity, identity, authorization, and state. These are important, but they answer different questions.
 
-- Paper type is classified and the correct variant of the governance checklist has been applied.
-- Every claim attributed to the paper is traceable to a specific part of the paper; every inference is marked as the reviewer's own.
-- At least one steelmanned counter-argument to the review's central critique appears and is addressed.
-- The archive index has been checked for adjacent or precedent papers, and the novelty claim reflects that check.
-- Publication date, institutional affiliation, and peer-review/preprint status are present in the front matter, with `null` recorded explicitly where information genuinely could not be found.
-- The lint script has run clean for banned phrases, em dashes, and character-count range.
-- Any prior review this paper's argument bears on (same author, same framework, revised edition) is cross-referenced.
+Provenance can establish where evidence came from. Integrity can establish that evidence has not been altered. Identity can establish who or what is acting. Authorization can establish that a rule or credential permits an action under defined conditions. None of these facts, by themselves, settle the legitimacy of the institution that issued the rule, defined the credential, or acquired the power to decide.
 
-None of this requires slowing the archive down into a formal peer-review process; it requires making explicit, checkable, and mechanically enforced what the current reviews are already trying to do by instinct. The gap between the archive's stated ambition and its current output is smaller than it looks. It is mostly a traceability and enforcement gap, not a judgment gap.
+A review should be alert to arguments that move too quickly from verifiability to trustworthiness, from identity to authority, or from compliance to legitimacy. The distinction is especially important in systems that make governance executable, because better enforcement can make an illegitimate rule more effective as easily as it can make a legitimate rule more reliable.
+
+## Surface assumptions that carry institutional weight
+
+Many governance arguments depend on conditions that are treated as background even though they determine whether the proposal can work.
+
+A framework may assume that institutions have the capacity to enforce its controls. A decentralized architecture may assume that operators remain meaningfully independent. A transparency mechanism may assume that affected people have the resources to interpret and act on disclosed information. An appeal process may exist formally while remaining inaccessible in practice. An interoperability claim may assume semantic agreement that the protocol itself does not guarantee.
+
+The reviewer should identify assumptions that are necessary for the paper's conclusions to hold and distinguish them from assumptions that are merely convenient. This is often where a paper's real institutional dependency becomes visible.
+
+## Ask what happens when the mechanism is contested
+
+Governance becomes most legible under disagreement, failure, and abuse.
+
+When a paper proposes an implementable mechanism, the review should consider what happens when authority is challenged, credentials become stale, operators disagree, evidence conflicts, institutions fail to cooperate, or the mechanism is deliberately exploited. This is not an invitation to append speculative threat lists to every paper. It is a way to test whether the proposal remains coherent when the conditions of easy compliance disappear.
+
+Revocation, redress, correction, and recovery matter because governance claims are incomplete when they describe how authority is created but not how it ends, or how decisions are made but not how errors can be contested.
+
+The absence of such machinery does not automatically invalidate a paper. It does determine what kind of claim the paper can credibly make. A normative architecture should not be mistaken for implemented governance.
+
+## Examine second-order effects without inventing them
+
+A useful governance review looks beyond intended outcomes, but second-order effects must follow from the structure being analyzed.
+
+A mechanism that reduces transaction friction may strengthen a gatekeeper if all participants must route through a single accreditation layer. A portability scheme may improve user choice while increasing dependence on a shared registry. A privacy-preserving proof may reduce disclosure while still creating durable correlation through surrounding metadata. Automated enforcement may improve consistency while making contestation harder.
+
+These are not generic risks. They are consequences produced by the institutional design.
+
+The review should therefore ask what the proposal makes easier to scale, what discretion it moves into less visible layers, which dependencies it creates, and whether the distribution of costs and benefits changes when the system succeeds.
+
+## Pressure-test criticism
+
+A review should be capable of surviving a fair response from the authors.
+
+Where a criticism matters to the evaluation, the reviewer should consider the strongest plausible answer available from the paper's own logic. Perhaps an apparent omission is explicitly out of scope. Perhaps an institutional risk is mitigated elsewhere in the design. Perhaps the reviewer is demanding certainty from exploratory work that only claims to establish a hypothesis.
+
+If the strongest counterargument resolves the criticism, the review should change. If it does not, explaining why makes the critique more useful.
+
+This is especially important when the disagreement is normative. A review should distinguish a factual defect from a dispute about who ought to decide, what interests deserve priority, or what constitutes legitimate public authority. Disagreement is analytically valuable when it is named accurately.
+
+## Position novelty comparatively
+
+A paper does not become novel because it introduces new terminology.
+
+The archive is intended to accumulate knowledge across reviews. When a paper enters a field already represented in the repository, the reviewer should consider whether its central contribution has appeared before and what, precisely, has changed.
+
+Novelty may lie in a new mechanism, stronger evidence, a different measurement method, an implementation that makes an existing theory testable, or a synthesis that changes how previously separate problems can be understood. Conversely, a new framework may simply rename an established governance problem.
+
+Comparative positioning does not require an exhaustive literature review. It does require enough attention to adjacent work to avoid treating each paper as intellectually isolated.
+
+## Write from a visible but disciplined point of view
+
+These reviews reflect the judgment of a reader, not institutional consensus. The repository does not seek a false neutrality.
+
+A reviewer may conclude that a governance arrangement concentrates unacceptable power, mistakes compliance for legitimacy, or places unreasonable burdens on affected people. Such judgments are part of serious governance analysis. They should, however, be grounded in the paper's architecture, evidence, and assumptions rather than presented as self-validating preferences.
+
+Where the conclusion depends on a contestable normative position, the prose should make that visible. The aim is not to weaken the judgment but to make clear what kind of judgment it is.
+
+## Prefer precise institutional prose
+
+Governance writing becomes less useful when agency disappears.
+
+Reviews should name actors where the identity of the actor matters. "The framework permits the registry operator to revoke participation" is more informative than "participation can be revoked." "The authors infer" is different from "the evidence shows." "The regulator would acquire discretion" is different from "discretion would increase."
+
+The repository favors dense, direct prose because the subject benefits from explicit causal and institutional relationships. Empty praise, ornamental academic phrasing, vague appeals to robustness, and stylistic hedging obscure rather than clarify those relationships.
+
+The objective is not severity. It is precision.
+
+## Corrections are part of editorial integrity
+
+A review can be wrong. A paper can be revised, corrected, superseded, or retracted. The credibility of the archive depends on treating those possibilities as part of publication rather than as exceptional embarrassment.
+
+Substantive errors should be corrected visibly. If a later version of a paper changes the basis of the review, that relationship should be made clear. A review should not silently continue to represent a source that no longer exists in the form originally assessed.
+
+Editorial confidence is valuable only when paired with the ability to revise a judgment when the evidence changes.
+
+## What a reader should be able to take away
+
+A Digital Governance Paper Notes review should leave the reader able to answer more than "what does this paper say?"
+
+The reader should understand what the paper establishes, what evidence supports it, which assumptions carry the argument, what institutional arrangement follows from accepting it, where authority and dependency sit inside that arrangement, and what remains unresolved.
+
+The durable question behind the archive is therefore:
+
+> What distribution of power, authority, legitimacy, dependency, and institutional responsibility does this work make possible, and what would have to be true for that arrangement to remain governable in practice?
+
+That question is not a template to impose mechanically. It is the editorial lens through which the archive turns reading into cumulative governance analysis.
