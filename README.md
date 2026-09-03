@@ -94,7 +94,7 @@ templates/review-template.md  canonical front matter and body template
 taxonomy/domains.yml           controlled vocabulary: domains, tags, scholarly signals
 collections/collections.json  curated cross-cutting collections
 scripts/build_index.py         rebuilds index.md, docs/, and the README's generated sections
-scripts/editorial_lint.py      Tier 1 editorial checks (style, schema, taxonomy, duplication)
+scripts/editorial_lint.py      machine-verifiable contribution checks (style, schema, taxonomy, duplication)
 editorial-standards.md         human-facing editorial principles for critical reading and governance analysis
 CONTRIBUTING.md                how to suggest a paper and how the maintainer writes a review
 .github/workflows/             CI: lint + index staleness check, index rebuild, Pages deploy
