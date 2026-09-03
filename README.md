@@ -6,7 +6,7 @@ A curated archive of governance-first reviews of research papers, policy reports
 
 **Index:** [index.md](index.md)
 
-**Editorial standards:** [editorial-standards.md](editorial-standards.md)
+**Editorial principles:** [editorial-standards.md](editorial-standards.md)
 
 **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
@@ -24,23 +24,25 @@ To suggest a paper for review, open an issue and assign it to the maintainer. Se
 
 ---
 
-## Editorial standards
+## Editorial principles
 
-Every review is written against a fixed governance checklist and a fixed style discipline, documented in full in [editorial-standards.md](editorial-standards.md). In short:
+The archive's editorial approach is described in [editorial-standards.md](editorial-standards.md). It is written for the human reader and reviewer rather than as a production workflow. The central commitments are straightforward:
 
-- **Governance-first, not summary.** A review states what the paper argues and, for mechanism or design proposals and policy/regulatory reports, evaluates control, contestability, enforcement, redress, the assumed beneficiary population, and unaddressed failure modes. Conceptual, philosophical, and advocacy papers get an adapted version of the same lens rather than a forced fit.
-- **Traceable claims.** What the review says the paper argues should be locatable in the paper. Reviewer inference is distinguished from the paper's own claims rather than folded into them.
-- **A steelman before a critique.** Every substantive critique engages the strongest available counter-argument before making its case.
-- **No em dashes, no hedge phrases, no empty praise.** "Robust," "leverage" as a verb, "delves into," "sheds light on," and similar filler are off-limits; see the full banned-phrase list in [editorial-standards.md](editorial-standards.md).
-- **`key_insight` is load-bearing.** It must be specific to the paper, present in the front matter, and identical to the body's `## Key Insight` section.
+- **Read the paper on its own terms first.** Establish what the authors actually claim, what evidence they provide, and what lies outside their scope before extending the analysis.
+- **Distinguish evidence from inference.** Claims attributed to the paper should be traceable to it; institutional consequences inferred by the reviewer should be presented as analysis rather than as authorial claims.
+- **Follow decision rights.** Where a paper changes infrastructure or institutional arrangements, examine who can decide, authorize, exclude, verify, revoke, contest, and recover.
+- **Separate capability, provenance, authority, and legitimacy.** A system being able to act, or proving who acted, does not by itself establish that the actor possessed legitimate authority.
+- **Pressure-test criticism and position novelty comparatively.** Serious critique should survive the strongest reasonable response, and novelty should be assessed against adjacent work rather than terminology alone.
 
-A subset of these rules is enforced mechanically. Run the linter before opening a pull request:
+Repository mechanics are deliberately kept separate from those editorial principles. File naming, front matter, taxonomy use, linting, generated files, and contribution steps are documented in [CONTRIBUTING.md](CONTRIBUTING.md), the review template, and the repository scripts.
+
+Before opening a pull request, run:
 
 ```bash
 python scripts/editorial_lint.py
 ```
 
-It checks front matter completeness, taxonomy conformance, file naming, em dashes, the banned-phrase list, `key_insight` identity between front matter and body, body length, and duplicate papers across the archive. CI runs it on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, length-band outliers) are reported but left to editorial judgment. What the linter can and cannot verify, and why some checks are warnings rather than hard gates, is documented in [editorial-standards.md](editorial-standards.md).
+The linter checks machine-verifiable repository constraints such as front matter completeness, taxonomy conformance, file naming, style prohibitions, `key_insight` consistency, body length, and duplicate papers. CI runs the same checks on every pull request.
 
 ---
 
@@ -92,8 +94,8 @@ templates/review-template.md  canonical front matter and body template
 taxonomy/domains.yml           controlled vocabulary: domains, tags, scholarly signals
 collections/collections.json  curated cross-cutting collections
 scripts/build_index.py         rebuilds index.md, docs/, and the README's generated sections
-scripts/editorial_lint.py      Tier 1 editorial checks (style, schema, taxonomy, duplication)
-editorial-standards.md         the full editorial rulebook, including what is and isn't automated
+scripts/editorial_lint.py      machine-verifiable contribution checks (style, schema, taxonomy, duplication)
+editorial-standards.md         human-facing editorial principles for critical reading and governance analysis
 CONTRIBUTING.md                how to suggest a paper and how the maintainer writes a review
 .github/workflows/             CI: lint + index staleness check, index rebuild, Pages deploy
 ```

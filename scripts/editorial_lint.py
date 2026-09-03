@@ -1,27 +1,23 @@
 #!/usr/bin/env python3
 """Editorial lint for Digital Governance Paper Notes.
 
-Implements the Tier 1 (fully mechanical) checks from the repository's
-editorial standards: front matter completeness, taxonomy conformance,
-file naming, banned-phrase and em-dash style rules, key_insight
-duplication, body length range, and duplicate-paper detection.
+Enforces machine-verifiable repository conventions documented in
+CONTRIBUTING.md, templates/review-template.md, and taxonomy/domains.yml:
+front matter completeness, taxonomy conformance, file naming, explicit
+style prohibitions, key_insight consistency, body length bounds, and
+duplicate-paper detection.
 
-This script deliberately does NOT attempt the Tier 2/3 checks (claim
-traceability, steelman presence, comparative positioning quality,
-substantive judgment calls). Those need a human or a model-assisted
-second pass; encoding them as hard pass/fail here would produce false
-confidence. See editorial-standards.md for the full tier breakdown.
+The linter deliberately does not attempt substantive editorial judgments
+such as claim traceability, steelmanning, comparative positioning, vague
+agency, or the quality of governance analysis. Those remain human review
+responsibilities described in editorial-standards.md.
 
 Usage:
     python scripts/editorial_lint.py                  # lint all reviews, human-readable report
     python scripts/editorial_lint.py --json            # machine-readable report
-    python scripts/editorial_lint.py --strict-schema    # also require provenance fields
-                                                          # (published, doi, affiliation,
-                                                          # peer_review_status, paper_type)
-                                                          # that are not yet part of the live
-                                                          # schema -- use this to see the size
-                                                          # of the Phase 2 migration, not as a
-                                                          # gate today.
+    python scripts/editorial_lint.py --strict-schema    # preview experimental provenance
+                                                          # fields that are not yet part of the
+                                                          # live schema or normal CI gate.
     python scripts/editorial_lint.py path/to/one.md     # lint a single file
 
 Exit code is 1 if any ERROR-level finding exists, 0 otherwise. WARNING-level
@@ -53,8 +49,9 @@ REQUIRED_FIELDS = [
 ]
 OPTIONAL_FIELDS = ["scholarly_signal"]
 
-# Fields the editorial standards doc proposes adding (provenance / traceability).
-# Not yet part of the live schema. Reported only under --strict-schema.
+# Experimental provenance fields for a possible future schema migration.
+# These are documented in CONTRIBUTING.md, are not part of the live schema,
+# and are reported only under --strict-schema.
 PROPOSED_FIELDS = ["published", "doi", "affiliation", "peer_review_status", "paper_type"]
 
 FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})__([a-z0-9-]+)__v(\d+)\.md$")
@@ -70,8 +67,8 @@ MIN_CHARS, MAX_CHARS = 1200, 6000
 EM_DASH_CHARS = ["\u2014", "\u2013\u2013"]  # em dash; doubled en dash used as a stand-in
 
 # Phrase -> note. Matched case-insensitively as whole-word/phrase boundaries.
-# "ecosystem" and "leverage" are handled separately (see below) because they
-# have legitimate literal/noun uses that the flat ban would false-positive on.
+# Keep this list deliberately small and high-precision: arguable prose choices
+# belong to human editorial review, not lexical lint heuristics.
 BANNED_PHRASES = {
     r"it is worth noting": "hedge phrase",
     r"\bimportantly\b": "hedge phrase",
@@ -84,29 +81,6 @@ BANNED_PHRASES = {
     r"a nuanced approach": "filler phrase",
     r"\brobust\b": "banned adjective",
 }
-
-# "ecosystem": banned only as a metaphor for a non-biological system.
-# In this archive it is frequently used exactly that way (AI ecosystem,
-# DPI ecosystem, vendor ecosystem) and is also, arguably, a term of art
-# in the field. Flagged as WARNING, not ERROR, pending an explicit editorial
-# call on whether domain-standard compounds are exempt. See report notes.
-ECOSYSTEM_RE = re.compile(r"\becosystems?\b", re.IGNORECASE)
-
-# "leverage": banned only as a verb ("to leverage X", "leveraging",
-# "leveraged X to Y"). Noun uses ("institutional leverage", "operational
-# leverage") are legitimate and common in this archive. Heuristic below
-# catches the clear verb forms; ambiguous cases are left to human read.
-LEVERAGE_VERB_RE = re.compile(
-    r"\bleverag(e|es|ing|ed)\b(?!\s+(?:in|and\s+bargaining|,?\s*(?:it|that)?\s*is))",
-    re.IGNORECASE,
-)
-# A bare noun-phrase allowlist pattern: "X leverage" or "leverage to V" as noun
-LEVERAGE_NOUN_HINT_RE = re.compile(
-    r"(institutional|operational|jurisdictional|bargaining|regulatory|real)\s+leverage"
-    r"|\bleverage\b(?!\s+\w+ing\b)(?=\s+(?:to\s+govern|actually\s+sits|alone))",
-    re.IGNORECASE,
-)
-
 
 @dataclass
 class Finding:
@@ -273,22 +247,6 @@ def check_banned_phrases(body: str, report: FileReport) -> None:
         for pattern, note in BANNED_PHRASES.items():
             if re.search(pattern, line, re.IGNORECASE):
                 report.add("ERROR", "banned-phrase", f"'{pattern}' ({note})", line=i)
-        if ECOSYSTEM_RE.search(line):
-            report.add(
-                "WARNING", "ecosystem-metaphor",
-                "'ecosystem' used; confirm non-biological metaphor is intended and not just avoidable filler",
-                line=i,
-            )
-        for m in LEVERAGE_VERB_RE.finditer(line):
-            if not LEVERAGE_NOUN_HINT_RE.search(line):
-                # Demoted to WARNING: this heuristic has poor precision (noun
-                # uses like "domestic leverage" or "remove leverage" trip it).
-                # Verified against this archive, it produced zero true
-                # positives and two false positives, so it is a human-review
-                # flag, not a hard gate. See editorial-standards.md Tier 2.
-                report.add("WARNING", "leverage-possible-verb-use",
-                           "'leverage' near a verb-like context; confirm noun vs. verb use by hand",
-                           line=i)
 
 
 def lint_file(path: Path, primary_domains: List[str], secondary_topics: List[str],
@@ -345,7 +303,7 @@ def main() -> int:
     ap.add_argument("paths", nargs="*", help="Specific review files to lint (default: all)")
     ap.add_argument("--json", action="store_true", help="Emit machine-readable JSON report")
     ap.add_argument("--strict-schema", action="store_true",
-                     help="Also report missing Phase 2 provenance fields (warnings)")
+                     help="Preview missing experimental provenance fields (warnings)")
     ap.add_argument("--strict", action="store_true",
                      help="Treat warnings as failing the run too")
     args = ap.parse_args()
