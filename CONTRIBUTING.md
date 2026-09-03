@@ -72,7 +72,7 @@ Before rebuilding the index, run the Tier 1 editorial lint. It checks front matt
 python scripts/editorial_lint.py
 ```
 
-Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. See `editorial-standards.md` for the full tier breakdown of what this script does and does not check, and why.
+Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. See `editorial-standards.md` for the full tier breakdown of what this script does and does not check, and why.
 
 To see a single file's findings:
 
@@ -104,4 +104,4 @@ CI will also rebuild generated files automatically on push to `main` if `reviews
 
 ### What to commit
 
-Commit your review file. The CI pipeline (`rebuild-index.yml`) handles regenerating `index.md`, `docs/index.html`, and the README recent-reviews block, and auto-commits those changes. If you ran the build script locally, commit the generated files together with the review in a single commit.
+Commit the review file and any hand-authored source changes. Generated discovery files are automation-owned: pull-request CI builds them ephemerally to validate generation, `rebuild-index.yml` refreshes and persists them on `main`, and the Pages workflow builds its deployment artifact directly from the merged review sources. If you deliberately ran the generator locally and want the generated diff reviewed in the same PR, it is still acceptable to commit those files together, but it is no longer required for a review-only change.
