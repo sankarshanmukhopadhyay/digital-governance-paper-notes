@@ -1,0 +1,41 @@
+schema_version: 1
+
+review_optional_fields:
+  published:
+    type: date
+    description: Date of the publication or version actually reviewed, when reliably known.
+  doi:
+    type: string_or_null
+    description: DOI when one exists and has been verified. Null means checked and none identified; omission means not yet enriched.
+  peer_review_status:
+    type: enum
+    values: [peer-reviewed, accepted, preprint, working-paper, institutional-publication, essay, unknown]
+  paper_type:
+    type: enum
+    values: [research-article, conference-paper, preprint, working-paper, policy-report, standards-document, essay, other]
+  paper_version:
+    type: string
+    description: Human-readable source version, such as arXiv v4, accepted manuscript, or edition identifier.
+  review_status:
+    type: enum
+    values: [current, superseded, corrected]
+    default: current
+  governance_facets:
+    type: list
+    vocabulary: knowledge/governance-facets.yml
+
+relationship_types:
+  - related_to
+  - builds_on
+  - extends
+  - challenges
+  - contrasts_with
+  - supersedes
+  - superseded_by
+
+principles:
+  - Existing reviews remain valid when optional knowledge fields are absent.
+  - Omission is distinct from a verified null value.
+  - Metadata enrichment must not be guessed merely to achieve completeness.
+  - Relationship and facet assignments are canonical only after human editorial acceptance.
+  - Generated discovery pages are derived surfaces and never independent sources of truth.
