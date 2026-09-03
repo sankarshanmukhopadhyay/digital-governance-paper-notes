@@ -33,10 +33,7 @@ jobs:
         run: python scripts/knowledge_lint.py
 
       - name: Build current discovery site
-        run: |
-          python scripts/build_index.py
-          python scripts/add_knowledge_nav.py
-          python scripts/build_knowledge.py
+        run: python scripts/build_site.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
