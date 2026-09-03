@@ -54,7 +54,7 @@ It checks front matter completeness, taxonomy conformance, file naming, em dashe
 - **AI Safety & Evaluation** (10)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
-- **Digital Identity** (4)
+- **Digital Identity** (5)
 - **Trust Infrastructure** (2)
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (2)
@@ -155,6 +155,7 @@ Commit the review file and any hand-authored source changes. Generated files may
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-03** — [Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer](reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md) — *arXiv preprint (v1)*
 - **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433*
 - **2026-08-06** — [Position: LLMs Can't Jump](reviews/2026/2026-08-06__llms-cant-jump__v1.md) — *ICML 2026*
 - **2026-08-06** — [Not All LLM Reasoning is Visible in the Chain-of-Thought](reviews/2026/2026-08-06__not-all-llm-reasoning-is-visible-in-the-chain-of-thought__v1.md) — *arXiv*
@@ -162,7 +163,6 @@ Commit the review file and any hand-authored source changes. Generated files may
 - **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)*
 - **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv*
 - **2026-07-24** — [The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science](reviews/2026/2026-07-19__the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science__v1.md) — *arXiv*
-- **2026-07-12** — [‘God has helped us, and so will AI’: How the Terrorist Group Boko Haram Uses Frontier AI](reviews/2026/2026-07-12__god-has-helped-us-and-so-will-ai__v1.md) — *Cambridge Programme on AI Science & Policy, University of Cambridge*
 
 <!-- RECENT_REVIEWS:END -->
 

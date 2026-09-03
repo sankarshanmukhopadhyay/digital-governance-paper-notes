@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer | Digital Governance Paper Notes</title>
+  <meta name="description" content="Split-knowledge identity can make an agent traceable without making its principal visible to business actors, but traceability becomes legitimate accountability only when tracing, revocation, delegated authority, and redress are independently governable.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../../../">Digital Governance Paper Notes</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../../#recent">Recent</a>
+        <a href="../../../domains/">Domains</a>
+        <a href="../../../collections/">Collections</a>
+        <a href="../../../archive/">Archive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container"><div class="breadcrumbs"><a href="../../../">Home</a> / <a href="../../../domains/">Domains</a> / <a href="../../../domains/digital-identity/">Digital Identity</a></div>
+<article class="review-page">
+<header class="review-header"><div class="eyebrow">Digital Identity · 2026-09-03</div><h1>Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer</h1><div class="review-meta"><span>arXiv preprint (v1)</span><span><a href="https://arxiv.org/abs/2607.23207" target="_blank" rel="noopener noreferrer">Original paper</a></span><span><a href="https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes/blob/main/reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md">Markdown source</a></span></div><div class="tag-row"><span class="tag">AI agents</span><span class="tag">accountability</span><span class="tag">authority</span><span class="tag">governance-by-design</span><span class="tag">trust assurance</span></div></header>
+<section class="key-insight"><div class="eyebrow">Key Insight</div><p>Split-knowledge identity can make an agent traceable without making its principal visible to business actors, but traceability becomes legitimate accountability only when tracing, revocation, delegated authority, and redress are independently governable.</p></section>
+<div class="prose"><h2 id="review">Review</h2>
+<p>He, Shan, Luo, and Wang describe a pre-launch Chinese national identity layer for AI agents that separates association from disclosure. MPS retains the mapping from a pairwise reference to verified identity, while SIC retains the reference-to-agent linkage. Applications receive proof that an agent is bound to a verified principal without learning who that principal is. Re-identification requires a legal authority to compel both institutions separately. The authors correctly characterize this as institutional split knowledge rather than cryptographic threshold anonymity and explicitly acknowledge that a coordinated state can reconstruct identity.</p>
+<p>The paper's durable design contribution is the "accountability surface": deployments choose which calls or messages leave attributable evidence, making attribution granularity and the point at which revocation takes effect explicit infrastructure decisions. Its threat model also treats state over-reach, straw principals, cross-agent profiling, harmed counterparties, biometric exclusion, and registry-level revocation as governance risks rather than peripheral security concerns. The architecture therefore moves beyond a simple identity credential by specifying how action-to-agent evidence and agent-to-principal tracing can be composed after harm.</p>
+<p>The unresolved issue is that identity attribution is not authority. A retained presentation plus an agent-to-principal trace can establish which bound agent produced an action, but cannot establish that the principal authorized that specific action, that the delegation remained valid, or that the agent acted inside its permitted scope. The paper itself concedes that a definite bound principal need not be the responsible party in straw-principal cases. That concession prevents a simplistic identity-equals-liability reading, but it leaves a broader architectural gap: governance-grade accountability needs a chain from principal through current delegation and action-specific authority to the agent act and surviving evidence.</p>
+<p>The same distinction applies institutionally. Business actors are structurally denied principal identity, but tracing and pseudonymous revocation remain state powers gated mainly by procedure. The paper openly leaves subject notification, unified end-to-end audit, parts of blocklisting governance, and revocation appeal unresolved. Since its proportionality framework says escrow is defensible only where institutional oversight credibly constrains those powers, post-launch evidence about rejected tracing requests, revocation review, restoration, biometric failure, disputed bindings, and service-gateway dependence will matter as much as adoption counts.</p>
+<p>The paper therefore makes a useful intervention against the assumption that accountable agents must be continuously identifiable to platforms and counterparties. Its deeper governance proposition is more precise: privacy can be improved by redistributing who is allowed to resolve identity, but legitimate accountability still depends on separately governing authority, tracing, revocation, evidence, and redress.</p>
+<h2 id="key-insight">Key Insight</h2>
+<p>Split-knowledge identity can make an agent traceable without making its principal visible to business actors, but traceability becomes legitimate accountability only when tracing, revocation, delegated authority, and redress are independently governable.</p></div>
+<section class="membership"><h2>Appears in these collections</h2><div class="tag-row"><a class="tag-link" href="../../../collections/digital-identity-trust-infrastructure/">Digital identity and trust infrastructure</a><a class="tag-link" href="../../../collections/agent-authority-delegation-redress/">Agent authority, delegation and redress</a><a class="tag-link" href="../../../collections/governance-beyond-principles/">Governance beyond principles</a></div></section>
+<div class="prev-next"><span></span><a class="next" href="../../../reviews/2026/taking-scale-seriously-in-technology-law/"><span>Older review</span>Taking Scale Seriously in Technology Law</a></div>
+</article>
+<section><div class="section-heading"><div><div class="eyebrow">Continue exploring</div><h2>Related reviews</h2></div><a href="../../../domains/digital-identity/">More in Digital Identity</a></div><div class="card-grid review-grid"><article class="review-card">
+  <div class="eyebrow">Digital Identity · 2026-04-06</div>
+  <h3><a href="../../../reviews/2026/a-cryptographic-framework-for-proof-of-personhood/">A Cryptographic Framework for Proof of Personhood</a></h3>
+  <div class="publication">Reference page for IACR ePrint paper</div>
+  <p>The paper usefully formalizes privacy-preserving proof of personhood as a cryptographic problem, but its real governance challenge lies upstream of the proofs: who is allowed to issue personhood, what social relationships count, and how those judgments are revoked, contested, and made legible across institutions.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/a-cryptographic-framework-for-proof-of-personhood/">Read review</a> · <a href="https://cronokirby.com/refs/2026-02-a-cryptographic-framework-for-proof-of-personhood.html" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Digital Identity · 2026-05-05</div>
+  <h3><a href="../../../reviews/2026/self-sovereign-identity-future-digital-trust/">Self-Sovereign Identity and the Future of Digital Trust: From India to the World</a></h3>
+  <div class="publication">Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence</div>
+  <p>The paper frames self-sovereign identity as a strategic shift from institutional data accumulation to holder-mediated verification, but its governance model still depends on future trust registries, legal recognition, sectoral mandates, revocation controls, and redress institutions that are not yet operationalized.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/self-sovereign-identity-future-digital-trust/">Read review</a> · <a href="https://www.dsci.in/resource/content/self-sovereign-identity-and-future-digital-trust-india-world" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Digital Identity · 2026-06-27</div>
+  <h3><a href="../../../reviews/2026/strategic-identity-asymmetry/">Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines</a></h3>
+  <div class="publication">SSRN</div>
+  <p>Cross-border digital identity interoperability fails when states can issue credentials but cannot export trust. The paper&#x27;s central contribution is to relocate the binding constraint from protocols and enrollment infrastructure to assurance grammar, accreditation authority, trusted lists, and institutional capacity.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/strategic-identity-asymmetry/">Read review</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6890859" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article><article class="review-card">
+  <div class="eyebrow">Digital Identity · 2026-03-12</div>
+  <h3><a href="../../../reviews/2026/digital-identities-across-the-world/">Digital Identities Across the World</a></h3>
+  <div class="publication">PwC / Strategy&amp;</div>
+  <p>Digital identity succeeds not when a credential exists, but when governance, interoperability, trust, and everyday service relevance are engineered together as public infrastructure.</p>
+  <div class="card-actions"><a href="../../../reviews/2026/digital-identities-across-the-world/">Read review</a> · <a href="https://www.pwc.de/en/public-sector/digital-identities-across-the-world-pwc-strategyand.pdf" target="_blank" rel="noopener noreferrer">Original paper</a></div>
+</article></div></section></main>
+  <footer class="site-footer"><div class="container">A static, governance-first research index generated from repository metadata.</div></footer>
+</body>
+</html>

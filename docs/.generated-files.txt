@@ -27,6 +27,7 @@ docs/domains/state-capacity-administrative-systems/index.html
 docs/domains/trust-infrastructure/index.html
 docs/index.html
 docs/reviews/2026/a-cryptographic-framework-for-proof-of-personhood/index.html
+docs/reviews/2026/accountable-yet-anonymous-ai-agents/index.html
 docs/reviews/2026/advancing-indigenous-foundation-models/index.html
 docs/reviews/2026/advancing-open-source-ai-in-india/index.html
 docs/reviews/2026/agents-of-chaos/index.html

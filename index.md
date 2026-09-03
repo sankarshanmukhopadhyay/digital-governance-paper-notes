@@ -8,7 +8,7 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 - [AI Safety & Evaluation](#ai-safety-evaluation) (10)
 - [Digital Public Infrastructure](#digital-public-infrastructure) (8)
 - [Public Sector Digital Strategy](#public-sector-digital-strategy) (2)
-- [Digital Identity](#digital-identity) (4)
+- [Digital Identity](#digital-identity) (5)
 - [Trust Infrastructure](#trust-infrastructure) (2)
 - [Standards, Protocols & Interoperability](#standards-protocols-interoperability) (1)
 - [Privacy & Data Protection](#privacy-data-protection) (2)
@@ -121,6 +121,8 @@ A generated repository-native index. The GitHub Pages site provides guided brows
 ### Digital Identity
 <a id="digital-identity"></a>
 
+- **2026-09-03** — [Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer](reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md) — *arXiv preprint (v1)* — [Source](https://arxiv.org/abs/2607.23207)
+  - Split-knowledge identity can make an agent traceable without making its principal visible to business actors, but traceability becomes legitimate accountability only when tracing, revocation, delegated authority, and redress are independently governable.
 - **2026-06-27** — [Strategic Identity Asymmetry: Why Digital Infrastructure Governance Fails Where Technology Succeeds in Brazil, Nigeria, and the Philippines](reviews/2026/2026-06-27__strategic-identity-asymmetry__v1.md) — *SSRN* — [Source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6890859)
   - Cross-border digital identity interoperability fails when states can issue credentials but cannot export trust. The paper's central contribution is to relocate the binding constraint from protocols and enrollment infrastructure to assurance grammar, accreditation authority, trusted lists, and institutional capacity.
 - **2026-05-05** — [Self-Sovereign Identity and the Future of Digital Trust: From India to the World](reviews/2026/2026-04-16__self-sovereign-identity-future-digital-trust__v1.md) — *Data Security Council of India / Digi Yatra Foundation / National Centre of Excellence* — [Source](https://www.dsci.in/resource/content/self-sovereign-identity-and-future-digital-trust-india-world)
