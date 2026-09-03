@@ -66,13 +66,13 @@ The key insight line is also stored in the front matter `key_insight` field — 
 
 ### Editorial lint
 
-Before rebuilding the index, run the Tier 1 editorial lint. It checks front matter completeness, taxonomy conformance, file naming, the em dash and banned-phrase style rules, `key_insight` identity between front matter and the body's `## Key Insight` section, body length, and duplicate papers across the archive:
+Before rebuilding the index, run the repository linter. It checks machine-verifiable contribution rules: front matter completeness, taxonomy conformance, file naming, the em dash and a deliberately small high-precision banned-phrase list, `key_insight` identity between front matter and the body's `## Key Insight` section, body length, and duplicate papers across the archive:
 
 ```bash
 python scripts/editorial_lint.py
 ```
 
-Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors; warnings (tag count outside 3-6, `ecosystem` used as a possible non-biological metaphor, body length outside the expected band, filename/`date_read` date mismatches) are reported but do not block, since they currently need an editorial judgment call rather than a mechanical fix. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. The intellectual standards for reading and critique are described separately in `editorial-standards.md`; this file and the repository tooling remain the source of truth for contribution mechanics and automated checks.
+Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors. Warnings cover bounded repository heuristics such as tag count outside 3-6, body length outside the expected band, filename/`date_read` mismatches, duplicate-paper signals, and tags not found in the controlled vocabulary. The linter intentionally does not flag words such as `ecosystem` or attempt to infer whether `leverage` is stylistically weak; those are prose judgments for a human reviewer. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. The intellectual standards for reading and critique are described separately in `editorial-standards.md`; this file and the repository tooling remain the source of truth for contribution mechanics and automated checks.
 
 To see a single file's findings:
 
@@ -80,7 +80,7 @@ To see a single file's findings:
 python scripts/editorial_lint.py reviews/2026/2026-03-05__some-review__v1.md
 ```
 
-To see what the proposed Phase 2 provenance fields (`published`, `doi`, `affiliation`, `peer_review_status`, `paper_type`) would add, without treating them as required yet:
+The linter also retains an explicitly experimental schema preview for possible future provenance fields: `published`, `doi`, `affiliation`, `peer_review_status`, and `paper_type`. These fields are not part of the live template and do not participate in normal CI. Use the preview only to inspect the impact of a future schema decision:
 
 ```bash
 python scripts/editorial_lint.py --strict-schema
