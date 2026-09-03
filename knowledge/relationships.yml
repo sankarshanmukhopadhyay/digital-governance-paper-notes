@@ -1,0 +1,17 @@
+version: 1
+relationships:
+  - from: reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md
+    rationale: Both reviews examine agent infrastructure through governance requirements around bounded authority, accountability and trust rather than agent capability alone.
+  - from: reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md
+    type: related_to
+    to: reviews/2026/2026-08-03__critique-of-agent-model__v1.md
+    rationale: Both reviews treat the agent model as institutionally incomplete when authority, accountability and governance are not made operational.
+
+rules:
+  - Relationship edges are curated editorial claims, not automatic semantic similarity.
+  - Both endpoints must exist in the archive unless an explicit external-reference mechanism is introduced later.
+  - Self-links are invalid.
+  - Directional relationship types should be used only when the direction is supported by the reviewed work.
+  - AI systems may propose candidate edges, but human editorial acceptance is required before an edge is canonical.
