@@ -25,10 +25,14 @@ jobs:
       - name: Knowledge-layer lint
         run: python scripts/knowledge_lint.py
 
-      - name: Build generated discovery site
-        run: |
-          python scripts/build_index.py
-          python scripts/build_knowledge.py
+      - name: Build generated review site
+        run: python scripts/build_index.py
 
       - name: Verify generated review output is reproducible
         run: python scripts/build_index.py --check
+
+      - name: Add Knowledge to primary navigation
+        run: python scripts/add_knowledge_nav.py
+
+      - name: Build knowledge discovery layer
+        run: python scripts/build_knowledge.py
