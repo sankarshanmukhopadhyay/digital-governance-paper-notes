@@ -35,6 +35,7 @@ jobs:
       - name: Build current discovery site
         run: |
           python scripts/build_index.py
+          python scripts/add_knowledge_nav.py
           python scripts/build_knowledge.py
 
       - name: Configure Pages
