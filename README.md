@@ -2,47 +2,50 @@
 
 A curated archive of governance-first reviews of research papers, policy reports, essays, and institutional publications on AI governance, digital public infrastructure, public-interest technology, digital identity, and adjacent governance questions.
 
-**Site:** [sankarshanmukhopadhyay.github.io/digital-governance-paper-notes](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/) 
+**Site:** [sankarshanmukhopadhyay.github.io/digital-governance-paper-notes](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/)
 
-**Index:** [index.md](index.md)
+**Knowledge infrastructure:** [sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/knowledge/](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/knowledge/)
 
-**Editorial principles:** [editorial-standards.md](editorial-standards.md)
-
-**Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
+**Index:** [index.md](index.md) · **Editorial principles:** [editorial-standards.md](editorial-standards.md) · **AI usage:** [AI-USAGE.md](AI-USAGE.md) · **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
 ## About
 
-These are working notes from a single reader. Each review extracts the governance claim a paper makes or implies, assesses it against a fixed set of questions (who controls the system, under what conditions that control can be contested, whether the proposed mechanisms are enforceable and by whom), and closes with one durable insight worth carrying into future work.
+These are working notes from a single reader. Reviews ask what a paper actually establishes, what evidence carries the argument, what assumptions bear institutional weight, and how a proposed system redistributes authority, control, dependency, legitimacy and responsibility.
 
-The archive has a running editorial preoccupation: when does a governance claim become operationally credible? Maturity frameworks, sovereignty postures, and open-ecosystem visions are evaluated here against whether they specify enforceable controls, testable design choices, and mechanisms that could actually fail, rather than against how well they affirm good intentions. That bias is deliberate and it shows in the reviews.
+The archive's recurring concern is operational credibility. Governance claims are examined for whether authority, enforcement, revocation, evidence, contestability and redress become implementable rather than remaining principles. That lens is applied only where the paper's mechanism makes those questions material; the paper is read on its own terms first.
 
-The current set skews toward India, South Asia, and APAC contexts because that is where the reading started. That is a temporary feature of the backlog, not a limitation of scope. The archive covers globally published work that aligns to the taxonomy below.
+The repository is maintained with assistance from AI/LLM systems. The disclosure and responsibility boundary are documented in [AI-USAGE.md](AI-USAGE.md). AI assistance may support extraction, enrichment, comparative retrieval, synthesis and repository work, but canonical editorial judgment remains the responsibility of the human maintainer.
 
-To suggest a paper for review, open an issue and assign it to the maintainer. See [CONTRIBUTING.md](CONTRIBUTING.md) for what to include.
+---
+
+## Archive as Knowledge Infrastructure
+
+The archive now has a second layer above individual reviews. It is designed to make accumulated governance knowledge explicit without converting editorial judgment into opaque scores or automatic classifications.
+
+- **Provenance and paper state:** optional metadata can record publication state, paper type, source version and review status without forcing speculative backfill.
+- **Review relationships:** curated edges record when reviews relate to, extend, challenge or supersede one another. Every canonical edge requires a rationale.
+- **Governance facets:** a bounded vocabulary exposes recurring mechanisms such as authority, legitimacy, redress, revocation, delegation, gatekeeping and institutional capacity. Facets are discovery aids, not quality grades.
+- **Collection synthesis:** human-edited synthesis artifacts accumulate findings across reviews while retaining traceability to constituent reviews and underlying papers.
+- **History and correction:** correction, supersession, withdrawal and review-version semantics are reader-facing rather than hidden only in git history.
+
+Canonical definitions live under [`knowledge/`](knowledge/), collection syntheses under [`collections/syntheses/`](collections/syntheses/), and generated discovery pages under `/knowledge/` on GitHub Pages.
 
 ---
 
 ## Editorial principles
 
-The archive's editorial approach is described in [editorial-standards.md](editorial-standards.md). It is written for the human reader and reviewer rather than as a production workflow. The central commitments are straightforward:
+The archive's human-facing editorial approach is described in [editorial-standards.md](editorial-standards.md). Its central commitments are to read papers on their own terms, distinguish evidence from inference, follow decision rights, separate capability and provenance from authority and legitimacy, surface consequential assumptions, examine contestability and redress where the mechanism makes them material, and pressure-test criticism against the strongest reasonable response.
 
-- **Read the paper on its own terms first.** Establish what the authors actually claim, what evidence they provide, and what lies outside their scope before extending the analysis.
-- **Distinguish evidence from inference.** Claims attributed to the paper should be traceable to it; institutional consequences inferred by the reviewer should be presented as analysis rather than as authorial claims.
-- **Follow decision rights.** Where a paper changes infrastructure or institutional arrangements, examine who can decide, authorize, exclude, verify, revoke, contest, and recover.
-- **Separate capability, provenance, authority, and legitimacy.** A system being able to act, or proving who acted, does not by itself establish that the actor possessed legitimate authority.
-- **Pressure-test criticism and position novelty comparatively.** Serious critique should survive the strongest reasonable response, and novelty should be assessed against adjacent work rather than terminology alone.
-
-Repository mechanics are deliberately kept separate from those editorial principles. File naming, front matter, taxonomy use, linting, generated files, and contribution steps are documented in [CONTRIBUTING.md](CONTRIBUTING.md), the review template, and the repository scripts.
+Repository mechanics remain separate. File naming, front matter, optional knowledge metadata, taxonomy, linting, synthesis traceability and generated outputs are documented in [CONTRIBUTING.md](CONTRIBUTING.md), the review template and repository scripts.
 
 Before opening a pull request, run:
 
 ```bash
 python scripts/editorial_lint.py
+python scripts/knowledge_lint.py
 ```
-
-The linter checks machine-verifiable repository constraints such as front matter completeness, taxonomy conformance, file naming, style prohibitions, `key_insight` consistency, body length, and duplicate papers. CI runs the same checks on every pull request.
 
 ---
 
@@ -72,84 +75,64 @@ The linter checks machine-verifiable repository constraints such as front matter
 
 This snapshot regenerates automatically from `taxonomy/domains.yml` and the reviews in `reviews/`; don't hand-edit the block between the markers above.
 
-Core areas include:
-
-- AI governance and institutional capacity
-- Digital public infrastructure, DPGs, and public-sector transformation
-- Digital identity, trust infrastructure, and interoperability
-- Internet governance, privacy, cybersecurity, and standards
-- Socio-technical systems and governance theory
-
-The full controlled vocabulary, including secondary topic tags and arXiv scholarly-signal codes, lives in [`taxonomy/domains.yml`](taxonomy/domains.yml). Adding a domain or tag not yet in that file means updating it in the same commit as the review that needs it.
+The full controlled vocabulary, including secondary topic tags and arXiv scholarly-signal codes, lives in [`taxonomy/domains.yml`](taxonomy/domains.yml). The separate governance-facet vocabulary lives in [`knowledge/governance-facets.yml`](knowledge/governance-facets.yml).
 
 ---
 
 ## Repository Structure
 
 ```text
-reviews/YYYY/                 canonical review files, one per paper
-index.md                      generated root index
-docs/                         generated GitHub Pages site (index.html, per-domain and per-collection pages)
-templates/review-template.md  canonical front matter and body template
-taxonomy/domains.yml           controlled vocabulary: domains, tags, scholarly signals
-collections/collections.json  curated cross-cutting collections
-scripts/build_index.py         rebuilds index.md, docs/, and the README's generated sections
-scripts/editorial_lint.py      machine-verifiable contribution checks (style, schema, taxonomy, duplication)
-editorial-standards.md         human-facing editorial principles for critical reading and governance analysis
-CONTRIBUTING.md                how to suggest a paper and how the maintainer writes a review
-.github/workflows/             CI: lint + index staleness check, index rebuild, Pages deploy
+reviews/YYYY/                   canonical review files, one per paper
+collections/collections.json    curated cross-cutting collection rules
+collections/syntheses/          human-edited cumulative collection analysis
+knowledge/schema.yml            additive knowledge-layer schema semantics
+knowledge/review-metadata.yml   curated migration metadata for existing reviews
+knowledge/governance-facets.yml bounded governance discovery vocabulary
+knowledge/relationships.yml     curated relationships between reviews
+knowledge/history-policy.md     corrections and supersession semantics
+AI-USAGE.md                     disclosure and responsibility model for AI/LLM assistance
+templates/review-template.md    canonical review template
+scripts/editorial_lint.py       machine-verifiable review contribution checks
+scripts/knowledge_lint.py       knowledge-layer integrity and traceability checks
+scripts/build_index.py          normal review/index site generator
+scripts/build_knowledge.py      knowledge discovery page generator
+docs/                           generated GitHub Pages artifact
+editorial-standards.md          human-facing editorial principles
+CONTRIBUTING.md                 contribution and repository mechanics
+.github/workflows/              CI and Pages deployment
 ```
 
 ---
 
 ## Review File Convention
 
-New reviews use the canonical path format:
+New reviews use:
 
 ```text
 reviews/YYYY/YYYY-MM-DD__slug__v1.md
 ```
 
-The date is when the review was finished, not the paper's publication date. Version increments (`v2`, `v3`) are used only for substantive post-publication revisions to the analysis, not formatting fixes.
+The canonical fields remain `title`, `source`, `publication`, `date_read`, `primary_domain`, `tags`, and `key_insight`; `scholarly_signal` is optional. Archive as Knowledge Infrastructure adds optional provenance, version, review-state and governance-facet fields. Omit unavailable optional metadata rather than guessing it. See [`knowledge/schema.yml`](knowledge/schema.yml) for semantics.
 
-Each review follows [`templates/review-template.md`](templates/review-template.md): required front matter, then a `## Review` section of roughly 2,000-6,000 characters depending on how much the paper is actually arguing, then a `## Key Insight` section that must match the front matter `key_insight` field exactly.
-
-Required front matter:
-
-```yaml
----
-title: ""
-source: ""
-publication: ""
-date_read: "YYYY-MM-DD"
-primary_domain: ""
-tags: []
-scholarly_signal: ""    # optional; arXiv/preprint subject classification only
-key_insight: ""
----
-```
-
-`primary_domain` and every entry in `tags` must come from [`taxonomy/domains.yml`](taxonomy/domains.yml). `scholarly_signal` is the only optional field; every other field is required and checked by `editorial_lint.py`.
+Version increments (`v2`, `v3`) are reserved for substantive post-publication revisions to the analytical object. Reader-facing correction and supersession rules are in [`knowledge/history-policy.md`](knowledge/history-policy.md).
 
 ---
 
 ## Automation
 
-The repository maintains itself with minimal manual overhead:
+On pull requests and pushes, CI runs the editorial and knowledge-layer validators, builds the normal discovery site, builds the knowledge discovery surfaces, and verifies reproducibility of the core review generator. GitHub Pages rebuilds both layers from canonical source files before deployment.
 
-- On pull requests and pushes, CI installs dependencies, runs `editorial_lint.py`, builds the generated discovery site in the runner, and verifies that generation is reproducible. Review PRs do not need to commit generated files solely to satisfy CI.
-- On pushes to `main` that touch `reviews/`, the taxonomy, or the indexing logic, CI rebuilds `index.md` and `docs/` and auto-commits the result so the repository stays synchronized.
-- GitHub Pages independently rebuilds `docs/` from the merged review sources before uploading the Pages artifact, avoiding a race with the repository's generated-file commit.
-
-To run everything locally before opening a pull request:
+To run locally:
 
 ```bash
-python scripts/editorial_lint.py      # style, schema, and taxonomy checks
-python scripts/build_index.py          # rebuild index.md, docs/, and this README's generated sections
-python scripts/build_index.py --check  # verify nothing is stale
+python scripts/editorial_lint.py
+python scripts/knowledge_lint.py
+python scripts/build_index.py
+python scripts/build_knowledge.py
+python scripts/build_index.py --check
 ```
 
-Commit the review file and any hand-authored source changes. Generated files may be committed for review when useful, but the default path leaves them to the repository automation.
+Generated Pages files are deployment artifacts, not independent sources of truth.
 
 ---
 
@@ -168,13 +151,13 @@ Commit the review file and any hand-authored source changes. Generated files may
 
 <!-- RECENT_REVIEWS:END -->
 
-This list regenerates automatically from the most recently read reviews; don't hand-edit the block between the markers above. See [index.md](index.md) for the full archive, browsable by domain and by collection.
+This list regenerates automatically from the most recently read reviews; don't hand-edit the block between the markers above. See [index.md](index.md) for the full archive.
 
 ---
 
 ## Contributing
 
-To suggest a paper for review, open an issue and assign it to the maintainer, including the title, author(s), a direct link, and a sentence on why it fits the taxonomy. To write a review, follow the conventions above and in [CONTRIBUTING.md](CONTRIBUTING.md), then run `editorial_lint.py` and `build_index.py` before opening a pull request.
+To suggest a paper for review, open an issue and assign it to the maintainer, including the title, author(s), a direct link, and a sentence on why it fits the taxonomy. Contribution mechanics, AI-assisted work rules and knowledge-layer conventions are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

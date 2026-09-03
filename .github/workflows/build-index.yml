@@ -19,14 +19,16 @@ jobs:
       - name: Install lint dependencies
         run: pip install pyyaml
 
-      - name: Editorial lint (Tier 1 checks)
-        run: |
-          python scripts/editorial_lint.py
+      - name: Editorial lint
+        run: python scripts/editorial_lint.py
+
+      - name: Knowledge-layer lint
+        run: python scripts/knowledge_lint.py
 
       - name: Build generated discovery site
         run: |
           python scripts/build_index.py
+          python scripts/build_knowledge.py
 
-      - name: Verify generated output is reproducible
-        run: |
-          python scripts/build_index.py --check
+      - name: Verify generated review output is reproducible
+        run: python scripts/build_index.py --check

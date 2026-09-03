@@ -4,6 +4,8 @@
 
 This repository is maintained by a single curator. Reviews reflect one practitioner's reading and judgment, not institutional consensus.
 
+The repository is maintained with assistance from AI/LLM systems. See [`AI-USAGE.md`](AI-USAGE.md) for the disclosure, permitted assistance, source-grounding requirements, and the boundary between machine assistance and human editorial responsibility.
+
 ## Suggesting a paper for review
 
 If you have a paper, report, or essay you would like to see reviewed, open an issue and assign it to the maintainer. It will be triaged into the reading backlog. There is no guarantee of turnaround time.
@@ -29,7 +31,7 @@ Use the date you finished the review, not the paper's publication date. The slug
 
 ### Front matter
 
-Copy the template from `templates/review-template.md`. All fields are required except `scholarly_signal`, which applies only to arXiv papers or other preprints that carry an arXiv subject classification.
+Copy the template from `templates/review-template.md`. The canonical review fields remain required except `scholarly_signal`, which applies only to arXiv papers or other preprints that carry an arXiv subject classification.
 
 ```yaml
 ---
@@ -45,6 +47,20 @@ key_insight: ""
 ```
 
 `primary_domain` and `tags` must use values from `taxonomy/domains.yml`. If you need a new domain or tag, update the taxonomy file in the same commit.
+
+Archive as Knowledge Infrastructure adds optional fields for provenance, review state, and governance discovery. Omit an optional field rather than guess its value. The canonical semantics are defined in `knowledge/schema.yml`.
+
+```yaml
+published: "YYYY-MM-DD"          # optional
+# doi: null                      # null = checked and none identified; omission = not yet enriched
+peer_review_status: "preprint"   # optional controlled value
+paper_type: "preprint"           # optional controlled value
+paper_version: "arXiv v1"        # optional source-version label
+review_status: "current"         # current | corrected | superseded
+governance_facets: ["authority", "delegation"]
+```
+
+Historical reviews do not need speculative backfill. `knowledge/review-metadata.yml` provides a curated migration surface for older reviews when enrichment is reliable.
 
 ### Review body
 
@@ -72,36 +88,49 @@ Before rebuilding the index, run the repository linter. It checks machine-verifi
 python scripts/editorial_lint.py
 ```
 
-Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors. Warnings cover bounded repository heuristics such as tag count outside 3-6, body length outside the expected band, filename/`date_read` mismatches, duplicate-paper signals, and tags not found in the controlled vocabulary. The linter intentionally does not flag words such as `ecosystem` or attempt to infer whether `leverage` is stylistically weak; those are prose judgments for a human reviewer. CI then builds the generated discovery site in the runner and verifies that a second `--check` pass is clean. Review PRs therefore do not need to carry generated index or Pages files merely to satisfy CI. The intellectual standards for reading and critique are described separately in `editorial-standards.md`; this file and the repository tooling remain the source of truth for contribution mechanics and automated checks.
+Exit code is non-zero if any error-level finding exists. CI runs this on every pull request and blocks the merge on errors. Warnings cover bounded repository heuristics such as tag count outside 3-6, body length outside the expected band, filename/`date_read` mismatches, duplicate-paper signals, and tags not found in the controlled vocabulary. Prose judgment remains a human editorial responsibility described in `editorial-standards.md`.
 
-To see a single file's findings:
+The linter retains `--strict-schema` as an experimental preview for legacy provenance migration. The live Archive as Knowledge Infrastructure semantics are now documented in `knowledge/schema.yml`, not inferred from the editorial principles.
 
-```bash
-python scripts/editorial_lint.py reviews/2026/2026-03-05__some-review__v1.md
-```
+### Knowledge-layer validation
 
-The linter also retains an explicitly experimental schema preview for possible future provenance fields: `published`, `doi`, `affiliation`, `peer_review_status`, and `paper_type`. These fields are not part of the live template and do not participate in normal CI. Use the preview only to inspect the impact of a future schema decision:
+Changes under `knowledge/`, `collections/syntheses/`, or optional knowledge metadata should also pass:
 
 ```bash
-python scripts/editorial_lint.py --strict-schema
+python scripts/knowledge_lint.py
 ```
+
+This validates controlled governance facets, review references, relationship types and rationales, review-state values, and synthesis traceability. It checks structure and referential integrity rather than deciding whether an editorial interpretation is correct.
+
+Governance facets are defined in `knowledge/governance-facets.yml`. A facet indicates substantive treatment of a governance mechanism or institutional tension. It must not be assigned by keyword occurrence alone. AI/LLM systems may propose candidate facets or relationships, but canonical assignments require human editorial acceptance under `AI-USAGE.md`.
+
+Curated review relationships live in `knowledge/relationships.yml`. Relationship edges are editorial claims and therefore require an explicit rationale. Generated semantic similarity is not sufficient for a canonical edge.
+
+### Collection synthesis
+
+Collection-level synthesis lives under `collections/syntheses/`. A synthesis must identify its constituent `source_reviews`, carry a `last_reviewed` date and status, and include a `## Traceability` section. Synthesis may be produced with AI/LLM assistance, but it remains a human-edited analytical artifact. Claims should remain traceable to constituent reviews and, through them, to the underlying papers.
+
+### Corrections and supersession
+
+The reader-facing policy for paper versions, substantive review corrections, supersession, withdrawal and retraction is documented in `knowledge/history-policy.md`. Do not silently rewrite analysis when the evidentiary basis changes materially. Use a new review version when the paper or interpretation changes enough to make the earlier analytical object materially different.
 
 ### Rebuilding generated files
 
-After writing or editing a review, rebuild the generated index files locally before committing:
+Build the normal discovery site and then the knowledge layer:
 
 ```bash
 python scripts/build_index.py
+python scripts/build_knowledge.py
 ```
 
-To verify without writing:
+To verify the normal generated review site without writing:
 
 ```bash
 python scripts/build_index.py --check
 ```
 
-CI will also rebuild generated files automatically on push to `main` if `reviews/` or `scripts/build_index.py` changed. You only need to run locally if you want to preview changes before pushing.
+CI runs `editorial_lint.py`, `knowledge_lint.py`, `build_index.py`, `build_knowledge.py`, and the reproducibility check on pull requests. GitHub Pages independently rebuilds both discovery layers from canonical source files before deployment.
 
 ### What to commit
 
-Commit the review file and any hand-authored source changes. Generated discovery files are automation-owned: pull-request CI builds them ephemerally to validate generation, `rebuild-index.yml` refreshes and persists them on `main`, and the Pages workflow builds its deployment artifact directly from the merged review sources. If you deliberately ran the generator locally and want the generated diff reviewed in the same PR, it is still acceptable to commit those files together, but it is no longer required for a review-only change.
+Commit canonical review files and other hand-authored or human-accepted source changes. Generated discovery files are automation-owned unless a generated diff is deliberately included for review. Canonical knowledge sources are the files under `knowledge/`, `collections/syntheses/`, and any accepted optional metadata in review front matter. Generated Pages artifacts are discovery surfaces and must not become accidental sources of truth.
