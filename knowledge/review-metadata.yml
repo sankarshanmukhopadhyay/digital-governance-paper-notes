@@ -1,0 +1,25 @@
+version: 1
+reviews:
+  reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md:
+    paper_type: essay
+    peer_review_status: essay
+    review_status: current
+    governance_facets: [authority, delegation, revocation, accountability, dependency]
+  reviews/2026/2026-08-03__critique-of-agent-model__v1.md:
+    published: 2026-06-22
+    paper_type: preprint
+    peer_review_status: preprint
+    paper_version: arXiv preprint
+    review_status: current
+    governance_facets: [authority, delegation, accountability, contestability, revocation, redress, enforcement]
+  reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md:
+    paper_type: preprint
+    peer_review_status: preprint
+    paper_version: arXiv v1
+    review_status: current
+    governance_facets: [authority, legitimacy, accountability, redress, revocation, provenance, gatekeeping]
+
+notes:
+  - This file is a curated migration surface for existing reviews. New reviews may carry equivalent optional fields directly in front matter.
+  - Omitted fields are unknown or not yet enriched and must not be inferred merely for completeness.
+  - Canonical values require source verification and human editorial acceptance.
