@@ -56,11 +56,11 @@ python scripts/knowledge_lint.py
 <!-- TAXONOMY_SUMMARY:START -->
 
 - **AI Governance** (20)
-- **AI Safety & Evaluation** (10)
+- **AI Safety & Evaluation** (11)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
-- **Digital Identity** (5)
-- **Trust Infrastructure** (2)
+- **Digital Identity** (6)
+- **Trust Infrastructure** (3)
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
@@ -140,14 +140,14 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-04** — [Designing Agent IDs](reviews/2026/2026-09-04__designing-agent-ids__v1.md) — *Singapore AI Safety Hub (SASH) policy memo*
+- **2026-09-03** — [Position: Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!](reviews/2026/2026-09-03__stop-anthropomorphizing-intermediate-tokens__v1.md) — *Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), PMLR 306*
 - **2026-09-03** — [Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer](reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md) — *arXiv preprint (v1)*
+- **2026-09-03** — [A Verifier-Centric Conceptual Model for Digital Credential Ecosystems](reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md) — *arXiv preprint (v2)*
 - **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433*
 - **2026-08-06** — [Position: LLMs Can't Jump](reviews/2026/2026-08-06__llms-cant-jump__v1.md) — *ICML 2026*
 - **2026-08-06** — [Not All LLM Reasoning is Visible in the Chain-of-Thought](reviews/2026/2026-08-06__not-all-llm-reasoning-is-visible-in-the-chain-of-thought__v1.md) — *arXiv*
 - **2026-08-03** — [Critique of Agent Model](reviews/2026/2026-08-03__critique-of-agent-model__v1.md) — *arXiv*
-- **2026-07-28** — [Targeted Report on Regulatory Challenges from Decentralised Finance](reviews/2026/2026-07-28__targeted-report-on-regulatory-challenges-from-decentralised-finance__v1.md) — *Financial Action Task Force (FATF)*
-- **2026-07-25** — [The AI Amplifier Effect: Defining Human-AI Intimacy and Romantic Relationships with Conversational AI](reviews/2026/2026-07-25__the-ai-amplifier-effect-defining-human-ai-intimacy-and-romantic-relationships-with-conversational-ai__v1.md) — *arXiv*
-- **2026-07-24** — [The Unintended Consequences of Large Language Models as a Labor-Augmenting Technology in Science](reviews/2026/2026-07-19__the-unintended-consequences-of-large-language-models-as-a-labor-augmenting-technology-in-science__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
