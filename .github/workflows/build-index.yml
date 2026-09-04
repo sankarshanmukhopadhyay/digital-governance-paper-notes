@@ -28,5 +28,12 @@ jobs:
       - name: Build generated discovery site
         run: python scripts/build_site.py
 
+      - name: Verify README generated summaries are committed
+        run: |
+          if ! git diff --exit-code -- README.md; then
+            echo "::error::README.md generated summary blocks are stale. Run python scripts/build_index.py and commit README.md."
+            exit 1
+          fi
+
       - name: Verify generated review output is reproducible
         run: python scripts/build_site.py --check
