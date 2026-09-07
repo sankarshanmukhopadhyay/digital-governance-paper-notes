@@ -60,7 +60,7 @@ python scripts/knowledge_lint.py
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (7)
-- **Trust Infrastructure** (4)
+- **Trust Infrastructure** (5)
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (2)
 - **Cybersecurity & Resilience** (1)
@@ -141,13 +141,13 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-09-07** — [Authority Propagation Models: PoP vs PoC and the Confused Deputy Problem](reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md) — *Zenodo*
+- **2026-09-07** — [Authority is a Continuous System](reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md) — *Zenodo*
 - **2026-09-07** — [Announcing the 1.0 trust framework](reviews/2026/2026-09-07__uk-dvs-trust-framework-1-0__v1.md) — *Enabling digital identity, Office for Digital Identities and Attributes*
 - **2026-09-04** — [Designing Agent IDs](reviews/2026/2026-09-04__designing-agent-ids__v1.md) — *Singapore AI Safety Hub (SASH) policy memo*
 - **2026-09-03** — [Position: Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!](reviews/2026/2026-09-03__stop-anthropomorphizing-intermediate-tokens__v1.md) — *Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), PMLR 306*
 - **2026-09-03** — [Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer](reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md) — *arXiv preprint (v1)*
 - **2026-09-03** — [A Verifier-Centric Conceptual Model for Digital Credential Ecosystems](reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md) — *arXiv preprint (v2)*
 - **2026-08-06** — [Taking Scale Seriously in Technology Law](reviews/2026/2026-08-06__taking-scale-seriously-in-technology-law__v1.md) — *Wake Forest Law Review, Vol. 61 (2026), pp. 393-433*
-- **2026-08-06** — [Position: LLMs Can't Jump](reviews/2026/2026-08-06__llms-cant-jump__v1.md) — *ICML 2026*
 
 <!-- RECENT_REVIEWS:END -->
 
