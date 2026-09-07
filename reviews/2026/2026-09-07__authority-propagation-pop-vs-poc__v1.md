@@ -20,7 +20,7 @@ The governance contribution is the relocation of authority from an artifact held
 
 The formal result is narrower than the paper's broad claim about artifact-based delegation. The proof establishes safety under monotonicity and origin-bounded assumptions. It does not show that every JWT, capability, or cryptographic delegation system implements possession semantics without contextual attenuation, audience restriction, policy evaluation, or invocation-specific binding. The strongest defense is that the paper contrasts semantic models rather than surveying implementations. That resolves the need for exhaustive coverage, but not the universal phrasing.
 
-PIC also does not establish legitimacy. It can prove that an action descends from an origin without showing that the origin was entitled to authorize it, how authority is revoked during execution, or how disputed provenance supports redress. Its practical value is making one class of authority expansion structurally impossible, not completing governance of delegated action.
+PIC also does not establish legitimacy. It can prove that an action descends from an origin without showing that the origin was entitled to authorize it, how authority is revoked during execution, or how disputed provenance supports redress. Its practical value is making one class of authority expansion structurally impossible while leaving the broader governance of delegated action unresolved.
 
 ## Key Insight
 
