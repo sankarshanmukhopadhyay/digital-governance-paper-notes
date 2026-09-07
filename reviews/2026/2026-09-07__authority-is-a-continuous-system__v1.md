@@ -22,7 +22,7 @@ The central limitation is legitimate authority creation. Institutions routinely 
 
 The zero-trust conclusion is also definition-dependent. The paper proves incompatibility where possession can rematerialize authority independently of current state. It does not establish that every practical system using proof of possession is non-zero-trust when possession is only one input to continuous authorization.
 
-The durable contribution is an architectural invariant: downstream execution should be able to lose authority but not manufacture it.
+Its durable contribution is an architectural invariant: downstream execution should be able to lose authority but not manufacture it.
 
 ## Key Insight
 
