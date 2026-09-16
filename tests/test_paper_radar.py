@@ -23,8 +23,12 @@ class PaperRadarTests(unittest.TestCase):
     def test_existing_paper_never_returns_as_fresh_candidate(self):
         item = {"source_system": "arxiv", "title": "Governance and Authority in AI Systems", "abstract": "governance authority redress interoperability", "arxiv_id": "2609.12345"}
         scored = radar.score(item, CFG, "ai-governance", "AI governance authority", {"arxiv:2609.12345"}, [])
-        self.assertEqual(scored["state"], "published")
-        self.assertTrue(scored["already_in_corpus"])
+        self.assertEqual(scored["state"], "represented")
+        self.assertTrue(scored["already_represented"])
+
+    def test_issue_reference_extraction_captures_arxiv(self):
+        keys, _ = radar.extract_refs("Paper: https://arxiv.org/abs/2609.17416")
+        self.assertIn("arxiv:2609.17416", keys)
 
     def test_score_is_diagnostic_not_admission(self):
         item = {"source_system": "openalex", "title": "Governance Authority and Redress for AI", "abstract": "interoperability governance authority redress"}
@@ -38,11 +42,12 @@ class PaperRadarTests(unittest.TestCase):
         self.assertLess(scored["score"], CFG["candidate_threshold"])
 
     def test_dedupe_prefers_higher_scoring_record(self):
-        low = {"title": "Same Paper", "doi": "10.1/a", "score": 4, "state": "deferred"}
-        high = {"title": "Same Paper", "doi": "10.1/a", "score": 8, "state": "candidate"}
+        low = {"source_system": "crossref", "title": "Same Paper", "doi": "10.1/a", "score": 4, "state": "deferred"}
+        high = {"source_system": "openalex", "title": "Same Paper", "doi": "10.1/a", "score": 8, "state": "candidate"}
         out = radar.dedupe([low, high])
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0]["score"], 8)
+        self.assertIn("crossref", out[0]["also_seen_in"])
 
 
 if __name__ == "__main__":
