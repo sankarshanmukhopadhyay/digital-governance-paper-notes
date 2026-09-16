@@ -55,8 +55,8 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (23)
-- **AI Safety & Evaluation** (12)
+- **AI Governance** (25)
+- **AI Safety & Evaluation** (13)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (7)
@@ -140,14 +140,14 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-16** — [Verifiable Social Reasoning for LLM Assistants](reviews/2026/2026-09-16__verifiable-social-reasoning__v1.md) — *arXiv*
 - **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
 - **2026-09-16** — [People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe](reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md) — *arXiv; accepted at AIES 2026*
+- **2026-09-16** — [Never Stop Thinking: Continuous-Time Language Agents](reviews/2026/2026-09-16__never-stop-thinking__v1.md) — *arXiv*
+- **2026-09-16** — [Interactive Memory Learning for Long-Term Conversations](reviews/2026/2026-09-16__interactive-memory-learning__v1.md) — *arXiv*
 - **2026-09-16** — [Interaction Creates Dynamical AI Behavior Absent in Isolation](reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md) — *arXiv*
 - **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-09-16** — [Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations](reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md) — *arXiv*
-- **2026-09-08** — [AI Agents Push Humans Out of the Loop](reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md) — *arXiv*
-- **2026-09-07** — [Authority Propagation Models: PoP vs PoC and the Confused Deputy Problem](reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md) — *Zenodo*
-- **2026-09-07** — [Authority is a Continuous System](reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md) — *Zenodo*
 
 <!-- RECENT_REVIEWS:END -->
 
