@@ -69,7 +69,7 @@ python scripts/knowledge_lint.py
 - **Socio-technical Systems** (9)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (1)
-- **Economic & Market Infrastructure** (4)
+- **Economic & Market Infrastructure** (5)
 
 <!-- TAXONOMY_SUMMARY:END -->
 
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-16** — [Very Justified Envy](reviews/2026/2026-09-16__very-justified-envy__v1.md) — *arXiv*
 - **2026-09-16** — [Verifiable Social Reasoning for LLM Assistants](reviews/2026/2026-09-16__verifiable-social-reasoning__v1.md) — *arXiv*
 - **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
 - **2026-09-16** — [People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe](reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md) — *arXiv; accepted at AIES 2026*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-16** — [Interactive Memory Learning for Long-Term Conversations](reviews/2026/2026-09-16__interactive-memory-learning__v1.md) — *arXiv*
 - **2026-09-16** — [Interaction Creates Dynamical AI Behavior Absent in Isolation](reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md) — *arXiv*
 - **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
-- **2026-09-16** — [Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations](reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
