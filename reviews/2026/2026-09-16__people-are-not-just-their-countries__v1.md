@@ -9,7 +9,7 @@ scholarly_signal: "cs.AI"
 key_insight: "Measuring which populations an LLM resembles is evidence about representational distribution, not a mandate for whose values the system should implement; moving from country averages to demographic granularity makes the legitimacy of the alignment target more, not less, important."
 published: "2026-08-07"
 peer_review_status: "accepted"
-paper_type: "conference paper"
+paper_type: "conference-paper"
 paper_version: "v1"
 review_status: "current"
 ---
