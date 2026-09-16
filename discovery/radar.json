@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "lookback_days": 14,
+  "max_per_source": 40,
+  "candidate_threshold": 7,
+  "judgment_threshold": 5,
+  "themes": [
+    {
+      "name": "ai-governance",
+      "queries": ["AI governance", "agentic AI governance", "algorithmic accountability", "AI agents delegation authority"]
+    },
+    {
+      "name": "digital-identity",
+      "queries": ["digital identity governance", "verifiable credentials governance", "decentralized identifiers governance"]
+    },
+    {
+      "name": "trust-infrastructure",
+      "queries": ["trust infrastructure", "trust registry", "digital provenance governance", "credential verification infrastructure"]
+    },
+    {
+      "name": "digital-public-infrastructure",
+      "queries": ["digital public infrastructure governance", "digital public goods governance", "public digital infrastructure"]
+    },
+    {
+      "name": "platform-and-state-capacity",
+      "queries": ["platform governance", "digital state capacity", "public sector digital governance", "digital sovereignty infrastructure"]
+    }
+  ],
+  "governance_signals": [
+    "accountability", "authority", "authorization", "delegation", "legitimacy",
+    "governance", "regulation", "enforcement", "contestability", "redress",
+    "revocation", "interoperability", "infrastructure", "standards", "provenance",
+    "concentration", "sovereignty", "public administration", "institutional",
+    "rights", "liability", "procurement", "assurance"
+  ],
+  "exclusion_signals": [
+    "medical image segmentation", "protein folding", "wireless channel estimation",
+    "autonomous driving perception", "object detection benchmark"
+  ],
+  "source_weights": {
+    "arxiv": 1,
+    "crossref": 1,
+    "openalex": 1
+  }
+}
