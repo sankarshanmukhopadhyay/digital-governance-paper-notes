@@ -212,9 +212,140 @@ def arxiv(query: str, rows: int) -> list[dict]:
     return out
 
 
+def same_work(candidate: dict, other: dict) -> bool:
+    if candidate.get("doi") and other.get("doi") and norm(candidate["doi"]) == norm(other["doi"]):
+        return True
+    a, b = norm(candidate.get("title", "")), norm(other.get("title", ""))
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    if min(len(a), len(b)) >= 28 and (a in b or b in a):
+        return True
+    aw, bw = set(a.split()), set(b.split())
+    return bool(aw and bw and len(aw & bw) / len(aw | bw) >= 0.82)
+
+
+def crossref_lookup(candidate: dict) -> list[dict]:
+    doi = candidate.get("doi")
+    if doi:
+        try:
+            x = fetch_json("https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="")).get("message", {})
+            xs = [x]
+        except Exception:
+            xs = []
+    else:
+        params = urllib.parse.urlencode({"query.bibliographic": candidate.get("title", ""), "rows": 5})
+        xs = fetch_json("https://api.crossref.org/works?" + params).get("message", {}).get("items", [])
+    out = []
+    for x in xs:
+        title = " ".join(x.get("title", [])).strip()
+        if not title:
+            continue
+        rec = {
+            "source_system": "crossref",
+            "title": title,
+            "doi": x.get("DOI"),
+            "url": x.get("URL"),
+            "source_date_semantics": "registered_publication_metadata",
+            "source_dates": source_dates(
+                published=crossref_date(x.get("published")),
+                created=(x.get("created") or {}).get("date-time"),
+                deposited=(x.get("deposited") or {}).get("date-time"),
+                indexed=(x.get("indexed") or {}).get("date-time"),
+            ),
+        }
+        if same_work(candidate, rec):
+            out.append(rec)
+    return out
+
+
+def openalex_lookup(candidate: dict) -> list[dict]:
+    params = urllib.parse.urlencode({"search": candidate.get("title", ""), "per-page": 5})
+    data = fetch_json("https://api.openalex.org/works?" + params)
+    out = []
+    for x in data.get("results", []):
+        doi = (x.get("doi") or "").replace("https://doi.org/", "") or None
+        rec = {
+            "source_system": "openalex",
+            "title": x.get("title") or "",
+            "doi": doi,
+            "url": (x.get("primary_location") or {}).get("landing_page_url") or x.get("id"),
+            "source_date_semantics": "index_publication_metadata",
+            "source_dates": source_dates(
+                published=x.get("publication_date"),
+                indexed=x.get("updated_date"),
+                observed=x.get("created_date"),
+            ),
+        }
+        if rec["title"] and same_work(candidate, rec):
+            out.append(rec)
+    return out
+
+
+def arxiv_lookup(candidate: dict) -> list[dict]:
+    title = candidate.get("title", "").replace('"', "")
+    params = urllib.parse.urlencode({"search_query": f'ti:"{title}"', "start": 0, "max_results": 5, "sortBy": "submittedDate", "sortOrder": "ascending"})
+    root = ET.fromstring(fetch_text("https://export.arxiv.org/api/query?" + params))
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    out = []
+    for e in root.findall("a:entry", ns):
+        url = e.findtext("a:id", "", ns)
+        aid = url.rstrip("/").split("/")[-1].split("v")[0]
+        rec = {
+            "source_system": "arxiv",
+            "title": " ".join(e.findtext("a:title", "", ns).split()),
+            "arxiv_id": aid,
+            "url": url,
+            "source_date_semantics": "repository_submission",
+            "source_dates": source_dates(
+                published=e.findtext("a:published", "", ns),
+                updated=e.findtext("a:updated", "", ns),
+            ),
+        }
+        if same_work(candidate, rec):
+            out.append(rec)
+    return out
+
+
+def record_fingerprint(record: dict) -> tuple:
+    return (
+        record.get("source_system"),
+        norm(record.get("doi") or ""),
+        record.get("arxiv_id") or "",
+        norm(record.get("title") or ""),
+        tuple(sorted((record.get("source_dates") or {}).items())),
+    )
+
+
+def enrich_shortlisted_freshness(items: list[dict], errors: list[dict]) -> list[dict]:
+    """Look beyond the discovery window for older equivalent records before asserting freshness."""
+    for item in items:
+        if item.get("state") != "candidate" or item.get("already_represented"):
+            continue
+        records = list(item.get("source_records") or [])
+        for source, lookup in (
+            ("crossref-enrichment", crossref_lookup),
+            ("openalex-enrichment", openalex_lookup),
+            ("arxiv-enrichment", arxiv_lookup),
+        ):
+            try:
+                for found in lookup(item):
+                    records.append(source_record(found))
+            except Exception as e:
+                errors.append({"source": source, "title": item.get("title"), "error": str(e)})
+        deduped = {}
+        for record in records:
+            deduped[record_fingerprint(record)] = record
+        apply_freshness(item, list(deduped.values()))
+        item["freshness_enriched"] = True
+    return items
+
+
 def source_record(item: dict) -> dict:
     return {
         "source_system": item.get("source_system"),
+        "title": item.get("title"),
         "url": item.get("url"),
         "doi": item.get("doi"),
         "arxiv_id": item.get("arxiv_id"),
@@ -445,6 +576,8 @@ def main() -> int:
         time.sleep(0.6)
 
     items = dedupe(found)
+    items = enrich_shortlisted_freshness(items, errors)
+    items = sorted(items, key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, -x["score"], x["title"]))
     payload = {
         "schema_version": 2,
         "generated_at": now.isoformat(),
