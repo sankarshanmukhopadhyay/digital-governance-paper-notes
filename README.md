@@ -55,7 +55,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (21)
+- **AI Governance** (22)
 - **AI Safety & Evaluation** (11)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-09-08** — [AI Agents Push Humans Out of the Loop](reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md) — *arXiv*
 - **2026-09-07** — [Authority Propagation Models: PoP vs PoC and the Confused Deputy Problem](reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md) — *Zenodo*
 - **2026-09-07** — [Authority is a Continuous System](reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md) — *Zenodo*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-04** — [Designing Agent IDs](reviews/2026/2026-09-04__designing-agent-ids__v1.md) — *Singapore AI Safety Hub (SASH) policy memo*
 - **2026-09-03** — [Position: Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!](reviews/2026/2026-09-03__stop-anthropomorphizing-intermediate-tokens__v1.md) — *Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), PMLR 306*
 - **2026-09-03** — [Accountable yet Anonymous AI Agents: Split-Knowledge Binding in China’s National Agent-Identity Layer](reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md) — *arXiv preprint (v1)*
-- **2026-09-03** — [A Verifier-Centric Conceptual Model for Digital Credential Ecosystems](reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md) — *arXiv preprint (v2)*
 
 <!-- RECENT_REVIEWS:END -->
 
