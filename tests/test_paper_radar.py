@@ -10,6 +10,7 @@ spec.loader.exec_module(radar)
 CFG = {
     "candidate_threshold": 7,
     "judgment_threshold": 5,
+    "themes": [{"name": "ai-governance", "anchors": ["AI", "artificial intelligence", "agentic"]}],
     "governance_signals": ["governance", "authority", "redress", "interoperability"],
     "exclusion_signals": ["protein folding"],
     "source_weights": {"arxiv": 1, "crossref": 1, "openalex": 1},
@@ -31,13 +32,18 @@ class PaperRadarTests(unittest.TestCase):
         self.assertIn("arxiv:2609.17416", keys)
 
     def test_score_is_diagnostic_not_admission(self):
-        item = {"source_system": "openalex", "title": "Governance Authority and Redress for AI", "abstract": "interoperability governance authority redress"}
+        item = {"source_system": "openalex", "title": "AI Governance Authority and Redress", "abstract": "interoperability governance authority redress"}
         scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
         self.assertEqual(scored["state"], "candidate")
         self.assertNotIn("queue", scored)
 
+    def test_missing_theme_anchor_forces_deferred(self):
+        item = {"source_system": "openalex", "title": "Fiscal Governance and Authority", "abstract": "governance authority redress interoperability"}
+        scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
+        self.assertEqual(scored["state"], "deferred")
+
     def test_exclusion_signal_reduces_score(self):
-        item = {"source_system": "crossref", "title": "Governance for Protein Folding", "abstract": "governance authority protein folding"}
+        item = {"source_system": "crossref", "title": "AI Governance for Protein Folding", "abstract": "governance authority protein folding"}
         scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
         self.assertLess(scored["score"], CFG["candidate_threshold"])
 
