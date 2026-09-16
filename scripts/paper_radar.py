@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Discover, score, deduplicate, and report governance-relevant papers."""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import html
+import json
+import os
+import re
+import sys
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+USER_AGENT = "digital-governance-paper-notes-paper-radar/0.1"
+
+
+def fetch_json(url: str) -> dict:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def fetch_text(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8")
+
+
+def norm(s: str) -> str:
+    s = html.unescape(s or "").lower()
+    s = re.sub(r"https?://(dx\.)?doi\.org/", "", s)
+    s = re.sub(r"[^a-z0-9]+", " ", s)
+    return " ".join(s.split())
+
+
+def canonical_key(item: dict) -> str:
+    if item.get("doi"):
+        return "doi:" + norm(item["doi"])
+    if item.get("arxiv_id"):
+        return "arxiv:" + item["arxiv_id"].lower()
+    return "title:" + norm(item.get("title", ""))
+
+
+def load_existing() -> tuple[set[str], list[str]]:
+    keys, titles = set(), []
+    for p in ROOT.glob("reviews/**/*.md"):
+        text = p.read_text(encoding="utf-8")
+        m = re.search(r'^title:\s*["\']?(.*?)["\']?\s*$', text, re.M)
+        if m:
+            title = m.group(1).strip()
+            titles.append(norm(title))
+            keys.add("title:" + norm(title))
+        m = re.search(r'^doi:\s*["\']?(.*?)["\']?\s*$', text, re.M)
+        if m and m.group(1).strip() not in {"", "null"}:
+            keys.add("doi:" + norm(m.group(1).strip()))
+        m = re.search(r'^source:\s*["\']?(.*?)["\']?\s*$', text, re.M)
+        if m:
+            src = m.group(1)
+            am = re.search(r'arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})', src)
+            if am:
+                keys.add("arxiv:" + am.group(1))
+    return keys, titles
+
+
+def crossref(query: str, start: str, rows: int) -> list[dict]:
+    params = urllib.parse.urlencode({"query.bibliographic": query, "filter": f"from-pub-date:{start}", "rows": rows, "select": "DOI,title,abstract,author,published,URL,type,publisher"})
+    data = fetch_json("https://api.crossref.org/works?" + params)
+    out = []
+    for x in data.get("message", {}).get("items", []):
+        title = " ".join(x.get("title", [])).strip()
+        if not title:
+            continue
+        parts = x.get("published", {}).get("date-parts", [[None]])[0]
+        date = "-".join(str(v).zfill(2) for v in parts) if parts and parts[0] else ""
+        abstract = re.sub(r"<[^>]+>", " ", x.get("abstract", ""))
+        out.append({"source_system": "crossref", "title": title, "abstract": abstract, "doi": x.get("DOI"), "url": x.get("URL"), "published": date, "publication": x.get("publisher", "")})
+    return out
+
+
+def openalex(query: str, start: str, rows: int) -> list[dict]:
+    params = urllib.parse.urlencode({"search": query, "filter": f"from_publication_date:{start}", "per-page": rows})
+    data = fetch_json("https://api.openalex.org/works?" + params)
+    out = []
+    for x in data.get("results", []):
+        title = x.get("title") or ""
+        if not title:
+            continue
+        inv = x.get("abstract_inverted_index") or {}
+        words = []
+        for w, pos in inv.items():
+            for i in pos:
+                words.append((i, w))
+        abstract = " ".join(w for _, w in sorted(words))
+        doi = (x.get("doi") or "").replace("https://doi.org/", "") or None
+        out.append({"source_system": "openalex", "title": title, "abstract": abstract, "doi": doi, "url": (x.get("primary_location") or {}).get("landing_page_url") or x.get("id"), "published": x.get("publication_date", ""), "publication": ((x.get("primary_location") or {}).get("source") or {}).get("display_name", "")})
+    return out
+
+
+def arxiv(query: str, rows: int) -> list[dict]:
+    params = urllib.parse.urlencode({"search_query": "all:" + query, "start": 0, "max_results": rows, "sortBy": "submittedDate", "sortOrder": "descending"})
+    text = fetch_text("https://export.arxiv.org/api/query?" + params)
+    root = ET.fromstring(text)
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    out = []
+    for e in root.findall("a:entry", ns):
+        url = e.findtext("a:id", "", ns)
+        aid = url.rstrip("/").split("/")[-1].split("v")[0]
+        out.append({"source_system": "arxiv", "title": " ".join(e.findtext("a:title", "", ns).split()), "abstract": " ".join(e.findtext("a:summary", "", ns).split()), "arxiv_id": aid, "url": url, "published": e.findtext("a:published", "", ns)[:10], "publication": "arXiv"})
+    return out
+
+
+def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str], existing_titles: list[str]) -> dict:
+    text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
+    signals = [s for s in cfg["governance_signals"] if norm(s) in text]
+    exclusions = [s for s in cfg["exclusion_signals"] if norm(s) in text]
+    qterms = [t for t in norm(query).split() if len(t) > 3]
+    qmatches = sorted({t for t in qterms if t in text})
+    title = norm(item.get("title", ""))
+    near_existing = any(title and (title == t or (len(title) > 28 and (title in t or t in title))) for t in existing_titles)
+    exact_existing = canonical_key(item) in existing_keys
+    points = min(4, len(signals)) + min(2, len(qmatches)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
+    if exclusions:
+        points -= 4
+    if exact_existing or near_existing:
+        state = "published"
+    elif points >= cfg["candidate_threshold"]:
+        state = "candidate"
+    elif points >= cfg["judgment_threshold"]:
+        state = "needs_judgment"
+    else:
+        state = "deferred"
+    item.update({"theme": theme, "matched_query": query, "governance_signals": signals, "query_matches": qmatches, "exclusion_signals": exclusions, "score": points, "state": state, "already_in_corpus": bool(exact_existing or near_existing)})
+    return item
+
+
+def dedupe(items: list[dict]) -> list[dict]:
+    merged = {}
+    for x in items:
+        k = canonical_key(x)
+        if k not in merged or x["score"] > merged[k]["score"]:
+            merged[k] = x
+        else:
+            merged[k].setdefault("also_seen_in", []).append(x["source_system"])
+    return sorted(merged.values(), key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, -x["score"], x["title"]))
+
+
+def render(items: list[dict], run_date: str) -> str:
+    counts = {s: sum(1 for x in items if x["state"] == s) for s in ["candidate", "needs_judgment", "deferred", "published"]}
+    lines = [f"# Paper Radar — {run_date}", "", "This report is a discovery and editorial-triage surface. Scores are diagnostic and do not authorize queue admission.", "", "## Summary", "", f"- Candidate: {counts['candidate']}", f"- Needs judgment: {counts['needs_judgment']}", f"- Deferred: {counts['deferred']}", f"- Already represented: {counts['published']}", "", "## Candidate papers", ""]
+    selected = [x for x in items if x["state"] in {"candidate", "needs_judgment"} and not x["already_in_corpus"]]
+    if not selected:
+        lines.append("No papers crossed the candidate/judgment thresholds in this run.")
+    for x in selected:
+        lines += [f"### {x['title']}", "", f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`", f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}", f"- URL: {x.get('url','')}", f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}", f"- Trigger query: `{x['matched_query']}`", ""]
+    return "\n".join(lines) + "\n"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--config", default="discovery/radar.json")
+    ap.add_argument("--output", default="data/paper-candidates.json")
+    ap.add_argument("--report", default=None)
+    ap.add_argument("--fixtures", action="store_true", help="Do not use network; reserved for tests")
+    args = ap.parse_args()
+    cfg = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
+    today = dt.date.today()
+    start = (today - dt.timedelta(days=cfg["lookback_days"])).isoformat()
+    existing_keys, existing_titles = load_existing()
+    found, errors = [], []
+    for theme in cfg["themes"]:
+        for query in theme["queries"]:
+            for name, fn in [("crossref", lambda: crossref(query, start, cfg["max_per_source"])), ("openalex", lambda: openalex(query, start, cfg["max_per_source"])), ("arxiv", lambda: arxiv(query, min(20, cfg["max_per_source"])))]:
+                try:
+                    for item in fn():
+                        if item.get("published") and item["published"][:10] < start:
+                            continue
+                        found.append(score(item, cfg, theme["name"], query, existing_keys, existing_titles))
+                except Exception as e:
+                    errors.append({"source": name, "theme": theme["name"], "query": query, "error": str(e)})
+    items = dedupe(found)
+    payload = {"schema_version": 1, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "lookback_start": start, "source_errors": errors, "items": items}
+    out = ROOT / args.output
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    report_path = ROOT / (args.report or f"reports/radar/{today.isoformat()}.md")
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(render(items, today.isoformat()), encoding="utf-8")
+    print(f"wrote {len(items)} deduplicated candidates; {len(errors)} source errors")
+    if errors and not found:
+        return 2
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
