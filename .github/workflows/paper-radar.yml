@@ -1,0 +1,47 @@
+name: Paper Radar
+
+on:
+  pull_request:
+    paths:
+      - "discovery/**"
+      - "scripts/paper_radar.py"
+      - "tests/test_paper_radar.py"
+      - ".github/workflows/paper-radar.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "23 2 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Paper Radar tests
+        run: python -m unittest discover -s tests -p 'test_paper_radar.py'
+      - name: Run Paper Radar
+        run: python scripts/paper_radar.py
+      - name: Publish report to job summary
+        if: always()
+        shell: bash
+        run: |
+          latest=$(ls -1 reports/radar/*.md 2>/dev/null | tail -1 || true)
+          if [ -n "$latest" ]; then
+            cat "$latest" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Paper Radar did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload candidate ledger and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-radar-${{ github.run_id }}
+          path: |
+            data/paper-candidates.json
+            reports/radar/*.md
+          if-no-files-found: warn
