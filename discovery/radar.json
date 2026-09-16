@@ -3,12 +3,12 @@
   "repository": "sankarshanmukhopadhyay/digital-governance-paper-notes",
   "lookback_days": 14,
   "max_per_source": 40,
-  "candidate_threshold": 7,
-  "judgment_threshold": 5,
+  "candidate_threshold": 9,
+  "judgment_threshold": 7,
   "themes": [
     {
       "name": "ai-governance",
-      "anchors": ["artificial intelligence", " ai ", "agentic", " ai agent", "llm", "algorithmic", "foundation model"],
+      "anchors": ["artificial intelligence", "ai", "agentic", "ai agent", "llm", "algorithmic", "foundation model"],
       "queries": ["AI governance", "agentic AI governance", "algorithmic accountability", "AI agents delegation authority"]
     },
     {
@@ -38,6 +38,17 @@
     "revocation", "interoperability", "infrastructure", "standards", "provenance",
     "concentration", "sovereignty", "public administration", "institutional",
     "rights", "liability", "procurement", "assurance"
+  ],
+  "material_governance_signals": [
+    "accountability", "authority", "authorization", "delegation", "legitimacy",
+    "enforcement", "contestability", "redress", "revocation", "interoperability",
+    "provenance", "concentration", "rights", "liability", "procurement", "assurance"
+  ],
+  "candidate_title_signals": [
+    "governance", "governing", "accountability", "authority", "delegation",
+    "authorization", "legitimacy", "redress", "revocation", "assurance",
+    "provenance", "identity", "credential", "digital public infrastructure",
+    "state capacity", "sovereign"
   ],
   "exclusion_signals": [
     "medical image segmentation", "protein folding", "wireless channel estimation",
