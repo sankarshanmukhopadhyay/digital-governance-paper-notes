@@ -8,22 +8,27 @@
   "themes": [
     {
       "name": "ai-governance",
+      "anchors": ["artificial intelligence", " ai ", "agentic", " ai agent", "llm", "algorithmic", "foundation model"],
       "queries": ["AI governance", "agentic AI governance", "algorithmic accountability", "AI agents delegation authority"]
     },
     {
       "name": "digital-identity",
+      "anchors": ["digital identity", "electronic identity", "national id", "identity wallet", "eidas", "verifiable credential", "decentralized identifier", "credential verification", "digital credential"],
       "queries": ["digital identity governance", "verifiable credentials governance", "decentralized identifiers governance"]
     },
     {
       "name": "trust-infrastructure",
+      "anchors": ["trust infrastructure", "trust registry", "trust framework", "digital trust", "provenance", "credential", "verification", "authenticity"],
       "queries": ["trust infrastructure", "trust registry", "digital provenance governance", "credential verification infrastructure"]
     },
     {
       "name": "digital-public-infrastructure",
+      "anchors": ["digital public infrastructure", "digital public goods", "public digital infrastructure", "digital government", "digital public service", "public digital service", "digital state"],
       "queries": ["digital public infrastructure governance", "digital public goods governance", "public digital infrastructure"]
     },
     {
       "name": "platform-and-state-capacity",
+      "anchors": ["platform governance", "digital sovereignty", "digital state", "state capacity", "public sector digital", "digital public administration", "digital government", "institutional capacity"],
       "queries": ["platform governance", "digital state capacity", "public sector digital governance", "digital sovereignty infrastructure"]
     }
   ],
