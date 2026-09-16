@@ -66,7 +66,7 @@ python scripts/knowledge_lint.py
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (9)
 - **Platform Governance & Internet Governance** (2)
-- **Socio-technical Systems** (8)
+- **Socio-technical Systems** (9)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (1)
 - **Economic & Market Infrastructure** (4)
@@ -141,13 +141,13 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
+- **2026-09-16** — [People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe](reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md) — *arXiv; accepted at AIES 2026*
 - **2026-09-16** — [Interaction Creates Dynamical AI Behavior Absent in Isolation](reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md) — *arXiv*
 - **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-09-16** — [Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations](reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md) — *arXiv*
 - **2026-09-08** — [AI Agents Push Humans Out of the Loop](reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md) — *arXiv*
 - **2026-09-07** — [Authority Propagation Models: PoP vs PoC and the Confused Deputy Problem](reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md) — *Zenodo*
 - **2026-09-07** — [Authority is a Continuous System](reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md) — *Zenodo*
-- **2026-09-07** — [Announcing the 1.0 trust framework](reviews/2026/2026-09-07__uk-dvs-trust-framework-1-0__v1.md) — *Enabling digital identity, Office for Digital Identities and Attributes*
 
 <!-- RECENT_REVIEWS:END -->
 
