@@ -10,7 +10,7 @@ key_insight: "Once a matching system permits bounded priority violations for eff
 published: "2026-09-07"
 peer_review_status: "preprint"
 paper_type: "preprint"
-paper_version: "arXiv v1"
+paper_version: "arXiv v2"
 review_status: "current"
 governance_facets: ["authority", "legitimacy", "accountability", "redress"]
 ---
@@ -19,13 +19,13 @@ governance_facets: ["authority", "legitimacy", "accountability", "redress"]
 
 ## Review
 
-Adam Hamdan studies the intensity of priority violations in matching markets rather than treating justified envy as a binary condition. An agent has very justified envy when she prefers another agent's assignment and her priority advantage for that object exceeds a threshold of k ranks. The paper establishes that, unless k becomes prohibitively large, Pareto efficiency is incompatible with eliminating this form of envy. It then generalizes Deferred Acceptance and Immediate Acceptance mechanisms to eliminate very justified envy for any chosen k, and uses simulations of random matching markets to show that modest relaxation of the constraint can improve assignment ranks.
+Adam Hamdan studies the intensity of priority violations in matching markets rather than treating justified envy as a binary condition. The planner specifies a threshold k: an agent has very justified envy when she prefers another agent's assignment and her priority advantage for that object exceeds k ranks. The paper proves that, unless k is almost maximal, Pareto efficiency and elimination of very justified envy cannot always coexist. It then defines k-Threshold Acceptance, which nests Deferred Acceptance at k = 0 and Immediate Acceptance at k = n - 1 and eliminates very justified envy for any k.
 
-For governance, the important move is the conversion of an institutional priority rule into a tunable executable constraint. Priority is not merely a mathematical ordering when matching allocates school places, public services, jobs or other scarce opportunities. It represents a claim about who should precede whom. The threshold k therefore determines how far a mechanism may depart from that claim in pursuit of allocation efficiency. Choosing k redistributes decision rights between the institution that defines priority, the mechanism that optimizes assignments and the people whose claims can be displaced.
+The mechanism makes the institutional trade-off executable, but the full results sharpen its limits. Intermediate k-TA mechanisms are neither strategyproof nor Pareto efficient, and they can be Pareto dominated even by other matchings that remain free of very justified envy. The paper therefore presents k-TA as an operationally simple implementation rather than an optimal mechanism. Its simulations use 1,000 random markets with 100 agents and 100 unit-capacity objects, independent uniform preferences and priorities, and truthful preference reports. Higher k produces better assignment ranks but more numerous and more intense priority violations, with much of the first-choice gain appearing at early threshold increases.
 
-The formal results establish the efficiency trade-off, but they do not establish the legitimacy of any particular threshold. Rank distance also need not represent equivalent harm across domains: being displaced by two priority positions can have very different consequences depending on what is allocated, why priority exists and whether it protects a statutory entitlement or vulnerable population. Aggregate improvements in assignment ranks can likewise obscure which participants bear the cost of relaxation.
+For governance, k is not merely a tuning parameter. In school choice, housing or another priority-based allocation system, priority represents an institutional claim about who should precede whom. The paper explicitly leaves k to the planner, so threshold-setting concentrates normative authority outside the algorithm. Rank distance also cannot establish equivalent harm across domains, and random-market gains do not establish the legitimacy of relaxing statutory, vulnerability-based or otherwise protected priorities in a real allocation system.
 
-Operational deployment would therefore require governance outside the mechanism: an accountable authority for setting and changing k, publication of the rule and its rationale, evidence explaining affected assignments, monitoring of distributional effects, and routes for challenge, exception and redress. The paper makes a valuable institutional tension measurable. It does not remove the need to decide who is entitled to authorize the trade-off.
+Deployment would therefore require an accountable authority for setting and changing k, publication of the rule and rationale, evidence explaining affected assignments, monitoring of distributional effects and strategic behavior, and routes for challenge, exception and redress. The paper makes the fairness-efficiency frontier measurable and implementable. It does not determine who may legitimately authorize movement along that frontier.
 
 ## Key Insight
 
