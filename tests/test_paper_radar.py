@@ -34,7 +34,7 @@ class PaperRadarTests(unittest.TestCase):
         self.assertIn("arxiv:2609.17416", keys)
 
     def test_score_is_diagnostic_not_admission(self):
-        item = {"source_system": "openalex", "title": "AI Governance Authority and Redress", "abstract": "interoperability governance authority redress accountability"}
+        item = {"source_system": "openalex", "title": "Agentic AI Governance Authority and Redress", "abstract": "artificial intelligence interoperability governance authority redress accountability"}
         scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
         self.assertEqual(scored["state"], "candidate")
         self.assertNotIn("queue", scored)
