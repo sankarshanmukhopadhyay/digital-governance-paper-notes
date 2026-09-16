@@ -55,13 +55,37 @@ class PaperRadarTests(unittest.TestCase):
         self.assertLess(scored["score"], CFG["candidate_threshold"])
 
     def test_dedupe_collapses_version_dois_by_title(self):
-        low = {"source_system": "crossref", "title": "Execution Governance for AI Orchestration and Agentic Systems", "doi": "10.1/v1", "score": 8, "state": "needs_judgment"}
-        high = {"source_system": "openalex", "title": "Execution Governance for AI Orchestration and Agentic Systems", "doi": "10.1/v2", "score": 9, "state": "candidate"}
+        low = {"source_system": "crossref", "title": "Execution Governance for AI Orchestration and Agentic Systems", "doi": "10.1/v1", "score": 8, "state": "needs_judgment", "source_date_semantics": "registered_publication_metadata", "source_dates": {"published": "2026-09-01"}}
+        high = {"source_system": "openalex", "title": "Execution Governance for AI Orchestration and Agentic Systems", "doi": "10.1/v2", "score": 9, "state": "candidate", "source_date_semantics": "index_publication_metadata", "source_dates": {"published": "2026-09-01"}}
         out = radar.dedupe([low, high])
         self.assertEqual(len(out), 1)
         self.assertEqual(out[0]["score"], 9)
         self.assertIn("crossref", out[0]["also_seen_in"])
         self.assertIn("doi:10 1 v1", out[0]["alternate_identifiers"])
+
+    def test_same_doi_different_titles_reconcile_to_one_record(self):
+        a = {"source_system": "crossref", "title": "Governance for Agentic Systems", "doi": "10.1000/example", "score": 9, "state": "candidate", "source_date_semantics": "registered_publication_metadata", "source_dates": {"published": "2026-09-10"}}
+        b = {"source_system": "openalex", "title": "Governance for Agentic Systems: A Framework", "doi": "10.1000/example", "score": 8, "state": "needs_judgment", "source_date_semantics": "index_publication_metadata", "source_dates": {"published": "2026-09-10"}}
+        self.assertEqual(len(radar.dedupe([a, b])), 1)
+
+    def test_conflicting_freshness_downgrades_candidate_to_judgment(self):
+        recent = {"source_system": "openalex", "title": "Agentic AI Governance Authority", "doi": "10.1000/fresh", "score": 9, "state": "candidate", "source_date_semantics": "index_publication_metadata", "source_dates": {"published": "2026-09-12"}}
+        older = {"source_system": "crossref", "title": "Agentic AI Governance Authority", "doi": "10.1000/fresh", "score": 9, "state": "candidate", "source_date_semantics": "registered_publication_metadata", "source_dates": {"published": "2026-04-03"}}
+        out = radar.dedupe([recent, older])[0]
+        self.assertEqual(out["freshness_status"], "conflicting")
+        self.assertEqual(out["earliest_known_publication_at"], "2026-04-03")
+        self.assertEqual(out["state"], "needs_judgment")
+        self.assertTrue(out["freshness_requires_judgment"])
+
+    def test_repository_date_is_not_rendered_as_verified_published(self):
+        item = {"freshness_status": "source_consistent", "earliest_known_publication_at": "2026-04-03", "source_records": [{"source_system": "arxiv", "date_semantics": "repository_submission", "dates": {"published": "2026-04-03"}}]}
+        line = radar.report_date_line(item)
+        self.assertTrue(line.startswith("- Source date:"))
+        self.assertNotIn("- Published:", line)
+
+    def test_crossref_registered_publication_can_render_as_published(self):
+        item = {"freshness_status": "verified", "earliest_known_publication_at": "2026-09-10", "source_records": [{"source_system": "crossref", "date_semantics": "registered_publication_metadata", "dates": {"published": "2026-09-10"}}]}
+        self.assertEqual(radar.report_date_line(item), "- Published: 2026-09-10")
 
 
 if __name__ == "__main__":
