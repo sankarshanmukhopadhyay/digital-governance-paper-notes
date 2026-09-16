@@ -37,6 +37,10 @@ def norm(s: str) -> str:
     return " ".join(s.split())
 
 
+def phrase_in_text(text: str, phrase: str) -> bool:
+    return f" {norm(phrase)} " in f" {text} "
+
+
 def canonical_key(item: dict) -> str:
     if item.get("doi"):
         return "doi:" + norm(item["doi"])
@@ -69,6 +73,12 @@ def load_existing_reviews() -> tuple[set[str], list[str]]:
     return keys, titles
 
 
+def issue_paper_title(issue_title: str) -> str:
+    if ": " in issue_title and issue_title.startswith("review("):
+        return issue_title.split(": ", 1)[1]
+    return issue_title
+
+
 def load_existing_issues(repo: str) -> tuple[set[str], list[str], list[str]]:
     keys, titles, errors = set(), [], []
     if not repo:
@@ -83,9 +93,7 @@ def load_existing_issues(repo: str) -> tuple[set[str], list[str], list[str]]:
             for issue in data:
                 if issue.get("pull_request"):
                     continue
-                body = issue.get("body") or ""
-                issue_title = issue.get("title") or ""
-                k, t = extract_refs(body, issue_title.removeprefix("review(ai-governance): ").removeprefix("review(ai-evaluation): ").removeprefix("review(market-infrastructure): "))
+                k, t = extract_refs(issue.get("body") or "", issue_paper_title(issue.get("title") or ""))
                 keys |= k
                 titles += t
             if len(data) < 100:
@@ -139,25 +147,29 @@ def arxiv(query: str, rows: int) -> list[dict]:
 
 def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str], existing_titles: list[str]) -> dict:
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
-    signals = [s for s in cfg["governance_signals"] if norm(s) in text]
-    exclusions = [s for s in cfg["exclusion_signals"] if norm(s) in text]
+    theme_cfg = next(t for t in cfg["themes"] if t["name"] == theme)
+    anchors = [a for a in theme_cfg.get("anchors", []) if phrase_in_text(text, a)]
+    signals = [s for s in cfg["governance_signals"] if phrase_in_text(text, s)]
+    exclusions = [s for s in cfg["exclusion_signals"] if phrase_in_text(text, s)]
     qterms = [t for t in norm(query).split() if len(t) > 3]
-    qmatches = sorted({t for t in qterms if t in text})
+    qmatches = sorted({t for t in qterms if phrase_in_text(text, t)})
     title = norm(item.get("title", ""))
     near_existing = any(title and (title == t or (len(title) > 28 and (title in t or t in title))) for t in existing_titles)
     exact_existing = canonical_key(item) in existing_keys
-    points = min(4, len(signals)) + min(2, len(qmatches)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
+    points = min(4, len(signals)) + min(2, len(qmatches)) + min(2, len(anchors)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
     if exclusions:
         points -= 4
     if exact_existing or near_existing:
         state = "represented"
+    elif not anchors:
+        state = "deferred"
     elif points >= cfg["candidate_threshold"]:
         state = "candidate"
     elif points >= cfg["judgment_threshold"]:
         state = "needs_judgment"
     else:
         state = "deferred"
-    item.update({"theme": theme, "matched_query": query, "governance_signals": signals, "query_matches": qmatches, "exclusion_signals": exclusions, "score": points, "state": state, "already_represented": bool(exact_existing or near_existing)})
+    item.update({"theme": theme, "matched_query": query, "theme_anchors": anchors, "governance_signals": signals, "query_matches": qmatches, "exclusion_signals": exclusions, "score": points, "state": state, "already_represented": bool(exact_existing or near_existing)})
     return item
 
 
@@ -167,7 +179,7 @@ def dedupe(items: list[dict]) -> list[dict]:
         k = canonical_key(x)
         if k not in merged or x["score"] > merged[k]["score"]:
             previous_sources = merged.get(k, {}).get("also_seen_in", [])
-            x["also_seen_in"] = sorted(set(previous_sources + [merged[k]["source_system"]] if k in merged else previous_sources))
+            x["also_seen_in"] = sorted(set(previous_sources + ([merged[k]["source_system"]] if k in merged else [])))
             merged[k] = x
         else:
             merged[k].setdefault("also_seen_in", []).append(x["source_system"])
@@ -183,7 +195,7 @@ def render(items: list[dict], run_date: str) -> str:
     if not selected:
         lines.append("No papers crossed the candidate/judgment thresholds in this run.")
     for x in selected:
-        lines += [f"### {x['title']}", "", f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`", f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}", f"- URL: {x.get('url','')}", f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}", f"- Trigger query: `{x['matched_query']}`", ""]
+        lines += [f"### {x['title']}", "", f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`", f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}", f"- URL: {x.get('url','')}", f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}", f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}", f"- Trigger query: `{x['matched_query']}`", ""]
     return "\n".join(lines) + "\n"
 
 
@@ -195,6 +207,7 @@ def main() -> int:
     args = ap.parse_args()
     cfg = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
     today = dt.date.today()
+    today_s = today.isoformat()
     start = (today - dt.timedelta(days=cfg["lookback_days"])).isoformat()
 
     existing_keys, existing_titles = load_existing_reviews()
@@ -218,7 +231,8 @@ def main() -> int:
             name, theme, query = futures[future]
             try:
                 for item in future.result():
-                    if item.get("published") and item["published"][:10] < start:
+                    published = (item.get("published") or "")[:10]
+                    if published and (published < start or published > today_s):
                         continue
                     found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
             except Exception as e:
@@ -229,9 +243,9 @@ def main() -> int:
     out = ROOT / args.output
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    report_path = ROOT / (args.report or f"reports/radar/{today.isoformat()}.md")
+    report_path = ROOT / (args.report or f"reports/radar/{today_s}.md")
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(render(items, today.isoformat()), encoding="utf-8")
+    report_path.write_text(render(items, today_s), encoding="utf-8")
     print(f"wrote {len(items)} deduplicated records; {len(errors)} source errors")
     if errors and not found:
         return 2
