@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discover, score, deduplicate, and report governance-relevant papers."""
+"""Discover, score, deduplicate, reconcile freshness, and report governance-relevant papers."""
 from __future__ import annotations
 
 import argparse
@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-USER_AGENT = "digital-governance-paper-notes-paper-radar/0.1"
+USER_AGENT = "digital-governance-paper-notes-paper-radar/0.2"
 
 
 def fetch_json(url: str) -> dict | list:
@@ -38,6 +38,17 @@ def norm(s: str) -> str:
     return " ".join(s.split())
 
 
+def date_only(value: str | None) -> str:
+    return (value or "")[:10]
+
+
+def crossref_date(block: dict | None) -> str:
+    parts = (block or {}).get("date-parts", [[None]])[0]
+    if not parts or not parts[0]:
+        return ""
+    return "-".join(str(v).zfill(2) for v in parts)
+
+
 def phrase_in_text(text: str, phrase: str) -> bool:
     return f" {norm(phrase)} " in f" {text} "
 
@@ -50,12 +61,13 @@ def canonical_key(item: dict) -> str:
     return "title:" + norm(item.get("title", ""))
 
 
-def dedupe_key(item: dict) -> str:
-    """Collapse exact title matches even when repositories assign version-specific DOIs."""
-    title = norm(item.get("title", ""))
-    if len(title) >= 20:
-        return "title:" + title
-    return canonical_key(item)
+def identity_keys(item: dict) -> set[str]:
+    keys = {"title:" + norm(item.get("title", ""))}
+    if item.get("doi"):
+        keys.add("doi:" + norm(item["doi"]))
+    if item.get("arxiv_id"):
+        keys.add("arxiv:" + item["arxiv_id"].lower())
+    return {k for k in keys if k.split(":", 1)[1]}
 
 
 def extract_refs(text: str, title: str | None = None) -> tuple[set[str], list[str]]:
@@ -113,18 +125,39 @@ def load_existing_issues(repo: str) -> tuple[set[str], list[str], list[str]]:
     return keys, titles, errors
 
 
+def source_dates(**kwargs: str) -> dict:
+    return {k: date_only(v) for k, v in kwargs.items() if date_only(v)}
+
+
 def crossref(query: str, start: str, rows: int) -> list[dict]:
-    params = urllib.parse.urlencode({"query.bibliographic": query, "filter": f"from-pub-date:{start}", "rows": rows, "select": "DOI,title,abstract,published,URL,publisher"})
+    params = urllib.parse.urlencode({
+        "query.bibliographic": query,
+        "filter": f"from-pub-date:{start}",
+        "rows": rows,
+        "select": "DOI,title,abstract,published,created,deposited,indexed,URL,publisher",
+    })
     data = fetch_json("https://api.crossref.org/works?" + params)
     out = []
     for x in data.get("message", {}).get("items", []):
         title = " ".join(x.get("title", [])).strip()
         if not title:
             continue
-        parts = x.get("published", {}).get("date-parts", [[None]])[0]
-        date = "-".join(str(v).zfill(2) for v in parts) if parts and parts[0] else ""
         abstract = re.sub(r"<[^>]+>", " ", x.get("abstract", ""))
-        out.append({"source_system": "crossref", "title": title, "abstract": abstract, "doi": x.get("DOI"), "url": x.get("URL"), "published": date, "publication": x.get("publisher", "")})
+        out.append({
+            "source_system": "crossref",
+            "title": title,
+            "abstract": abstract,
+            "doi": x.get("DOI"),
+            "url": x.get("URL"),
+            "publication": x.get("publisher", ""),
+            "source_date_semantics": "registered_publication_metadata",
+            "source_dates": source_dates(
+                published=crossref_date(x.get("published")),
+                created=(x.get("created") or {}).get("date-time"),
+                deposited=(x.get("deposited") or {}).get("date-time"),
+                indexed=(x.get("indexed") or {}).get("date-time"),
+            ),
+        })
     return out
 
 
@@ -138,7 +171,20 @@ def openalex(query: str, start: str, rows: int) -> list[dict]:
             continue
         words = [(i, w) for w, pos in (x.get("abstract_inverted_index") or {}).items() for i in pos]
         doi = (x.get("doi") or "").replace("https://doi.org/", "") or None
-        out.append({"source_system": "openalex", "title": title, "abstract": " ".join(w for _, w in sorted(words)), "doi": doi, "url": (x.get("primary_location") or {}).get("landing_page_url") or x.get("id"), "published": x.get("publication_date", ""), "publication": ((x.get("primary_location") or {}).get("source") or {}).get("display_name", "")})
+        out.append({
+            "source_system": "openalex",
+            "title": title,
+            "abstract": " ".join(w for _, w in sorted(words)),
+            "doi": doi,
+            "url": (x.get("primary_location") or {}).get("landing_page_url") or x.get("id"),
+            "publication": ((x.get("primary_location") or {}).get("source") or {}).get("display_name", ""),
+            "source_date_semantics": "index_publication_metadata",
+            "source_dates": source_dates(
+                published=x.get("publication_date"),
+                indexed=x.get("updated_date"),
+                observed=x.get("created_date"),
+            ),
+        })
     return out
 
 
@@ -150,8 +196,71 @@ def arxiv(query: str, rows: int) -> list[dict]:
     for e in root.findall("a:entry", ns):
         url = e.findtext("a:id", "", ns)
         aid = url.rstrip("/").split("/")[-1].split("v")[0]
-        out.append({"source_system": "arxiv", "title": " ".join(e.findtext("a:title", "", ns).split()), "abstract": " ".join(e.findtext("a:summary", "", ns).split()), "arxiv_id": aid, "url": url, "published": e.findtext("a:published", "", ns)[:10], "publication": "arXiv"})
+        out.append({
+            "source_system": "arxiv",
+            "title": " ".join(e.findtext("a:title", "", ns).split()),
+            "abstract": " ".join(e.findtext("a:summary", "", ns).split()),
+            "arxiv_id": aid,
+            "url": url,
+            "publication": "arXiv",
+            "source_date_semantics": "repository_submission",
+            "source_dates": source_dates(
+                published=e.findtext("a:published", "", ns),
+                updated=e.findtext("a:updated", "", ns),
+            ),
+        })
     return out
+
+
+def source_record(item: dict) -> dict:
+    return {
+        "source_system": item.get("source_system"),
+        "url": item.get("url"),
+        "doi": item.get("doi"),
+        "arxiv_id": item.get("arxiv_id"),
+        "date_semantics": item.get("source_date_semantics", "unknown"),
+        "dates": dict(item.get("source_dates") or {}),
+    }
+
+
+def freshness_evidence(records: list[dict]) -> tuple[str, str, list[str]]:
+    published = []
+    semantics = set()
+    for record in records:
+        semantics.add(record.get("date_semantics") or "unknown")
+        value = date_only((record.get("dates") or {}).get("published"))
+        if value:
+            published.append(value)
+    if not published:
+        return "", "unknown", []
+    unique = sorted(set(published))
+    earliest = unique[0]
+    if len(unique) == 1 and semantics <= {"registered_publication_metadata"}:
+        return earliest, "verified", unique
+    if len(unique) == 1:
+        return earliest, "source_consistent", unique
+    try:
+        dates = [dt.date.fromisoformat(v) for v in unique]
+        spread = (max(dates) - min(dates)).days
+    except ValueError:
+        spread = 9999
+    if spread > 31:
+        return earliest, "conflicting", unique
+    return earliest, "source_consistent", unique
+
+
+def apply_freshness(item: dict, records: list[dict]) -> dict:
+    earliest, status, dates = freshness_evidence(records)
+    item["source_records"] = records
+    item["earliest_known_publication_at"] = earliest or None
+    item["freshness_status"] = status
+    item["freshness_dates"] = dates
+    if status == "conflicting" and item.get("state") == "candidate":
+        item["state"] = "needs_judgment"
+        item["freshness_requires_judgment"] = True
+    else:
+        item["freshness_requires_judgment"] = False
+    return item
 
 
 def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str], existing_titles: list[str]) -> dict:
@@ -166,7 +275,7 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
     qterms = [t for t in norm(query).split() if len(t) > 3]
     qmatches = sorted({t for t in qterms if phrase_in_text(text, t)})
     near_existing = any(title and (title == t or (len(title) > 28 and (title in t or t in title))) for t in existing_titles)
-    exact_existing = canonical_key(item) in existing_keys or ("title:" + title) in existing_keys
+    exact_existing = bool(identity_keys(item) & existing_keys)
     points = min(4, len(signals)) + min(2, len(qmatches)) + min(2, len(anchors)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
     if exclusions:
         points -= 4
@@ -196,41 +305,82 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
     return item
 
 
+def should_merge(a: dict, b: dict) -> bool:
+    if identity_keys(a) & identity_keys(b):
+        return True
+    ta, tb = norm(a.get("title", "")), norm(b.get("title", ""))
+    return bool(ta and tb and len(ta) >= 20 and ta == tb)
+
+
+def merge_group(group: list[dict]) -> dict:
+    best = max(group, key=lambda x: x.get("score", 0))
+    out = dict(best)
+    records = [source_record(x) for x in group]
+    out["also_seen_in"] = sorted({x.get("source_system") for x in group if x.get("source_system")} - {out.get("source_system")})
+    out["alternate_identifiers"] = sorted({k for x in group for k in identity_keys(x)} - identity_keys(out))
+    out["matched_queries"] = sorted({x.get("matched_query") for x in group if x.get("matched_query")})
+    out["theme_matches"] = sorted({x.get("theme") for x in group if x.get("theme")})
+    return apply_freshness(out, records)
+
+
 def dedupe(items: list[dict]) -> list[dict]:
-    merged = {}
-    for x in items:
-        k = dedupe_key(x)
-        if k not in merged or x["score"] > merged[k]["score"]:
-            old = merged.get(k)
-            prior_sources = old.get("also_seen_in", []) if old else []
-            prior_ids = old.get("alternate_identifiers", []) if old else []
-            if old:
-                prior_sources.append(old["source_system"])
-                prior_ids.append(canonical_key(old))
-            x["also_seen_in"] = sorted(set(prior_sources))
-            x["alternate_identifiers"] = sorted(set(prior_ids))
-            merged[k] = x
-        else:
-            merged[k].setdefault("also_seen_in", []).append(x["source_system"])
-            merged[k]["also_seen_in"] = sorted(set(merged[k]["also_seen_in"]))
-            merged[k].setdefault("alternate_identifiers", []).append(canonical_key(x))
-            merged[k]["alternate_identifiers"] = sorted(set(merged[k]["alternate_identifiers"]))
-    return sorted(merged.values(), key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, -x["score"], x["title"]))
+    groups: list[list[dict]] = []
+    for item in items:
+        matches = [i for i, group in enumerate(groups) if any(should_merge(item, member) for member in group)]
+        if not matches:
+            groups.append([item])
+            continue
+        target = matches[0]
+        groups[target].append(item)
+        for idx in reversed(matches[1:]):
+            groups[target].extend(groups.pop(idx))
+    merged = [merge_group(group) for group in groups]
+    return sorted(merged, key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, -x["score"], x["title"]))
+
+
+def report_date_line(x: dict) -> str:
+    status = x.get("freshness_status", "unknown")
+    earliest = x.get("earliest_known_publication_at")
+    records = x.get("source_records") or []
+    if status == "verified" and earliest:
+        return f"- Published: {earliest}"
+    visible = []
+    for record in records:
+        source_date = (record.get("dates") or {}).get("published")
+        if source_date:
+            visible.append(f"{record.get('source_system')}={source_date} ({record.get('date_semantics')})")
+    return f"- Source date: {'; '.join(visible) if visible else 'unknown'}"
 
 
 def render(items: list[dict], run_date: str) -> str:
     states = ["candidate", "needs_judgment", "deferred", "represented"]
     counts = {s: sum(1 for x in items if x["state"] == s) for s in states}
-    lines = [f"# Paper Radar — {run_date}", "", "This report is a discovery and editorial-triage surface. Scores are diagnostic and do not authorize queue admission.", "", "## Summary", "", f"- Candidate: {counts['candidate']}", f"- Needs judgment: {counts['needs_judgment']}", f"- Deferred: {counts['deferred']}", f"- Already represented or queued: {counts['represented']}", "", "## Candidate papers", ""]
+    lines = [
+        f"# Paper Radar — {run_date}", "",
+        "This report is a discovery and editorial-triage surface. Scores are diagnostic and do not authorize queue admission.",
+        "Freshness is provenance-sensitive: `Published` is used only for verified publication semantics; otherwise source-specific dates are shown.", "",
+        "## Summary", "",
+        f"- Candidate: {counts['candidate']}",
+        f"- Needs judgment: {counts['needs_judgment']}",
+        f"- Deferred: {counts['deferred']}",
+        f"- Already represented or queued: {counts['represented']}", "",
+        "## Candidate papers", "",
+    ]
     selected = [x for x in items if x["state"] in {"candidate", "needs_judgment"} and not x["already_represented"]]
     if not selected:
         lines.append("No papers crossed the candidate/judgment thresholds in this run.")
     for x in selected:
         lines += [
             f"### {x['title']}", "",
-            f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`",
-            f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}",
-            f"- URL: {x.get('url','')}", f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}",
+            f"- State: `{x['state']}`",
+            f"- Score: {x['score']}",
+            f"- Theme: `{x['theme']}`",
+            f"- Source: {x['source_system']}",
+            report_date_line(x),
+            f"- Freshness status: `{x.get('freshness_status', 'unknown')}`",
+            f"- Earliest known publication/public-release date: {x.get('earliest_known_publication_at') or 'unknown'}",
+            f"- URL: {x.get('url','')}",
+            f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}",
             f"- Material governance signals: {', '.join(x['material_governance_signals']) or 'none'}",
             f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}",
             f"- Trigger query: `{x['matched_query']}`", "",
@@ -239,8 +389,9 @@ def render(items: list[dict], run_date: str) -> str:
 
 
 def accept_record(item: dict, start: str, today_s: str) -> bool:
-    published = (item.get("published") or "")[:10]
-    return not published or start <= published <= today_s
+    dates = item.get("source_dates") or {}
+    source_date = date_only(dates.get("published") or dates.get("indexed") or dates.get("observed"))
+    return not source_date or start <= source_date <= today_s
 
 
 def main() -> int:
@@ -250,7 +401,8 @@ def main() -> int:
     ap.add_argument("--report", default=None)
     args = ap.parse_args()
     cfg = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
-    today = dt.date.today()
+    now = dt.datetime.now(dt.timezone.utc)
+    today = now.date()
     today_s = today.isoformat()
     start = (today - dt.timedelta(days=cfg["lookback_days"])).isoformat()
 
@@ -276,6 +428,7 @@ def main() -> int:
             name, theme, query = futures[future]
             try:
                 for item in future.result():
+                    item["discovered_at"] = now.isoformat()
                     if accept_record(item, start, today_s):
                         found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
             except Exception as e:
@@ -284,6 +437,7 @@ def main() -> int:
     for name, theme, query, fn in crossref_jobs:
         try:
             for item in fn():
+                item["discovered_at"] = now.isoformat()
                 if accept_record(item, start, today_s):
                     found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
         except Exception as e:
@@ -291,7 +445,13 @@ def main() -> int:
         time.sleep(0.6)
 
     items = dedupe(found)
-    payload = {"schema_version": 1, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "lookback_start": start, "source_errors": errors, "items": items}
+    payload = {
+        "schema_version": 2,
+        "generated_at": now.isoformat(),
+        "lookback_start": start,
+        "source_errors": errors,
+        "items": items,
+    }
     out = ROOT / args.output
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
