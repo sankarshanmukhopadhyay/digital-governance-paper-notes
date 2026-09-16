@@ -9,6 +9,7 @@ import html
 import json
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -47,6 +48,14 @@ def canonical_key(item: dict) -> str:
     if item.get("arxiv_id"):
         return "arxiv:" + item["arxiv_id"].lower()
     return "title:" + norm(item.get("title", ""))
+
+
+def dedupe_key(item: dict) -> str:
+    """Collapse exact title matches even when repositories assign version-specific DOIs."""
+    title = norm(item.get("title", ""))
+    if len(title) >= 20:
+        return "title:" + title
+    return canonical_key(item)
 
 
 def extract_refs(text: str, title: str | None = None) -> tuple[set[str], list[str]]:
@@ -146,16 +155,18 @@ def arxiv(query: str, rows: int) -> list[dict]:
 
 
 def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str], existing_titles: list[str]) -> dict:
+    title = norm(item.get("title", ""))
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
     theme_cfg = next(t for t in cfg["themes"] if t["name"] == theme)
     anchors = [a for a in theme_cfg.get("anchors", []) if phrase_in_text(text, a)]
     signals = [s for s in cfg["governance_signals"] if phrase_in_text(text, s)]
+    material = [s for s in cfg.get("material_governance_signals", []) if phrase_in_text(text, s)]
+    title_signals = [s for s in cfg.get("candidate_title_signals", []) if phrase_in_text(title, s)]
     exclusions = [s for s in cfg["exclusion_signals"] if phrase_in_text(text, s)]
     qterms = [t for t in norm(query).split() if len(t) > 3]
     qmatches = sorted({t for t in qterms if phrase_in_text(text, t)})
-    title = norm(item.get("title", ""))
     near_existing = any(title and (title == t or (len(title) > 28 and (title in t or t in title))) for t in existing_titles)
-    exact_existing = canonical_key(item) in existing_keys
+    exact_existing = canonical_key(item) in existing_keys or ("title:" + title) in existing_keys
     points = min(4, len(signals)) + min(2, len(qmatches)) + min(2, len(anchors)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
     if exclusions:
         points -= 4
@@ -163,27 +174,47 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
         state = "represented"
     elif not anchors:
         state = "deferred"
-    elif points >= cfg["candidate_threshold"]:
+    elif points >= cfg["candidate_threshold"] and len(material) >= 2 and title_signals:
         state = "candidate"
-    elif points >= cfg["judgment_threshold"]:
+    elif points >= cfg["judgment_threshold"] and (material or title_signals):
         state = "needs_judgment"
     else:
         state = "deferred"
-    item.update({"theme": theme, "matched_query": query, "theme_anchors": anchors, "governance_signals": signals, "query_matches": qmatches, "exclusion_signals": exclusions, "score": points, "state": state, "already_represented": bool(exact_existing or near_existing)})
+    item.update({
+        "theme": theme,
+        "matched_query": query,
+        "theme_anchors": anchors,
+        "governance_signals": signals,
+        "material_governance_signals": material,
+        "candidate_title_signals": title_signals,
+        "query_matches": qmatches,
+        "exclusion_signals": exclusions,
+        "score": points,
+        "state": state,
+        "already_represented": bool(exact_existing or near_existing),
+    })
     return item
 
 
 def dedupe(items: list[dict]) -> list[dict]:
     merged = {}
     for x in items:
-        k = canonical_key(x)
+        k = dedupe_key(x)
         if k not in merged or x["score"] > merged[k]["score"]:
-            previous_sources = merged.get(k, {}).get("also_seen_in", [])
-            x["also_seen_in"] = sorted(set(previous_sources + ([merged[k]["source_system"]] if k in merged else [])))
+            old = merged.get(k)
+            prior_sources = old.get("also_seen_in", []) if old else []
+            prior_ids = old.get("alternate_identifiers", []) if old else []
+            if old:
+                prior_sources.append(old["source_system"])
+                prior_ids.append(canonical_key(old))
+            x["also_seen_in"] = sorted(set(prior_sources))
+            x["alternate_identifiers"] = sorted(set(prior_ids))
             merged[k] = x
         else:
             merged[k].setdefault("also_seen_in", []).append(x["source_system"])
             merged[k]["also_seen_in"] = sorted(set(merged[k]["also_seen_in"]))
+            merged[k].setdefault("alternate_identifiers", []).append(canonical_key(x))
+            merged[k]["alternate_identifiers"] = sorted(set(merged[k]["alternate_identifiers"]))
     return sorted(merged.values(), key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, -x["score"], x["title"]))
 
 
@@ -195,8 +226,21 @@ def render(items: list[dict], run_date: str) -> str:
     if not selected:
         lines.append("No papers crossed the candidate/judgment thresholds in this run.")
     for x in selected:
-        lines += [f"### {x['title']}", "", f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`", f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}", f"- URL: {x.get('url','')}", f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}", f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}", f"- Trigger query: `{x['matched_query']}`", ""]
+        lines += [
+            f"### {x['title']}", "",
+            f"- State: `{x['state']}`", f"- Score: {x['score']}", f"- Theme: `{x['theme']}`",
+            f"- Source: {x['source_system']}", f"- Published: {x.get('published','') or 'unknown'}",
+            f"- URL: {x.get('url','')}", f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}",
+            f"- Material governance signals: {', '.join(x['material_governance_signals']) or 'none'}",
+            f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}",
+            f"- Trigger query: `{x['matched_query']}`", "",
+        ]
     return "\n".join(lines) + "\n"
+
+
+def accept_record(item: dict, start: str, today_s: str) -> bool:
+    published = (item.get("published") or "")[:10]
+    return not published or start <= published <= today_s
 
 
 def main() -> int:
@@ -215,28 +259,36 @@ def main() -> int:
     existing_keys |= issue_keys
     existing_titles += issue_titles
 
-    jobs = []
+    parallel_jobs, crossref_jobs = [], []
     for theme in cfg["themes"]:
         for query in theme["queries"]:
-            jobs += [
-                ("crossref", theme["name"], query, lambda q=query: crossref(q, start, cfg["max_per_source"])),
+            parallel_jobs += [
                 ("openalex", theme["name"], query, lambda q=query: openalex(q, start, cfg["max_per_source"])),
                 ("arxiv", theme["name"], query, lambda q=query: arxiv(q, min(20, cfg["max_per_source"]))),
             ]
+            crossref_jobs.append(("crossref", theme["name"], query, lambda q=query: crossref(q, start, cfg["max_per_source"])))
 
     found, errors = [], [{"source": "github-issues", "error": e} for e in issue_errors]
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(fn): (name, theme, query) for name, theme, query, fn in jobs}
+        futures = {pool.submit(fn): (name, theme, query) for name, theme, query, fn in parallel_jobs}
         for future in concurrent.futures.as_completed(futures):
             name, theme, query = futures[future]
             try:
                 for item in future.result():
-                    published = (item.get("published") or "")[:10]
-                    if published and (published < start or published > today_s):
-                        continue
-                    found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
+                    if accept_record(item, start, today_s):
+                        found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
             except Exception as e:
                 errors.append({"source": name, "theme": theme, "query": query, "error": str(e)})
+
+    for name, theme, query, fn in crossref_jobs:
+        try:
+            for item in fn():
+                if accept_record(item, start, today_s):
+                    found.append(score(item, cfg, theme, query, existing_keys, existing_titles))
+        except Exception as e:
+            errors.append({"source": name, "theme": theme, "query": query, "error": str(e)})
+        time.sleep(0.6)
 
     items = dedupe(found)
     payload = {"schema_version": 1, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "lookback_start": start, "source_errors": errors, "items": items}
