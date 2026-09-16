@@ -1,0 +1,23 @@
+version: 1
+findings:
+  - id: governance-requires-execution
+    title: Governance becomes consequential when rules can alter execution
+    claim: Principles, taxonomies and assurance evidence do not themselves govern a system; governance becomes operational when evidence is connected to decision authority, intervention, enforcement and residual-risk ownership.
+    rationale: Reviews across AI risk tooling and agent governance repeatedly separate descriptive or evaluative capability from the institutional machinery that can permit, constrain, stop or remedy action.
+    source_reviews:
+      - reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+  - id: composition-is-governed-object
+    title: Composition can be part of the governed object
+    claim: Assurance of components in isolation is incomplete when interaction topology, message ordering, retained context or delegated relationships can change system behaviour.
+    rationale: The archive contains both experimental evidence that interaction changes observed behaviour and governance analysis showing that delegated agents exercise authority through relationships rather than as isolated models.
+    source_reviews:
+      - reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+  - id: measurement-is-not-legitimacy
+    title: Measurement does not confer legitimacy
+    claim: Provenance, representational similarity and other measurable properties can establish facts about a system without establishing who is entitled to decide, whose values should prevail or whether an action is legitimate.
+    rationale: Recent reviews distinguish empirical evidence about represented populations and credential disclosure from the institutional authority needed to justify consequential choices.
+    source_reviews:
+      - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
+      - reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md

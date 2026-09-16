@@ -1,0 +1,22 @@
+version: 1
+gaps:
+  - id: enforcement-chain
+    title: Where does evidence become an enforceable decision?
+    gap: Many governance approaches can classify risk, evaluate behaviour or state duties without specifying the authority, thresholds, intervention path and residual-risk owner that turn evidence into a binding operational consequence.
+    why_it_matters: Without this control chain, governance can remain advisory even when the underlying system acts at machine speed.
+    source_reviews:
+      - reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+  - id: revocation-redress
+    title: How are delegated powers revoked and contested after deployment?
+    gap: Agent governance proposals increasingly define duties and delegated authority, but operational revocation, evidence preservation, correction and redress remain less specified than initial authorization.
+    why_it_matters: A governance system that can grant authority but cannot reliably withdraw or contest it creates persistent decision rights without a complete lifecycle.
+    source_reviews:
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+      - reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md
+  - id: legitimate-reference-population
+    title: Who legitimately defines the reference population for alignment?
+    gap: More granular measurement can reveal distributional differences but does not supply a legitimate rule for selecting populations, demographic categories, aggregation weights or intervention thresholds.
+    why_it_matters: Treating an empirical alignment target as self-justifying embeds political choices inside measurement and tuning infrastructure.
+    source_reviews:
+      - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
