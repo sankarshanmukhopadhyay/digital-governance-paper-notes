@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "repository": "sankarshanmukhopadhyay/digital-governance-paper-notes",
   "lookback_days": 14,
   "max_per_source": 40,
   "candidate_threshold": 7,
