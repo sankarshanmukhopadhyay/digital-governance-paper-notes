@@ -55,7 +55,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (22)
+- **AI Governance** (23)
 - **AI Safety & Evaluation** (11)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
 - **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 - **2026-09-16** — [Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations](reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md) — *arXiv*
 - **2026-09-08** — [AI Agents Push Humans Out of the Loop](reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md) — *arXiv*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-07** — [Authority is a Continuous System](reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md) — *Zenodo*
 - **2026-09-07** — [Announcing the 1.0 trust framework](reviews/2026/2026-09-07__uk-dvs-trust-framework-1-0__v1.md) — *Enabling digital identity, Office for Digital Identities and Attributes*
 - **2026-09-04** — [Designing Agent IDs](reviews/2026/2026-09-04__designing-agent-ids__v1.md) — *Singapore AI Safety Hub (SASH) policy memo*
-- **2026-09-03** — [Position: Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!](reviews/2026/2026-09-03__stop-anthropomorphizing-intermediate-tokens__v1.md) — *Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), PMLR 306*
 
 <!-- RECENT_REVIEWS:END -->
 
