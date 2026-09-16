@@ -1,10 +1,10 @@
 {
   "version": 1,
   "repository": "sankarshanmukhopadhyay/digital-governance-paper-notes",
-  "lookback_days": 14,
+  "lookback_days": 8,
   "max_per_source": 40,
   "candidate_threshold": 9,
-  "judgment_threshold": 7,
+  "judgment_threshold": 9,
   "themes": [
     {
       "name": "ai-governance",
