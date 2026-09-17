@@ -64,7 +64,7 @@ python scripts/knowledge_lint.py
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (3)
 - **Cybersecurity & Resilience** (1)
-- **Law, Regulation & Liability** (9)
+- **Law, Regulation & Liability** (10)
 - **Platform Governance & Internet Governance** (2)
 - **Socio-technical Systems** (9)
 - **Inclusion, Rights & Development** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-17** — [Multi-stakeholder transparency evaluation and dynamic accountability mechanisms for AI-assisted criminal sentencing](reviews/2026/2026-09-17__multi-stakeholder-transparency-dynamic-accountability-ai-sentencing__v1.md) — *Scientific Reports (2026)*
 - **2026-09-16** — [Very Justified Envy](reviews/2026/2026-09-16__very-justified-envy__v1.md) — *arXiv*
 - **2026-09-16** — [Verifiable Social Reasoning for LLM Assistants](reviews/2026/2026-09-16__verifiable-social-reasoning__v1.md) — *arXiv*
 - **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-16** — [Never Stop Thinking: Continuous-Time Language Agents](reviews/2026/2026-09-16__never-stop-thinking__v1.md) — *arXiv*
 - **2026-09-16** — [Interactive Memory Learning for Long-Term Conversations](reviews/2026/2026-09-16__interactive-memory-learning__v1.md) — *arXiv*
 - **2026-09-16** — [Interaction Creates Dynamical AI Behavior Absent in Isolation](reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md) — *arXiv*
-- **2026-09-16** — [Designing Loyalty: AI Agents and Conflicts of Interest](reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md) — *Stanford Institute for Human-Centered Artificial Intelligence (HAI)*
 
 <!-- RECENT_REVIEWS:END -->
 
