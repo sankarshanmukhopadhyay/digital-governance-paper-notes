@@ -1,0 +1,58 @@
+name: Paper review issue lifecycle
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  apply-state:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reconcile lifecycle label and issue state
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const applied = context.payload.label.name;
+            const lifecycle = [
+              "radar:candidate",
+              "radar:needs-judgment",
+              "review:backlog",
+              "review:in-progress",
+              "review:published",
+              "disposition:deferred",
+              "disposition:declined",
+            ];
+            if (!lifecycle.includes(applied)) {
+              return;
+            }
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue_number = issue.number;
+            const current = issue.labels.map(label => typeof label === "string" ? label : label.name);
+            const keep = current.filter(label => !lifecycle.includes(label) || label === applied);
+
+            await github.rest.issues.setLabels({ owner, repo, issue_number, labels: keep });
+
+            if (applied === "disposition:deferred" || applied === "disposition:declined") {
+              const wording = applied === "disposition:deferred"
+                ? "Deferred from the current review backlog. Paper Radar may resurface it after the configured reconsideration window if it again qualifies for editorial triage."
+                : "Declined for the current archive. This records an editorial disposition, not a judgment on the quality of the underlying work.";
+              await github.rest.issues.createComment({ owner, repo, issue_number, body: wording });
+              await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "not_planned" });
+              return;
+            }
+
+            if (applied === "review:published") {
+              await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "completed" });
+              return;
+            }
+
+            if (issue.state === "closed") {
+              await github.rest.issues.update({ owner, repo, issue_number, state: "open" });
+            }

@@ -5,6 +5,7 @@ on:
     paths:
       - "discovery/**"
       - "scripts/paper_radar.py"
+      - "scripts/paper_radar_intake.py"
       - "tests/test_paper_radar.py"
       - ".github/workflows/paper-radar.yml"
   workflow_dispatch:
@@ -13,6 +14,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   radar:
@@ -26,6 +28,14 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_paper_radar.py'
       - name: Run Paper Radar
         run: python scripts/paper_radar.py
+      - name: Validate issue intake projection
+        if: github.event_name == 'pull_request'
+        run: python scripts/paper_radar_intake.py --dry-run
+      - name: Create or resurface editorial intake issues
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/paper_radar_intake.py
       - name: Publish report to job summary
         if: always()
         shell: bash
