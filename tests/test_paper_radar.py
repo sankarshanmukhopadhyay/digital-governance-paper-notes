@@ -7,6 +7,10 @@ spec = importlib.util.spec_from_file_location("paper_radar", ROOT / "scripts" / 
 radar = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(radar)
 
+intake_spec = importlib.util.spec_from_file_location("paper_radar_intake", ROOT / "scripts" / "paper_radar_intake.py")
+intake = importlib.util.module_from_spec(intake_spec)
+intake_spec.loader.exec_module(intake)
+
 CFG = {
     "candidate_threshold": 9,
     "judgment_threshold": 7,
@@ -77,6 +81,23 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(out["earliest_known_publication_at"], "2026-04-03")
         self.assertEqual(out["state"], "needs_judgment")
         self.assertTrue(out["freshness_requires_judgment"])
+
+    def test_issue_intake_only_selects_candidate_and_judgment(self):
+        payload = {"items": [
+            {"title": "Candidate", "state": "candidate", "already_represented": False},
+            {"title": "Judgment", "state": "needs_judgment", "already_represented": False},
+            {"title": "Deferred", "state": "deferred", "already_represented": False},
+            {"title": "Known", "state": "candidate", "already_represented": True},
+        ]}
+        self.assertEqual(
+            [item["title"] for item in intake.select_items(payload)],
+            ["Candidate", "Judgment"],
+        )
+
+    def test_issue_intake_maps_radar_labels(self):
+        cfg = {"issue_intake": {"candidate_label": "radar:candidate", "judgment_label": "radar:needs-judgment"}}
+        self.assertEqual(intake.intake_label({"state": "candidate"}, cfg), "radar:candidate")
+        self.assertEqual(intake.intake_label({"state": "needs_judgment"}, cfg), "radar:needs-judgment")
 
     def test_closed_declined_issue_is_suppressed(self):
         issue = {"state": "closed", "labels": [{"name": "disposition:declined"}], "closed_at": "2026-01-01T00:00:00Z"}
