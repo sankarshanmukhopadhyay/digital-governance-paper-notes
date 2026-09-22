@@ -100,19 +100,46 @@ def issue_paper_title(issue_title: str) -> str:
     return issue_title
 
 
-def load_existing_issues(repo: str) -> tuple[set[str], list[str], list[str]]:
+def issue_label_names(issue: dict) -> set[str]:
+    return {label.get("name", "") for label in issue.get("labels", []) if isinstance(label, dict)}
+
+
+def parse_issue_date(value: str | None) -> dt.date | None:
+    if not value:
+        return None
+    try:
+        return dt.datetime.fromisoformat(value.replace("Z", "+00:00")).date()
+    except ValueError:
+        return None
+
+
+def issue_should_suppress(issue: dict, cfg: dict, today: dt.date) -> bool:
+    """Return whether an existing issue should keep a paper out of fresh Radar intake."""
+    labels = issue_label_names(issue)
+    if issue.get("state") == "open":
+        return True
+    if "review:published" in labels or "disposition:declined" in labels:
+        return True
+    if "disposition:deferred" in labels:
+        days = int((cfg.get("issue_intake") or {}).get("deferred_reconsider_days", 90))
+        anchor = parse_issue_date(issue.get("closed_at") or issue.get("updated_at"))
+        return True if anchor is None else (today - anchor).days < days
+    return False
+
+
+def load_existing_issues(repo: str, cfg: dict, today: dt.date) -> tuple[set[str], list[str], list[str]]:
     keys, titles, errors = set(), [], []
     if not repo:
         return keys, titles, errors
     try:
         page = 1
-        while page <= 3:
-            url = f"https://api.github.com/repos/{repo}/issues?state=open&per_page=100&page={page}"
+        while page <= 5:
+            url = f"https://api.github.com/repos/{repo}/issues?state=all&per_page=100&page={page}"
             data = fetch_json(url)
             if not isinstance(data, list) or not data:
                 break
             for issue in data:
-                if issue.get("pull_request"):
+                if issue.get("pull_request") or not issue_should_suppress(issue, cfg, today):
                     continue
                 k, t = extract_refs(issue.get("body") or "", issue_paper_title(issue.get("title") or ""))
                 keys |= k
@@ -538,7 +565,7 @@ def main() -> int:
     start = (today - dt.timedelta(days=cfg["lookback_days"])).isoformat()
 
     existing_keys, existing_titles = load_existing_reviews()
-    issue_keys, issue_titles, issue_errors = load_existing_issues(cfg.get("repository", ""))
+    issue_keys, issue_titles, issue_errors = load_existing_issues(cfg.get("repository", ""), cfg, today)
     existing_keys |= issue_keys
     existing_titles += issue_titles
 
