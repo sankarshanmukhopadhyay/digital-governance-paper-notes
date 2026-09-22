@@ -79,6 +79,13 @@ def same_issue_item(issue: dict, item: dict) -> bool:
     return bool(a and b and (a == b or (min(len(a), len(b)) >= 28 and (a in b or b in a))))
 
 
+def select_items(payload: dict) -> list[dict]:
+    return [
+        item for item in payload.get("items", [])
+        if item.get("state") in {"candidate", "needs_judgment"} and not item.get("already_represented")
+    ]
+
+
 def intake_label(item: dict, cfg: dict) -> str:
     intake = cfg.get("issue_intake") or {}
     if item.get("state") == "candidate":
@@ -189,10 +196,7 @@ def main() -> int:
         return 0
 
     payload = json.loads((ROOT / args.ledger).read_text(encoding="utf-8"))
-    selected = [
-        item for item in payload.get("items", [])
-        if item.get("state") in {"candidate", "needs_judgment"} and not item.get("already_represented")
-    ]
+    selected = select_items(payload)
     if args.dry_run:
         for item in selected:
             print(f"{intake_label(item, cfg)}\t{item.get('title')}")
