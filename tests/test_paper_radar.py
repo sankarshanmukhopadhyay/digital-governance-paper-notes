@@ -16,6 +16,7 @@ CFG = {
     "candidate_title_signals": ["governance", "authority", "redress", "accountability"],
     "exclusion_signals": ["protein folding"],
     "source_weights": {"arxiv": 1, "crossref": 1, "openalex": 1},
+    "issue_intake": {"deferred_reconsider_days": 90},
 }
 
 
@@ -76,6 +77,22 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(out["earliest_known_publication_at"], "2026-04-03")
         self.assertEqual(out["state"], "needs_judgment")
         self.assertTrue(out["freshness_requires_judgment"])
+
+    def test_closed_declined_issue_is_suppressed(self):
+        issue = {"state": "closed", "labels": [{"name": "disposition:declined"}], "closed_at": "2026-01-01T00:00:00Z"}
+        self.assertTrue(radar.issue_should_suppress(issue, CFG, radar.dt.date(2026, 9, 22)))
+
+    def test_recent_deferred_issue_is_suppressed(self):
+        issue = {"state": "closed", "labels": [{"name": "disposition:deferred"}], "closed_at": "2026-09-01T00:00:00Z"}
+        self.assertTrue(radar.issue_should_suppress(issue, CFG, radar.dt.date(2026, 9, 22)))
+
+    def test_old_deferred_issue_can_resurface(self):
+        issue = {"state": "closed", "labels": [{"name": "disposition:deferred"}], "closed_at": "2026-05-01T00:00:00Z"}
+        self.assertFalse(radar.issue_should_suppress(issue, CFG, radar.dt.date(2026, 9, 22)))
+
+    def test_closed_nonterminal_issue_does_not_suppress(self):
+        issue = {"state": "closed", "labels": [], "closed_at": "2026-09-01T00:00:00Z"}
+        self.assertFalse(radar.issue_should_suppress(issue, CFG, radar.dt.date(2026, 9, 22)))
 
     def test_repository_date_is_not_rendered_as_verified_published(self):
         item = {"freshness_status": "source_consistent", "earliest_known_publication_at": "2026-04-03", "source_records": [{"source_system": "arxiv", "date_semantics": "repository_submission", "dates": {"published": "2026-04-03"}}]}
