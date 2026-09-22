@@ -10,12 +10,13 @@ It is not a publication authority. A `candidate` state means that the paper cros
 2. Normalise DOI, arXiv identifiers, titles and URLs.
 3. Deduplicate records observed through multiple sources, including records that share a DOI while using different title renderings.
 4. Reconcile source-specific freshness evidence before making any publication-date claim.
-5. Compare canonical identifiers and titles with published reviews and open review issues.
+5. Compare canonical identifiers and titles with published reviews and issue lifecycle history, including closed terminal dispositions.
 6. Require at least one domain-specific theme anchor before a record can become a candidate or judgment case.
 7. Record theme anchors, query matches, governance signals and exclusions.
-8. Classify each result as `candidate`, `needs_judgment`, `deferred`, or `represented` when already reviewed or queued.
-9. Write `data/paper-candidates.json` and a dated Markdown report under `reports/radar/`.
-10. Require editorial judgment before creating a review issue.
+8. Classify each result as `candidate`, `needs_judgment`, `deferred`, or `represented` when already reviewed or suppressed by issue state.
+9. Write `data/paper-candidates.json` and a dated Markdown report under `reports/radar/` inside the workflow run only.
+10. Create or resurface GitHub intake issues only for `candidate` and `needs_judgment` records.
+11. Require human editorial action to move an intake issue into `review:backlog` or a terminal disposition.
 
 ## Configuration
 
@@ -30,7 +31,9 @@ The score is diagnostic. It exists to explain why a record was surfaced and to r
 - `deferred`: discovered but below the current triage threshold or missing a required domain anchor.
 - `represented`: already present in the review corpus or current open review queue.
 
-Queue lifecycle states such as `queued`, `reviewing`, and `published` belong to the editorial workflow after admission. Paper Radar does not move a candidate into that lifecycle on its own.
+Radar states and editorial issue states are deliberately separate. Machine-level `deferred` records do not create issues. A Radar shortlist becomes an issue labelled `radar:candidate` or `radar:needs-judgment`. Human editorial action may then move it to `review:backlog`, `review:in-progress`, `disposition:deferred`, or `disposition:declined`. `review:published` is terminal.
+
+Only one lifecycle label should be active at a time. The issue-lifecycle workflow removes superseded lifecycle labels automatically. `disposition:deferred` and `disposition:declined` close an issue as not planned; `review:published` closes it as completed. A deferred issue is suppressed for 90 days by default and may then be resurfaced by Radar into the same issue.
 
 ## Freshness provenance
 
@@ -51,7 +54,9 @@ python -m unittest discover -s tests -p 'test_paper_radar.py'
 python scripts/paper_radar.py
 ```
 
-The `Paper Radar` GitHub Actions workflow runs weekly on Monday and can also be run manually. Its report is rendered in the Actions job summary and the ledger/report are retained as workflow artifacts. Generated radar outputs are operational evidence, not canonical editorial content.
+The `Paper Radar` GitHub Actions workflow runs weekly on Monday and can also be run manually. Its report is rendered in the Actions job summary and the ledger/report are retained as workflow artifacts. They are not committed to `main`, so the repository does not become an archive of machine-discovered or machine-deferred papers.
+
+On scheduled or manually dispatched runs, the workflow converts only `candidate` and `needs_judgment` records into GitHub intake issues. Pull-request runs validate the same projection in dry-run mode and do not create issues.
 
 ## Admission to the review queue
 
@@ -63,13 +68,15 @@ Before opening a review issue, inspect the paper itself or authoritative metadat
 - Is there enough source material to support the full review operating procedure?
 - Is its apparent freshness supported by the provenance record, or does it require temporal reconciliation first?
 
-If admitted, create the normal paper-review issue with title, authors, stable source URL, discovery provenance, proposed domain, and an explicit admission rationale. From that point the canonical paper-review operating procedure applies.
+Admission is represented by changing the issue label to `review:backlog`. That transition removes the Radar triage label and establishes a human editorial decision that the paper belongs in the review programme. `review:in-progress` marks active work. The resulting review PR should close the issue in the normal issue/PR flow; `review:published` can also be applied as the terminal lifecycle label.
+
+If the paper should not enter the backlog, use `disposition:deferred` or `disposition:declined`. These states close the issue so triage does not accumulate as a perpetually open queue.
 
 ## Trustworthiness rules
 
 - A source failure is retained in `source_errors`; a total source failure causes the run to fail rather than reporting an empty clean result.
 - Future-dated metadata is not admitted into the current radar window.
-- Existing or already-queued papers are not surfaced as fresh candidates when canonical DOI/arXiv identifiers or sufficiently close titles match.
+- Existing reviews, active intake issues, admitted review issues, published issues, declined issues, and recently deferred issues suppress duplicate fresh intake when canonical DOI/arXiv identifiers or sufficiently close titles match.
 - Source-specific publication, deposit, index, update, and observed dates are retained where available rather than collapsed into one field.
 - A recent source deposit is not silently described as a recent publication.
 - Materially conflicting freshness evidence requires judgment before admission.
