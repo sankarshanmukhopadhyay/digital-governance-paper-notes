@@ -1,31 +1,30 @@
 ---
 title: "Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability"
 source: "https://doi.org/10.61643/c79060"
-publication: "The Pinnacle: A Journal by Scholar-Practitioners"
+publication: "The Pinnacle: A Journal by Scholar-Practitioners, 4(2)"
 date_read: "2026-09-24"
 primary_domain: "AI Governance"
-tags: ["AI governance", "accountability", "cyber risk", "AI risk management", "regulatory frameworks"]
-key_insight: "When AI systems become operational cyber assets, accountability has to attach to the human and institutional chain that authorizes, deploys, monitors, and responds to their actions, not to the model as an abstract actor."
+tags: ["AI governance", "accountability", "cyber risk", "AI risk management", "agentic systems"]
+key_insight: "AI accountability becomes executable only when each consequential decision has a named owner and each control function has preauthorized authority to intervene before failure."
 published: "2026-09-17"
 doi: "10.61643/c79060"
-peer_review_status: "peer-reviewed"
 paper_type: "research-article"
 review_status: "current"
-governance_facets: ["accountability", "authority", "institutional-capacity", "dependency"]
+governance_facets: ["accountability", "authority", "enforcement", "institutional-capacity", "revocation"]
 ---
 
 # Paper Review
 
 ## Review
 
-This review is necessarily source-limited: the issue-supplied PDF is present in GitHub, but its attachment bytes were not retrievable through the available repository interface, so the assessment below is grounded in verified publication metadata and the paper's stated framing rather than a section-by-section reading of the full text.
+Montgomery and Copeland treat AI failure as an authority-design problem rather than merely a model-risk problem. Their central distinction is between system ownership, responsibility for maintaining an AI capability, and decision ownership, accountability for interpreting, acting on, challenging, containing, or stopping its outputs. The paper argues that enterprise AI governance should remain cross-functional while every consequential decision retains one accountable owner. It identifies three recurring failures: capability without authority, inclusion without operational integration, and detection without execution.
 
-The paper's title places a consequential governance problem at the intersection of AI governance and cybersecurity: failure is no longer cleanly separable into model risk, software risk, security incident, or organizational misconduct once AI systems are embedded in operational infrastructure. The durable institutional question is therefore not whether an AI system can be treated as the actor that "owns" failure, but how responsibility is allocated across the people and organizations that select the model, configure it, authorize its use, integrate it with data and systems, monitor its operation, and respond when its behavior produces harm or exposure. That framing matters because cybersecurity practice already has mature concepts for incident ownership, control testing, escalation, logging, recovery, and executive accountability, while AI governance often remains organized around principles, model documentation, or risk classification.
+The paper's main contribution is the AI Decision Authority Charter, a use-case-specific governance instrument that assigns business, technical, security, legal, privacy, and executive decision rights before deployment. The model gives the CISO bounded, preauthorized stop-work authority for defined security conditions, including unauthorized access, data exposure, compromised retrieval or model integrity, excessive agency, credential abuse, and loss of traceability. Return to service remains a separate decision requiring business authorization, technical readiness, and security concurrence. This separation between containment authority and final business disposition is institutionally important because it converts shared governance from committee participation into executable control.
 
-A governance implication, inferred from the paper's stated convergence rather than attributed to uninspected full text, is that AI accountability becomes operational only when it is mapped onto concrete control surfaces: named decision rights, deployment authority, evidence retention, monitoring duties, incident response, vendor dependencies, and post-failure remediation. This also exposes a recurring weakness in "shared responsibility" models. Distributing tasks across developers, vendors, security teams, business owners, and boards can improve coverage, but it can also diffuse answerability unless hand-offs and residual responsibility are explicit.
+The paper also challenges human-in-the-loop oversight when the human lacks evidence, time, an alternative path, or genuine authority to reject the system. Its escalation model therefore ties observable triggers to named decision owners, response deadlines, containment actions, and executive adjudication. For agentic AI, the argument becomes sharper: authority granted to an agent must be matched by the organization's capacity to observe, restrict, revoke, and recover from that authority.
 
-The most important unresolved question is where responsibility remains non-delegable. Vendors may supply models and security controls, but deploying institutions still determine context, acceptable risk, operational access, and whether outputs become consequential actions. A useful extension would therefore distinguish contractual allocation of liability from governance accountability, and test how responsibility changes across procurement, deployment, runtime operation, incident response, correction, and retirement.
+The framework is operationally useful, but its evidence base is primarily synthesis, standards alignment, and illustrative cases rather than validation of the Charter in live organizations. Robodebt and SyRI demonstrate the consequences of diffuse authority, but they do not establish that singular decision ownership or bounded CISO authority will resolve cross-domain conflicts in practice. The next step should be implementation evidence: tabletop exercises, incident simulations, measurable intervention latency, tested revocation paths, and comparative results across organizations with different regulatory and operating models.
 
 ## Key Insight
 
-When AI systems become operational cyber assets, accountability has to attach to the human and institutional chain that authorizes, deploys, monitors, and responds to their actions, not to the model as an abstract actor.
+AI accountability becomes executable only when each consequential decision has a named owner and each control function has preauthorized authority to intervene before failure.
