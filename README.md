@@ -55,7 +55,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (25)
+- **AI Governance** (26)
 - **AI Safety & Evaluation** (13)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-24** — [Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability](reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md) — *The Pinnacle: A Journal by Scholar-Practitioners, 4(2)*
 - **2026-09-22** — [Procedural fairness, accountability, and legitimacy in the AI-enabled state: evidence from China](reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md) — *Humanities and Social Sciences Communications (2026)*
 - **2026-09-17** — [Multi-stakeholder transparency evaluation and dynamic accountability mechanisms for AI-assisted criminal sentencing](reviews/2026/2026-09-17__multi-stakeholder-transparency-dynamic-accountability-ai-sentencing__v1.md) — *Scientific Reports (2026)*
 - **2026-09-16** — [Very Justified Envy](reviews/2026/2026-09-16__very-justified-envy__v1.md) — *arXiv*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-16** — [Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools](reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md) — *arXiv*
 - **2026-09-16** — [People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe](reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md) — *arXiv; accepted at AIES 2026*
 - **2026-09-16** — [Never Stop Thinking: Continuous-Time Language Agents](reviews/2026/2026-09-16__never-stop-thinking__v1.md) — *arXiv*
-- **2026-09-16** — [Interactive Memory Learning for Long-Term Conversations](reviews/2026/2026-09-16__interactive-memory-learning__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
