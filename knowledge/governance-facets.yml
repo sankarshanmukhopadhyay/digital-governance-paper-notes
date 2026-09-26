@@ -24,6 +24,8 @@ facets:
     description: Mechanisms through which rules or obligations become practically binding.
   dependency:
     description: Structural reliance on operators, infrastructure, vendors, registries or institutional cooperation.
+  auditability:
+    description: Whether decisions, evidence, state changes and control actions can be reconstructed and examined after the fact.
 
 assignment_rules:
   - Assign a facet only when the review substantively addresses the mechanism or institutional tension.
