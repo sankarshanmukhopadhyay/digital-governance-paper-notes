@@ -51,7 +51,7 @@ relationships:
   - from: reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md
     type: related_to
     to: reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
-    rationale: Both distinguish provenance continuity from legitimate authority: one bounds execution to an origin, while the other requires an explicit institutional trust decision over issuer and relying-party authority.
+    rationale: Both distinguish provenance continuity from legitimate authority. One bounds execution to an origin, while the other requires an explicit institutional trust decision over issuer and relying-party authority.
   - from: reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md
     type: related_to
     to: reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
