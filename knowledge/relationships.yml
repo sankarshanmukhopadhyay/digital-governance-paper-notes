@@ -8,6 +8,54 @@ relationships:
     type: related_to
     to: reviews/2026/2026-08-03__critique-of-agent-model__v1.md
     rationale: Both reviews treat the agent model as institutionally incomplete when authority, accountability and governance are not made operational.
+  - from: reviews/2026/2026-09-04__designing-agent-ids__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-03__accountable-yet-anonymous-ai-agents__v1.md
+    rationale: Both distinguish agent identification and attribution from current, action-specific authority, while exposing registry, revocation and accountability dependencies.
+  - from: reviews/2026/2026-09-04__designing-agent-ids__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+    rationale: Both place the receiving service or verifier at the point where identity and provenance evidence must be converted into an institutional acceptance or authorization decision.
+  - from: reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md
+    type: extends
+    to: reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md
+    rationale: The continuity paper generalizes the earlier provenance-bounded execution model from origin-bounded delegation into sequential, forked, joined and policy-mediated authority state transitions.
+  - from: reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+    rationale: Both require delegated authority to remain bounded during execution, while the loyalty review adds duties, conflicts, revocation and redress that the continuity model leaves outside its invariant.
+  - from: reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+    rationale: Both separate cryptographic verification from the relying institution's governance decision and require authority, purpose, current status and institutional responsibility to make acceptance legitimate.
+  - from: reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+    rationale: The oversight review explains how human decision capacity can decay in agentic workflows, while the responsibility-cascade review models how knowledge and control redistribute responsibility across those workflows.
+  - from: reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+    rationale: Both treat accountability as an allocation of decision rights and intervention capacity; one specifies named operational decision ownership while the other models responsibility across sequential workflow positions.
+  - from: reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md
+    rationale: Both translate normative duties into governance requirements for delegated agent action, including evidence, constraints, accountability and remedy across organizations.
+  - from: reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+    rationale: The loyalty review specifies duties around delegated action, while the responsibility-cascade review explains how responsibility migrates across initiation, checkpoints, delegation and outcomes.
+  - from: reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+    rationale: Both reject diffuse accountability as sufficient and require institutional mechanisms that turn shared duties into named authority, intervention, evidence and remedy.
+  - from: reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+    rationale: Both distinguish provenance continuity from legitimate authority: one bounds execution to an origin, while the other requires an explicit institutional trust decision over issuer and relying-party authority.
+  - from: reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+    rationale: Both center verifier-side power and show that credential exchange is governed by what relying parties request, what evidence they accept and which institutional assumptions shape validation.
 
 rules:
   - Relationship edges are curated editorial claims, not automatic semantic similarity.
