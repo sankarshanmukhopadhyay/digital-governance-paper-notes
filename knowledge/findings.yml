@@ -53,7 +53,7 @@ findings:
   - id: rights-and-duties-must-survive-delegation
     title: Rights and duties must survive delegation across agent ecosystems
     claim: Normative duties become operational only when they remain attached to delegated action across developers, deployers, platforms and agents through constraints, evidence, intervention rights and remedy.
-    rationale: Fiduciary, human-rights and responsibility analyses reach a shared institutional problem: distributed technical execution can diffuse responsibility unless duties are made traceable and enforceable across organizational boundaries.
+    rationale: Fiduciary, human-rights and responsibility analyses reach a shared institutional problem. Distributed technical execution can diffuse responsibility unless duties are made traceable and enforceable across organizational boundaries.
     facets: [accountability, delegation, enforcement, redress]
     source_reviews:
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
