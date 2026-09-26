@@ -4,19 +4,56 @@ gaps:
     title: Where does evidence become an enforceable decision?
     gap: Many governance approaches can classify risk, evaluate behaviour or state duties without specifying the authority, thresholds, intervention path and residual-risk owner that turn evidence into a binding operational consequence.
     why_it_matters: Without this control chain, governance can remain advisory even when the underlying system acts at machine speed.
+    facets: [authority, accountability, enforcement, institutional-capacity]
     source_reviews:
       - reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+      - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+
   - id: revocation-redress
     title: How are delegated powers revoked and contested after deployment?
-    gap: Agent governance proposals increasingly define duties and delegated authority, but operational revocation, evidence preservation, correction and redress remain less specified than initial authorization.
+    gap: Agent governance proposals increasingly define duties and delegated authority, but operational revocation, evidence preservation, correction, restoration and redress remain less specified than initial authorization.
     why_it_matters: A governance system that can grant authority but cannot reliably withdraw or contest it creates persistent decision rights without a complete lifecycle.
+    facets: [delegation, revocation, contestability, redress]
     source_reviews:
+      - reviews/2026/2026-09-04__designing-agent-ids__v1.md
+      - reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
-      - reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+
+  - id: cross-actor-responsibility-adjudication
+    title: Who adjudicates responsibility when control is distributed across organizations?
+    gap: Agentic governance increasingly recognizes shared or distributed responsibility, but it remains unclear how disputed allocations are adjudicated when developers, deployers, platform providers, operators and checkpoint approvers each controlled different parts of the causal path.
+    why_it_matters: Without an adjudication model, shared responsibility can become responsibility diffusion, especially when every actor can point to another actor's contribution or approval.
+    facets: [accountability, enforcement, redress, institutional-capacity]
+    source_reviews:
+      - reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+      - reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md
+      - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+
+  - id: registry-governance-legitimacy
+    title: Who governs the infrastructure that declares authority?
+    gap: Registries, trust lists and resolver services can make issuer or agent authority legible, but the archive repeatedly leaves open how admission, suspension, update, appeal, operator accountability and conflicting authority sources should be governed.
+    why_it_matters: A registry can improve provenance while simultaneously becoming a concentrated gatekeeper whose own authority and error-correction mechanisms determine who can participate.
+    facets: [authority, legitimacy, gatekeeping, contestability, dependency]
+    source_reviews:
+      - reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+      - reviews/2026/2026-09-04__designing-agent-ids__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+
+  - id: origin-legitimacy
+    title: What makes the origin of delegated authority legitimate?
+    gap: Provenance-bounded execution can prevent downstream authority expansion, but it does not establish who may create a new authority origin, under what evidence, or how competing, renewed or disputed origins are reconciled.
+    why_it_matters: Continuity can prove that execution stayed within an origin while leaving the institutional legitimacy of that origin outside the model.
+    facets: [authority, legitimacy, delegation, revocation]
+    source_reviews:
+      - reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md
+      - reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md
+
   - id: legitimate-reference-population
     title: Who legitimately defines the reference population for alignment?
     gap: More granular measurement can reveal distributional differences but does not supply a legitimate rule for selecting populations, demographic categories, aggregation weights or intervention thresholds.
     why_it_matters: Treating an empirical alignment target as self-justifying embeds political choices inside measurement and tuning infrastructure.
+    facets: [legitimacy]
     source_reviews:
       - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
