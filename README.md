@@ -60,7 +60,7 @@ python scripts/knowledge_lint.py
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
 - **Digital Identity** (7)
-- **Trust Infrastructure** (5)
+- **Trust Infrastructure** (6)
 - **Standards, Protocols & Interoperability** (1)
 - **Privacy & Data Protection** (3)
 - **Cybersecurity & Resilience** (1)
@@ -142,12 +142,12 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 - **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
 - **2026-09-26** — [Leveraging Human Rights Frameworks for Agentic AI Governance](reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md) — *Business and Human Rights Journal*
+- **2026-09-26** — [Building a National Digital Trust Architecture for India: From Digital Identity and Data Exchange to Federated Institutional Trust](reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md) — *Zenodo*
 - **2026-09-24** — [Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability](reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md) — *The Pinnacle: A Journal by Scholar-Practitioners, 4(2)*
 - **2026-09-24** — [When AI Begins to Build AI](reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md) — *Zenodo*
 - **2026-09-22** — [Procedural fairness, accountability, and legitimacy in the AI-enabled state: evidence from China](reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md) — *Humanities and Social Sciences Communications (2026)*
 - **2026-09-17** — [Multi-stakeholder transparency evaluation and dynamic accountability mechanisms for AI-assisted criminal sentencing](reviews/2026/2026-09-17__multi-stakeholder-transparency-dynamic-accountability-ai-sentencing__v1.md) — *Scientific Reports (2026)*
 - **2026-09-16** — [Very Justified Envy](reviews/2026/2026-09-16__very-justified-envy__v1.md) — *arXiv*
-- **2026-09-16** — [Verifiable Social Reasoning for LLM Assistants](reviews/2026/2026-09-16__verifiable-social-reasoning__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
