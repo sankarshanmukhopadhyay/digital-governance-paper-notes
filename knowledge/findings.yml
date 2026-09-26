@@ -4,20 +4,76 @@ findings:
     title: Governance becomes consequential when rules can alter execution
     claim: Principles, taxonomies and assurance evidence do not themselves govern a system; governance becomes operational when evidence is connected to decision authority, intervention, enforcement and residual-risk ownership.
     rationale: Reviews across AI risk tooling and agent governance repeatedly separate descriptive or evaluative capability from the institutional machinery that can permit, constrain, stop or remedy action.
+    facets: [authority, accountability, enforcement, institutional-capacity]
     source_reviews:
       - reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+      - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+
+  - id: authority-is-not-identity-or-provenance
+    title: Identity and provenance do not establish authority
+    claim: Knowing who or what acted, or proving the causal origin of an action, does not establish that the actor was entitled to exercise the authority required for that action.
+    rationale: Reviews of agent IDs, provenance-bounded execution, credential verification and national trust infrastructure converge on a recurring category boundary between attribution and legitimate mandate.
+    facets: [authority, legitimacy, provenance, delegation]
+    source_reviews:
+      - reviews/2026/2026-09-04__designing-agent-ids__v1.md
+      - reviews/2026/2026-09-07__authority-propagation-pop-vs-poc__v1.md
+      - reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+
+  - id: delegated-authority-needs-lifecycle
+    title: Delegated authority is a lifecycle, not a grant event
+    claim: A governed delegation must remain bounded, current, observable and revocable throughout execution rather than being treated as valid merely because an initial credential, token or policy grant existed.
+    rationale: The archive repeatedly finds that delegation proposals are more complete at issuance than at expiry, suspension, revocation, restoration, dispute and evidence preservation.
+    facets: [authority, delegation, revocation, redress]
+    source_reviews:
+      - reviews/2026/2026-09-04__designing-agent-ids__v1.md
+      - reviews/2026/2026-09-07__authority-is-a-continuous-system__v1.md
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+
+  - id: responsibility-follows-control-topology
+    title: Responsibility follows the topology of knowledge and control
+    claim: In agentic systems, accountability cannot be assigned reliably from formal role labels or the presence of a human approver; it depends on who had relevant knowledge, intervention power and decision authority at the points where consequential pathways were created.
+    rationale: Recent reviews independently move accountability away from nominal human presence and toward the actual distribution of decision rights, oversight capacity and stop-work authority.
+    facets: [accountability, authority, institutional-capacity, delegation]
+    source_reviews:
+      - reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md
+      - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+      - reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+
+  - id: institutional-reliance-is-governance-decision
+    title: Institutional reliance is a governance decision, not a verification result
+    claim: Cryptographic validity, issuer identity and provenance can support a relying institution's decision, but they do not determine whether reliance is authorised, appropriate for the purpose or legitimate.
+    rationale: Credential and trust-infrastructure reviews converge on the need to make verifier or relying-party policy explicit, including issuer authority, purpose, current status and responsibility for acceptance.
+    facets: [authority, legitimacy, provenance, accountability]
+    source_reviews:
+      - reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+
+  - id: rights-and-duties-must-survive-delegation
+    title: Rights and duties must survive delegation across agent ecosystems
+    claim: Normative duties become operational only when they remain attached to delegated action across developers, deployers, platforms and agents through constraints, evidence, intervention rights and remedy.
+    rationale: Fiduciary, human-rights and responsibility analyses reach a shared institutional problem. Distributed technical execution can diffuse responsibility unless duties are made traceable and enforceable across organizational boundaries.
+    facets: [accountability, delegation, enforcement, redress]
+    source_reviews:
+      - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+      - reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md
+      - reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
+
   - id: composition-is-governed-object
     title: Composition can be part of the governed object
     claim: Assurance of components in isolation is incomplete when interaction topology, message ordering, retained context or delegated relationships can change system behaviour.
     rationale: The archive contains both experimental evidence that interaction changes observed behaviour and governance analysis showing that delegated agents exercise authority through relationships rather than as isolated models.
+    facets: [accountability, dependency]
     source_reviews:
       - reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+
   - id: measurement-is-not-legitimacy
     title: Measurement does not confer legitimacy
     claim: Provenance, representational similarity and other measurable properties can establish facts about a system without establishing who is entitled to decide, whose values should prevail or whether an action is legitimate.
-    rationale: Recent reviews distinguish empirical evidence about represented populations and credential disclosure from the institutional authority needed to justify consequential choices.
+    rationale: Reviews distinguish empirical evidence about represented populations and credential disclosure from the institutional authority needed to justify consequential choices.
+    facets: [legitimacy, provenance]
     source_reviews:
       - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
       - reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md
