@@ -5,7 +5,7 @@ publication: "Digital Society, 5:47"
 date_read: "2026-09-26"
 primary_domain: "AI Governance"
 tags: ["AI governance", "AI agents", "agentic systems", "accountability", "delegation", "workflows"]
-key_insight: "Agentic accountability depends on preserving epistemic access, intervention authority, traceable delegation, and organizational responsibility at the points where consequential pathways are created."
+key_insight: "SRAF is a strong diagnostic model for where responsibility migrates in agentic workflows, but it is not yet an operational allocation method because knowledge, control, adjudication, and remedy remain difficult to measure and enforce."
 published: "2026-09-15"
 doi: "10.1007/s44206-026-00288-w"
 peer_review_status: "peer-reviewed"
@@ -24,8 +24,8 @@ The governance contribution is to relocate accountability from nominal human pre
 
 The framework remains more diagnostic than operational. Its proposed allocation of outcome responsibility combines causal contribution, knowledge, and control, but supplies no reproducible method for measuring or aggregating those factors. The three cases illustrate the taxonomy rather than validate it, and the approach assumes sufficiently complete workflow evidence to reconstruct responsibility after failure. It also leaves unresolved who adjudicates disputed assignments, how blame-shifting checkpoints are detected, and what enforcement or redress follows when an organization creates a foreseeable delegation vacuum.
 
-Relative to adjacent archive work on humans being pushed out of the loop and on named decision ownership, this paper adds a temporal model of how responsibility changes as delegated work unfolds. Accountability cannot be attached after failure to the nearest human actor. Governance must preserve epistemic access, intervention authority, traceable delegation, and organizational responsibility where consequential pathways are created.
+Relative to adjacent archive work on humans being pushed out of the loop and on named decision ownership, SRAF adds a valuable temporal model of how responsibility changes as delegated work unfolds. My assessment is that it is currently stronger as a diagnostic framework than as an allocation mechanism: it identifies where responsibility should be examined but does not yet make disputed responsibility reproducibly decidable. Accountability cannot be attached after failure to the nearest human actor; operational closure would require measurable responsibility factors, adjudication rules, and consequences tied to the points where consequential pathways are created.
 
 ## Key Insight
 
-Agentic accountability depends on preserving epistemic access, intervention authority, traceable delegation, and organizational responsibility at the points where consequential pathways are created.
+SRAF is a strong diagnostic model for where responsibility migrates in agentic workflows, but it is not yet an operational allocation method because knowledge, control, adjudication, and remedy remain difficult to measure and enforce.
