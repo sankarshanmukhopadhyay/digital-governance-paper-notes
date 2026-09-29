@@ -57,3 +57,14 @@ gaps:
     facets: [legitimacy]
     source_reviews:
       - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
+
+
+  - id: conflicting-evidence-adjudication
+    title: Who decides when authoritative evidence conflicts?
+    gap: Governance proposals increasingly improve provenance, verification and transparency without specifying how conflicting authenticity, authority or policy determinations are adjudicated when multiple institutions can make plausible claims.
+    why_it_matters: Better evidence infrastructure can make disagreement more visible without resolving it. Without decision rights, evidentiary thresholds, correction procedures and appeal, a dispute can simply migrate into whichever institution controls the verification or access layer.
+    facets: [authority, provenance, contestability, redress, gatekeeping]
+    source_reviews:
+      - reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md
+      - reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
