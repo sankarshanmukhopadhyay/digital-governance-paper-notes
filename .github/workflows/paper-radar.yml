@@ -5,6 +5,7 @@ on:
     paths:
       - "discovery/**"
       - "scripts/paper_radar.py"
+      - "scripts/radar_breadth.py"
       - "scripts/paper_radar_intake.py"
       - "tests/test_paper_radar.py"
       - ".github/workflows/paper-radar.yml"
