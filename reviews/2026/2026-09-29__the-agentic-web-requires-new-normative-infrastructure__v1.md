@@ -6,7 +6,7 @@ date_read: "2026-09-29"
 primary_domain: "Platform Governance & Internet Governance"
 tags: ["AI agents", "delegation", "authorization", "regulatory frameworks", "interoperability", "transparency and accountability"]
 scholarly_signal: "cs.CY"
-key_insight: "Agentic access is not primarily a bot-detection problem; it is a contest over who gets to define and enforce the boundary between a user's existing entitlement and a platform's control over the means of exercising it."
+key_insight: "The paper successfully makes platform control over agent access a governance object, but its delegation-transparency-proportionality triad remains normative infrastructure in design form until access disputes have shared evidence, revocation, adjudication, and remedy."
 published: "2026-07-16"
 peer_review_status: "preprint"
 paper_type: "preprint"
@@ -27,8 +27,8 @@ The argument is conceptual and legal rather than empirical. It combines delegati
 
 The unresolved issue is enforcement. Transparency does not specify a common policy vocabulary or evidence standard. Proportional restriction does not identify who adjudicates whether a platform's claimed harm is concrete, whether a less restrictive alternative exists, or what remedy follows from covert or discriminatory blocking. Delegation is also treated mainly at authorization time. The paper gives less attention to revocation, agent substitution, chained delegation, stale authority, or evidence that survives a dispute over what the agent was authorized to do at the moment of action. The authors' answer is that the paper intentionally proposes principles and light-touch paths rather than a complete institutional design. That scope limitation is valid, but it also defines the boundary of the contribution: this is normative infrastructure in design form, not yet executable governance.
 
-Relative to adjacent archive work on responsibility cascades and rights-based agent governance, this paper moves the locus outward from governing the agent to governing the agent's access relationship with platforms. Its durable consequence is to make platform gatekeeping itself a governance object. If delegated agents become a normal way of exercising digital rights and entitlements, platform control over agent access becomes a power that needs explicit justification, evidence, contestability and institutional limits.
+Relative to adjacent archive work on responsibility cascades and rights-based agent governance, this paper moves the locus outward from governing the agent to governing the agent's access relationship with platforms. That is a real contribution: it makes platform gatekeeping itself a governance object rather than treating anti-bot controls as neutral infrastructure. My assessment, however, is that the delegation-transparency-proportionality triad remains normative infrastructure in design form. If delegated agents become a normal way of exercising digital rights and entitlements, the model needs shared evidence, revocation, adjudication, and remedy before platform restriction can be meaningfully constrained rather than merely criticized.
 
 ## Key Insight
 
-Agentic access is not primarily a bot-detection problem; it is a contest over who gets to define and enforce the boundary between a user's existing entitlement and a platform's control over the means of exercising it.
+The paper successfully makes platform control over agent access a governance object, but its delegation-transparency-proportionality triad remains normative infrastructure in design form until access disputes have shared evidence, revocation, adjudication, and remedy.

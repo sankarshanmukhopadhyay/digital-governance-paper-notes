@@ -5,7 +5,7 @@ publication: "Zenodo"
 date_read: "2026-09-24"
 primary_domain: "AI Governance"
 tags: ["AI agents", "governance-by-design", "authorization", "delegation", "evidence", "deployment controls"]
-key_insight: "Machine-speed autonomy makes governance an executable systems property, but externalizing control from agents only redistributes power unless the authority to define, enforce, revoke, and contest policy is itself governed."
+key_insight: "The paper is strong on making control executable, but incomplete as governance: moving authority out of the agent does not solve the problem unless the control plane's own power to define, enforce, revoke, and contest policy is legitimate and constrained."
 published: "2026-09-14"
 doi: "10.5281/zenodo.22754885"
 peer_review_status: "essay"
@@ -27,8 +27,8 @@ This is a conceptual synthesis of public incident reports and frontier-lab discl
 
 A deeper governance gap remains. The paper explains how policy might become machine-enforceable, but not who legitimately defines it, who controls revocation, how evaluator authority is constituted, or how affected third parties contest errors and obtain redress. Evidence-as-Code can improve provenance without establishing legitimacy. Externalizing control from the agent can also concentrate power in whoever operates policy and authorization infrastructure.
 
-The durable contribution is the recognition that machine-speed autonomy requires governance to become an executable systems property, while leaving open who is entitled to exercise that control.
+The paper is strongest as a control architecture and weaker as an institutional governance architecture. It convincingly shows why machine-speed autonomy requires executable constraints, but moving authority into a policy and authorization layer merely relocates the governance problem. Until the control plane's mandate, revocation power, accountability, and redress are themselves governed, the proposal secures control more convincingly than it establishes legitimate control.
 
 ## Key Insight
 
-Machine-speed autonomy makes governance an executable systems property, but externalizing control from agents only redistributes power unless the authority to define, enforce, revoke, and contest policy is itself governed.
+The paper is strong on making control executable, but incomplete as governance: moving authority out of the agent does not solve the problem unless the control plane's own power to define, enforce, revoke, and contest policy is legitimate and constrained.

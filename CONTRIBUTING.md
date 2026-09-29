@@ -71,14 +71,14 @@ The review body should contain two sections, in this order:
 
 ## Review
 
-<up to ~2000 characters: main argument, what the paper does well, its limitations, why it matters for practitioners>
+<normally ~2000-4000 characters: establish the paper's principal claim and evidence; identify its genuine contribution; distinguish scope boundaries from evidence gaps or governance defects; state what the paper establishes and what stronger claim it does not establish; reach a consequential governance judgment; where material, make visible what evidence or institutional condition would change that judgment. Do not force criticism or use ratings.>
 
 ## Key Insight
 
 <one sentence that captures the single most durable takeaway>
 ```
 
-The key insight line is also stored in the front matter `key_insight` field — keep them identical.
+The key insight line is also stored in the front matter `key_insight` field — keep them identical. Prefer a durable editorial proposition over a neutral restatement of the paper's thesis.
 
 ### Editorial lint
 

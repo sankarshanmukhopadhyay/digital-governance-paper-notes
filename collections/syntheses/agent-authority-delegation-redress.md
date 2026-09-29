@@ -1,7 +1,7 @@
 ---
 title: "Agent authority, delegation and redress"
 collection: "agent-authority-delegation-redress"
-last_reviewed: "2026-09-26"
+last_reviewed: "2026-09-29"
 status: "current"
 source_reviews:
   - reviews/2026/2026-03-05__ai-agents-and-the-next-layer-of-india-s-digital__v1.md
@@ -10,9 +10,11 @@ source_reviews:
   - reviews/2026/2026-09-04__designing-agent-ids__v1.md
   - reviews/2026/2026-09-08__ai-agents-push-humans-out-of-the-loop__v1.md
   - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+  - reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md
   - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
   - reviews/2026/2026-09-26__the-responsibility-cascade__v1.md
   - reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md
+  - reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md
 ---
 
 # Collection Synthesis
@@ -23,11 +25,11 @@ The early infrastructure reviews identify the basic requirement: delegated autho
 
 The later reviews shift the problem from representation to operation. *AI Agents Push Humans Out of the Loop* shows that nominal human approval is not meaningful control when attention, expertise, independence or intervention capacity have eroded. *Designing Loyalty* adds a duty model around delegated consumer action and makes revocation, conflicts and evidence part of the governance problem. *Who Owns AI When It Breaks?* makes decision ownership executable through preauthorised intervention and stop-work authority. *The Responsibility Cascade* then explains why responsibility changes across initiation, checkpoints, delegation and outcomes as knowledge and control move through a workflow.
 
-The human-rights review broadens this from a single principal-agent relationship to multi-company ecosystems. Shared responsibility becomes governable only if duties survive technical and organisational delegation through constraints, auditability, escalation and remedy. This reinforces a recurring archive conclusion: **responsibility cannot be attached after failure to the nearest visible human or the last technical component in the chain**.
+The control-plane and platform-access reviews add a second boundary. *When AI Begins to Build AI* shows why policy and authorization controls must sit outside increasingly autonomous agents, but also why externalizing control relocates rather than resolves the authority problem. *The Agentic Web Requires New Normative Infrastructure* makes platform gatekeeping part of the same architecture: a user may possess a legitimate entitlement and delegate its exercise while the platform still controls whether that delegated action is recognized. The human-rights review then broadens the problem across multi-company ecosystems. Shared responsibility becomes governable only if duties survive technical and organisational delegation through constraints, auditability, escalation and remedy.
 
-Taken together, the reviews support a governance-grade agent model with at least five separable elements: principal and agent binding; current, action-specific authority; enforceable execution boundaries; intervention and revocation throughout the lifecycle; and durable evidence supporting attribution, contest, correction and redress. Human oversight is part of that architecture only when the human retains the information and authority needed to act.
+Taken together, the reviews support a governance-grade agent model with at least seven separable elements: principal and agent binding; current, action-specific authority; enforceable execution boundaries; legitimate control-plane authority; explicit treatment of platform or service gatekeeping; intervention and revocation throughout the lifecycle; and durable evidence supporting attribution, contest, correction and redress. Human oversight is part of that architecture only when the human retains the information and authority needed to act. **Responsibility cannot be attached after failure to the nearest visible human or the last technical component in the chain, and control cannot be made legitimate merely by moving it into a different component.**
 
-The unresolved problem is institutional closure. The archive is increasingly clear about what evidence and controls are needed, but less complete on who adjudicates disputed delegations, cross-vendor responsibility, restoration after revocation, and conflicts between commercial, regulatory and user mandates. Future reviews should be tested against that full lifecycle rather than only against initial authorization.
+The unresolved problem is institutional closure. The archive is increasingly clear about what evidence and controls are needed, but less complete on who adjudicates disputed delegations, conflicting access claims, cross-vendor responsibility, restoration after revocation, and conflicts between commercial, regulatory and user mandates. Future reviews should therefore be tested not only against initial authorization, but against the legitimacy of the control plane and the full dispute, revocation and redress lifecycle.
 
 ## Traceability
 

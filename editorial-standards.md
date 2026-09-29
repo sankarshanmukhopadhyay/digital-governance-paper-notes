@@ -110,6 +110,22 @@ A reviewer may conclude that a governance arrangement concentrates unacceptable 
 
 Where the conclusion depends on a contestable normative position, the prose should make that visible. The aim is not to weaken the judgment but to make clear what kind of judgment it is.
 
+## Reach a consequential editorial judgment
+
+A review should not stop at accurate summary plus a list of limitations. Once the paper has been read on its own terms and its evidence boundary is clear, the reviewer should state what the contribution amounts to.
+
+A consequential editorial judgment should distinguish three things:
+
+- **contribution:** what the paper genuinely advances, clarifies, demonstrates, or makes operational;
+- **claim boundary:** what the evidence or argument does not yet establish, especially where the paper's framing is stronger than its evidence;
+- **governance judgment:** what institutional consequence follows from accepting the paper's proposition, including where authority, dependency, legitimacy, enforcement, contestability, or responsibility remain unresolved.
+
+The judgment need not be negative. A paper may earn a strong positive conclusion when its evidence and institutional design support one. The requirement is that the review reaches a conclusion rather than merely balancing praise and caveats.
+
+Where the judgment is materially contestable, the reviewer should also be able to answer: **what evidence, implementation result, or institutional condition would cause this assessment to change?** That revision condition does not need to appear as a formula in every review, but the reasoning should be visible when it matters.
+
+Do not convert this discipline into scores, ratings, recommendation badges, fixed pros-and-cons lists, or criticism for its own sake. The archive's point of view should become sharper by becoming more explicit and falsifiable, not more performative.
+
 ## Prefer precise institutional prose
 
 Governance writing becomes less useful when agency disappears.
