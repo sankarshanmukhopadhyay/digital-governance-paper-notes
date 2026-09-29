@@ -57,6 +57,23 @@ relationships:
     to: reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
     rationale: Both center verifier-side power and show that credential exchange is governed by what relying parties request, what evidence they accept and which institutional assumptions shape validation.
 
+  - from: reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+    rationale: Both move AI governance from principles toward executable intervention. One externalizes control into policy and authorization infrastructure; the other assigns named decision owners and stop-work authority, exposing the same question of who legitimately controls the control plane.
+  - from: reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md
+    rationale: Both treat user-authorized agent action as delegated authority rather than generic automation, while the agentic-web review adds platform gatekeeping power as a separate governance boundary over whether delegated entitlement can be exercised.
+  - from: reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md
+    rationale: Both examine legitimacy around AI-enabled public authority and expose a common boundary: perceived acceptance or administrative coherence can describe institutional conditions without establishing that authority is contestable, constrained or justified.
+  - from: reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+    type: related_to
+    to: reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md
+    rationale: Both make provenance and verification supporting evidence rather than final authority. Each ultimately requires institutional rules for conflicting evidence, correction, relying decisions and redress.
+
 rules:
   - Relationship edges are curated editorial claims, not automatic semantic similarity.
   - Both endpoints must exist in the archive unless an explicit external-reference mechanism is introduced later.
