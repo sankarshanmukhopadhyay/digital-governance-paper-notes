@@ -1,7 +1,7 @@
 ---
 title: "Trust infrastructure and institutional reliance"
 collection: "digital-identity-trust-infrastructure"
-last_reviewed: "2026-09-26"
+last_reviewed: "2026-09-29"
 status: "current"
 source_reviews:
   - reviews/2026/2026-09-03__a-verifier-centric-conceptual-model-for-digital-credential-ecosystems__v1.md
@@ -22,11 +22,11 @@ The authority-continuity papers approach the same problem from execution lineage
 
 *Designing Agent IDs* shows how the same category error reappears in emerging agent infrastructure. Identity and provider metadata can make an actor legible to a service, but lifecycle authority still depends on scope, freshness, revocation, conflict resolution and the governance of registries and resolvers.
 
-The national digital trust architecture review brings these strands together at institutional scale. Its strongest move is to make the Trust Decision explicit: issuer authority, provenance, validity, purpose, relying-party authority and responsibility must all be evaluated before service action. The proposed registry is therefore not the source of trust itself. It is evidence infrastructure supporting a governed reliance decision.
+The national digital trust architecture review brings these strands together at institutional scale. Its strongest move is to make the Trust Decision explicit: issuer authority, provenance, validity, purpose, relying-party authority and responsibility must all be evaluated before service action. The proposed registry is therefore not the source of trust itself. It is evidence infrastructure supporting a governed reliance decision. The sharper review also fixes the contribution boundary: this is a strong governance blueprint, not yet deployable national trust infrastructure, because legal authority, registry operation, liability and cross-sector redress remain unresolved.
 
-Taken together, the archive supports a durable proposition: **trust infrastructure is not merely infrastructure for proving origin; it is infrastructure for making and auditing legitimate reliance decisions**. The governance burden therefore sits as much with relying institutions, registry operators and policy authorities as with issuers.
+Taken together, the archive supports a durable proposition: **trust infrastructure is not merely infrastructure for proving origin; it is infrastructure for making and auditing legitimate reliance decisions**. The governance burden therefore sits as much with relying institutions, registry operators and policy authorities as with issuers. A technically interoperable trust layer remains institutionally incomplete if those decision rights and liabilities are only implied.
 
-The remaining questions concern the institutions behind the infrastructure. Who may admit or suspend an issuer? How are conflicting authority sources reconciled? What appeal exists when registry state is wrong? How does a relying institution prove that its own use was authorised for the stated purpose? Cross-border recognition further requires governance arrangements that technical interoperability cannot supply on its own.
+The remaining questions concern the institutions behind the infrastructure. Who may admit or suspend an issuer? How are conflicting authority sources reconciled? What appeal exists when registry state is wrong? How does a relying institution prove that its own use was authorised for the stated purpose? Cross-border recognition further requires governance arrangements that technical interoperability cannot supply on its own. The material next evidence is therefore institutional: a pilot should demonstrate operator mandate, conflict resolution, liability, correction and redress, not merely successful verification.
 
 ## Traceability
 
