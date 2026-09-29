@@ -489,7 +489,8 @@ def render_domain_page(domain: str, items: List[ReviewRecord], collections: List
     path = f"domains/{_slugify(domain)}/index.html"
     body = f'''<div class="breadcrumbs"><a href="../../">Home</a> / <a href="../">Domains</a> / {html.escape(domain)}</div>
 <div class="page-header"><div class="eyebrow">{len(items)} reviews</div><h1>{html.escape(domain)}</h1><p>{html.escape(DOMAIN_DESCRIPTIONS.get(domain, 'Governance-focused reviews in this domain.'))}</p>{related_html and '<div class="tag-row">Related collections: ' + related_html + '</div>'}</div>
-<div class="card-grid review-grid">{cards}</div>'''
+<div class="card-grid review-grid">{cards}</div>
+<section><div class="section-heading"><div><div class="eyebrow">Cumulative knowledge</div><h2>What does this body of work add up to?</h2></div></div><p>Collection membership is a reading route. Cross-paper propositions remain curated editorial claims in the Knowledge layer, with explicit evidence and traceability.</p><div class="tag-row"><a class="tag-link" href="../../knowledge/findings/">Findings</a><a class="tag-link" href="../../knowledge/synthesis/">Syntheses</a><a class="tag-link" href="../../knowledge/gaps/">Open gaps</a><a class="tag-link" href="../../knowledge/relationships/">Relationships</a></div></section>'''
     return page_shell(domain, body, path)
 
 
@@ -499,7 +500,7 @@ def render_collections_index(collections: List[Collection], records: List[Review
         count = len(collection_records(c, records))
         if count:
             cards.append(f'''<article class="collection-card"><div class="count">{count} selected reviews</div><h2><a href="{c.slug}/">{html.escape(c.title)}</a></h2><p>{html.escape(c.description)}</p><a href="{c.slug}/">Open collection</a></article>''')
-    body = f'<div class="page-header"><div class="eyebrow">Curated pathways</div><h1>Governance collections</h1><p>Collections cut across the formal taxonomy. They group papers around recurring questions of authority, institutional capacity, enforcement, revocation, epistemic integrity and redress.</p></div><div class="card-grid collection-grid">{"".join(cards)}</div>'
+    body = f'<div class="page-header"><div class="eyebrow">Curated pathways</div><h1>Governance collections</h1><p>Collections cut across the formal taxonomy. They group papers around recurring questions of authority, institutional capacity, enforcement, revocation, epistemic integrity and redress.</p><p class="note">Collections organize what to read. The <a href="../knowledge/">Knowledge layer</a> records the archive\'s curated cross-paper findings, unresolved gaps, relationships and synthesis judgments.</p></div><div class="card-grid collection-grid">{"".join(cards)}</div>'
     return page_shell("Collections", body, "collections/index.html")
 
 
