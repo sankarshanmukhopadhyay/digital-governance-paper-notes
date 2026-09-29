@@ -5,7 +5,7 @@ publication: "Business and Human Rights Journal"
 date_read: "2026-09-26"
 primary_domain: "AI Governance"
 tags: ["AI governance", "AI agents", "agentic systems", "rights-based frameworks", "accountability", "interoperability"]
-key_insight: "Human rights obligations become governable in agentic AI only when shared responsibility is converted into traceable duties, enforceable constraints, continuous due diligence, and accessible remedy across the full agent ecosystem."
+key_insight: "The UNGP translation is institutionally useful, but shared responsibility remains aspirational until rights-relevant duties survive delegation as enforceable constraints with named intervention authority, adjudication, and remedy across organizational boundaries."
 published: "2026-09-21"
 doi: "10.1017/bhj.2026.10055"
 paper_type: "essay"
@@ -23,8 +23,8 @@ The paper makes shared responsibility concrete enough to matter institutionally.
 
 That translation is useful, but the paper sometimes assigns governance properties to technical interoperability that protocols alone cannot establish. A2A or MCP-style metadata can improve provenance and observability, but it does not determine whether an actor had legitimate authority, whether a rights-relevant duty attached to it, or whether the recorded trail is complete enough for remedy. Shared responsibility can also become responsibility diffusion unless duties, escalation rights and consequences are explicitly allocated. The paper calls for accessible grievance mechanisms but does not specify who adjudicates cross-vendor disputes, who can compel remediation, or how conflicting corporate duties are resolved.
 
-Relative to adjacent archive work on responsibility cascades and fiduciary duties for agents, this paper contributes a rights-based institutional frame for the same execution problem. Its durable implication is that human rights governance cannot stop at principles or post-hoc impact assessment. Rights have to survive delegation across technical and corporate boundaries as enforceable obligations with evidence and remedy attached.
+Relative to adjacent archive work on responsibility cascades and fiduciary duties for agents, this paper contributes a rights-based institutional frame for the same execution problem. The paper succeeds as a normative translation of the UNGPs into agentic-system concerns, but it is less complete as an operating model. In particular, interoperability metadata can help reconstruct events without deciding whose duty governed the event or who can compel correction. Rights therefore have to survive delegation across technical and corporate boundaries as enforceable obligations with named intervention authority, adjudication, evidence, and remedy attached. Evidence that a multi-vendor deployment can actually resolve a disputed duty across organizational boundaries would materially strengthen the paper's governance claim.
 
 ## Key Insight
 
-Human rights obligations become governable in agentic AI only when shared responsibility is converted into traceable duties, enforceable constraints, continuous due diligence, and accessible remedy across the full agent ecosystem.
+The UNGP translation is institutionally useful, but shared responsibility remains aspirational until rights-relevant duties survive delegation as enforceable constraints with named intervention authority, adjudication, and remedy across organizational boundaries.
