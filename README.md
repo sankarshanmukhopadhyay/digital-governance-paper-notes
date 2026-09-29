@@ -65,7 +65,7 @@ python scripts/knowledge_lint.py
 - **Privacy & Data Protection** (3)
 - **Cybersecurity & Resilience** (1)
 - **Law, Regulation & Liability** (10)
-- **Platform Governance & Internet Governance** (2)
+- **Platform Governance & Internet Governance** (3)
 - **Socio-technical Systems** (9)
 - **Inclusion, Rights & Development** (2)
 - **State Capacity & Administrative Systems** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-09-29** — [The Agentic Web Requires New Normative Infrastructure](reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md) — *arXiv preprint*
 - **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
 - **2026-09-26** — [Leveraging Human Rights Frameworks for Agentic AI Governance](reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md) — *Business and Human Rights Journal*
 - **2026-09-26** — [Building a National Digital Trust Architecture for India: From Digital Identity and Data Exchange to Federated Institutional Trust](reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md) — *Zenodo*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-24** — [When AI Begins to Build AI](reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md) — *Zenodo*
 - **2026-09-22** — [Procedural fairness, accountability, and legitimacy in the AI-enabled state: evidence from China](reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md) — *Humanities and Social Sciences Communications (2026)*
 - **2026-09-17** — [Multi-stakeholder transparency evaluation and dynamic accountability mechanisms for AI-assisted criminal sentencing](reviews/2026/2026-09-17__multi-stakeholder-transparency-dynamic-accountability-ai-sentencing__v1.md) — *Scientific Reports (2026)*
-- **2026-09-16** — [Very Justified Envy](reviews/2026/2026-09-16__very-justified-envy__v1.md) — *arXiv*
 
 <!-- RECENT_REVIEWS:END -->
 
