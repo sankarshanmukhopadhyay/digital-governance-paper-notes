@@ -55,7 +55,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (29)
+- **AI Governance** (30)
 - **AI Safety & Evaluation** (13)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -142,12 +142,12 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 - **2026-09-29** — [The Agentic Web Requires New Normative Infrastructure](reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md) — *arXiv preprint*
 - **2026-09-29** — [Structural Preconditions of Algorithmic Sovereignty: Informational Fragility and the Institutional Architecture of AI Governance](reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md) — *International Journal of Innovative Science and Research Technology (IJISRT), 11(3), 4261-4280*
+- **2026-09-29** — [Artificial Intelligence and Electoral Democracy in Nigeria: Political Participation, Information Integrity and The Future of Democratic Governance](reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md) — *International Journal of Scientific Research Studies, 3(9), 425-435*
 - **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
 - **2026-09-26** — [Leveraging Human Rights Frameworks for Agentic AI Governance](reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md) — *Business and Human Rights Journal*
 - **2026-09-26** — [Building a National Digital Trust Architecture for India: From Digital Identity and Data Exchange to Federated Institutional Trust](reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md) — *Zenodo*
 - **2026-09-24** — [Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability](reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md) — *The Pinnacle: A Journal by Scholar-Practitioners, 4(2)*
 - **2026-09-24** — [When AI Begins to Build AI](reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md) — *Zenodo*
-- **2026-09-22** — [Procedural fairness, accountability, and legitimacy in the AI-enabled state: evidence from China](reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md) — *Humanities and Social Sciences Communications (2026)*
 
 <!-- RECENT_REVIEWS:END -->
 
