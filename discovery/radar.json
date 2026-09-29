@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "repository": "sankarshanmukhopadhyay/digital-governance-paper-notes",
   "lookback_days": 8,
   "max_per_source": 40,
@@ -180,5 +180,97 @@
     "assignees": [
       "sankarshanmukhopadhyay"
     ]
-  }
+  },
+  "breadth": {
+    "recent_corpus_size": 30,
+    "horizon_limit": 4,
+    "serendipity_limit": 2,
+    "governance_relevance_threshold": 0.35,
+    "serendipity_novelty_threshold": 0.68,
+    "novelty_rate_threshold": 0.6,
+    "underrepresented_domain_max": 1,
+    "quality_baseline": 0.7
+  },
+  "adjacent_themes": [
+    {
+      "name": "law-and-technology",
+      "primary_topic": "Law, Regulation & Liability",
+      "anchors": [
+        "administrative law",
+        "technology law",
+        "digital regulation",
+        "algorithmic regulation",
+        "legal infrastructure"
+      ],
+      "queries": [
+        "technology law digital governance",
+        "administrative law digital systems",
+        "algorithmic regulation institutions"
+      ]
+    },
+    {
+      "name": "digital-markets",
+      "primary_topic": "Economic & Market Infrastructure",
+      "anchors": [
+        "digital markets",
+        "competition law",
+        "antitrust",
+        "market power",
+        "platform competition"
+      ],
+      "queries": [
+        "digital markets governance",
+        "competition policy technology platforms",
+        "antitrust digital infrastructure"
+      ]
+    },
+    {
+      "name": "privacy-and-data-governance",
+      "primary_topic": "Privacy & Data Protection",
+      "anchors": [
+        "data protection",
+        "privacy governance",
+        "data governance",
+        "data spaces",
+        "data access"
+      ],
+      "queries": [
+        "privacy data governance institutions",
+        "data protection digital infrastructure",
+        "data spaces governance"
+      ]
+    },
+    {
+      "name": "public-administration",
+      "primary_topic": "State Capacity & Administrative Systems",
+      "anchors": [
+        "public administration",
+        "administrative capacity",
+        "public sector reform",
+        "bureaucracy",
+        "institutional capacity"
+      ],
+      "queries": [
+        "public administration digital governance",
+        "administrative capacity technology",
+        "institutional capacity digital state"
+      ]
+    },
+    {
+      "name": "sociotechnical-institutions",
+      "primary_topic": "Socio-technical Systems",
+      "anchors": [
+        "sociotechnical",
+        "science and technology studies",
+        "institutional design",
+        "political economy",
+        "technology institutions"
+      ],
+      "queries": [
+        "sociotechnical governance institutions",
+        "political economy digital infrastructure",
+        "institutional design technology governance"
+      ]
+    }
+  ]
 }
