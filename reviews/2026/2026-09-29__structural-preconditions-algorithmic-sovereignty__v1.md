@@ -5,7 +5,7 @@ publication: "International Journal of Innovative Science and Research Technolog
 date_read: "2026-09-29"
 primary_domain: "State Capacity & Administrative Systems"
 tags: ["AI governance", "state capacity", "digital sovereignty", "interoperability", "institutional readiness", "public administration"]
-key_insight: "Algorithmic sovereignty depends less on owning AI systems than on whether the state can produce coherent demographic evidence, govern its circulation, and constrain the institutions that act on it."
+key_insight: "GPAS measures the administrative preconditions for algorithmic sovereignty more convincingly than it measures legitimate sovereignty itself, because informational coherence and state capacity do not establish contestability, institutional independence, or justified public authority."
 published: "2026-09-24"
 doi: "10.38124/ijisrt/26mar1903"
 paper_type: "research-article"
@@ -23,8 +23,8 @@ The paper is especially useful in distinguishing technical interoperability from
 
 The methodological limit appears in the Algorithmic Sovereignty Index. Birth-registration completeness, the UN Online Service Index, and a three-level data-protection score are tractable proxies, but they do not directly measure the institutional properties the framework claims to operationalize. The index also compresses legitimacy into formal legal and oversight indicators. The authors explicitly state that ISA does not measure democratic quality or human-rights compliance, which is a defensible boundary for an exploratory index. Yet the paper also describes algorithmic sovereignty as a legitimate property of public authority. That stronger claim requires evidence about contestability, redress, enforcement independence, abuse constraints, and whether affected people can correct state-held demographic data.
 
-The resulting governance tension is productive rather than fatal. Informational coherence can increase administrative capacity while also making surveillance, exclusion, and executive coordination easier to scale. GPAS identifies this concentration risk but does not yet make citizen-facing limits part of the architecture's core measurement logic. A next iteration should therefore test whether sovereignty remains possible when coherence is high but contestability, correction, and institutional independence are weak.
+The resulting governance tension is productive rather than fatal. Informational coherence can increase administrative capacity while also making surveillance, exclusion, and executive coordination easier to scale. My assessment is that GPAS currently measures the administrative preconditions for algorithmic sovereignty more convincingly than it measures legitimate sovereignty itself. The distinction matters because a state can become informationally coherent without becoming more contestable or institutionally constrained. A next iteration should test whether the sovereignty claim survives cases where coherence is high but correction, redress, and institutional independence are weak.
 
 ## Key Insight
 
-Algorithmic sovereignty depends less on owning AI systems than on whether the state can produce coherent demographic evidence, govern its circulation, and constrain the institutions that act on it.
+GPAS measures the administrative preconditions for algorithmic sovereignty more convincingly than it measures legitimate sovereignty itself, because informational coherence and state capacity do not establish contestability, institutional independence, or justified public authority.
