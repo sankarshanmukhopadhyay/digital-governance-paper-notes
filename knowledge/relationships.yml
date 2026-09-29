@@ -68,7 +68,8 @@ relationships:
   - from: reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md
     type: related_to
     to: reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md
-    rationale: Both examine legitimacy around AI-enabled public authority and expose a common boundary: perceived acceptance or administrative coherence can describe institutional conditions without establishing that authority is contestable, constrained or justified.
+    rationale: >-
+      Both examine legitimacy around AI-enabled public authority and expose a common boundary: perceived acceptance or administrative coherence can describe institutional conditions without establishing that authority is contestable, constrained or justified.
   - from: reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
     type: related_to
     to: reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md
