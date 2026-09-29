@@ -5,7 +5,7 @@ publication: "The Pinnacle: A Journal by Scholar-Practitioners, 4(2)"
 date_read: "2026-09-24"
 primary_domain: "AI Governance"
 tags: ["AI governance", "accountability", "cyber risk", "AI risk management", "agentic systems"]
-key_insight: "AI accountability becomes executable only when each consequential decision has a named owner and each control function has preauthorized authority to intervene before failure."
+key_insight: "The Decision Authority Charter is a credible route from accountability language to executable control, but its real governance test is whether named owners and preauthorized intervention still work when business, security, legal, and operational authorities genuinely conflict."
 published: "2026-09-17"
 doi: "10.61643/c79060"
 paper_type: "research-article"
@@ -23,8 +23,8 @@ The paper's main contribution is the AI Decision Authority Charter, a use-case-s
 
 The paper also challenges human-in-the-loop oversight when the human lacks evidence, time, an alternative path, or genuine authority to reject the system. Its escalation model therefore ties observable triggers to named decision owners, response deadlines, containment actions, and executive adjudication. For agentic AI, the argument becomes sharper: authority granted to an agent must be matched by the organization's capacity to observe, restrict, revoke, and recover from that authority.
 
-The framework is operationally useful, but its evidence base is primarily synthesis, standards alignment, and illustrative cases rather than validation of the Charter in live organizations. Robodebt and SyRI demonstrate the consequences of diffuse authority, but they do not establish that singular decision ownership or bounded CISO authority will resolve cross-domain conflicts in practice. The next step should be implementation evidence: tabletop exercises, incident simulations, measurable intervention latency, tested revocation paths, and comparative results across organizations with different regulatory and operating models.
+The framework is operationally useful, but its evidence base is primarily synthesis, standards alignment, and illustrative cases rather than validation of the Charter in live organizations. Robodebt and SyRI demonstrate the consequences of diffuse authority, but they do not establish that singular decision ownership or bounded CISO authority will resolve cross-domain conflicts in practice. That makes the Charter a credible operational hypothesis rather than a validated governance pattern. Its value is real because it specifies decision rights before failure, but the decisive test is whether those rights remain usable when business, security, legal, and operational authorities genuinely conflict. Implementation evidence should therefore include tabletop exercises, incident simulations, measurable intervention latency, tested revocation paths, and comparative results across organizations with different regulatory and operating models.
 
 ## Key Insight
 
-AI accountability becomes executable only when each consequential decision has a named owner and each control function has preauthorized authority to intervene before failure.
+The Decision Authority Charter is a credible route from accountability language to executable control, but its real governance test is whether named owners and preauthorized intervention still work when business, security, legal, and operational authorities genuinely conflict.
