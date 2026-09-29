@@ -68,7 +68,7 @@ python scripts/knowledge_lint.py
 - **Platform Governance & Internet Governance** (3)
 - **Socio-technical Systems** (9)
 - **Inclusion, Rights & Development** (2)
-- **State Capacity & Administrative Systems** (2)
+- **State Capacity & Administrative Systems** (3)
 - **Economic & Market Infrastructure** (5)
 
 <!-- TAXONOMY_SUMMARY:END -->
@@ -141,13 +141,13 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 <!-- RECENT_REVIEWS:START -->
 
 - **2026-09-29** — [The Agentic Web Requires New Normative Infrastructure](reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md) — *arXiv preprint*
+- **2026-09-29** — [Structural Preconditions of Algorithmic Sovereignty: Informational Fragility and the Institutional Architecture of AI Governance](reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md) — *International Journal of Innovative Science and Research Technology (IJISRT), 11(3), 4261-4280*
 - **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
 - **2026-09-26** — [Leveraging Human Rights Frameworks for Agentic AI Governance](reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md) — *Business and Human Rights Journal*
 - **2026-09-26** — [Building a National Digital Trust Architecture for India: From Digital Identity and Data Exchange to Federated Institutional Trust](reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md) — *Zenodo*
 - **2026-09-24** — [Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability](reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md) — *The Pinnacle: A Journal by Scholar-Practitioners, 4(2)*
 - **2026-09-24** — [When AI Begins to Build AI](reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md) — *Zenodo*
 - **2026-09-22** — [Procedural fairness, accountability, and legitimacy in the AI-enabled state: evidence from China](reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md) — *Humanities and Social Sciences Communications (2026)*
-- **2026-09-17** — [Multi-stakeholder transparency evaluation and dynamic accountability mechanisms for AI-assisted criminal sentencing](reviews/2026/2026-09-17__multi-stakeholder-transparency-dynamic-accountability-ai-sentencing__v1.md) — *Scientific Reports (2026)*
 
 <!-- RECENT_REVIEWS:END -->
 
