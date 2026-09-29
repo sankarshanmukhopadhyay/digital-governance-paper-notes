@@ -84,7 +84,8 @@ findings:
   - id: measurement-is-not-legitimacy
     title: Measurement does not confer legitimacy
     claim: Provenance, representational similarity, perceived acceptance, administrative coherence and other measurable properties can establish facts about a system without establishing who is entitled to decide, whose values should prevail or whether an action is legitimate.
-    rationale: Reviews now reach the same boundary from measurement, public-administration and state-capacity work: evidence about acceptance, coherence or representation can support analysis without supplying justified authority, contestability or institutional constraint.
+    rationale: >-
+      Reviews now reach the same boundary from measurement, public-administration and state-capacity work: evidence about acceptance, coherence or representation can support analysis without supplying justified authority, contestability or institutional constraint.
     facets: [legitimacy, provenance, contestability]
     source_reviews:
       - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
