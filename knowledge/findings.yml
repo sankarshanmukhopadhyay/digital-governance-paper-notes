@@ -3,12 +3,14 @@ findings:
   - id: governance-requires-execution
     title: Governance becomes consequential when rules can alter execution
     claim: Principles, taxonomies and assurance evidence do not themselves govern a system; governance becomes operational when evidence is connected to decision authority, intervention, enforcement and residual-risk ownership.
-    rationale: Reviews across AI risk tooling and agent governance repeatedly separate descriptive or evaluative capability from the institutional machinery that can permit, constrain, stop or remedy action.
+    rationale: Reviews across AI risk tooling, agent governance and platform access repeatedly separate descriptive or evaluative capability from the institutional machinery that can permit, constrain, stop, adjudicate or remedy action.
     facets: [authority, accountability, enforcement, institutional-capacity]
     source_reviews:
       - reviews/2026/2026-09-16__taxonomy-driven-analysis-open-source-ai-risk-mitigation-tools__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
       - reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md
+      - reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md
+      - reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md
 
   - id: authority-is-not-identity-or-provenance
     title: Identity and provenance do not establish authority
@@ -69,11 +71,23 @@ findings:
       - reviews/2026/2026-09-16__interaction-creates-dynamical-ai-behavior-absent-in-isolation__v1.md
       - reviews/2026/2026-09-16__designing-loyalty-ai-agents-conflicts-of-interest__v1.md
 
+  - id: control-plane-is-governance-object
+    title: Moving control does not remove the governance problem
+    claim: External policy engines, registries, platform access controls and other control-plane mechanisms can make governance more executable while simultaneously concentrating authority in the institutions that operate those mechanisms.
+    rationale: Recent reviews repeatedly show that moving constraints outside an agent or application improves enforceability but does not establish the legitimacy, accountability or contestability of the new decision point.
+    facets: [authority, legitimacy, enforcement, gatekeeping, contestability]
+    source_reviews:
+      - reviews/2026/2026-09-24__when-ai-begins-to-build-ai__v1.md
+      - reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md
+      - reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md
+
   - id: measurement-is-not-legitimacy
     title: Measurement does not confer legitimacy
-    claim: Provenance, representational similarity and other measurable properties can establish facts about a system without establishing who is entitled to decide, whose values should prevail or whether an action is legitimate.
-    rationale: Reviews distinguish empirical evidence about represented populations and credential disclosure from the institutional authority needed to justify consequential choices.
-    facets: [legitimacy, provenance]
+    claim: Provenance, representational similarity, perceived acceptance, administrative coherence and other measurable properties can establish facts about a system without establishing who is entitled to decide, whose values should prevail or whether an action is legitimate.
+    rationale: Reviews now reach the same boundary from measurement, public-administration and state-capacity work: evidence about acceptance, coherence or representation can support analysis without supplying justified authority, contestability or institutional constraint.
+    facets: [legitimacy, provenance, contestability]
     source_reviews:
       - reviews/2026/2026-09-16__people-are-not-just-their-countries__v1.md
       - reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md
+      - reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md
+      - reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md
