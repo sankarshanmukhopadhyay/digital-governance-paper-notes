@@ -18,9 +18,25 @@ It is not a publication authority. A `candidate` state means that the paper cros
 10. Create or resurface GitHub intake issues only for `candidate` and `needs_judgment` records.
 11. Require human editorial action to move an intake issue into `review:backlog` or a terminal disposition.
 
+## Controlled breadth: Core, Horizon, and Serendipity
+
+Radar now separates discovery into three classes rather than treating semantic proximity to the existing corpus as the only useful signal.
+
+- **Core** preserves the existing precision-oriented themes, thresholds, and scoring behaviour.
+- **Horizon** uses an explicitly configured adjacent-domain retrieval surface. Candidates must still pass a minimum governance-relevance gate and are quota-bounded before issue intake.
+- **Serendipity** is selected from governance-qualified adjacent candidates only when corpus-relative novelty clears a configured threshold. Novelty cannot compensate for weak governance relevance.
+
+The comparison window is the most recent canonical reviews, configured by `breadth.recent_corpus_size` (30 by default). The initial similarity mechanism is deliberately deterministic and dependency-free: it compares normalized token sets derived from review title, key insight, and primary domain. Missing comparison evidence remains missing; it is not converted into artificial high novelty.
+
+Each non-Core record carries `discovery_class`, `primary_topic`, `governance_relevance_score`, `quality_score`, `similarity_to_recent_corpus`, `novelty_score`, source-history context, and a `why_this_appeared` explanation. Eligible records outside the configured non-Core quota are retained in the run ledger as deferred evidence but do not create intake issues.
+
+The ledger also records per-cycle telemetry: surfaced volume by discovery class, distinct/new sources, top-five source concentration, topic distribution, and novelty rate where novelty is observable. These metrics are diagnostic evidence for later tuning; they do not automatically modify retrieval weights.
+
+Reviewer disposition remains authoritative in the GitHub issue lifecycle. Radar consumes issue state for suppression/reconsideration and does not maintain a competing private acceptance model.
+
 ## Configuration
 
-`discovery/radar.json` is the inspectable discovery policy. Themes define broad search surfaces and explicit domain anchors. A theme anchor is evidence that the work is actually about the relevant technical or institutional domain rather than merely containing generic words such as “governance” or “infrastructure”. `governance_signals` provide additional evidence that a work speaks to authority, accountability, legitimacy, institutional control or adjacent governance mechanisms. `exclusion_signals` suppress recurring false positives.
+`discovery/radar.json` is the inspectable discovery policy. The `breadth` block controls corpus window, governance gate, novelty threshold, and non-Core quotas; `adjacent_themes` defines the bounded Horizon retrieval surface. Themes define broad search surfaces and explicit domain anchors. A theme anchor is evidence that the work is actually about the relevant technical or institutional domain rather than merely containing generic words such as “governance” or “infrastructure”. `governance_signals` provide additional evidence that a work speaks to authority, accountability, legitimacy, institutional control or adjacent governance mechanisms. `exclusion_signals` suppress recurring false positives.
 
 The score is diagnostic. It exists to explain why a record was surfaced and to reduce the review burden. It must not be treated as a quality score, importance ranking, or automatic admission decision.
 
