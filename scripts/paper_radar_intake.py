@@ -82,7 +82,9 @@ def same_issue_item(issue: dict, item: dict) -> bool:
 def select_items(payload: dict) -> list[dict]:
     return [
         item for item in payload.get("items", [])
-        if item.get("state") in {"candidate", "needs_judgment"} and not item.get("already_represented")
+        if item.get("state") in {"candidate", "needs_judgment"}
+        and not item.get("already_represented")
+        and item.get("selected_for_intake", True)
     ]
 
 
@@ -117,8 +119,14 @@ def issue_body(item: dict, generated_at: str) -> str:
 ## Paper Radar provenance
 
 - Radar state: `{item.get('state')}`
+- Discovery class: `{item.get('discovery_class', 'core')}`
 - Theme: `{item.get('theme')}`
+- Primary topic: {item.get('primary_topic') or item.get('theme')}
 - Score: {item.get('score')}
+- Governance relevance: {item.get('governance_relevance_score') if item.get('governance_relevance_score') is not None else 'core-policy' }
+- Similarity to recent corpus: {item.get('similarity_to_recent_corpus') if item.get('similarity_to_recent_corpus') is not None else 'not-applicable' }
+- Novelty score: {item.get('novelty_score') if item.get('novelty_score') is not None else 'not-applicable' }
+- Why this appeared: {item.get('why_this_appeared') or 'Core Radar policy match.'}
 - Freshness status: `{item.get('freshness_status', 'unknown')}`
 - Earliest known publication/public-release date: {item.get('earliest_known_publication_at') or 'unknown'}
 - Discovered in run: {generated_at}
