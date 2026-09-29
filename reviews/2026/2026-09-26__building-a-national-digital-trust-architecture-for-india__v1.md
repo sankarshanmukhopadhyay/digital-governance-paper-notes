@@ -5,7 +5,7 @@ publication: "Zenodo"
 date_read: "2026-09-26"
 primary_domain: "Trust Infrastructure"
 tags: ["trust registries", "trust assurance", "authority", "authorization", "digital public infrastructure", "India"]
-key_insight: "The paper's central contribution is to separate technical verification from institutional reliance and make trust an explicit governance decision over issuer authority, purpose, status, relying-party authority, liability, and redress."
+key_insight: "This is a strong trust-architecture proposal because it refuses to collapse verification into reliance, but it remains a governance blueprint rather than deployable national infrastructure until legal authority, registry operation, liability, and cross-sector redress are resolved."
 published: "2026-09-19"
 doi: "10.5281/zenodo.22840405"
 peer_review_status: "working-paper"
@@ -27,8 +27,8 @@ The paper is careful about concentration risk. It proposes sector-signed registr
 
 The limits are equally clear. The architecture is conceptual and unimplemented. It does not yet establish the legal instrument, registry operator, cross-sector liability doctrine, cost model, formal security model or evidence that reuse will improve fraud, cost or processing outcomes. Its safe-harbour proposal for relying institutions requires explicit legal authority, and the interaction between sectoral regimes and the Digital Personal Data Protection framework remains unresolved. The implementation plan appropriately treats these as pilot questions rather than presumed benefits.
 
-For practitioners, the durable contribution is a governance model in which trust is neither a signature nor a credential property. It is a recorded institutional decision grounded in authority, scope, purpose, current status and accountable reliance.
+For practitioners, this is one of the stronger architectural contributions in the archive because it refuses to treat trust as a signature or credential property and instead makes reliance an explicit institutional decision. The same precision exposes the remaining boundary: without a settled legal instrument, registry operator, liability regime, and cross-sector redress path, this is a governance blueprint rather than deployable national trust infrastructure. A pilot that demonstrates those institutional mechanisms, not merely technical interoperability, would materially change that assessment.
 
 ## Key Insight
 
-The paper's central contribution is to separate technical verification from institutional reliance and make trust an explicit governance decision over issuer authority, purpose, status, relying-party authority, liability, and redress.
+This is a strong trust-architecture proposal because it refuses to collapse verification into reliance, but it remains a governance blueprint rather than deployable national infrastructure until legal authority, registry operation, liability, and cross-sector redress are resolved.
