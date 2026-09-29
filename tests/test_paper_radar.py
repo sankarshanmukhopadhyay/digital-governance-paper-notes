@@ -1,8 +1,10 @@
 import importlib.util
+import sys
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 spec = importlib.util.spec_from_file_location("paper_radar", ROOT / "scripts" / "paper_radar.py")
 radar = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(radar)
@@ -21,6 +23,15 @@ CFG = {
     "exclusion_signals": ["protein folding"],
     "source_weights": {"arxiv": 1, "crossref": 1, "openalex": 1},
     "issue_intake": {"deferred_reconsider_days": 90},
+    "breadth": {
+        "governance_relevance_threshold": 0.35,
+        "horizon_limit": 2,
+        "serendipity_limit": 1,
+        "serendipity_novelty_threshold": 0.68,
+        "novelty_rate_threshold": 0.60,
+        "quality_baseline": 0.70,
+        "underrepresented_domain_max": 1,
+    },
 }
 
 
@@ -124,6 +135,100 @@ class PaperRadarTests(unittest.TestCase):
     def test_crossref_registered_publication_can_render_as_published(self):
         item = {"freshness_status": "verified", "earliest_known_publication_at": "2026-09-10", "source_records": [{"source_system": "crossref", "date_semantics": "registered_publication_metadata", "dates": {"published": "2026-09-10"}}]}
         self.assertEqual(radar.report_date_line(item), "- Published: 2026-09-10")
+
+
+    def test_core_scoring_declares_core_without_changing_candidate_result(self):
+        item = {"source_system": "openalex", "title": "Agentic AI Governance Authority and Redress", "abstract": "artificial intelligence interoperability governance authority redress accountability"}
+        scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
+        self.assertEqual(scored["state"], "candidate")
+        self.assertEqual(scored["discovery_class"], "core")
+        self.assertTrue(scored["selected_for_intake"])
+
+    def test_adjacent_novelty_cannot_bypass_governance_gate(self):
+        theme = {"name": "digital-markets", "primary_topic": "Economic & Market Infrastructure", "anchors": ["digital markets"]}
+        corpus = [{"tokens": {"agentic", "governance", "authority"}, "primary_domain": "AI Governance", "publication": "Example"}]
+        item = {"source_system": "openalex", "title": "Digital Markets Pricing Models", "abstract": "digital markets pricing demand supply", "publication": "Journal X"}
+        scored = radar.breadth.score_adjacent(
+            item, CFG, theme, "digital markets", set(), [], corpus,
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "deferred")
+        self.assertGreater(scored["novelty_score"], 0.5)
+        self.assertLess(scored["governance_relevance_score"], CFG["breadth"]["governance_relevance_threshold"])
+
+    def test_adjacent_governance_candidate_records_explanation_and_novelty(self):
+        theme = {"name": "digital-markets", "primary_topic": "Economic & Market Infrastructure", "anchors": ["digital markets"]}
+        corpus = [{"tokens": {"agentic", "governance", "authority"}, "primary_domain": "AI Governance", "publication": "Example"}]
+        item = {
+            "source_system": "openalex",
+            "title": "Digital Markets Governance and Platform Accountability",
+            "abstract": "digital markets regulation accountability authority rights institutional enforcement",
+            "publication": "Journal Y",
+        }
+        scored = radar.breadth.score_adjacent(
+            item, CFG, theme, "digital markets governance", set(), [], corpus,
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "candidate")
+        self.assertEqual(scored["discovery_class"], "horizon")
+        self.assertIsNotNone(scored["novelty_score"])
+        self.assertTrue(scored["why_this_appeared"])
+        self.assertEqual(scored["primary_topic"], "Economic & Market Infrastructure")
+
+    def test_non_core_mix_enforces_horizon_and_serendipity_quotas(self):
+        items = []
+        for i, novelty in enumerate([0.95, 0.90, 0.80, 0.50, 0.40, 0.30]):
+            items.append({
+                "title": f"Paper {i}",
+                "state": "candidate",
+                "already_represented": False,
+                "discovery_class": "horizon",
+                "governance_relevance_score": 0.8,
+                "quality_score": 0.8,
+                "novelty_score": novelty,
+                "why_this_appeared": "eligible",
+                "selected_for_intake": False,
+            })
+        mixed = radar.breadth.apply_non_core_mix(items, CFG)
+        selected = [x for x in mixed if x.get("selected_for_intake")]
+        self.assertEqual(sum(x["discovery_class"] == "serendipity" for x in selected), 1)
+        self.assertLessEqual(sum(x["discovery_class"] == "horizon" for x in selected), 2)
+        self.assertTrue(all(x["state"] == "deferred" for x in mixed if not x.get("selected_for_intake")))
+
+    def test_missing_corpus_does_not_become_serendipity_by_assumption(self):
+        item = {
+            "title": "Adjacent governance paper",
+            "state": "candidate",
+            "already_represented": False,
+            "discovery_class": "horizon",
+            "governance_relevance_score": 0.9,
+            "quality_score": 0.8,
+            "novelty_score": None,
+            "why_this_appeared": "eligible",
+            "selected_for_intake": False,
+        }
+        mixed = radar.breadth.apply_non_core_mix([item], CFG)
+        self.assertEqual(mixed[0]["discovery_class"], "horizon")
+        self.assertTrue(mixed[0]["selected_for_intake"])
+
+    def test_intake_ignores_non_core_overflow(self):
+        payload = {"items": [
+            {"title": "Selected", "state": "candidate", "already_represented": False, "selected_for_intake": True},
+            {"title": "Overflow", "state": "candidate", "already_represented": False, "selected_for_intake": False},
+        ]}
+        self.assertEqual([x["title"] for x in intake.select_items(payload)], ["Selected"])
+
+    def test_telemetry_reports_class_source_and_novelty_mix(self):
+        items = [
+            {"state": "candidate", "already_represented": False, "selected_for_intake": True, "discovery_class": "core", "publication": "A", "theme": "ai-governance", "novelty_score": None, "source_previously_seen": None},
+            {"state": "candidate", "already_represented": False, "selected_for_intake": True, "discovery_class": "horizon", "publication": "B", "primary_topic": "Privacy", "novelty_score": 0.7, "source_previously_seen": False},
+            {"state": "candidate", "already_represented": False, "selected_for_intake": True, "discovery_class": "serendipity", "publication": "C", "primary_topic": "Markets", "novelty_score": 0.9, "source_previously_seen": False},
+        ]
+        metrics = radar.breadth.telemetry(items, CFG)
+        self.assertEqual(metrics["candidate_volume_by_class"], {"core": 1, "horizon": 1, "serendipity": 1})
+        self.assertEqual(metrics["distinct_sources"], 3)
+        self.assertEqual(metrics["new_source_count"], 2)
+        self.assertEqual(metrics["novelty_rate"], 1.0)
 
 
 if __name__ == "__main__":
