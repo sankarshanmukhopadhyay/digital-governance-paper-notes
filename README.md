@@ -22,7 +22,7 @@ The repository is maintained with assistance from AI/LLM systems. The disclosure
 
 ## Archive as Knowledge Infrastructure
 
-The archive now has a second layer above individual reviews. It is designed to make accumulated governance knowledge explicit without converting editorial judgment into opaque scores or automatic classifications.
+The archive now has a second layer above individual reviews. It is designed to make accumulated governance knowledge explicit without converting editorial judgment into opaque scores or automatic classifications. Collections organize what to read; the Knowledge layer records accepted cross-paper propositions, material relationships, evidence-backed gaps and synthesis judgments.
 
 - **Provenance and paper state:** optional metadata can record publication state, paper type, source version and review status without forcing speculative backfill.
 - **Review relationships:** curated edges record when reviews relate to, extend, challenge or supersede one another. Every canonical edge requires a rationale.
