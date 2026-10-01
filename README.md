@@ -55,7 +55,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:START -->
 
-- **AI Governance** (31)
+- **AI Governance** (32)
 - **AI Safety & Evaluation** (13)
 - **Digital Public Infrastructure** (8)
 - **Public Sector Digital Strategy** (2)
@@ -140,6 +140,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:START -->
 
+- **2026-10-01** — [JAZB Framework v1.1: Judiciary AI Zero-Trust Broker](reviews/2026/2026-10-01__jazb-framework-judiciary-ai-zero-trust-broker__v1.md) — *Zenodo framework publication set*
 - **2026-10-01** — [Governance Laundering: A Taxonomy of Failure Modes in AI Compliance Architectures](reviews/2026/2026-10-01__governance-laundering__v1.md) — *FERZ, Inc. research report*
 - **2026-09-29** — [The Agentic Web Requires New Normative Infrastructure](reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md) — *arXiv preprint*
 - **2026-09-29** — [Structural Preconditions of Algorithmic Sovereignty: Informational Fragility and the Institutional Architecture of AI Governance](reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md) — *International Journal of Innovative Science and Research Technology (IJISRT), 11(3), 4261-4280*
@@ -147,7 +148,6 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 - **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
 - **2026-09-26** — [Leveraging Human Rights Frameworks for Agentic AI Governance](reviews/2026/2026-09-26__leveraging-human-rights-frameworks-for-agentic-ai-governance__v1.md) — *Business and Human Rights Journal*
 - **2026-09-26** — [Building a National Digital Trust Architecture for India: From Digital Identity and Data Exchange to Federated Institutional Trust](reviews/2026/2026-09-26__building-a-national-digital-trust-architecture-for-india__v1.md) — *Zenodo*
-- **2026-09-24** — [Who Owns AI When It Breaks? The Convergence of AI Governance and Cybersecurity Accountability](reviews/2026/2026-09-24__who-owns-ai-when-it-breaks__v1.md) — *The Pinnacle: A Journal by Scholar-Practitioners, 4(2)*
 
 <!-- RECENT_REVIEWS:END -->
 
