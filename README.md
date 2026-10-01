@@ -73,7 +73,7 @@ python scripts/knowledge_lint.py
 
 <!-- TAXONOMY_SUMMARY:END -->
 
-This snapshot regenerates automatically from `taxonomy/domains.yml` and the reviews in `reviews/`; don't hand-edit the block between the markers above.
+This snapshot is generated from `taxonomy/domains.yml` and the reviews in `reviews/`. It is a convenience view, not canonical state. CI and Pages rebuild it in the workspace, so review PRs do not need to commit changes to this block.
 
 The full controlled vocabulary, including secondary topic tags and arXiv scholarly-signal codes, lives in [`taxonomy/domains.yml`](taxonomy/domains.yml). The separate governance-facet vocabulary lives in [`knowledge/governance-facets.yml`](knowledge/governance-facets.yml).
 
@@ -151,7 +151,7 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 <!-- RECENT_REVIEWS:END -->
 
-This list regenerates automatically from the most recently read reviews; don't hand-edit the block between the markers above. See [index.md](index.md) for the full archive.
+This list is generated from the most recently read reviews. It is a convenience view, not canonical state. CI and Pages rebuild it in the workspace, so review PRs do not need to commit changes to this block. See [index.md](index.md) for the full archive.
 
 ---
 
