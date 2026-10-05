@@ -18,25 +18,29 @@ It is not a publication authority. A `candidate` state means that the paper cros
 10. Create or resurface GitHub intake issues only for `candidate` and `needs_judgment` records.
 11. Require human editorial action to move an intake issue into `review:backlog` or a terminal disposition.
 
-## Controlled breadth: Core, Horizon, and Serendipity
+## Discovery architecture: Core, Coverage, and Serendipity
 
-Radar now separates discovery into three classes rather than treating semantic proximity to the existing corpus as the only useful signal.
+Radar separates discovery into three classes so that strong governance work does not need to use the vocabulary of the existing corpus in order to become visible.
 
-- **Core** preserves the existing precision-oriented themes, thresholds, and scoring behaviour.
-- **Horizon** uses an explicitly configured adjacent-domain retrieval surface. Candidates must still pass a minimum governance-relevance gate and are quota-bounded before issue intake.
-- **Serendipity** is selected from governance-qualified adjacent candidates only when corpus-relative novelty clears a configured threshold. Novelty cannot compensate for weak governance relevance.
+- **Core** preserves precision-oriented discovery for established repository themes such as AI governance, digital identity, trust infrastructure, digital public infrastructure, and state capacity.
+- **Coverage** gives first-class retrieval to institutionally important governance literatures that were previously treated as a small adjacent quota: law and liability, privacy and data governance, public administration, digital markets, and socio-technical institutions. Coverage records must still clear the same minimum governance-relevance gate.
+- **Serendipity** is a bounded path for unusually novel Coverage records. Novelty cannot compensate for weak governance relevance.
 
-The comparison window is the most recent canonical reviews, configured by `breadth.recent_corpus_size` (30 by default). The initial similarity mechanism is deliberately deterministic and dependency-free: it compares normalized token sets derived from review title, key insight, and primary domain. Missing comparison evidence remains missing; it is not converted into artificial high novelty.
+AI subject matter is no longer sufficient by itself for an `ai-governance` Core classification. AI anchors such as `AI`, `LLM`, `agentic`, or `algorithmic` must be accompanied by an AI-specific governance mechanism such as AI governance, algorithmic accountability, agent authority, delegation, liability, assurance, deployment control, or human oversight.
 
-Each non-Core record carries `discovery_class`, `primary_topic`, `governance_relevance_score`, `quality_score`, `similarity_to_recent_corpus`, `novelty_score`, source-history context, and a `why_this_appeared` explanation. Eligible records outside the configured non-Core quota are retained in the run ledger as deferred evidence but do not create intake issues.
+Core and Coverage records are deduplicated together. Where the same work appears through multiple discovery lanes, Radar prefers the more institutionally specific governance classification and retains all matched themes as provenance. This prevents generic AI subject signals from masking a more specific legal, privacy, administrative, market, identity, or infrastructure proposition.
 
-The ledger also records per-cycle telemetry: surfaced volume by discovery class, distinct/new sources, top-five source concentration, topic distribution, and novelty rate where novelty is observable. These metrics are diagnostic evidence for later tuning; they do not automatically modify retrieval weights.
+The comparison window remains the most recent canonical reviews, configured by `breadth.recent_corpus_size` (30 by default). Similarity remains deterministic and dependency-free, comparing normalized token sets derived from review title, key insight, and primary domain. Missing comparison evidence remains missing rather than being converted into artificial novelty.
 
-Reviewer disposition remains authoritative in the GitHub issue lifecycle. Radar consumes issue state for suppression/reconsideration and does not maintain a competing private acceptance model.
+Issue intake is bounded separately from scholarly relevance. The configured `breadth.intake_limit` limits how many qualified records become intake issues in one cycle. A conditional dominance guard limits a single theme to `breadth.max_theme_share` while equally qualified alternatives exist. If alternatives are insufficient, the guard relaxes rather than manufacturing diversity or suppressing high-value work solely to satisfy a distribution target. Qualified records outside the cycle budget remain visible in the run ledger as `qualified-overflow`.
+
+The ledger records both the pre-selection and selected populations: qualified total, selected intake, qualified overflow, discovery-class mix, qualified and selected theme distributions, topic distribution, source concentration, novelty rate, and largest-theme share. `breadth.dominance_warning_share` produces a diagnostic warning only. It does not fail CI or make an admission decision.
+
+Reviewer disposition remains authoritative in the GitHub issue lifecycle. Radar discovers, classifies, explains, and bounds intake throughput. It does not determine what the archive must contain.
 
 ## Configuration
 
-`discovery/radar.json` is the inspectable discovery policy. The `breadth` block controls corpus window, governance gate, novelty threshold, and non-Core quotas; `adjacent_themes` defines the bounded Horizon retrieval surface. Themes define broad search surfaces and explicit domain anchors. A theme anchor is evidence that the work is actually about the relevant technical or institutional domain rather than merely containing generic words such as “governance” or “infrastructure”. `governance_signals` provide additional evidence that a work speaks to authority, accountability, legitimacy, institutional control or adjacent governance mechanisms. `exclusion_signals` suppress recurring false positives.
+`discovery/radar.json` is the inspectable discovery policy. The `breadth` block controls corpus window, governance gate, novelty threshold, intake budget, conditional theme-share guard, and diagnostic dominance threshold; `coverage_themes` defines the first-class institutional coverage surface. Themes define broad search surfaces and explicit domain anchors. A theme anchor is evidence that the work is actually about the relevant technical or institutional domain rather than merely containing generic words such as “governance” or “infrastructure”. `governance_signals` provide additional evidence that a work speaks to authority, accountability, legitimacy, institutional control or adjacent governance mechanisms. `exclusion_signals` suppress recurring false positives.
 
 The score is diagnostic. It exists to explain why a record was surfaced and to reduce the review burden. It must not be treated as a quality score, importance ranking, or automatic admission decision.
 
