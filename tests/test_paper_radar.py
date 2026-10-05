@@ -274,6 +274,29 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(scored["material_governance_signals"], [])
 
 
+    def test_coverage_defers_technology_only_buried_in_abstract(self):
+        theme = {
+            "name": "public-administration",
+            "primary_topic": "State Capacity & Administrative Systems",
+            "anchors": ["institutional capacity"],
+            "context_signals": ["digital", "technology", "artificial intelligence", "data"],
+            "require_title_context": True,
+        }
+        item = {
+            "source_system": "openalex",
+            "title": "Regional Security Cooperation and Institutional Capacity",
+            "abstract": "institutional capacity accountability interoperability digital technology artificial intelligence governance",
+            "publication": "Journal Z",
+        }
+        scored = radar.breadth.score_coverage(
+            item, CFG, theme, "institutional capacity digital state", set(), [], [],
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "deferred")
+        self.assertTrue(scored["context_signals"])
+        self.assertEqual(scored["title_context_signals"], [])
+
+
 
     def test_ai_subject_without_ai_governance_mechanism_is_deferred(self):
         item = {
