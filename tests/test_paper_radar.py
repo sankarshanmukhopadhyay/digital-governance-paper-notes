@@ -336,6 +336,48 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(merged["theme"], "law-and-technology")
         self.assertEqual(merged["primary_topic"], "Law, Regulation & Liability")
         self.assertEqual(set(merged["theme_matches"]), {"ai-governance", "law-and-technology"})
+    def test_deferred_specific_match_cannot_suppress_qualified_core_candidate(self):
+        core = {
+            "source_system": "openalex", "title": "AI Governance and Public Authority", "doi": "10.1000/state",
+            "score": 9, "state": "candidate", "theme": "ai-governance", "primary_topic": "ai-governance",
+            "specificity_rank": 20, "already_represented": False,
+            "source_date_semantics": "index_publication_metadata",
+            "source_dates": {"published": "2026-09-10"},
+        }
+        weak_law = {
+            "source_system": "crossref", "title": "AI Governance and Public Authority", "doi": "10.1000/state",
+            "score": 6, "state": "deferred", "theme": "law-and-technology",
+            "primary_topic": "Law, Regulation & Liability", "specificity_rank": 100,
+            "already_represented": False,
+            "source_date_semantics": "registered_publication_metadata",
+            "source_dates": {"published": "2026-09-10"},
+        }
+        merged = radar.dedupe([core, weak_law])[0]
+        self.assertEqual(merged["state"], "candidate")
+        self.assertEqual(merged["theme"], "ai-governance")
+
+    def test_qualified_specific_match_can_classify_without_lowering_candidate_state(self):
+        core = {
+            "source_system": "openalex", "title": "AI Evidence and Judicial Review", "doi": "10.1000/class",
+            "score": 9, "state": "candidate", "theme": "ai-governance", "primary_topic": "ai-governance",
+            "specificity_rank": 20, "already_represented": False,
+            "source_date_semantics": "index_publication_metadata",
+            "source_dates": {"published": "2026-09-10"},
+        }
+        law = {
+            "source_system": "crossref", "title": "AI Evidence and Judicial Review", "doi": "10.1000/class",
+            "score": 8, "state": "needs_judgment", "theme": "law-and-technology",
+            "primary_topic": "Law, Regulation & Liability", "specificity_rank": 100,
+            "already_represented": False,
+            "source_date_semantics": "registered_publication_metadata",
+            "source_dates": {"published": "2026-09-10"},
+        }
+        merged = radar.dedupe([core, law])[0]
+        self.assertEqual(merged["state"], "candidate")
+        self.assertEqual(merged["theme"], "law-and-technology")
+        self.assertEqual(merged["primary_topic"], "Law, Regulation & Liability")
+
+
 
     def test_dominance_guard_prefers_qualified_alternatives(self):
         cfg = dict(CFG)
