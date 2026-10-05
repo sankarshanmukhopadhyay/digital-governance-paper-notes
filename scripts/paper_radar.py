@@ -428,10 +428,11 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
     theme_cfg = next(t for t in cfg["themes"] if t["name"] == theme)
     anchors = [a for a in theme_cfg.get("anchors", []) if phrase_in_text(text, a)]
-    signals = [s for s in cfg["governance_signals"] if phrase_in_text(text, s)]
-    material = [s for s in cfg.get("material_governance_signals", []) if phrase_in_text(text, s)]
-    title_signals = [s for s in cfg.get("candidate_title_signals", []) if phrase_in_text(title, s)]
-    exclusions = [s for s in cfg["exclusion_signals"] if phrase_in_text(text, s)]
+    mechanisms = [m for m in theme_cfg.get("governance_mechanisms", []) if phrase_in_text(text, m)]
+    signals = [sig for sig in cfg["governance_signals"] if phrase_in_text(text, sig)]
+    material = [sig for sig in cfg.get("material_governance_signals", []) if phrase_in_text(text, sig)]
+    title_signals = [sig for sig in cfg.get("candidate_title_signals", []) if phrase_in_text(title, sig)]
+    exclusions = [sig for sig in cfg["exclusion_signals"] if phrase_in_text(text, sig)]
     qterms = [t for t in norm(query).split() if len(t) > 3]
     qmatches = sorted({t for t in qterms if phrase_in_text(text, t)})
     near_existing = any(title and (title == t or (len(title) > 28 and (title in t or t in title))) for t in existing_titles)
@@ -439,9 +440,13 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
     points = min(4, len(signals)) + min(2, len(qmatches)) + min(2, len(anchors)) + cfg.get("source_weights", {}).get(item["source_system"], 0)
     if exclusions:
         points -= 4
+
+    ai_mechanism_required = theme == "ai-governance"
     if exact_existing or near_existing:
         state = "represented"
     elif not anchors:
+        state = "deferred"
+    elif ai_mechanism_required and not mechanisms:
         state = "deferred"
     elif points >= cfg["candidate_threshold"] and len(material) >= 2 and title_signals:
         state = "candidate"
@@ -449,10 +454,17 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
         state = "needs_judgment"
     else:
         state = "deferred"
+
+    if ai_mechanism_required and anchors and not mechanisms and state == "deferred":
+        rationale = "AI subject matter was detected, but no configured AI-specific governance mechanism was present."
+    else:
+        rationale = "Strong alignment with an active Core Radar theme and existing precision-oriented thresholds."
+
     item.update({
         "theme": theme,
         "matched_query": query,
         "theme_anchors": anchors,
+        "governance_mechanisms": mechanisms,
         "governance_signals": signals,
         "material_governance_signals": material,
         "candidate_title_signals": title_signals,
@@ -462,16 +474,18 @@ def score(item: dict, cfg: dict, theme: str, query: str, existing_keys: set[str]
         "state": state,
         "already_represented": bool(exact_existing or near_existing),
         "discovery_class": "core",
-        "primary_topic": theme,
-        "secondary_topics": sorted(set(anchors + material)),
+        "theme_kind": "core",
+        "primary_topic": theme_cfg.get("primary_topic") or theme,
+        "specificity_rank": int(theme_cfg.get("specificity_rank", 50)),
+        "secondary_topics": sorted(set(anchors + mechanisms + material)),
         "governance_relevance_score": None,
         "quality_score": None,
         "similarity_to_recent_corpus": None,
         "novelty_score": None,
         "source_previously_seen": None,
         "underrepresented_domain": False,
-        "why_this_appeared": "Strong alignment with an active Core Radar theme and existing precision-oriented thresholds.",
-        "selected_for_intake": True,
+        "why_this_appeared": rationale,
+        "selected_for_intake": False,
     })
     return item
 
@@ -484,7 +498,9 @@ def should_merge(a: dict, b: dict) -> bool:
 
 
 def merge_group(group: list[dict]) -> dict:
-    best = max(group, key=lambda x: x.get("score", 0))
+    # Prefer the most institutionally specific governance classification when the
+    # same work is discovered through multiple lanes. Score breaks ties.
+    best = max(group, key=lambda x: (int(x.get("specificity_rank", 0)), float(x.get("score", 0))))
     out = dict(best)
     records = [source_record(x) for x in group]
     out["also_seen_in"] = sorted({x.get("source_system") for x in group if x.get("source_system")} - {out.get("source_system")})
@@ -525,20 +541,27 @@ def report_date_line(x: dict) -> str:
 
 def render(items: list[dict], run_date: str, metrics: dict | None = None) -> str:
     states = ["candidate", "needs_judgment", "deferred", "represented"]
-    counts = {s: sum(1 for x in items if x["state"] == s) for s in states}
+    counts = {state: sum(1 for x in items if x["state"] == state) for state in states}
     metrics = metrics or {}
     mix = metrics.get("candidate_volume_by_class") or {}
     lines = [
         f"# Paper Radar — {run_date}", "",
         "This report is a discovery and editorial-triage surface. Scores are diagnostic and do not authorize queue admission.",
-        "Freshness is provenance-sensitive: `Published` is used only for verified publication semantics; otherwise source-specific dates are shown.",
-        "Core precision remains unchanged; Horizon and Serendipity are separately gated and quota-bounded.", "",
+        "Freshness is provenance-sensitive: Published is used only for verified publication semantics; otherwise source-specific dates are shown.",
+        "Core and Coverage lanes retain governance gates; the bounded intake uses a conditional dominance guard rather than archive quotas.", "",
         "## Summary", "",
+        f"- Qualified: {metrics.get('qualified_total', 0)}",
+        f"- Selected for intake: {metrics.get('surfaced_total', 0)}",
+        f"- Qualified overflow: {metrics.get('qualified_overflow_total', 0)}",
         f"- Candidate: {counts['candidate']}",
         f"- Needs judgment: {counts['needs_judgment']}",
         f"- Deferred: {counts['deferred']}",
         f"- Already represented or queued: {counts['represented']}",
-        f"- Surfaced mix: core={mix.get('core', 0)}, horizon={mix.get('horizon', 0)}, serendipity={mix.get('serendipity', 0)}",
+        f"- Selected mix: core={mix.get('core', 0)}, coverage={mix.get('coverage', 0)}, serendipity={mix.get('serendipity', 0)}",
+        f"- Selected theme distribution: {metrics.get('theme_distribution', {})}",
+        f"- Qualified theme distribution: {metrics.get('qualified_theme_distribution', {})}",
+        f"- Largest selected theme share: {metrics.get('largest_theme_share', 0)} ({metrics.get('largest_theme')})",
+        f"- Dominance warning: {metrics.get('dominance_warning', False)}",
         f"- Distinct surfaced sources: {metrics.get('distinct_sources', 0)}",
         f"- Top-five source share: {metrics.get('top_five_source_share', 0)}",
         f"- Novelty rate (where observable): {metrics.get('novelty_rate')}", "",
@@ -551,25 +574,28 @@ def render(items: list[dict], run_date: str, metrics: dict | None = None) -> str
         and x.get("selected_for_intake", True)
     ]
     if not selected:
-        lines.append("No papers crossed the candidate/judgment thresholds in this run.")
+        lines.append("No papers crossed the candidate/judgment thresholds and intake selection in this run.")
     for x in selected:
         lines += [
             f"### {x['title']}", "",
-            f"- State: `{x['state']}`",
-            f"- Discovery class: `{x.get('discovery_class', 'core')}`",
+            f"- State: {x['state']}",
+            f"- Discovery class: {x.get('discovery_class', 'core')}",
             f"- Score: {x['score']}",
-            f"- Theme: `{x['theme']}`",
+            f"- Theme: {x['theme']}",
+            f"- Theme matches: {', '.join(x.get('theme_matches') or [x.get('theme')])}",
             f"- Primary topic: {x.get('primary_topic') or x.get('theme')}",
             f"- Source: {x['source_system']}",
             report_date_line(x),
-            f"- Freshness status: `{x.get('freshness_status', 'unknown')}`",
+            f"- Freshness status: {x.get('freshness_status', 'unknown')}",
             f"- Earliest known publication/public-release date: {x.get('earliest_known_publication_at') or 'unknown'}",
             f"- URL: {x.get('url','')}",
             f"- Theme anchors: {', '.join(x['theme_anchors']) or 'none'}",
             f"- Material governance signals: {', '.join(x['material_governance_signals']) or 'none'}",
             f"- Governance signals: {', '.join(x['governance_signals']) or 'none'}",
-            f"- Trigger query: `{x['matched_query']}`",
+            f"- Trigger query: {x['matched_query']}",
         ]
+        if x.get("governance_mechanisms"):
+            lines.append(f"- AI-specific governance mechanisms: {', '.join(x.get('governance_mechanisms') or [])}")
         if x.get("discovery_class") != "core":
             lines += [
                 f"- Governance relevance: {x.get('governance_relevance_score')}",
@@ -614,7 +640,7 @@ def main() -> int:
             ]
             crossref_jobs.append(("crossref", theme["name"], query, lambda q=query: crossref(q, start, cfg["max_per_source"])))
 
-    found, adjacent_found = [], []
+    found, coverage_found = [], []
     errors = [{"source": "github-issues", "error": e} for e in issue_errors]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
@@ -639,36 +665,36 @@ def main() -> int:
             errors.append({"source": name, "theme": theme, "query": query, "error": str(e)})
         time.sleep(0.6)
 
-    adjacent_parallel_jobs, adjacent_crossref_jobs = [], []
-    for theme in cfg.get("adjacent_themes", []):
+    coverage_parallel_jobs, coverage_crossref_jobs = [], []
+    for theme in cfg.get("coverage_themes", []):
         for query in theme.get("queries", []):
-            adjacent_parallel_jobs += [
+            coverage_parallel_jobs += [
                 ("openalex", theme, query, lambda q=query: openalex(q, start, cfg["max_per_source"])),
                 ("arxiv", theme, query, lambda q=query: arxiv(q, min(20, cfg["max_per_source"]))),
             ]
-            adjacent_crossref_jobs.append(("crossref", theme, query, lambda q=query: crossref(q, start, cfg["max_per_source"])))
+            coverage_crossref_jobs.append(("crossref", theme, query, lambda q=query: crossref(q, start, cfg["max_per_source"])))
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(fn): (name, theme, query) for name, theme, query, fn in adjacent_parallel_jobs}
+        futures = {pool.submit(fn): (name, theme, query) for name, theme, query, fn in coverage_parallel_jobs}
         for future in concurrent.futures.as_completed(futures):
             name, theme, query = futures[future]
             try:
                 for item in future.result():
                     item["discovered_at"] = now.isoformat()
                     if accept_record(item, start, today_s):
-                        adjacent_found.append(breadth.score_adjacent(
+                        coverage_found.append(breadth.score_coverage(
                             item, cfg, theme, query, existing_keys, existing_titles, recent_corpus,
                             norm, identity_keys, phrase_in_text,
                         ))
             except Exception as e:
                 errors.append({"source": name, "theme": theme.get("name"), "query": query, "error": str(e)})
 
-    for name, theme, query, fn in adjacent_crossref_jobs:
+    for name, theme, query, fn in coverage_crossref_jobs:
         try:
             for item in fn():
                 item["discovered_at"] = now.isoformat()
                 if accept_record(item, start, today_s):
-                    adjacent_found.append(breadth.score_adjacent(
+                    coverage_found.append(breadth.score_coverage(
                         item, cfg, theme, query, existing_keys, existing_titles, recent_corpus,
                         norm, identity_keys, phrase_in_text,
                     ))
@@ -676,17 +702,16 @@ def main() -> int:
             errors.append({"source": name, "theme": theme.get("name"), "query": query, "error": str(e)})
         time.sleep(0.6)
 
-    items = dedupe(found)
-    adjacent_items = dedupe(adjacent_found)
-    adjacent_items = [x for x in adjacent_items if not any(should_merge(x, core) for core in items)]
-    adjacent_items = breadth.apply_non_core_mix(adjacent_items, cfg)
-    items.extend(adjacent_items)
+    # Reconcile Core and Coverage together so the most institutionally specific
+    # governance classification can outrank a generic AI subject match.
+    items = dedupe(found + coverage_found)
+    items = breadth.apply_intake_mix(items, cfg)
     items = enrich_shortlisted_freshness(items, errors)
-    class_order = {"core": 0, "horizon": 1, "serendipity": 2}
+    class_order = {"core": 0, "coverage": 1, "serendipity": 2}
     items = sorted(items, key=lambda x: (x["state"] not in {"candidate", "needs_judgment"}, class_order.get(x.get("discovery_class", "core"), 9), -x["score"], x["title"]))
     metrics = breadth.telemetry(items, cfg)
     payload = {
-        "schema_version": 3,
+        "schema_version": 4,
         "generated_at": now.isoformat(),
         "lookback_start": start,
         "source_errors": errors,
