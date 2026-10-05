@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "repository": "sankarshanmukhopadhyay/digital-governance-paper-notes",
   "lookback_days": 8,
   "max_per_source": 40,
@@ -17,15 +17,48 @@
         "algorithmic",
         "foundation model"
       ],
+      "governance_mechanisms": [
+        "ai governance",
+        "algorithmic accountability",
+        "model governance",
+        "ai accountability",
+        "ai liability",
+        "ai assurance",
+        "agent delegation",
+        "agent authority",
+        "autonomous agent",
+        "delegated authority",
+        "deployment control",
+        "human oversight",
+        "governance",
+        "accountability",
+        "authority",
+        "authorization",
+        "delegation",
+        "liability",
+        "assurance",
+        "oversight",
+        "redress",
+        "revocation",
+        "audit",
+        "contestability",
+        "regulation",
+        "rights",
+        "sovereignty",
+        "compliance"
+      ],
+      "specificity_rank": 20,
       "queries": [
         "AI governance",
         "agentic AI governance",
         "algorithmic accountability",
         "AI agents delegation authority"
-      ]
+      ],
+      "primary_topic": "AI Governance"
     },
     {
       "name": "digital-identity",
+      "primary_topic": "Digital Identity",
       "anchors": [
         "digital identity",
         "electronic identity",
@@ -37,6 +70,7 @@
         "credential verification",
         "digital credential"
       ],
+      "specificity_rank": 80,
       "queries": [
         "digital identity governance",
         "verifiable credentials governance",
@@ -45,6 +79,7 @@
     },
     {
       "name": "trust-infrastructure",
+      "primary_topic": "Trust Infrastructure",
       "anchors": [
         "trust infrastructure",
         "trust registry",
@@ -55,6 +90,7 @@
         "verification",
         "authenticity"
       ],
+      "specificity_rank": 70,
       "queries": [
         "trust infrastructure",
         "trust registry",
@@ -64,6 +100,7 @@
     },
     {
       "name": "digital-public-infrastructure",
+      "primary_topic": "Digital Public Infrastructure",
       "anchors": [
         "digital public infrastructure",
         "digital public goods",
@@ -73,6 +110,7 @@
         "public digital service",
         "digital state"
       ],
+      "specificity_rank": 80,
       "queries": [
         "digital public infrastructure governance",
         "digital public goods governance",
@@ -81,6 +119,7 @@
     },
     {
       "name": "platform-and-state-capacity",
+      "primary_topic": "State Capacity & Administrative Systems",
       "anchors": [
         "platform governance",
         "digital sovereignty",
@@ -91,6 +130,7 @@
         "digital government",
         "institutional capacity"
       ],
+      "specificity_rank": 75,
       "queries": [
         "platform governance",
         "digital state capacity",
@@ -183,7 +223,9 @@
   },
   "breadth": {
     "recent_corpus_size": 30,
-    "horizon_limit": 4,
+    "intake_limit": 18,
+    "max_theme_share": 0.5,
+    "dominance_warning_share": 0.6,
     "serendipity_limit": 2,
     "governance_relevance_threshold": 0.35,
     "serendipity_novelty_threshold": 0.68,
@@ -191,86 +233,211 @@
     "underrepresented_domain_max": 1,
     "quality_baseline": 0.7
   },
-  "adjacent_themes": [
+  "coverage_themes": [
     {
       "name": "law-and-technology",
       "primary_topic": "Law, Regulation & Liability",
+      "specificity_rank": 100,
       "anchors": [
         "administrative law",
         "technology law",
         "digital regulation",
         "algorithmic regulation",
-        "legal infrastructure"
+        "legal infrastructure",
+        "evidence law",
+        "judicial review",
+        "legal liability",
+        "evidence admissibility",
+        "admissibility of evidence",
+        "legal admissibility",
+        "legal framework",
+        "legal accountability",
+        "constitutional law",
+        "criminal law",
+        "constitutional",
+        "legal role",
+        "administrative discretion",
+        "judicial",
+        "court",
+        "criminal proceedings"
       ],
       "queries": [
         "technology law digital governance",
         "administrative law digital systems",
-        "algorithmic regulation institutions"
-      ]
+        "algorithmic regulation institutions",
+        "AI evidence admissibility law",
+        "digital systems judicial review"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "automated",
+        "data",
+        "cyber",
+        "platform",
+        "online",
+        "internet",
+        "electronic",
+        "software",
+        "information system"
+      ],
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "digital-markets",
       "primary_topic": "Economic & Market Infrastructure",
+      "specificity_rank": 95,
       "anchors": [
         "digital markets",
         "competition law",
         "antitrust",
         "market power",
-        "platform competition"
+        "platform competition",
+        "digital economy regulation"
       ],
       "queries": [
         "digital markets governance",
         "competition policy technology platforms",
-        "antitrust digital infrastructure"
-      ]
+        "antitrust digital infrastructure",
+        "digital economy regulation market power"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "platform",
+        "online",
+        "internet",
+        "data",
+        "algorithmic",
+        "artificial intelligence",
+        "ai",
+        "software"
+      ],
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "privacy-and-data-governance",
       "primary_topic": "Privacy & Data Protection",
+      "specificity_rank": 100,
       "anchors": [
         "data protection",
         "privacy governance",
         "data governance",
         "data spaces",
-        "data access"
+        "data access",
+        "surveillance",
+        "personal data",
+        "privacy law",
+        "privacy",
+        "data sharing",
+        "data privacy"
       ],
       "queries": [
         "privacy data governance institutions",
         "data protection digital infrastructure",
-        "data spaces governance"
-      ]
+        "data spaces governance",
+        "AI data protection governance",
+        "digital surveillance privacy law"
+      ],
+      "context_signals": [
+        "digital",
+        "data",
+        "privacy",
+        "surveillance",
+        "algorithmic",
+        "artificial intelligence",
+        "ai",
+        "automated",
+        "platform",
+        "online",
+        "internet",
+        "cyber",
+        "electronic",
+        "information system"
+      ],
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "public-administration",
       "primary_topic": "State Capacity & Administrative Systems",
+      "specificity_rank": 100,
       "anchors": [
         "public administration",
         "administrative capacity",
         "public sector reform",
         "bureaucracy",
-        "institutional capacity"
+        "institutional capacity",
+        "public service delivery",
+        "administrative systems",
+        "government administration",
+        "public sector",
+        "public services",
+        "government services"
       ],
       "queries": [
         "public administration digital governance",
         "administrative capacity technology",
-        "institutional capacity digital state"
-      ]
+        "institutional capacity digital state",
+        "public service delivery digital administration"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "automated",
+        "data",
+        "platform",
+        "e-government",
+        "electronic government",
+        "information system",
+        "digital government",
+        "digital public"
+      ],
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "sociotechnical-institutions",
       "primary_topic": "Socio-technical Systems",
+      "specificity_rank": 95,
       "anchors": [
         "sociotechnical",
         "science and technology studies",
         "institutional design",
         "political economy",
-        "technology institutions"
+        "technology institutions",
+        "infrastructural power",
+        "socio-technical"
       ],
       "queries": [
         "sociotechnical governance institutions",
         "political economy digital infrastructure",
-        "institutional design technology governance"
-      ]
+        "institutional design technology governance",
+        "infrastructural power digital systems"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "platform",
+        "data",
+        "infrastructure",
+        "software",
+        "internet",
+        "information system"
+      ],
+      "require_title_context": true,
+      "require_title_anchor": true
     }
   ]
 }
