@@ -498,10 +498,22 @@ def should_merge(a: dict, b: dict) -> bool:
 
 
 def merge_group(group: list[dict]) -> dict:
-    # Prefer the most institutionally specific governance classification when the
-    # same work is discovered through multiple lanes. Score breaks ties.
-    best = max(group, key=lambda x: (int(x.get("specificity_rank", 0)), float(x.get("score", 0))))
-    out = dict(best)
+    # Classification specificity and intake eligibility are separate decisions.
+    # A weak/deferred Coverage match must never suppress a valid Core candidate,
+    # while a qualified institutionally specific match may still supply the
+    # primary governance classification.
+    state_rank = {"represented": 4, "candidate": 3, "needs_judgment": 2, "deferred": 1}
+    state_source = max(group, key=lambda x: (state_rank.get(x.get("state"), 0), float(x.get("score", 0))))
+    qualified = [x for x in group if x.get("state") in {"candidate", "needs_judgment"}]
+    classification_pool = qualified or group
+    classification_source = max(
+        classification_pool,
+        key=lambda x: (int(x.get("specificity_rank", 0)), float(x.get("score", 0))),
+    )
+    out = dict(classification_source)
+    out["state"] = state_source.get("state")
+    out["score"] = max(float(x.get("score", 0)) for x in group)
+    out["already_represented"] = any(bool(x.get("already_represented")) for x in group)
     records = [source_record(x) for x in group]
     out["also_seen_in"] = sorted({x.get("source_system") for x in group if x.get("source_system")} - {out.get("source_system")})
     out["alternate_identifiers"] = sorted({k for x in group for k in identity_keys(x)} - identity_keys(out))
