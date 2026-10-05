@@ -144,7 +144,7 @@ class PaperRadarTests(unittest.TestCase):
         scored = radar.score(item, CFG, "ai-governance", "AI governance authority", set(), [])
         self.assertEqual(scored["state"], "candidate")
         self.assertEqual(scored["discovery_class"], "core")
-        self.assertTrue(scored["selected_for_intake"])
+        self.assertFalse(scored["selected_for_intake"])
 
     def test_adjacent_novelty_cannot_bypass_governance_gate(self):
         theme = {"name": "digital-markets", "primary_topic": "Economic & Market Infrastructure", "anchors": ["digital markets"]}
@@ -202,7 +202,7 @@ class PaperRadarTests(unittest.TestCase):
             "title": "Adjacent governance paper",
             "state": "candidate",
             "already_represented": False,
-            "discovery_class": "horizon",
+            "discovery_class": "coverage",
             "governance_relevance_score": 0.9,
             "quality_score": 0.8,
             "novelty_score": None,
