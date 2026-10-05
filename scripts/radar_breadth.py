@@ -97,6 +97,7 @@ def score_coverage(
     title = norm(item.get("title", ""))
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
     anchors = [a for a in theme.get("anchors", []) if phrase_in_text(text, a)]
+    context_signals = [s for s in theme.get("context_signals", []) if phrase_in_text(text, s)]
     signals = [s for s in cfg.get("governance_signals", []) if phrase_in_text(text, s)]
     material = [s for s in cfg.get("material_governance_signals", []) if phrase_in_text(text, s)]
     exclusions = [s for s in cfg.get("exclusion_signals", []) if phrase_in_text(text, s)]
@@ -112,6 +113,10 @@ def score_coverage(
     if exact_existing or near_existing:
         state = "represented"
     elif not anchors or exclusions:
+        state = "deferred"
+    elif theme.get("context_signals") and not context_signals:
+        state = "deferred"
+    elif not material:
         state = "deferred"
     elif relevance >= threshold:
         state = "candidate"
@@ -130,6 +135,10 @@ def score_coverage(
         rationale = "Already represented in the review corpus or editorial issue history."
     elif state == "deferred" and not anchors:
         rationale = "Coverage record lacked the configured institutional-domain anchor."
+    elif state == "deferred" and theme.get("context_signals") and not context_signals:
+        rationale = "Coverage record matched an institutional term but lacked a digital or technology context signal."
+    elif state == "deferred" and not material:
+        rationale = "Coverage record lacked a material governance mechanism such as authority, accountability, rights, liability, redress, or enforcement."
     elif state == "deferred":
         rationale = "Coverage record did not satisfy the minimum governance-relevance gate."
     else:
@@ -144,6 +153,7 @@ def score_coverage(
         "theme": theme.get("name"),
         "matched_query": query,
         "theme_anchors": anchors,
+        "context_signals": context_signals,
         "governance_signals": signals,
         "material_governance_signals": material,
         "candidate_title_signals": [],
