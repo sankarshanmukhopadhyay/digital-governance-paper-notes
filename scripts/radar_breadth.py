@@ -98,6 +98,7 @@ def score_coverage(
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
     anchors = [a for a in theme.get("anchors", []) if phrase_in_text(text, a)]
     context_signals = [s for s in theme.get("context_signals", []) if phrase_in_text(text, s)]
+    title_context_signals = [s for s in theme.get("context_signals", []) if phrase_in_text(title, s)]
     signals = [s for s in cfg.get("governance_signals", []) if phrase_in_text(text, s)]
     material = [s for s in cfg.get("material_governance_signals", []) if phrase_in_text(text, s)]
     exclusions = [s for s in cfg.get("exclusion_signals", []) if phrase_in_text(text, s)]
@@ -115,6 +116,8 @@ def score_coverage(
     elif not anchors or exclusions:
         state = "deferred"
     elif theme.get("context_signals") and not context_signals:
+        state = "deferred"
+    elif theme.get("require_title_context") and not title_context_signals:
         state = "deferred"
     elif not material:
         state = "deferred"
@@ -137,6 +140,8 @@ def score_coverage(
         rationale = "Coverage record lacked the configured institutional-domain anchor."
     elif state == "deferred" and theme.get("context_signals") and not context_signals:
         rationale = "Coverage record matched an institutional term but lacked a digital or technology context signal."
+    elif state == "deferred" and theme.get("require_title_context") and not title_context_signals:
+        rationale = "Coverage record mentioned digital or technology context only in the body/abstract, not in the paper title; it is deferred to preserve intake precision."
     elif state == "deferred" and not material:
         rationale = "Coverage record lacked a material governance mechanism such as authority, accountability, rights, liability, redress, or enforcement."
     elif state == "deferred":
@@ -154,6 +159,7 @@ def score_coverage(
         "matched_query": query,
         "theme_anchors": anchors,
         "context_signals": context_signals,
+        "title_context_signals": title_context_signals,
         "governance_signals": signals,
         "material_governance_signals": material,
         "candidate_title_signals": [],
