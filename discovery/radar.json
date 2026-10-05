@@ -252,7 +252,13 @@
         "legal framework",
         "legal accountability",
         "constitutional law",
-        "criminal law"
+        "criminal law",
+        "constitutional",
+        "legal role",
+        "administrative discretion",
+        "judicial",
+        "court",
+        "criminal proceedings"
       ],
       "queries": [
         "technology law digital governance",
@@ -277,7 +283,8 @@
         "software",
         "information system"
       ],
-      "require_title_context": true
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "digital-markets",
@@ -309,7 +316,8 @@
         "ai",
         "software"
       ],
-      "require_title_context": true
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "privacy-and-data-governance",
@@ -323,7 +331,10 @@
         "data access",
         "surveillance",
         "personal data",
-        "privacy law"
+        "privacy law",
+        "privacy",
+        "data sharing",
+        "data privacy"
       ],
       "queries": [
         "privacy data governance institutions",
@@ -348,7 +359,8 @@
         "electronic",
         "information system"
       ],
-      "require_title_context": true
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "public-administration",
@@ -361,7 +373,11 @@
         "bureaucracy",
         "institutional capacity",
         "public service delivery",
-        "administrative systems"
+        "administrative systems",
+        "government administration",
+        "public sector",
+        "public services",
+        "government services"
       ],
       "queries": [
         "public administration digital governance",
@@ -384,7 +400,8 @@
         "digital government",
         "digital public"
       ],
-      "require_title_context": true
+      "require_title_context": true,
+      "require_title_anchor": true
     },
     {
       "name": "sociotechnical-institutions",
@@ -396,7 +413,8 @@
         "institutional design",
         "political economy",
         "technology institutions",
-        "infrastructural power"
+        "infrastructural power",
+        "socio-technical"
       ],
       "queries": [
         "sociotechnical governance institutions",
@@ -417,7 +435,8 @@
         "internet",
         "information system"
       ],
-      "require_title_context": true
+      "require_title_context": true,
+      "require_title_anchor": true
     }
   ]
 }
