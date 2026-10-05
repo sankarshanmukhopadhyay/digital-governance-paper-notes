@@ -232,6 +232,48 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(metrics["new_source_count"], 2)
         self.assertEqual(metrics["novelty_rate"], 1.0)
 
+    def test_coverage_rejects_generic_institutional_paper_without_digital_context(self):
+        theme = {
+            "name": "public-administration",
+            "primary_topic": "State Capacity & Administrative Systems",
+            "anchors": ["institutional capacity"],
+            "context_signals": ["digital", "technology", "artificial intelligence", "data"],
+        }
+        corpus = [{"tokens": {"digital", "governance"}, "primary_domain": "State Capacity & Administrative Systems", "publication": "Example"}]
+        item = {
+            "source_system": "openalex",
+            "title": "Regional Security Cooperation and Institutional Capacity",
+            "abstract": "institutional capacity accountability authority enforcement governance",
+            "publication": "Journal Z",
+        }
+        scored = radar.breadth.score_coverage(
+            item, CFG, theme, "institutional capacity digital state", set(), [], corpus,
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "deferred")
+        self.assertEqual(scored["context_signals"], [])
+
+    def test_coverage_requires_material_governance_not_generic_digital_context(self):
+        theme = {
+            "name": "public-administration",
+            "primary_topic": "State Capacity & Administrative Systems",
+            "anchors": ["public administration"],
+            "context_signals": ["digital", "technology", "data"],
+        }
+        item = {
+            "source_system": "openalex",
+            "title": "Digital Tools in Public Administration",
+            "abstract": "digital technology public administration institutional infrastructure",
+            "publication": "Journal Z",
+        }
+        scored = radar.breadth.score_coverage(
+            item, CFG, theme, "public administration digital governance", set(), [], [],
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "deferred")
+        self.assertEqual(scored["material_governance_signals"], [])
+
+
 
     def test_ai_subject_without_ai_governance_mechanism_is_deferred(self):
         item = {
