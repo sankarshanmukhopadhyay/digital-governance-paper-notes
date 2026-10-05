@@ -350,7 +350,11 @@ def record_fingerprint(record: dict) -> tuple:
 def enrich_shortlisted_freshness(items: list[dict], errors: list[dict]) -> list[dict]:
     """Look beyond the discovery window for older equivalent records before asserting freshness."""
     for item in items:
-        if item.get("state") != "candidate" or item.get("already_represented"):
+        if (
+            item.get("state") != "candidate"
+            or item.get("already_represented")
+            or not item.get("selected_for_intake", True)
+        ):
             continue
         records = list(item.get("source_records") or [])
         for source, lookup in (
