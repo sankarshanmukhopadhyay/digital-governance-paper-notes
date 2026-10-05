@@ -626,7 +626,7 @@ SITE_CSS = r"""
 """
 
 
-def build_outputs(records: List[ReviewRecord], taxonomy: Taxonomy, collections: List[Collection], readme: str) -> Dict[Path, str]:
+def build_outputs(records: List[ReviewRecord], taxonomy: Taxonomy, collections: List[Collection]) -> Dict[Path, str]:
     outputs: Dict[Path, str] = {
         INDEX_PATH: render_markdown_index(records, taxonomy),
         ROOT_HTML_PATH: render_root_redirect(),
@@ -720,7 +720,7 @@ def main() -> int:
     records = load_reviews(taxonomy)
     collections = load_collections()
     if args.print_generated:
-        outputs = build_outputs(records, taxonomy, collections, README_PATH.read_text(encoding="utf-8"))
+        outputs = build_outputs(records, taxonomy, collections)
         for path in sorted(outputs):
             print(path.relative_to(REPO_ROOT).as_posix())
         return 0
