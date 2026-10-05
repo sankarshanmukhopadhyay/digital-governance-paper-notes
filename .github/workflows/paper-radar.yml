@@ -17,6 +17,10 @@ permissions:
   contents: read
   issues: write
 
+concurrency:
+  group: paper-radar-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   radar:
     runs-on: ubuntu-latest
