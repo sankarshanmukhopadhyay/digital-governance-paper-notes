@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Controlled-breadth scoring, corpus novelty, quotas, and telemetry for Paper Radar."""
+"""Coverage scoring, corpus novelty, intake mixing, and telemetry for Paper Radar."""
 from __future__ import annotations
 
+import math
 import re
 from collections import Counter
 from pathlib import Path
@@ -21,7 +22,6 @@ def frontmatter_value(text: str, key: str) -> str:
 
 
 def load_recent_corpus(root: Path, limit: int = 30) -> list[dict]:
-    """Load a deterministic recent-review comparison window from canonical review files."""
     reviews = sorted(root.glob("reviews/**/*.md"), reverse=True)[: max(0, int(limit))]
     corpus = []
     for path in reviews:
@@ -42,7 +42,6 @@ def load_recent_corpus(root: Path, limit: int = 30) -> list[dict]:
 
 
 def corpus_similarity(item: dict, corpus: list[dict]) -> float | None:
-    """Return maximum token-set Jaccard similarity to the comparison corpus."""
     candidate = token_set((item.get("title") or "") + " " + (item.get("abstract") or ""))
     if not candidate or not corpus:
         return None
@@ -82,7 +81,7 @@ def source_seen(item: dict, corpus: list[dict]) -> bool:
     return any(publication == norm_text(review.get("publication") or "") for review in corpus)
 
 
-def score_adjacent(
+def score_coverage(
     item: dict,
     cfg: dict,
     theme: dict,
@@ -94,7 +93,7 @@ def score_adjacent(
     identity_keys,
     phrase_in_text,
 ) -> dict:
-    """Score an adjacent-domain record without weakening Core Radar semantics."""
+    """Score a first-class Coverage record without weakening the governance gate."""
     title = norm(item.get("title", ""))
     text = norm((item.get("title") or "") + " " + (item.get("abstract") or ""))
     anchors = [a for a in theme.get("anchors", []) if phrase_in_text(text, a)]
@@ -123,16 +122,16 @@ def score_adjacent(
     points = round(10.0 * ((0.45 * relevance) + (0.35 * quality) + (0.20 * novelty_component)), 2)
 
     counts = domain_frequency(corpus)
-    topic = theme.get("primary_topic") or theme.get("name") or "adjacent"
+    topic = theme.get("primary_topic") or theme.get("name") or "coverage"
     topic_count = counts.get(topic, 0)
     underrepresented = topic_count <= int((cfg.get("breadth") or {}).get("underrepresented_domain_max", 1))
 
     if state == "represented":
         rationale = "Already represented in the review corpus or editorial issue history."
     elif state == "deferred" and not anchors:
-        rationale = "Adjacent-domain record lacked the configured domain anchor required for controlled breadth."
+        rationale = "Coverage record lacked the configured institutional-domain anchor."
     elif state == "deferred":
-        rationale = "Adjacent-domain record did not satisfy the minimum governance-relevance gate."
+        rationale = "Coverage record did not satisfy the minimum governance-relevance gate."
     else:
         novelty_text = "unknown" if novelty is None else f"{novelty:.2f}"
         representation = "underrepresented" if underrepresented else "represented"
@@ -153,8 +152,10 @@ def score_adjacent(
         "score": points,
         "state": state,
         "already_represented": bool(exact_existing or near_existing),
-        "discovery_class": "horizon",
+        "discovery_class": "coverage",
+        "theme_kind": "coverage",
         "primary_topic": topic,
+        "specificity_rank": int(theme.get("specificity_rank", 90)),
         "secondary_topics": sorted(set(anchors + material)),
         "governance_relevance_score": round(relevance, 4),
         "quality_score": round(quality, 4),
@@ -168,76 +169,146 @@ def score_adjacent(
     return item
 
 
-def apply_non_core_mix(items: list[dict], cfg: dict) -> list[dict]:
-    """Select bounded Horizon/Serendipity intake while retaining overflow as evidence."""
+def score_adjacent(*args, **kwargs):
+    """Backward-compatible alias retained for tests and older local tooling."""
+    return score_coverage(*args, **kwargs)
+
+
+def _selection_value(item: dict) -> tuple:
+    relevance = item.get("governance_relevance_score")
+    relevance = 1.0 if relevance is None and item.get("discovery_class") == "core" else float(relevance or 0)
+    quality = item.get("quality_score")
+    quality = 0.75 if quality is None else float(quality)
+    novelty = float(item.get("novelty_score") or 0)
+    score = float(item.get("score") or 0) / 10.0
+    return (0.45 * relevance) + (0.25 * quality) + (0.20 * score) + (0.10 * novelty)
+
+
+def apply_intake_mix(items: list[dict], cfg: dict) -> list[dict]:
+    """Select a bounded intake while preventing one theme from crowding out qualified alternatives."""
     breadth = cfg.get("breadth") or {}
-    horizon_limit = int(breadth.get("horizon_limit", 4))
-    serendipity_limit = int(breadth.get("serendipity_limit", 2))
+    intake_limit = max(1, int(breadth.get("intake_limit", 18)))
+    max_theme_share = min(1.0, max(0.1, float(breadth.get("max_theme_share", 0.5))))
+    theme_cap = max(1, int(math.floor(intake_limit * max_theme_share)))
     novelty_threshold = float(breadth.get("serendipity_novelty_threshold", 0.68))
-    relevance_threshold = float(breadth.get("governance_relevance_threshold", 0.35))
+    serendipity_limit = max(0, int(breadth.get("serendipity_limit", 2)))
 
     eligible = [
         x for x in items
         if x.get("state") in {"candidate", "needs_judgment"}
         and not x.get("already_represented")
-        and float(x.get("governance_relevance_score") or 0) >= relevance_threshold
     ]
+    ranked = sorted(
+        eligible,
+        key=lambda x: (-_selection_value(x), -int(x.get("specificity_rank", 0)), x.get("title") or ""),
+    )
 
-    serendipity = sorted(
-        [x for x in eligible if x.get("novelty_score") is not None and float(x["novelty_score"]) >= novelty_threshold],
-        key=lambda x: (-float(x.get("novelty_score") or 0), -float(x.get("governance_relevance_score") or 0), x.get("title") or ""),
-    )[:serendipity_limit]
-    serendipity_ids = {id(x) for x in serendipity}
+    selected: list[dict] = []
+    per_theme: Counter = Counter()
 
-    horizon = sorted(
-        [x for x in eligible if id(x) not in serendipity_ids],
-        key=lambda x: (-float(x.get("governance_relevance_score") or 0), -float(x.get("quality_score") or 0), -float(x.get("novelty_score") or 0), x.get("title") or ""),
-    )[:horizon_limit]
-    horizon_ids = {id(x) for x in horizon}
+    novel = [
+        x for x in ranked
+        if x.get("discovery_class") == "coverage"
+        and x.get("novelty_score") is not None
+        and float(x.get("novelty_score") or 0) >= novelty_threshold
+    ][:serendipity_limit]
+    novel_ids = {id(x) for x in novel}
+    for item in novel:
+        selected.append(item)
+        per_theme[item.get("theme") or "unknown"] += 1
 
+    for item in ranked:
+        if len(selected) >= intake_limit:
+            break
+        if id(item) in novel_ids:
+            continue
+        theme = item.get("theme") or "unknown"
+        alternatives_exist = any(
+            other is not item
+            and id(other) not in {id(x) for x in selected}
+            and (other.get("theme") or "unknown") != theme
+            for other in ranked
+        )
+        if alternatives_exist and per_theme[theme] >= theme_cap:
+            continue
+        selected.append(item)
+        per_theme[theme] += 1
+
+    # Conditional guard: if qualified alternatives are insufficient, fill remaining capacity
+    # rather than suppressing strong work solely to satisfy a distribution target.
+    if len(selected) < intake_limit:
+        selected_ids = {id(x) for x in selected}
+        for item in ranked:
+            if len(selected) >= intake_limit:
+                break
+            if id(item) not in selected_ids:
+                selected.append(item)
+                selected_ids.add(id(item))
+
+    selected_ids = {id(x) for x in selected}
     for item in items:
-        if id(item) in serendipity_ids:
-            item["discovery_class"] = "serendipity"
+        if id(item) in selected_ids:
             item["selected_for_intake"] = True
-            item["why_this_appeared"] = (
-                item.get("why_this_appeared", "")
-                + " Selected as a bounded Serendipity candidate because novelty cleared the configured threshold."
-            ).strip()
-        elif id(item) in horizon_ids:
-            item["discovery_class"] = "horizon"
-            item["selected_for_intake"] = True
-        elif item.get("discovery_class") in {"horizon", "serendipity"} and item.get("state") in {"candidate", "needs_judgment"}:
-            item["state"] = "deferred"
+            if id(item) in novel_ids:
+                item["discovery_class"] = "serendipity"
+                item["why_this_appeared"] = (
+                    item.get("why_this_appeared", "")
+                    + " Selected through the bounded Serendipity lane because novelty cleared the configured threshold."
+                ).strip()
+        elif item.get("state") in {"candidate", "needs_judgment"} and not item.get("already_represented"):
             item["selected_for_intake"] = False
+            item["intake_status"] = "qualified-overflow"
             item["why_this_appeared"] = (
                 item.get("why_this_appeared", "")
-                + " Eligible but outside this cycle's configured non-Core quota."
+                + " Qualified for Radar but not selected in this cycle's bounded intake."
             ).strip()
     return items
 
 
+def apply_non_core_mix(items: list[dict], cfg: dict) -> list[dict]:
+    """Backward-compatible wrapper. New code should call apply_intake_mix on the combined candidate set."""
+    return apply_intake_mix(items, cfg)
+
+
 def telemetry(items: list[dict], cfg: dict) -> dict:
-    surfaced = [
+    qualified = [
         x for x in items
         if x.get("state") in {"candidate", "needs_judgment"}
         and not x.get("already_represented")
-        and x.get("selected_for_intake", True)
     ]
+    surfaced = [x for x in qualified if x.get("selected_for_intake", True)]
+    overflow = [x for x in qualified if not x.get("selected_for_intake", True)]
+
     class_counts = Counter(x.get("discovery_class", "core") for x in surfaced)
     sources = Counter(x.get("publication") or x.get("source_system") or "unknown" for x in surfaced)
     topics = Counter(x.get("primary_topic") or x.get("theme") or "unknown" for x in surfaced)
+    themes = Counter(x.get("theme") or "unknown" for x in surfaced)
+    qualified_themes = Counter(x.get("theme") or "unknown" for x in qualified)
     total = len(surfaced)
     top_five = sum(count for _, count in sources.most_common(5))
     novelty_threshold = float((cfg.get("breadth") or {}).get("novelty_rate_threshold", 0.60))
     novelty_observed = [x for x in surfaced if x.get("novelty_score") is not None]
     novel = [x for x in novelty_observed if float(x["novelty_score"]) >= novelty_threshold]
+    largest_theme, largest_count = ("", 0)
+    if themes:
+        largest_theme, largest_count = themes.most_common(1)[0]
+    largest_share = round(largest_count / total, 4) if total else 0.0
+    warning_threshold = float((cfg.get("breadth") or {}).get("dominance_warning_share", 0.6))
+
     return {
+        "qualified_total": len(qualified),
         "surfaced_total": total,
+        "qualified_overflow_total": len(overflow),
         "candidate_volume_by_class": dict(sorted(class_counts.items())),
         "distinct_sources": len(sources),
         "new_source_count": sum(1 for x in surfaced if x.get("source_previously_seen") is False),
         "top_five_source_share": round(top_five / total, 4) if total else 0.0,
         "topic_distribution": dict(sorted(topics.items())),
+        "theme_distribution": dict(sorted(themes.items())),
+        "qualified_theme_distribution": dict(sorted(qualified_themes.items())),
+        "largest_theme": largest_theme or None,
+        "largest_theme_share": largest_share,
+        "dominance_warning": bool(total and largest_share > warning_threshold),
         "novelty_rate": round(len(novel) / len(novelty_observed), 4) if novelty_observed else None,
         "novelty_observed_count": len(novelty_observed),
     }
