@@ -51,29 +51,11 @@ python scripts/knowledge_lint.py
 
 ## Scope
 
-### Taxonomy Snapshot
+### Taxonomy and live domain counts
 
-<!-- TAXONOMY_SUMMARY:START -->
+The canonical domain taxonomy is defined in [`taxonomy/domains.yml`](taxonomy/domains.yml). Current review counts by domain are generated directly from canonical review metadata and published on the [Domains](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/domains/) page.
 
-- **AI Governance** (33)
-- **AI Safety & Evaluation** (13)
-- **Digital Public Infrastructure** (8)
-- **Public Sector Digital Strategy** (2)
-- **Digital Identity** (7)
-- **Trust Infrastructure** (6)
-- **Standards, Protocols & Interoperability** (1)
-- **Privacy & Data Protection** (3)
-- **Cybersecurity & Resilience** (1)
-- **Law, Regulation & Liability** (11)
-- **Platform Governance & Internet Governance** (3)
-- **Socio-technical Systems** (9)
-- **Inclusion, Rights & Development** (2)
-- **State Capacity & Administrative Systems** (3)
-- **Economic & Market Infrastructure** (5)
-
-<!-- TAXONOMY_SUMMARY:END -->
-
-This snapshot is generated from `taxonomy/domains.yml` and the reviews in `reviews/`. It is a convenience view, not canonical state. CI and Pages rebuild it in the workspace, so review PRs do not need to commit changes to this block.
+The README deliberately does not duplicate live counts. This keeps the protected `main` branch free of generated summary commits while ensuring that the public discovery surface is rebuilt from canonical reviews on every Pages deployment.
 
 The full controlled vocabulary, including secondary topic tags and arXiv scholarly-signal codes, lives in [`taxonomy/domains.yml`](taxonomy/domains.yml). The separate governance-facet vocabulary lives in [`knowledge/governance-facets.yml`](knowledge/governance-facets.yml).
 
@@ -138,20 +120,9 @@ Generated Pages files are deployment artifacts, not independent sources of truth
 
 ## Recent Reviews
 
-<!-- RECENT_REVIEWS:START -->
+The current review stream is generated directly from canonical review metadata. See [Recent reviews](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/#recent) for the latest publications, or the [full archive](https://sankarshanmukhopadhyay.github.io/digital-governance-paper-notes/archive/) for chronological browsing.
 
-- **2026-10-01** — [Toward Web 4.0: bidirectional trust between AI agents and blockchain](reviews/2026/2026-10-01__toward-web-4-0-bidirectional-trust-ai-agents-blockchain__v1.md) — *Blockchain*
-- **2026-10-01** — [The Next Five Years of Computational Antitrust](reviews/2026/2026-10-01__next-five-years-computational-antitrust__v1.md) — *CPI Antitrust Chronicle, September 2026*
-- **2026-10-01** — [JAZB Framework v1.1: Judiciary AI Zero-Trust Broker](reviews/2026/2026-10-01__jazb-framework-judiciary-ai-zero-trust-broker__v1.md) — *Zenodo framework publication set*
-- **2026-10-01** — [Governance Laundering: A Taxonomy of Failure Modes in AI Compliance Architectures](reviews/2026/2026-10-01__governance-laundering__v1.md) — *FERZ, Inc. research report*
-- **2026-09-29** — [The Agentic Web Requires New Normative Infrastructure](reviews/2026/2026-09-29__the-agentic-web-requires-new-normative-infrastructure__v1.md) — *arXiv preprint*
-- **2026-09-29** — [Structural Preconditions of Algorithmic Sovereignty: Informational Fragility and the Institutional Architecture of AI Governance](reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md) — *International Journal of Innovative Science and Research Technology (IJISRT), 11(3), 4261-4280*
-- **2026-09-29** — [Artificial Intelligence and Electoral Democracy in Nigeria: Political Participation, Information Integrity and The Future of Democratic Governance](reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md) — *International Journal of Scientific Research Studies, 3(9), 425-435*
-- **2026-09-26** — [The Responsibility Cascade: Moral Attribution and Governance Challenges in Agentic AI Systems](reviews/2026/2026-09-26__the-responsibility-cascade__v1.md) — *Digital Society, 5:47*
-
-<!-- RECENT_REVIEWS:END -->
-
-This list is generated from the most recently read reviews. It is a convenience view, not canonical state. CI and Pages rebuild it in the workspace, so review PRs do not need to commit changes to this block. See [index.md](index.md) for the full archive.
+Keeping this list on the generated site rather than duplicating it in the README prevents the repository landing page from becoming stale between protected-branch updates.
 
 ---
 
