@@ -378,6 +378,29 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(merged["primary_topic"], "Law, Regulation & Liability")
 
 
+    def test_freshness_enrichment_skips_qualified_overflow(self):
+        selected = {
+            "title": "Selected", "state": "candidate", "already_represented": False,
+            "selected_for_intake": True, "source_records": [],
+        }
+        overflow = {
+            "title": "Overflow", "state": "candidate", "already_represented": False,
+            "selected_for_intake": False, "source_records": [],
+        }
+        original = (radar.crossref_lookup, radar.openalex_lookup, radar.arxiv_lookup)
+        calls = []
+        try:
+            radar.crossref_lookup = lambda item: calls.append(("crossref", item["title"])) or []
+            radar.openalex_lookup = lambda item: calls.append(("openalex", item["title"])) or []
+            radar.arxiv_lookup = lambda item: calls.append(("arxiv", item["title"])) or []
+            radar.enrich_shortlisted_freshness([selected, overflow], [])
+        finally:
+            radar.crossref_lookup, radar.openalex_lookup, radar.arxiv_lookup = original
+        self.assertTrue(selected.get("freshness_enriched"))
+        self.assertIsNone(overflow.get("freshness_enriched"))
+        self.assertTrue(all(title == "Selected" for _, title in calls))
+
+
 
     def test_dominance_guard_prefers_qualified_alternatives(self):
         cfg = dict(CFG)
