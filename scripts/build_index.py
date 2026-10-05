@@ -704,7 +704,7 @@ def main() -> int:
         for path in sorted(outputs):
             print(path.relative_to(REPO_ROOT).as_posix())
         return 0
-    outputs = build_outputs(records, taxonomy, collections, README_PATH.read_text(encoding="utf-8"))
+    outputs = build_outputs(records, taxonomy, collections)
     return write_or_check(outputs, args.check)
 
 
