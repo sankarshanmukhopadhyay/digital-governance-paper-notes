@@ -254,6 +254,22 @@
         "algorithmic regulation institutions",
         "AI evidence admissibility law",
         "digital systems judicial review"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "automated",
+        "data",
+        "cyber",
+        "platform",
+        "online",
+        "internet",
+        "electronic",
+        "software",
+        "information system"
       ]
     },
     {
@@ -273,6 +289,18 @@
         "competition policy technology platforms",
         "antitrust digital infrastructure",
         "digital economy regulation market power"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "platform",
+        "online",
+        "internet",
+        "data",
+        "algorithmic",
+        "artificial intelligence",
+        "ai",
+        "software"
       ]
     },
     {
@@ -295,6 +323,22 @@
         "data spaces governance",
         "AI data protection governance",
         "digital surveillance privacy law"
+      ],
+      "context_signals": [
+        "digital",
+        "data",
+        "privacy",
+        "surveillance",
+        "algorithmic",
+        "artificial intelligence",
+        "ai",
+        "automated",
+        "platform",
+        "online",
+        "internet",
+        "cyber",
+        "electronic",
+        "information system"
       ]
     },
     {
@@ -315,6 +359,21 @@
         "administrative capacity technology",
         "institutional capacity digital state",
         "public service delivery digital administration"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "automated",
+        "data",
+        "platform",
+        "e-government",
+        "electronic government",
+        "information system",
+        "digital government",
+        "digital public"
       ]
     },
     {
@@ -334,6 +393,19 @@
         "political economy digital infrastructure",
         "institutional design technology governance",
         "infrastructural power digital systems"
+      ],
+      "context_signals": [
+        "digital",
+        "technology",
+        "artificial intelligence",
+        "ai",
+        "algorithmic",
+        "platform",
+        "data",
+        "infrastructure",
+        "software",
+        "internet",
+        "information system"
       ]
     }
   ]
