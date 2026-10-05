@@ -297,6 +297,30 @@ class PaperRadarTests(unittest.TestCase):
         self.assertEqual(scored["title_context_signals"], [])
 
 
+    def test_coverage_defers_when_domain_anchor_only_appears_in_abstract(self):
+        theme = {
+            "name": "privacy-and-data-governance",
+            "primary_topic": "Privacy & Data Protection",
+            "anchors": ["privacy", "data protection"],
+            "context_signals": ["digital", "data", "privacy", "artificial intelligence"],
+            "require_title_anchor": True,
+            "require_title_context": True,
+        }
+        item = {
+            "source_system": "openalex",
+            "title": "Advanced Network Security for Digital Economies",
+            "abstract": "privacy data protection accountability rights enforcement in digital infrastructure",
+            "publication": "Journal Z",
+        }
+        scored = radar.breadth.score_coverage(
+            item, CFG, theme, "privacy data governance institutions", set(), [], [],
+            radar.norm, radar.identity_keys, radar.phrase_in_text,
+        )
+        self.assertEqual(scored["state"], "deferred")
+        self.assertTrue(scored["theme_anchors"])
+        self.assertEqual(scored["title_anchors"], [])
+
+
 
     def test_ai_subject_without_ai_governance_mechanism_is_deferred(self):
         item = {
