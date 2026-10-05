@@ -610,7 +610,6 @@ def build_outputs(records: List[ReviewRecord], taxonomy: Taxonomy, collections: 
     outputs: Dict[Path, str] = {
         INDEX_PATH: render_markdown_index(records, taxonomy),
         ROOT_HTML_PATH: render_root_redirect(),
-        README_PATH: update_readme(readme, records, taxonomy),
         DOCS_ROOT / "index.html": render_home(records, taxonomy, collections),
         DOCS_ROOT / "assets" / "site.css": SITE_CSS.strip() + "\n",
         DOCS_ROOT / "domains" / "index.html": render_domains_index(records, taxonomy),
