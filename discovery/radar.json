@@ -244,9 +244,15 @@
         "algorithmic regulation",
         "legal infrastructure",
         "evidence law",
-        "admissibility",
         "judicial review",
-        "legal liability"
+        "legal liability",
+        "evidence admissibility",
+        "admissibility of evidence",
+        "legal admissibility",
+        "legal framework",
+        "legal accountability",
+        "constitutional law",
+        "criminal law"
       ],
       "queries": [
         "technology law digital governance",
@@ -270,7 +276,8 @@
         "electronic",
         "software",
         "information system"
-      ]
+      ],
+      "require_title_context": true
     },
     {
       "name": "digital-markets",
@@ -301,7 +308,8 @@
         "artificial intelligence",
         "ai",
         "software"
-      ]
+      ],
+      "require_title_context": true
     },
     {
       "name": "privacy-and-data-governance",
@@ -339,7 +347,8 @@
         "cyber",
         "electronic",
         "information system"
-      ]
+      ],
+      "require_title_context": true
     },
     {
       "name": "public-administration",
@@ -374,7 +383,8 @@
         "information system",
         "digital government",
         "digital public"
-      ]
+      ],
+      "require_title_context": true
     },
     {
       "name": "sociotechnical-institutions",
@@ -406,7 +416,8 @@
         "software",
         "internet",
         "information system"
-      ]
+      ],
+      "require_title_context": true
     }
   ]
 }
