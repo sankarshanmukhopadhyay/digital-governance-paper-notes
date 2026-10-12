@@ -10,6 +10,8 @@ on:
       - "tests/test_paper_radar.py"
       - ".github/workflows/paper-radar.yml"
   workflow_dispatch:
+  # GitHub cron cannot express a true 14-day interval. Weekly trigger is gated
+  # against a fixed UTC Monday anchor; manual and PR runs bypass the gate.
   schedule:
     - cron: "23 2 * * 1"
 
@@ -25,24 +27,46 @@ jobs:
   radar:
     runs-on: ubuntu-latest
     steps:
+      - name: Determine fortnightly eligibility
+        id: cadence
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" != "schedule" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # 2026-10-12 is an eligible Monday; every second Monday thereafter.
+          anchor=$(date -u -d '2026-10-12 00:00:00' +%s)
+          today=$(date -u -d "$(date -u +%F) 00:00:00" +%s)
+          days=$(( (today - anchor) / 86400 ))
+          if (( days >= 0 && days % 14 == 0 )); then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Paper Radar: skipped non-eligible week." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/checkout@v4
+        if: steps.cadence.outputs.run == 'true'
       - uses: actions/setup-python@v5
+        if: steps.cadence.outputs.run == 'true'
         with:
           python-version: "3.12"
       - name: Run Paper Radar tests
+        if: steps.cadence.outputs.run == 'true'
         run: python -m unittest discover -s tests -p 'test_paper_radar.py'
       - name: Run Paper Radar
+        if: steps.cadence.outputs.run == 'true'
         run: python scripts/paper_radar.py
       - name: Validate issue intake projection
-        if: github.event_name == 'pull_request'
+        if: steps.cadence.outputs.run == 'true' && github.event_name == 'pull_request'
         run: python scripts/paper_radar_intake.py --dry-run
       - name: Create or resurface editorial intake issues
-        if: github.event_name != 'pull_request'
+        if: steps.cadence.outputs.run == 'true' && github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/paper_radar_intake.py
       - name: Publish report to job summary
-        if: always()
+        if: always() && steps.cadence.outputs.run == 'true'
         shell: bash
         run: |
           latest=$(ls -1 reports/radar/*.md 2>/dev/null | tail -1 || true)
