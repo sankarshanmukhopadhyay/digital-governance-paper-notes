@@ -76,7 +76,7 @@ jobs:
             echo "Paper Radar did not produce a report." >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload candidate ledger and report
-        if: always()
+        if: always() && steps.cadence.outputs.run == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: paper-radar-${{ github.run_id }}
