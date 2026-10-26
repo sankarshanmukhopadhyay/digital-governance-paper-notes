@@ -4,7 +4,7 @@ source: "https://doi.org/10.12688/openreseurope.23459.4"
 publication: "Open Research Europe 2026, 6:181 (version 4, 6 October 2026)"
 date_read: "2026-10-26"
 primary_domain: "Privacy & Data Protection"
-tags: ["digital sovereignty", "interoperability", "data governance", "regulatory frameworks", "AI governance", "assurance"]
+tags: ["digital sovereignty", "interoperability", "governance-by-design", "regulatory frameworks", "AI governance", "assurance"]
 key_insight: "Federated health infrastructure preserves local custody of patient data, but legitimate secondary use still depends on independently reviewable access authority, cross-border policy reconciliation, and evidence of acceptable analytical outcomes."
 published: "2026-10-06"
 doi: "10.12688/openreseurope.23459.4"
