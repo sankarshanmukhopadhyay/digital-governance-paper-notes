@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, cite the version or commit consulted. Citation does not imply independent certification or upstream endorsement."
+title: "Digital Governance Paper Notes"
+type: dataset
+authors:
+  - family-names: Mukhopadhyay
+    given-names: Sankarshan
+repository-code: https://github.com/sankarshanmukhopadhyay/digital-governance-paper-notes
+abstract: "Curated analytical reviews and notes. Citation credits this analytical collection, not the authorship of the reviewed papers."
