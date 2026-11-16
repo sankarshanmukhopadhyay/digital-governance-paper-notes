@@ -71,14 +71,30 @@ The review body should contain two sections, in this order:
 
 ## Review
 
-<normally ~2000-4000 characters: establish the paper's principal claim and evidence; identify its genuine contribution; distinguish scope boundaries from evidence gaps or governance defects; state what the paper establishes and what stronger claim it does not establish; reach a consequential governance judgment; where material, make visible what evidence or institutional condition would change that judgment. Do not force criticism or use ratings.>
+<normally 500-900 words when analytical complexity warrants, shorter if sufficient and exceptionally up to 1200 words: establish the paper's principal claim and evidence; identify its genuine contribution; distinguish scope boundaries from evidence gaps or governance defects; state what the paper establishes and what stronger claim it does not establish; reach a consequential governance judgment; where material, make visible what evidence or institutional condition would change that judgment. Do not force criticism or use ratings.>
 
 ## Key Insight
 
 <one sentence that captures the single most durable takeaway>
 ```
 
-The key insight line is also stored in the front matter `key_insight` field — keep them identical. Prefer a durable editorial proposition over a neutral restatement of the paper's thesis.
+The key insight line is also stored in the front matter `key_insight` field; keep them identical. Prefer the reviewer's single most distinctive, source-supported editorial proposition over a neutral restatement of the paper's thesis. An insight that can be moved unchanged to an unrelated review is insufficiently discriminating.
+
+### Live editorial sequence
+
+Before writing the canonical review:
+
+1. Examine the primary publication and establish its argument, method, evidence, assumptions and declared scope.
+2. Identify the contribution that survives scrutiny. Distinguish its actual claim from stronger claims it does not make.
+3. Check directly relevant archive reviews. Determine whether this work adds a mechanism, stronger evidence, a qualification or contradiction, a testable implementation, or no material increment. Omit forced comparisons.
+4. Pressure-test only the decisive material claim against the best source-supported counterargument and its institutional consequences. Do not treat every unspecified control as a defect.
+5. Decide what the reader should accept, qualify, challenge, apply or leave alone before drafting. The decision is internal editorial reasoning, not a published rating.
+6. Compose the review around that judgment, name actors and decision rights when consequential, and end with a settled conclusion. Recommend future work only if it would change the judgment.
+7. Check that the Key Insight and principal criticism are specific to this publication, that factual statements remain grounded in the source, and that all standard metadata and lint constraints hold.
+
+**Length:** Typically 500–900 words, shorter where sufficient, up to 1,200 for justified cross-disciplinary complexity. Length is not an acceptance quota. An additional paragraph is warranted only by a new evidentiary distinction, substantial counterargument, comparative finding or institutional consequence. Preserve existing published reviews unless a source-grounded editorial improvement warrants a revision. Material reinterpretations follow `knowledge/history-policy.md`.
+
+
 
 ### Editorial lint
 
