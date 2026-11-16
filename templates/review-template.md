@@ -21,10 +21,10 @@ key_insight: ""
 
 ## Review
 
-<~2000–4000 character condensed review.
+<Normally 500–900 words, shorter when a bounded conclusion is sufficient, up to 1,200 only for materially complex work.
 
-Establish the paper's principal claim and evidence. Identify its genuine contribution. Pressure-test the strongest material claim against the evidence and institutional assumptions. State clearly what the paper establishes, what stronger claim it does not establish, and the reviewer's consequential governance judgment. Where material, make visible what evidence or condition would change that judgment. Do not force criticism when the paper earns a strong positive assessment.>
+Lead with the specific contribution established by the source, not a restatement of the abstract. Examine the decisive claim and its strongest credible counterargument in proportion to the paper's methodology and scope. Identify the precise decision, authority relation, evidence threshold, or institutional consequence that changes. Compare with adjacent published reviews only when the comparison changes the assessment; say when the paper adds little. Do not insert generic governance concerns or force criticism. End with an explicit editorial judgment: what should a reader accept, qualify, challenge, adopt or set aside? Recommend future work only when its result could change that judgment.>
 
 ## Key Insight
 
-<one sentence insight>
+<one distinctive, evidence-supported editorial proposition, not just the paper's thesis; it should not transfer unchanged to a different review>
