@@ -9,7 +9,7 @@ key_insight: "Governing the reliability of data-driven decisions requires scruti
 published: "2026-10-10"
 doi: "10.32628/IJSRSET2613530"
 paper_type: "research-article"
-review_status: "current"
+review_status: "superseded"
 ---
 
 # Paper Review
