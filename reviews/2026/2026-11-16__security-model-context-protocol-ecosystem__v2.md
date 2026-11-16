@@ -10,6 +10,7 @@ published: "2026-09-29"
 doi: "10.64388/IREV10I3-1723420"
 paper_type: "research-article"
 review_status: "current"
+governance_facets: [authority, delegation, enforcement, dependency]
 ---
 
 # Paper Review
