@@ -197,11 +197,17 @@ def main():
     findings = load(K / "findings.yml").get("findings") or []
     gaps = load(K / "gaps.yml").get("gaps") or []
     reviews = load_reviews()
+    # Historical versions remain resolvable for curated evidence, but current
+    # discovery, recency and coverage counts must not include superseded v1s.
+    current_reviews = {
+        path: meta for path, meta in reviews.items()
+        if meta.get("review_status") != "superseded"
+    }
     syntheses = load_syntheses()
     collections = json.loads(COLLECTIONS.read_text(encoding="utf-8")).get("collections", []) if COLLECTIONS.exists() else []
 
     DOCS.mkdir(parents=True, exist_ok=True)
-    mapped = {path: meta for path, meta in reviews.items() if meta.get("governance_facets")}
+    mapped = {path: meta for path, meta in current_reviews.items() if meta.get("governance_facets")}
     counts = Counter()
     for meta in mapped.values():
         counts.update(meta.get("governance_facets") or [])
@@ -214,7 +220,7 @@ def main():
         for fid, spec in sorted_themes
     )
 
-    recent_mapped = sorted(mapped.items(), key=lambda x: (x[1].get("date_read", ""), x[1].get("title", "")), reverse=True)[:6]
+    recent_reviews = sorted(current_reviews.items(), key=lambda x: (x[1].get("date_read", ""), x[1].get("title", "")), reverse=True)[:6]
     synth_cards = "".join(synthesis_card(s, "knowledge/index.html") for s in syntheses)
 
     body = f"""
@@ -223,11 +229,12 @@ def main():
   <h1>What the archive is learning across papers.</h1>
   <p>This section turns individual reviews into reader pathways through recurring governance mechanisms, curated connections, cross-paper findings, unresolved gaps and human-edited syntheses. Generated pages organize accepted evidence; they do not manufacture consensus.</p>
   <div class="hero-actions"><a class="button" href="findings/">Start with findings</a><a class="button secondary" href="synthesis/">Read syntheses</a></div>
-  <div class="metrics"><span><strong>{len(reviews)}</strong> canonical reviews</span><span><strong>{len(mapped)}</strong> knowledge-mapped reviews</span><span><strong>{len(relationships)}</strong> curated connections</span><span><strong>{len(findings)}</strong> findings</span><span><strong>{len(gaps)}</strong> open gaps</span><span><strong>{len(syntheses)}</strong> syntheses</span></div>
+  <div class="metrics"><span><strong>{len(current_reviews)}</strong> current reviews</span><span><strong>{len(mapped)}</strong> facet-mapped reviews</span><span><strong>{len(relationships)}</strong> curated connections</span><span><strong>{len(findings)}</strong> findings</span><span><strong>{len(gaps)}</strong> open gaps</span><span><strong>{len(syntheses)}</strong> syntheses</span></div>
 </section>
 <section>
   <div class="section-heading"><div><div class="eyebrow">Reader paths</div><h2>Choose the question you want the archive to answer</h2></div></div>
   <div class="card-grid collection-grid">
+    <article class="collection-card"><h3><a href="reviews/">Which papers have been reviewed?</a></h3><p>Browse every current review by domain, including those not yet included in curated syntheses.</p></article>
     <article class="collection-card"><h3><a href="findings/">What is recurring?</a></h3><p>Cross-paper propositions with an explicit evidence base.</p></article>
     <article class="collection-card"><h3><a href="synthesis/">What does a body of work add up to?</a></h3><p>Human-edited collection syntheses that accumulate analysis across reviews.</p></article>
     <article class="collection-card"><h3><a href="#themes">Which governance mechanism matters?</a></h3><p>Authority, legitimacy, accountability, revocation, redress and other recurring mechanisms.</p></article>
@@ -244,12 +251,13 @@ def main():
   <div class="card-grid review-grid">{''.join(knowledge_card(x,'Cross-paper finding','knowledge/index.html',reviews) for x in findings[:4])}</div>
 </section>
 <section id="themes">
-  <div class="section-heading"><div><div class="eyebrow">Recurring mechanisms</div><h2>Governance themes</h2></div></div>
+  <div class="section-heading"><div><div class="eyebrow">Curated classification</div><h2>Governance themes</h2></div><a href="reviews/">Browse all current reviews</a></div>
+  <p class="note">Facet coverage is editorially curated, not automatically assigned. {len(mapped)} of {len(current_reviews)} current reviews have a substantive governance-facet mapping; unmapped reviews remain accessible in the complete review directory.</p>
   <div class="card-grid collection-grid">{theme_cards}</div>
 </section>
 <section>
-  <div class="section-heading"><div><div class="eyebrow">Recent evidence</div><h2>Recently mapped reviews</h2></div></div>
-  <div class="card-grid review-grid">{''.join(review_card(path,meta,'knowledge/index.html') for path,meta in recent_mapped)}</div>
+  <div class="section-heading"><div><div class="eyebrow">Recent evidence</div><h2>Latest current reviews</h2></div><a href="reviews/">Complete review directory</a></div></div>
+  <div class="card-grid review-grid">{''.join(review_card(path,meta,'knowledge/index.html') for path,meta in recent_reviews)}</div>
 </section>
 <section>
   <div class="section-heading"><div><div class="eyebrow">Research agenda</div><h2>What remains unresolved</h2></div><a href="gaps/">All gaps</a></div>
@@ -257,6 +265,44 @@ def main():
 </section>
 """
     (DOCS / "index.html").write_text(page("Knowledge Map", body, "knowledge/index.html"), encoding="utf-8")
+
+    # Full-archive discovery is exhaustive and metadata-derived. Curated facets,
+    # findings, relationships and syntheses remain distinct editorial subsets.
+    by_domain = {}
+    for review_path, meta in current_reviews.items():
+        by_domain.setdefault(meta.get("domain") or "Unclassified", []).append((review_path, meta))
+    directory_sections = []
+    nav_links = []
+    for domain, items in sorted(by_domain.items()):
+        domain_slug = re.sub(r"[^a-z0-9]+", "-", domain.lower()).strip("-")
+        items.sort(key=lambda x: (x[1].get("date_read", ""), x[1].get("title", "")), reverse=True)
+        nav_links.append(
+            f"<a class='tag-link' href='#{domain_slug}'>{html.escape(domain)} ({len(items)})</a>"
+        )
+        listing = "".join(
+            f"<li><a href='{review_url(review_path, relative_prefix('knowledge/reviews/index.html'))}'>{html.escape(meta['title'])}</a>"
+            f" <span class='publication'>({html.escape(meta.get('date_read',''))})</span>"
+            f"<div class='publication'>{html.escape(meta.get('key_insight', ''))}</div></li>"
+            for review_path, meta in items
+        )
+        directory_sections.append(
+            f"<section id='{domain_slug}'><h2>{html.escape(domain)} · {len(items)} reviews</h2><ul>{listing}</ul></section>"
+        )
+    dir_body = (
+        f"<section class='page-header'><div class='eyebrow'>Whole-archive discovery</div>"
+        f"<h1>All current reviews</h1>"
+        f"<p>{len(current_reviews)} current reviews across {len(by_domain)} domains, including those without curated governance facets. "
+        f"{len(reviews) - len(current_reviews)} historical superseded versions remain preserved in the repository, "
+        f"but do not count as additional current papers. Findings, relationships and syntheses are editorially selected subsets.</p>"
+        f"<div class='tag-row'>{''.join(nav_links)}</div></section>"
+        + "".join(directory_sections)
+    )
+    directory = DOCS / "reviews"
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "index.html").write_text(
+        page("All current reviews", dir_body, "knowledge/reviews/index.html"),
+        encoding="utf-8",
+    )
 
     for fid, spec in facets.items():
         d = DOCS / "facets" / fid
@@ -341,7 +387,7 @@ def main():
         )
         (d / "index.html").write_text(page(s["title"], b, pp), encoding="utf-8")
 
-    print(f"Generated knowledge pages: {len(facets)} themes, {len(mapped)} mapped reviews, {len(relationships)} relationships, {len(findings)} findings, {len(gaps)} gaps, {len(syntheses)} syntheses")
+    print(f"Generated knowledge pages: {len(current_reviews)} current reviews ({len(reviews) - len(current_reviews)} superseded), {len(facets)} themes, {len(mapped)} mapped reviews, {len(relationships)} relationships, {len(findings)} findings, {len(gaps)} gaps, {len(syntheses)} syntheses")
     return 0
 
 

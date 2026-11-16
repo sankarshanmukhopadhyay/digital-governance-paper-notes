@@ -12,6 +12,7 @@ peer_review_status: "working-paper"
 paper_type: "working-paper"
 paper_version: "Final Publication Edition v2.1"
 review_status: "current"
+governance_facets: [revocation, authority, enforcement, auditability]
 ---
 
 # Paper Review

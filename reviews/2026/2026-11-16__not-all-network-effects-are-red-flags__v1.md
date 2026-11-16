@@ -16,6 +16,7 @@ published: "2026-10-13"
 peer_review_status: "essay"
 paper_type: "essay"
 review_status: "current"
+governance_facets: [gatekeeping, dependency]
 ---
 
 # Paper Review

@@ -11,6 +11,7 @@ doi: "10.1007/s13347-026-01211-4"
 peer_review_status: "peer-reviewed"
 paper_type: "research-article"
 review_status: "current"
+governance_facets: [legitimacy, accountability, contestability, authority]
 ---
 
 # Paper Review

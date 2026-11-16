@@ -92,3 +92,21 @@ findings:
       - reviews/2026/2026-09-16__credential-disclosure-eu-digital-identity-wallets__v1.md
       - reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md
       - reviews/2026/2026-09-29__structural-preconditions-algorithmic-sovereignty__v1.md
+
+  - id: public-reviewability-is-institutional-power
+    title: Reviewability requires authority to correct, not only intelligible outputs
+    claim: A public institution's use of automated decisions is accountable only where it can give reasons, independently review the basis for an outcome and compel its correction; technically consistent predictions or named human responsibility do not by themselves establish those powers.
+    rationale: The administrative-law analysis specifies independent reconsideration, vendor access and effective remedies; the Lockean interpretation supplies a separate normative reason why public institutions cannot delegate their fiduciary accountability to algorithms.
+    facets: [authority, legitimacy, accountability, contestability, redress]
+    source_reviews:
+      - reviews/2026/2026-10-26__accountability-ai-reviewable-administrative-governance__v1.md
+      - reviews/2026/2026-11-16__natural-equality-constitutional-legitimacy__v2.md
+
+  - id: recovery-requires-new-authority
+    title: Restoring execution state does not restore withdrawn authority
+    claim: Verification that a recovered system is technically intact cannot independently authorize privileged readmission. Current revocation state, independent recovery evidence and a fresh authorization decision remain separate requirements.
+    rationale: The oversight architecture separates verifier verdict from authorization and commit, while the recovery proposal applies this boundary to rollback, cached credentials and resumed operation after compromise.
+    facets: [authority, revocation, enforcement, auditability]
+    source_reviews:
+      - reviews/2026/2026-10-05__security-of-the-security__v1.md
+      - reviews/2026/2026-11-16__pause-is-not-recovery__v2.md

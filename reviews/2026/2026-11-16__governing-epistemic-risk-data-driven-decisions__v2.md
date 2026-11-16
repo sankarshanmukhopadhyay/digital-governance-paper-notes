@@ -10,6 +10,7 @@ published: "2026-10-10"
 doi: "10.32628/IJSRSET2613530"
 paper_type: "research-article"
 review_status: "current"
+governance_facets: [gatekeeping, legitimacy, contestability, provenance]
 ---
 
 # Paper Review
