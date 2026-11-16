@@ -35,6 +35,9 @@ jobs:
       - name: Build current discovery site
         run: python scripts/build_site.py
 
+      - name: Verify complete Knowledge review coverage
+        run: python scripts/check_knowledge_coverage.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
