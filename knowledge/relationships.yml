@@ -75,6 +75,23 @@ relationships:
     to: reviews/2026/2026-09-29__artificial-intelligence-electoral-democracy-nigeria__v1.md
     rationale: Both make provenance and verification supporting evidence rather than final authority. Each ultimately requires institutional rules for conflicting evidence, correction, relying decisions and redress.
 
+  - from: reviews/2026/2026-11-16__security-model-context-protocol-ecosystem__v2.md
+    type: related_to
+    to: reviews/2026/2026-10-06__authorization-architectures-tool-using-ai-agents__v1.md
+    rationale: The MCP security synthesis adds tool-description, metadata and supply-chain attack surfaces to the authorization-boundary analysis, but its empirical citations cannot independently substantiate comparative defense results.
+  - from: reviews/2026/2026-11-16__governing-epistemic-risk-data-driven-decisions__v2.md
+    type: contrasts_with
+    to: reviews/2026/2026-10-01__governance-laundering__v1.md
+    rationale: ERGF asks who controls the production and visibility of accepted knowledge, while governance laundering tests whether downstream authorization evidence can be independently reconstructed; neither property entails the other.
+  - from: reviews/2026/2026-11-16__pause-is-not-recovery__v2.md
+    type: related_to
+    to: reviews/2026/2026-10-05__security-of-the-security__v1.md
+    rationale: Security of the Security separates observation, verification and commit under possible compromise; Paper 06 extends those concerns into durable revocation, restoration and separately authorized readmission.
+  - from: reviews/2026/2026-11-16__natural-equality-constitutional-legitimacy__v2.md
+    type: contrasts_with
+    to: reviews/2026/2026-09-22__procedural-fairness-accountability-legitimacy-ai-enabled-state__v1.md
+    rationale: The survey examines perceived legitimacy and acceptance, whereas Simon advances a normative criterion for when public authority is justified regardless of perceived fairness or technical consistency.
+
 rules:
   - Relationship edges are curated editorial claims, not automatic semantic similarity.
   - Both endpoints must exist in the archive unless an explicit external-reference mechanism is introduced later.

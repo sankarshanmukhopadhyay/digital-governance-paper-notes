@@ -11,7 +11,7 @@ doi: "10.5281/zenodo.23032977"
 peer_review_status: "working-paper"
 paper_type: "working-paper"
 paper_version: "Final Publication Edition v2.1"
-review_status: "current"
+review_status: "superseded"
 ---
 
 # Paper Review

@@ -9,7 +9,7 @@ key_insight: "MCP security depends on independently enforcing action authority a
 published: "2026-09-29"
 doi: "10.64388/IREV10I3-1723420"
 paper_type: "research-article"
-review_status: "current"
+review_status: "superseded"
 ---
 
 # Paper Review
