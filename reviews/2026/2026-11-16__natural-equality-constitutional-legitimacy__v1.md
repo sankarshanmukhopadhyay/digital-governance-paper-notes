@@ -10,7 +10,7 @@ published: "2026-10-23"
 doi: "10.1007/s13347-026-01211-4"
 peer_review_status: "peer-reviewed"
 paper_type: "research-article"
-review_status: "current"
+review_status: "superseded"
 ---
 
 # Paper Review
