@@ -291,6 +291,10 @@ def load_reviews(taxonomy: Taxonomy) -> List[ReviewRecord]:
         text = path.read_text(encoding="utf-8")
         fm = parse_front_matter(text)
         errors.extend(f"{path.relative_to(REPO_ROOT)}: {e}" for e in validate_review_file(path, text, fm, taxonomy))
+        # Retain superseded Markdown as historical records, but publish only the
+        # current review version. Otherwise v1 and v2 overwrite the same URL.
+        if str(fm.get("review_status", "current")) == "superseded":
+            continue
         tags_raw = fm.get("tags", [])
         tags = tuple(str(x).strip() for x in tags_raw) if isinstance(tags_raw, list) else ()
         records.append(ReviewRecord(
