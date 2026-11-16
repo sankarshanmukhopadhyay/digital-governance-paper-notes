@@ -126,6 +126,22 @@ Where the judgment is materially contestable, the reviewer should also be able t
 
 Do not convert this discipline into scores, ratings, recommendation badges, fixed pros-and-cons lists, or criticism for its own sake. The archive's point of view should become sharper by becoming more explicit and falsifiable, not more performative.
 
+## Apply a discriminating review method
+
+The final review must be driven by the particular paper's strongest material proposition, not by a standard sequence of governance objections. Establish an internal editorial disposition before composing the final prose: what specific claim should the reader accept, qualify, reject, apply, or regard as already adequately settled? This disposition is an editorial judgment, not a score, label or additional metadata field.
+
+Read the paper on its own terms, determine what its evidence or reasoning establishes, and compare the surviving contribution with genuinely adjacent archive work. State whether it extends, qualifies, contradicts, makes testable, or substantially restates something already reviewed. Do not invent comparative novelty when there is no meaningful predecessor. A paper can contribute a reliable bounded result without proposing a new framework.
+
+Use the **transferability test** for the main criticism and Key Insight: if either could be moved unchanged into a different paper's review, return to the source and identify a more discriminating mechanism, inference boundary, or consequence. Recurring governance principles are legitimate grounds for inquiry, not predetermined conclusions.
+
+Criticism must be material to the author's actual claim. Distinguish a scope limit, an evidentiary defect, and a deployment dependency. Do not insist that philosophical papers produce engineering tests, or that empirical studies resolve constitutional questions they do not claim to answer. Accept a substantiated result without manufacturing additional deficiencies.
+
+The conclusion must establish the reviewer's settled position rather than defaulting to further-work recommendations. Propose a test, implementation, or reform only if it resolves uncertainty that could materially change that position. A defensible conclusion may be affirmative, sharply qualified, critical of a central premise, or that the work adds little beyond existing knowledge.
+
+## Match length to analytical complexity
+
+Reviews normally use **500–900 words** when that space materially improves independent judgment. Shorter reviews are appropriate when a source supports a concise, decisive conclusion; complex or cross-disciplinary work may extend to **1,200 words** if every additional paragraph adds source-based evidence, a distinct analytical contrast, or a consequential judgment. These are guides, not quotas. Do not lengthen paper summaries, repeat limitations, or create recommendations merely to reach a target. Keep the canonical `## Review` and `## Key Insight` structure unchanged.
+
 ## Prefer precise institutional prose
 
 Governance writing becomes less useful when agency disappears.
