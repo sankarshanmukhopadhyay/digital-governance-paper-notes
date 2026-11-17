@@ -19,6 +19,9 @@ jobs:
       - name: Install lint dependencies
         run: pip install pyyaml
 
+      - name: Review lifecycle regression tests
+        run: node --test tests/test_review_lifecycle.js
+
       - name: Editorial lint
         run: python scripts/editorial_lint.py
 

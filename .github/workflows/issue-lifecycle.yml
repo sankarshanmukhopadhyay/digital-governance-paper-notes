@@ -3,13 +3,19 @@ name: Paper review issue lifecycle
 on:
   issues:
     types: [labeled]
+  # Trusted base-branch workflow; do not execute contributor PR code.
+  pull_request_target:
+    types: [opened, reopened, ready_for_review, edited, closed]
 
 permissions:
   contents: read
   issues: write
+  pull-requests: read
+  checks: read
 
 jobs:
   apply-state:
+    if: github.event_name == 'issues'
     runs-on: ubuntu-latest
     steps:
       - name: Reconcile lifecycle label and issue state
@@ -27,32 +33,57 @@ jobs:
               "disposition:deferred",
               "disposition:declined",
             ];
-            if (!lifecycle.includes(applied)) {
-              return;
-            }
+            if (!lifecycle.includes(applied)) return;
 
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const issue_number = issue.number;
-            const current = issue.labels.map(label => typeof label === "string" ? label : label.name);
+            // Do not replay outdated label events after a newer transition.
+            const fresh = (await github.rest.issues.get({ owner, repo, issue_number })).data;
+            const current = fresh.labels.map(label => typeof label === "string" ? label : label.name);
+            if (!current.includes(applied)) return;
             const keep = current.filter(label => !lifecycle.includes(label) || label === applied);
-
-            await github.rest.issues.setLabels({ owner, repo, issue_number, labels: keep });
+            if (keep.length !== current.length) {
+              await github.rest.issues.setLabels({ owner, repo, issue_number, labels: keep });
+            }
 
             if (applied === "disposition:deferred" || applied === "disposition:declined") {
               const wording = applied === "disposition:deferred"
                 ? "Deferred from the current review backlog. Paper Radar may resurface it after the configured reconsideration window if it again qualifies for editorial triage."
                 : "Declined for the current archive. This records an editorial disposition, not a judgment on the quality of the underlying work.";
-              await github.rest.issues.createComment({ owner, repo, issue_number, body: wording });
-              await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "not_planned" });
+              if (fresh.state !== "closed") {
+                await github.rest.issues.createComment({ owner, repo, issue_number, body: wording });
+                await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "not_planned" });
+              }
               return;
             }
 
             if (applied === "review:published") {
-              await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "completed" });
+              if (fresh.state !== "closed" || fresh.state_reason !== "completed") {
+                await github.rest.issues.update({ owner, repo, issue_number, state: "closed", state_reason: "completed" });
+              }
               return;
             }
 
-            if (issue.state === "closed") {
+            // Avoid reopening published or disposed issues on delayed label events.
+            if (fresh.state === "closed" && !current.some(label =>
+              ["review:published", "disposition:deferred", "disposition:declined"].includes(label))) {
               await github.rest.issues.update({ owner, repo, issue_number, state: "open" });
             }
+
+  reconcile-review-pr:
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out trusted default-branch lifecycle code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - name: Reconcile linked paper review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { reconcile } = require('./scripts/review_lifecycle.js');
+            const result = await reconcile({ github, context });
+            core.info(`Review lifecycle: ${result}`);
